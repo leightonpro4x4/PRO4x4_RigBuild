@@ -3,3 +3,4 @@ public/** -text
 evidence/archive/** -text
 *.zip binary
 *.glb binary
+subsystems/catalogue/source-wf2/** -text

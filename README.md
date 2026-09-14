@@ -1,6 +1,6 @@
-# PRO4X4 Alpha 94 consolidation — baseline and layout only
+# PRO4X4 Alpha 94 consolidation — baseline, layout and catalogue
 
-Stages 1 and 2 are established. Stage 3 and all business-logic integration are deferred.
+Stages 1–3 are established. Stage 3 adds WF2 catalogue normalization and explicit Alpha 93 mapping/fixture data outside the active application. Stage 4 dependency-engine integration is deferred.
 
 Run `npm start` and open `http://127.0.0.1:8094/`. This serves only `public/`, containing the unchanged Alpha 93 HTML and its ten live GLBs. Three.js remains the original pinned CDN dependency; internet access is required for it. The local server adds no quote API or persistence service.
 
@@ -12,7 +12,7 @@ Run `npm test` for archive/source hashes, all 45 Alpha 93 relocations, 24 GLBs, 
 |---|---|
 | Customer app | `public/index.html`; `subsystems/customer-app/` documents future extraction |
 | Shared domain engine | `subsystems/domain/` — reserved |
-| Catalogue/data | `subsystems/catalogue/` — reserved |
+| Catalogue/data | `subsystems/catalogue/` — authoritative WF2 data, normalization and checkpoint mappings; not wired into the app |
 | Visual runtime | Unchanged inline runtime and assets in `public/`; `subsystems/visual-runtime/` contract |
 | Visual eligibility adapter | `subsystems/visual-eligibility/` — reserved |
 | Server/persistence | `subsystems/server-persistence/` — reserved; `tools/serve.mjs` is preview infrastructure only |
@@ -21,6 +21,8 @@ Run `npm test` for archive/source hashes, all 45 Alpha 93 relocations, 24 GLBs, 
 | Acceptance/tests | `acceptance/tests/` |
 | Evidence archive | `evidence/archive/` — excluded from web serving |
 
-The preserved monolithic application is intentionally not refactored at this stage. Reserved boundaries contain documentation, not invented implementations or duplicate entrypoints. Do not deploy the repository root; `public/` is the sole web root.
+The preserved monolithic application is intentionally not refactored at this stage. Boundaries other than catalogue remain reserved documentation. Do not deploy the repository root; `public/` is the sole web root.
 
 See `consolidation/manifest.json` for the complete machine-readable baseline, `consolidation/BASELINE.md` for limitations and source classifications, and `consolidation/STAGE_2_VALIDATION.json` for the gate record. Original branch histories remain the source references; snapshot ZIPs are preservation containers, not applications to deploy.
+
+See `consolidation/STAGE_3.md` and `consolidation/STAGE_3_VALIDATION.json` for the current catalogue gate. `npm test` also validates the Stage 3 counts, identities, mapping outcomes, unresolved values and fixture total. The original baseline documents remain historical Stage 1/2 records.

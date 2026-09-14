@@ -1,0 +1,71 @@
+{
+  "stage": 3,
+  "status": "PASS",
+  "wf2Commit": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+  "ranger": {
+    "accessories": 73,
+    "evidence": 54
+  },
+  "y62": {
+    "evidence": 15,
+    "accessories": 26,
+    "approvedProduction3DBase": false
+  },
+  "vehicleScopedProductIdentities": 99,
+  "mappingMatches": 6,
+  "alpha93OnlyMappingGaps": [
+    "PB-FD-005"
+  ],
+  "fixturePartsAUD": 10239,
+  "sourceHashes": [
+    {
+      "path": "data-ranger.js",
+      "bytes": 163133,
+      "gitBlob": "2743f57007d7a3c78ddd8587e820046502f6d36b",
+      "sha256": "3369031180b33ce8d63fd0da8c1c0f59807219b2c57849fc36c8bc7a1f7a4293",
+      "classification": "source"
+    },
+    {
+      "path": "data-y62.js",
+      "bytes": 94782,
+      "gitBlob": "03955f917c5dbdd6b8ec9cab5f3ca0b402edd3b7",
+      "sha256": "3c7d617271aeda543e2014cc2c0005bcd4a23ce5dbb90d9bace3fba63284c782",
+      "classification": "source"
+    },
+    {
+      "path": "ranger-source-evidence.js",
+      "bytes": 55213,
+      "gitBlob": "aa8534db80101dd46f9062c2da10fb159f1692aa",
+      "sha256": "b6908a05d5959c5f3d40b455fb92ee0d3f4d9d2627b943c26d03b1dc11613ef8",
+      "classification": "source-evidence-or-contract"
+    },
+    {
+      "path": "y62-source-evidence.js",
+      "bytes": 33008,
+      "gitBlob": "18e3d5650006b965176c27899d59e66e544a3293",
+      "sha256": "6a24cd2ae411e7a1b8573412932b6b2c377dfcea9a478aea561344ad463df95c",
+      "classification": "source-evidence-or-contract"
+    }
+  ],
+  "all2407BaselineSourceHashes": "PASS",
+  "all24Alpha93Glbs": "byte-identical",
+  "protectedBranches": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "commands": [
+    "node --experimental-vm-modules acceptance/tests/layout.mjs",
+    "node acceptance/tests/catalogue.mjs",
+    "node --check tools/serve.mjs",
+    "node --check acceptance/tests/layout.mjs",
+    "node --check acceptance/tests/catalogue.mjs",
+    "node --check subsystems/catalogue/normalize.mjs"
+  ],
+  "npmNote": "Exact script commands run directly because npm is not available in PATH",
+  "stage4Started": false
+}

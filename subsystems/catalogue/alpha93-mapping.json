@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+  "checkpointCommit": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+  "vehicleId": "ford-ranger-nextgen-2025",
+  "mappingPolicy": "Exact SKU within the Ranger vehicle context identifies catalogue candidates; it does not approve exact trim, accessory route, fitment, visual use or pricing. Alpha93 does not establish all installation variants.",
+  "mappings": [
+    {"visualProductId":"predator","sku":"FB-FRA-NG-22-PR-ASM0","catalogueIdentity":"ford-ranger-nextgen-2025::oa-predator","outcome":"catalogue-identity-match","unresolved":["Standalone PRO4X4 installation price remains unknown; catalogue visual status priced-only is not production approval."]},
+    {"visualProductId":"rally","sku":"TB-COM-RAL-ORA-2X7-ASM0","catalogueIdentity":"ford-ranger-nextgen-2025::oa-rally-hoop-7in-ranger","outcome":"catalogue-identity-match-with-conflict","unresolved":["WF2 requires oa-predator AND oa-camera-relocation-ranger; Alpha93 fixture requires Predator only.","Designed for two Butt Kicker 7-inch lights; installation time and labour remain unknown."]},
+    {"visualProductId":"lights","sku":"ORA-ALO-R5-C10D1","catalogueIdentity":"ford-ranger-nextgen-2025::oa-butt-kicker-7-pair-ranger","outcome":"catalogue-identity-match-under-review","unresolved":["Engineering/staff-review, visual approved=false.","Alternative Predator/Toro parent routes; compatible Predator Rally Hoop is not a proven universal hard requirement.","Mounting BOM, lamp connector mating, polarity/pinout, electrical route and standalone labour remain unresolved; normalized weight remains null."]},
+    {"visualProductId":"scout","sku":"RR-FRA-PU-22-SCT-ASM0","catalogueIdentity":"ford-ranger-nextgen-2025::oa-scout-rack-ranger","outcome":"catalogue-identity-match-with-conditions","unresolved":["Exact Next-Gen light-bar wind-deflector SKU/interface and related 42-inch light-bar support routes remain engineering review.","Headliner-drop/T-slot installation conditions retained; PRO4X4 installation price remains unknown."]},
+    {"visualProductId":"powerboards","sku":"PB-FD-005","catalogueIdentity":null,"outcome":"alpha93-only-mapping-gap","unresolved":["No WF2 catalogue record. Alpha93 visual and A$1649 checkpoint price confer no catalogue identity, fitment, rights or dependency authority."]},
+    {"visualProductId":"tubrack","sku":"TR-NR-COM-ASM1","catalogueIdentity":"ford-ranger-nextgen-2025::oa-nice-tub-rack-ranger","outcome":"catalogue-identity-match-under-review","unresolved":["WF2 price=null, source-conflict: manufacturer product page A$1750 versus category A$1300.","Alpha93 A$1300 is a regression fixture only.","Exact tub width/roller-shutter mounting route and installation values remain unresolved; engineering/staff-review."]},
+    {"visualProductId":"rearbumper","sku":"RB-FRA-NG-22-ASM0","catalogueIdentity":"ford-ranger-nextgen-2025::oa-rear-protection-ranger","outcome":"catalogue-identity-match-under-review","unresolved":["Engineering/staff-review; factory tow bar required; Hayman Reese tow bars incompatible.","Exact trim/towbar setup must satisfy source conditions; reverse-work-light identity remains under review and installation price remains unknown."]}
+  ]
+}

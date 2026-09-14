@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "classification": "regression-checkpoint-only; not consolidated pricing or catalogue authority",
+  "sourceCommit": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+  "vehicleContext": "Alpha93 Ranger P703 visual checkpoint; exact installation variants not established",
+  "currency": "AUD",
+  "products": {
+    "predator": {
+      "name": "Predator Bull Bar",
+      "sku": "FB-FRA-NG-22-PR-ASM0",
+      "price": 3100,
+      "requires": []
+    },
+    "rally": {
+      "name": "Rally Hoop",
+      "sku": "TB-COM-RAL-ORA-2X7-ASM0",
+      "price": 315,
+      "requires": [
+        "predator"
+      ]
+    },
+    "lights": {
+      "name": "Butt Kicker 7in Pair",
+      "sku": "ORA-ALO-R5-C10D1",
+      "price": 415,
+      "requires": [
+        "predator",
+        "rally"
+      ]
+    },
+    "scout": {
+      "name": "Scout Roof Rack",
+      "sku": "RR-FRA-PU-22-SCT-ASM0",
+      "price": 1520,
+      "requires": []
+    },
+    "powerboards": {
+      "name": "Clearview Power Boards",
+      "sku": "PB-FD-005",
+      "price": 1649,
+      "requires": []
+    },
+    "tubrack": {
+      "name": "The Nice Tub Rack",
+      "sku": "TR-NR-COM-ASM1",
+      "price": 1300,
+      "requires": []
+    },
+    "rearbumper": {
+      "name": "Rear Protection Bumper",
+      "sku": "RB-FRA-NG-22-ASM0",
+      "price": 1940,
+      "requires": []
+    }
+  },
+  "partsTotal": 10239,
+  "productionQuote": false
+}

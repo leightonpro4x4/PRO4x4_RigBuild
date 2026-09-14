@@ -2,12 +2,13 @@
   "name": "pro4x4-alpha94-consolidation",
   "version": "0.94.0",
   "private": true,
-  "description": "Stages 1/2 layout only; unchanged Alpha 93 application",
+  "description": "Stages 1-3 catalogue baseline; unchanged Alpha 93 application",
   "type": "module",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "test": "node --experimental-vm-modules acceptance/tests/layout.mjs",
-    "check": "node --check tools/serve.mjs && node --check acceptance/tests/layout.mjs"
+    "test": "node --experimental-vm-modules acceptance/tests/layout.mjs && node acceptance/tests/catalogue.mjs",
+    "check": "node --check tools/serve.mjs && node --check acceptance/tests/layout.mjs && node --check acceptance/tests/catalogue.mjs && node --check subsystems/catalogue/normalize.mjs",
+    "catalogue:normalize": "node subsystems/catalogue/normalize.mjs"
   },
   "engines": { "node": ">=22" }
 }
