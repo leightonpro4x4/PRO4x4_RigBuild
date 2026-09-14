@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const browser=await chromium.launch({channel:'msedge',headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
-await page.goto('http://127.0.0.1:8094/');
+await page.goto(process.env.ALPHA94_PREVIEW_URL||'http://127.0.0.1:8094/');
 await page.waitForFunction(()=>document.querySelector('#runtimeGate').textContent.includes('10/10'),{},{timeout:60000});
 await page.selectOption('#profile','checkpoint');
 await page.click('#loadFullBuild');

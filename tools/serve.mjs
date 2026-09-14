@@ -7,6 +7,7 @@ const webRoot = fileURLToPath(new URL('../public/', import.meta.url));
 // Local preview only. No business API, directory listing, archive or second app.
 const allowed = new Set(['index.html', ...(await fs.readdir(webRoot)).filter(p => p.endsWith('.glb'))]);
 const modules=new Set(['subsystems/customer-app/app.mjs','subsystems/visual-runtime/ranger.mjs','subsystems/visual-runtime/session.mjs','subsystems/visual-eligibility/adapter.mjs','subsystems/domain/engine.mjs','subsystems/domain/fixture.mjs','subsystems/catalogue/catalogue.json','subsystems/catalogue/alpha93-fixture.json','subsystems/catalogue/alpha93-mapping.json']);
+modules.add('subsystems/customer-app/projects.mjs');
 export async function handle(req, res) {
   const name = new URL(req.url, 'http://localhost').pathname.slice(1) || 'index.html';
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); res.end(); return; }
@@ -16,6 +17,8 @@ export async function handle(req, res) {
   res.end(req.method === 'HEAD' ? undefined : bytes);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  http.createServer((req, res) => handle(req, res).catch(() => { res.writeHead(500); res.end(); }))
-    .listen(Number(process.env.PORT || 8094), '127.0.0.1', () => console.log('Alpha 93 preserved preview: http://127.0.0.1:' + (process.env.PORT || 8094)));
+  const port=Number(process.env.PORT||8094),origin=`http://127.0.0.1:${port}`;
+  const {bootstrap}=await import('../subsystems/server-persistence/bootstrap.mjs');const {api}=bootstrap(origin);
+  http.createServer((req,res)=>(req.url.startsWith('/api/')?api(req,res):handle(req,res)).catch(()=>{res.writeHead(500);res.end();}))
+    .listen(port,'127.0.0.1',()=>console.log('Alpha94 authoritative projects preview: '+origin));
 }

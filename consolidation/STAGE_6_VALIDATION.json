@@ -1,0 +1,60 @@
+{
+  "stage": 6,
+  "status": "PASS",
+  "automatedPersistenceTests": {
+    "failed": 0,
+    "passed": 32
+  },
+  "priorGates": {
+    "baselineSourceFiles": 2407,
+    "alpha93Glbs": 24,
+    "fixturePartsAUD": 10239,
+    "domain": 29,
+    "visualRuntime": 17,
+    "status": "PASS",
+    "y62": "26/15",
+    "ranger": "73/54"
+  },
+  "liveHTTP": "PASS: session, save/reload, lineage rejection, review-required quote",
+  "schema": "alpha94-project-v1",
+  "persistence": "Private SQLite WAL, foreign keys, immediate transactions, immutable revisions/terminal quotes/audit triggers",
+  "vendorSources": [
+    {
+      "path": "pro4x4-rig-builder-alpha26/audit-integrity.js",
+      "bytes": 5616,
+      "gitBlob": "22490f43724b577938597f1f647640065c3be4e1",
+      "sha256": "27fe43d2eaf4a4101320a887e7f998681764e0938090a32bdc41a22231a88ef9",
+      "classification": "source"
+    },
+    {
+      "path": "pro4x4-rig-builder-alpha26/server/auth.js",
+      "bytes": 3853,
+      "gitBlob": "d8d2aec00e46cc55ba43417e6f7f839b6dd42d93",
+      "sha256": "ed546aaed3836e2cb85c45040b85d00152360f944b270a93b7cf88756df9ee4e",
+      "classification": "source"
+    }
+  ],
+  "protectedBranches": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "domainAndRenderParity": "PASS; Stage4 engine and Stage5 adapter/runtime unchanged",
+  "publicShareIsolation": "PASS; explicit pinned-revision DTO",
+  "migration": "Explicit revalidation/new revision; legacy Alpha93 imports checkpoint-only",
+  "finalisation": "Named authorised issuer; exact idempotent retry; terminal mutation rejected",
+  "desktopBlocker": "Resolved by normal Windows PowerShell execution; sandbox browser spawn limitation remains",
+  "previewURL": "http://127.0.0.1:8096/",
+  "iOS": "NOT TESTED",
+  "sourceBranchesUnchanged": true,
+  "stage7Started": false,
+  "desktopSmoke": {
+    "status": "PASS",
+    "evidence": "consolidation/STAGE_6_DESKTOP.json",
+    "execution": "User ran prepared tests in normal Windows PowerShell; saved results match screenshot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "browser": "Edge desktop headless",
+  "visualRegression": "PASS",
+  "projectSaveReload": "PASS",
+  "dirtyQuoteGuard": "PASS",
+  "immutableRevisionNavigation": "PASS",
+  "quoteHandoff": "PASS / review required",
+  "publicShareIsolation": "PASS",
+  "pageErrors": [],
+  "iOS": "NOT TESTED"
+}

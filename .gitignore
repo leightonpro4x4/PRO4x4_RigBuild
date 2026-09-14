@@ -1,0 +1,2 @@
+# Local authoritative database and session credentials; never publish.
+/.runtime/

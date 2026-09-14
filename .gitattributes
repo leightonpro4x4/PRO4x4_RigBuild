@@ -4,3 +4,4 @@ evidence/archive/** -text
 *.zip binary
 *.glb binary
 subsystems/catalogue/source-wf2/** -text
+subsystems/server-persistence/vendor/** -text
