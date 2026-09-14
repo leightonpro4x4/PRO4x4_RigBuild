@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.26.22",
+  "decisionId": "Y62-R34-V1-REVIEW-DECISION-01",
+  "reviewId": "Y62-R34-V1-CAMERA-SEMANTIC-REVIEW-01",
+  "candidateId": "Y62-R34-V1-CANDIDATE-01",
+  "candidateSha256": "8d61ff21aa2bc0ec61122ab1641a232a6e2f3781c0601da6154593f15844a67b",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "reviewer": {
+    "reviewerId": "OPENAI-WF3-VISUAL-REVIEW-01",
+    "reviewerClass": "model-vision-semantic-review",
+    "authority": "camera-for-reconstruction-only",
+    "masterApprovalAuthority": false,
+    "productionPassAuthority": false
+  },
+  "reviewedAt": "2026-09-14T13:04:00+09:30",
+  "decision": "accept-camera-for-reconstruction",
+  "cameraReviewAccepted": true,
+  "cameraGeometryMatched": false,
+  "reconstructionAllowed": true,
+  "productionEligible": false,
+  "requiredChecks": {
+    "rear34-camera": "pass",
+    "rear-quarter-silhouette": "pass",
+    "tail-lamp-anchor": "pass",
+    "tailgate-anchor": "pass",
+    "bumper-tow-anchor": "pass",
+    "no-invented-geometry": "pass"
+  },
+  "productionCameraLock": false,
+  "productionBinaryRights": "not-separately-recorded",
+  "nextDependency": "Transparent clean R34 reconstruction against the accepted owner-source camera, followed by fresh exact-checksum review; accepted F34-family alignment remains mandatory before production camera lock.",
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-review-decision-v01.png",
+    "sha256": "32b6eb933b1a067b64a8d785dc439da9a0613ce0251c3c6e466abbb4e3dd4107",
+    "width": 1920,
+    "height": 1300
+  }
+}

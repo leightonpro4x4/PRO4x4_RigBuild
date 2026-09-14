@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.26.22",
+  "reviewId": "Y62-R34-V1-CAMERA-SEMANTIC-REVIEW-01",
+  "candidateId": "Y62-R34-V1-CANDIDATE-01",
+  "candidateSha256": "8d61ff21aa2bc0ec61122ab1641a232a6e2f3781c0601da6154593f15844a67b",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "state": "camera-accepted-for-reconstruction",
+  "decision": "accept-camera-for-reconstruction",
+  "cameraMatched": false,
+  "productionEligible": false,
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-camera-semantic-review-pack-v01.png",
+    "sha256": "93cb7b97cdb90030195972025afc4dca06c9fcb0b6813714fd70663f62421c5c"
+  },
+  "primaryAuthenticityEvidence": [
+    "OWNER-Y62-REAR34-01",
+    "OWNER-Y62-REAR-01",
+    "OWNER-Y62-F34-01"
+  ],
+  "requiredReviewerChecks": [
+    "rear34-camera",
+    "rear-quarter-silhouette",
+    "tail-lamp-anchor",
+    "tailgate-anchor",
+    "bumper-tow-anchor",
+    "no-invented-geometry"
+  ],
+  "reviewer": {
+    "reviewerId": "OPENAI-WF3-VISUAL-REVIEW-01",
+    "reviewerClass": "model-vision-semantic-review",
+    "reviewedAt": "2026-09-14T13:04:00+09:30",
+    "decision": "accept-camera-for-reconstruction",
+    "authority": "camera-for-reconstruction-only",
+    "masterApprovalAuthority": false,
+    "productionPassAuthority": false
+  },
+  "externalExactVehicleProductionPixelsUsed": false,
+  "reconstructionAllowed": true,
+  "productionPromotionAllowed": false,
+  "nextDependency": "Create transparent clean R34 reconstruction against the accepted owner-source camera; keep production lock blocked until accepted F34-family alignment, exact-checksum review, rights, master approval and WF5.",
+  "decisionRecordId": "Y62-R34-V1-REVIEW-DECISION-01"
+}

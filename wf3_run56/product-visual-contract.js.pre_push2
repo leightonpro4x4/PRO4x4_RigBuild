@@ -1,0 +1,48 @@
+(function(root,factory){
+  const api=factory();
+  if(typeof module==='object'&&module.exports)module.exports=api; else root.PRO4X4_PRODUCT_VISUALS=api;
+})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  const allowed=new Set(['approved','priced-only','staff-review','blocked']);
+  function derive(product,vehicleId){
+    const explicit=product.visual||{};
+    let state=explicit.status;
+    if(!allowed.has(state)){
+      if(product.status==='blocked')state='blocked';
+      else if(product.status==='engineering'||product.fitment?.reviewRequired)state='staff-review';
+      else state='priced-only';
+    }
+    const supportedViews=Array.isArray(explicit.supportedViews)?explicit.supportedViews:[];
+    return {
+      visualisable: explicit.visualisable===true,
+      supportedViews,
+      visualLayerRequired: explicit.visualLayerRequired!==false,
+      status: state,
+      referenceAvailable: explicit.referenceAvailable===true,
+      fitmentConfidence: explicit.fitmentConfidence || (product.status==='confirmed'&&!product.fitment?.reviewRequired?'confirmed':'review-required'),
+      vehicleId: explicit.vehicleId||vehicleId||null,
+      layerId: explicit.layerId||product.layer||null,
+      note: explicit.note||null
+    };
+  }
+  function badge(product,vehicleId){
+    const v=derive(product,vehicleId);
+    if(v.status==='approved')return {label:'VISUAL PREVIEW AVAILABLE',className:'good'};
+    if(v.status==='blocked')return {label:'VISUAL BLOCKED',className:'bad'};
+    if(v.status==='staff-review')return {label:'STAFF FITMENT REVIEW',className:'warn'};
+    return {label:'PRICED / PREVIEW PENDING',className:'neutral'};
+  }
+  function preAddMessages(product,allProducts,selectedIds){
+    const ids=new Set(selectedIds||[]), byId=new Map((allProducts||[]).map(p=>[p.id,p]));
+    const out=[];
+    for(const req of product.requires||product.fitment?.requiredParts||[]){
+      const p=byId.get(req); if(!ids.has(req))out.push(`Requires ${p?.name||req}; it will be added with this item.`);
+    }
+    for(const c of product.fitment?.conflicts||[]){
+      if(ids.has(c)){const p=byId.get(c);out.push(`Conflicts with selected ${p?.name||c}; remove that item first.`)}
+    }
+    if(product.status==='engineering'||product.fitment?.reviewRequired)out.push('PRO4X4 fitment review is required before final quote approval.');
+    return out;
+  }
+  function applyDataset(data){if(!data?.accessories)return data;for(const p of data.accessories){const v=derive(p,data.vehicle?.id);p.visual={...(p.visual||{}),visualisable:v.visualisable,supportedViews:v.supportedViews,visualLayerRequired:v.visualLayerRequired,status:v.status,referenceAvailable:v.referenceAvailable,fitmentConfidence:v.fitmentConfidence,vehicleId:v.vehicleId,layerId:v.layerId,note:v.note};}data.visualContractVersion='0.26.0';return data;}
+  return {schemaVersion:'0.26.0',derive,badge,preAddMessages,applyDataset};
+});

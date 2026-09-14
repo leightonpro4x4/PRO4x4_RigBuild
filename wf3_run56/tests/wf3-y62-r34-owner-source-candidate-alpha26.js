@@ -1,0 +1,36 @@
+const assert=require('assert');
+const fs=require('fs');const path=require('path');const crypto=require('crypto');
+const root=path.join(__dirname,'..');
+const pack=require('../y62-reference-pack.js');
+const pkg=require('../y62-r34-owner-source-candidate.js');
+const briefs=require('../y62-canonical-briefs.js');
+const cams=require('../camera-profiles-y62.js');
+const readiness=require('../y62-readiness-plan.js');
+const candidates=require('../y62-canonical-candidates.js');
+function sha(file){return crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')}
+assert.equal(pkg.policy,'REFERENCE_BACKED_APPROVED_VISUALS_ONLY');
+assert.equal(pkg.decision,'REVIEWABLE_OWNER_SOURCE_CANDIDATE_READY');
+assert.equal(pkg.primaryReference.id,'OWNER-Y62-REAR34-01');
+assert.equal(sha(pkg.primaryReference.file),pkg.primaryReference.sha256);
+assert.equal(pkg.transformation.crop,'none');
+assert.equal(pkg.transformation.perspectiveWarp,false);
+assert.equal(pkg.transformation.geometrySynthesis,false);
+assert.equal(pkg.candidate.hasAlpha,false);
+assert.equal(pkg.candidate.productionEligible,false);
+assert.equal(pkg.externalReferencePolicy.status,'reference-only-not-used-in-candidate');
+assert.equal(pkg.externalReferencePolicy.productionRightsRecorded,false);
+assert.ok(pkg.cameraViewContract.prohibitions.some(x=>/perspective warp/i.test(x)));
+assert.ok(pkg.cameraViewContract.prohibitions.some(x=>/generative completion/i.test(x)));
+assert.ok(pkg.cameraViewContract.prohibitions.some(x=>/external exact-vehicle production pixels/i.test(x)));
+assert.equal(sha(pkg.candidate.source),pkg.candidate.sha256);
+assert.equal(sha(pkg.candidate.manifest),pkg.candidate.manifestSha256);
+for(const ref of pack.references){assert.equal(sha(ref.file),ref.sha256,`hash mismatch ${ref.id}`)}
+const brief=briefs.briefs.rear34;assert.equal(brief.sourcePackageId,pkg.packageId);assert.equal(brief.candidateCreation,'transparent-reconstruction-authorised');
+const cam=cams.get('rear34');assert.equal(cam.state,'reconstruction-authorised');assert.equal(cam.referenceAsset,pkg.primaryReference.file);assert.equal(cam.candidateAsset.id,'Y62-R34-V1-CANDIDATE-01');assert.equal(cam.candidateAsset.cameraMatched,false);assert.equal(cam.candidateAsset.productionEligible,false);assert.equal(cam.matching.perspectiveWarpFromOwnerSourceAllowed,false);assert.equal(cam.matching.generativeGeometryCompletionAllowed,false);assert.equal(cam.externalReferencePolicy.status,'reference-only-not-used-in-candidate');
+const first=candidates.listHistory('rear34')[0];assert.equal(first.candidateId,'Y62-R34-V1-CANDIDATE-01');assert.equal(first.file.checksumSha256,pkg.candidate.sha256);assert.equal(candidates.productionEligible(first),false);
+assert.ok(['transparent-isolation-reviewable','candidate02-edge-returned','candidate03-edge-review-required','candidate03-edge-returned-targeted-cleanup','candidate04-edge-review-required','candidate04-edge-returned-second-targeted-cleanup','candidate05-edge-review-required'].includes(readiness.canonicalMasters.rear34.state));assert.equal(readiness.canonicalMasters.rear34.productionEligible,false);assert.equal(readiness.canonicalMasters.rear34.sourcePackage.candidateSha256,pkg.candidate.sha256);
+const manifest=JSON.parse(fs.readFileSync(path.join(root,pkg.candidate.manifest),'utf8'));assert.equal(manifest.decision,'REVIEWABLE_OWNER_SOURCE_CANDIDATE_READY');assert.equal(manifest.candidate.sha256,pkg.candidate.sha256);assert.equal(manifest.candidate.productionEligible,false);assert.equal(manifest.cameraViewContract.cameraLock,false);assert.equal(manifest.externalReferencePolicy.productionPixelUse,'prohibited');
+assert.equal(candidates.getLatest('front34').file.checksumSha256,'bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1');
+assert.equal(readiness.canonicalMasters.side.state,'queued');assert.equal(candidates.getLatest('side'),null);
+assert.equal(pkg.assess().productionEligible,false);assert.equal(pkg.assess().cameraLocked,false);
+console.log('WF3 Y62 R34 owner-source Candidate 01: PASS');

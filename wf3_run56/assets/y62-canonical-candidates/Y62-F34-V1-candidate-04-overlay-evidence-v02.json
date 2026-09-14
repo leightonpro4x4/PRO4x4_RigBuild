@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "0.26.11",
+  "evidenceId": "Y62-F34-V1-OVERLAY-EVIDENCE-02",
+  "reviewContractId": "Y62-F34-V1-OVERLAY-01",
+  "candidateId": "Y62-F34-V1-CANDIDATE-04",
+  "candidateSha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+  "primaryReference": {
+    "id": "OWNER-Y62-F34-01",
+    "file": "references/y62-owner/IMG_4030.jpeg",
+    "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc"
+  },
+  "method": "SIFT + Lowe ratio 0.60 + RANSAC partial affine; review evidence only, no production geometry transform written back",
+  "alignment": {
+    "goodMatches": 1101,
+    "inliers": 1075,
+    "inlierRatio": 0.9763851044504995,
+    "uniformScale": 0.7278808322560417,
+    "rotationDeg": -0.003854123128407881,
+    "translationPx": {
+      "x": 316.7948557634547,
+      "y": -37.74246141490424
+    },
+    "residualPx": {
+      "mean": 0.17279858887195587,
+      "p95": 0.6549184918403625,
+      "max": 1.5439157485961914
+    }
+  },
+  "alpha": {
+    "nonZeroPixels": 303988,
+    "bbox": [
+      463,
+      22,
+      1226,
+      597
+    ],
+    "connectedComponents": 1,
+    "componentAreas": [
+      303988
+    ],
+    "canvasBoundaryContact": false,
+    "min": 0,
+    "max": 255,
+    "uniqueLevels": 199
+  },
+  "machinePrecheck": {
+    "geometryAlignment": "pass",
+    "transparencyStructure": "pass",
+    "semanticOverlayApproval": "pending-identified-reviewer",
+    "cameraGeometryMatched": false,
+    "productionEligible": false
+  },
+  "reviewerRequiredChecks": [
+    "wheel-centres",
+    "silhouette",
+    "roofline",
+    "bumper-corner",
+    "headlamp-anchor",
+    "edge-quality",
+    "identity/stance cross-check against supporting owner references"
+  ],
+  "rights": {
+    "referenceRights": "owner-project-approved",
+    "productionBinaryRights": "not-separately-recorded"
+  },
+  "artifact": {
+    "file": "assets/y62-canonical-candidates/Y62-F34-V1-candidate-04-overlay-evidence-v02.png",
+    "sha256": "6b53745a23aaaedaf18d6f476381e0ff7192438e99d5dab7b556a7ff4d4afd96"
+  }
+}

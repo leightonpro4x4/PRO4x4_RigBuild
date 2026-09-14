@@ -1,0 +1,32 @@
+const assert=require('assert'),fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.join(__dirname,'..');
+const packet=require('../y62-f34-reviewer-signoff');
+const review=require('../y62-f34-candidate-03-review');
+const cands=require('../y62-canonical-candidates');
+const cams=require('../camera-profiles-y62');
+const readiness=require('../y62-readiness-plan');
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+(function(){
+  assert.equal(packet.packetId,'Y62-F34-V1-REVIEWER-SIGNOFF-01');
+  assert.equal(packet.candidateId,'Y62-F34-V1-CANDIDATE-03');
+  assert.equal(packet.candidateSha256,'67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e');
+  assert.equal(packet.overlayEvidenceId,'Y62-F34-V1-OVERLAY-EVIDENCE-01');
+  assert.equal(packet.referenceSet.length,4);
+  assert.deepEqual(packet.referenceSet.map(x=>x.id),['OWNER-Y62-F34-01','OWNER-Y62-F34-02','OWNER-Y62-FRONT-01','OWNER-Y62-FRONT-02']);
+  for(const r of packet.referenceSet){const p=path.join(root,r.file);assert.ok(fs.existsSync(p));assert.equal(sha(p),r.sha256);assert.match(r.rights,/internal-canonical-development/)}
+  assert.equal(packet.reviewDecision.reviewerId,null);assert.equal(packet.reviewDecision.reviewedAt,null);assert.equal(packet.reviewDecision.decision,'pending');
+  assert.equal(packet.reviewDecision.cameraGeometryMatched,false);assert.equal(packet.reviewDecision.masterState,'master-draft');
+  assert.equal(packet.rightsGate.directPhotoDerivedProductionBinaryRights,'not-separately-recorded');assert.equal(packet.rightsGate.productionEligibility,'blocked');assert.equal(packet.productionEligible,false);
+  assert.ok(packet.requiredReviewerChecks.every(x=>x.state==='pending-identified-reviewer'));
+  const art=path.join(root,packet.artifact.file);assert.ok(fs.existsSync(art));assert.equal(sha(art),packet.artifact.sha256);
+  const meta=JSON.parse(fs.readFileSync(path.join(root,'assets/y62-canonical-candidates/Y62-F34-V1-reviewer-signoff-pack-v01.json'),'utf8'));assert.equal(meta.artifact.sha256,packet.artifact.sha256);
+  assert.equal(review.status,'reviewer-signoff-ready');assert.equal(review.promotionDecision,'held-for-identified-review');
+  assert.equal(review.verification.reviewerSignoffPacket.packetId,packet.packetId);assert.equal(review.verification.reviewerSignoffPacket.reviewerId,null);assert.equal(review.verification.reviewerSignoffPacket.productionEligible,false);
+  assert.ok(review.gateResults.some(x=>x.id==='reviewer-signoff-packet'&&x.result==='pass'));
+  const cand=cands.listHistory('front34').find(x=>x.candidateId==='Y62-F34-V1-CANDIDATE-03');assert.equal(cand.review.state,'reviewer-signoff-ready');assert.equal(cand.governance.state,'master-draft');assert.equal(cands.productionEligible(cand),false);
+  const cam=cams.get('front34');assert.equal(cam.transparentCandidate.id,'Y62-F34-V1-CANDIDATE-04');assert.equal(cam.transparentCandidate.overlayPrecheck.state,'ready-for-identified-review');assert.equal(cam.transparentCandidate.overlayPrecheck.priorCandidateEvidence.reviewerPacket.packetId,packet.packetId);assert.equal(cam.transparentCandidate.overlayPrecheck.currentCandidateEvidence.reviewerPacket.packetId,'Y62-F34-V1-REVIEWER-SIGNOFF-02');assert.equal(cam.transparentCandidate.overlayPrecheck.priorCandidateEvidence.reviewerPacket.reviewerId,null);assert.equal(cam.transparentCandidate.cameraMatched,false);assert.equal(cam.transparentCandidate.productionEligible,false);
+  assert.equal(readiness.canonicalMasters.front34.state,'candidate-04-returned-pro-recon-handoff-ready');assert.equal(readiness.canonicalMasters.front34.productionEligible,false);
+  const html=fs.readFileSync(path.join(root,'y62-canonical-review.html'),'utf8');assert.match(html,/REVIEWER-SIGNOFF-01/);assert.match(html,/Historical Candidate 03 evidence/);assert.match(html,/NOT CUSTOMER VISIBLE/);
+  const customer=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.equal(customer.includes(packet.packetId),false);assert.equal(customer.includes(packet.artifact.file),false);
+  console.log('WF3 Y62 F34 reviewer signoff packet Alpha 26: PASS');
+})();

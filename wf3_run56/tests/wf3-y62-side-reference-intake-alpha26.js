@@ -1,0 +1,32 @@
+const assert=require('assert');
+const fs=require('fs');const path=require('path');const crypto=require('crypto');
+const root=path.join(__dirname,'..');
+const pack=require('../y62-reference-pack.js');
+const intake=require('../y62-side-reference-intake.js');
+const briefs=require('../y62-canonical-briefs.js');
+const cams=require('../camera-profiles-y62.js');
+const readiness=require('../y62-readiness-plan.js');
+const candidates=require('../y62-canonical-candidates.js');
+function sha(file){return crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')}
+assert.equal(intake.policy,'REFERENCE_BACKED_APPROVED_VISUALS_ONLY');
+assert.equal(intake.sufficiency.decision,'SOURCE_GAP_CONFIRMED');
+assert.equal(intake.sufficiency.cleanRawSquareOnOwnerSide,false);
+assert.equal(intake.sufficiency.candidateCreationAllowed,false);
+assert.equal(intake.sufficiency.productionPromotionAllowed,false);
+assert.ok(intake.cameraViewContract.prohibitions.some(x=>/perspective warp/i.test(x)));
+assert.ok(intake.cameraViewContract.prohibitions.some(x=>/generative completion/i.test(x)));
+assert.equal(pack.references.length,9);
+for(const ref of pack.references){assert.equal(sha(ref.file),ref.sha256,`hash mismatch ${ref.id}`)}
+const board=pack.references.find(x=>x.id==='OWNER-Y62-DESIGNBOARD-01');
+assert.equal(board.sourceType,'owner-supplied');assert.equal(board.sourceForm,'derivative-composite');
+assert.equal(board.pixelUse,'reference-only');
+assert.equal(board.geometryAuthority,'secondary-only');
+assert.ok(!pack.references.some(x=>x.view==='side' && x.sourceType==='owner-supplied'));
+assert.equal(briefs.briefs.side.sourceIntakeId,intake.intakeId);
+assert.equal(briefs.briefs.side.candidateCreation,'blocked-until-clean-square-on-source');
+const cam=cams.get('side');assert.equal(cam.state,'source-gap-confirmed');assert.equal(cam.candidateAsset,null);assert.equal(cam.matching.perspectiveWarpFromObliqueSourceAllowed,false);assert.equal(cam.matching.generativeGeometryCompletionAllowed,false);
+assert.equal(readiness.canonicalMasters.side.state,'queued');assert.equal(readiness.canonicalMasters.side.sourceIntake.state,'source-gap-confirmed');assert.equal(readiness.canonicalMasters.side.sourceIntake.productionEligible,false);
+assert.equal(candidates.get('side'),null);assert.equal(candidates.getLatest('side'),null);
+const manifest=JSON.parse(fs.readFileSync(path.join(root,intake.artifact.manifest),'utf8'));assert.equal(manifest.decision,'SOURCE_GAP_CONFIRMED');assert.equal(manifest.ownerReferenceVerification.length,9);assert.equal(manifest.productionEligible,false);assert.equal(manifest.boardSha256,sha(manifest.board));assert.equal(intake.artifact.boardSha256,manifest.boardSha256);assert.equal(intake.artifact.manifestSha256,sha(intake.artifact.manifest));
+assert.equal(intake.assess().productionEligible,false);
+console.log('WF3 Y62 SIDE reference intake gate: PASS');

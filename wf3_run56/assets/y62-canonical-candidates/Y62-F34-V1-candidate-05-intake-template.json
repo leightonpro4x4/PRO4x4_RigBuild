@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "0.26.20",
+  "contractId": "Y62-F34-V1-CANDIDATE05-INTAKE-01",
+  "handoffId": "Y62-F34-V1-PRO-RECON-HANDOFF-01",
+  "candidateId": "Y62-F34-V1-CANDIDATE-05",
+  "binaryFile": "Y62-F34-V1-CANDIDATE-05.png",
+  "retoucher": {
+    "id": null,
+    "name": null,
+    "organisation": null
+  },
+  "completedAt": null,
+  "toolsAndMethod": null,
+  "productionPixelSources": [
+    {
+      "sourceId": "OWNER-Y62-F34-01",
+      "role": "authenticity-reference",
+      "productionPixelsUsed": false,
+      "note": "Owner-supplied primary F34 authenticity evidence; do not infer production-pixel rights from reference approval."
+    },
+    {
+      "sourceId": "Y62-F34-V1-CANDIDATE-04",
+      "role": "direct-predecessor-binary",
+      "productionPixelsUsed": true,
+      "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1"
+    }
+  ],
+  "externalExactVehicleProductionSources": [],
+  "rights": {
+    "productionBinaryState": "pending",
+    "productionBinaryBasis": null,
+    "recordedBy": null,
+    "recordedAt": null
+  },
+  "geometryException": {
+    "preAuthorised": false,
+    "authorisationId": null,
+    "scope": null
+  },
+  "declarations": {
+    "noPerspectiveWarp": null,
+    "noNonUniformScaling": null,
+    "noReplacementWheelTyreGeometry": null,
+    "noInventedBodyFasciaGlassTrimAccessoryGeometry": null,
+    "allExternalExactVehicleProductionSourcesDeclared": null,
+    "noCameraReframe": null
+  },
+  "promotion": {
+    "requested": false,
+    "productionEligible": false,
+    "note": "Intake cannot approve or promote the candidate. Fresh exact-checksum overlay, semantic review, rights approval and WF5 remain mandatory."
+  },
+  "cameraTransferContractId": "Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01"
+}

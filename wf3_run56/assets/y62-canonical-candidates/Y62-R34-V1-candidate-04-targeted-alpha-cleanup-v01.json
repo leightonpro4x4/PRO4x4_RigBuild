@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "0.26.28",
+  "packageId": "Y62-R34-V1-CANDIDATE04-TARGETED-ALPHA-CLEANUP-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "rear34",
+  "briefId": "Y62-R34-V1",
+  "candidateId": "Y62-R34-V1-CANDIDATE-04",
+  "source": {
+    "id": "OWNER-Y62-REAR34-01",
+    "file": "references/y62-owner/IMG_4540.jpeg",
+    "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+    "rights": "owner-project-approved",
+    "role": "primary exact-vehicle authenticity/camera/RGB authority"
+  },
+  "lineage": {
+    "fromCandidateId": "Y62-R34-V1-CANDIDATE-03",
+    "fromCandidateSha256": "1260362df7d22c70dafbfd3deba3f767150496093fdaeb8178b826e0470fd6b7",
+    "fromMaskSha256": "c0d66588f0dbba6300383f7beffaf10524d93d6814aa7cb967a4324b708e0041",
+    "authorisingReviewPackageId": "Y62-R34-V1-CANDIDATE03-EDGE-REVIEW-01",
+    "authorisingReviewSha256": "caf4cd3bb1d1ff050bdecd178dfd8a99d593676c8846466b45bdf873e58d8e7c",
+    "authorisedDecision": "return-targeted-alpha-residue-cleanup-before-neutral-reconstruction"
+  },
+  "transformation": {
+    "type": "alpha-only-targeted-subtraction",
+    "canvas": {
+      "width": 1672,
+      "height": 615
+    },
+    "sourceResize": {
+      "width": 700,
+      "height": 525,
+      "method": "LANCZOS-uniform-4:3"
+    },
+    "placement": {
+      "x": 486,
+      "y": 45
+    },
+    "permittedZones": [
+      {
+        "id": "mirror-front-side",
+        "reason": "owner-evidenced photographed foliage/background residue",
+        "polygons": [
+          [
+            [
+              568,
+              188
+            ],
+            [
+              581,
+              188
+            ],
+            [
+              581,
+              211
+            ],
+            [
+              568,
+              211
+            ]
+          ],
+          [
+            [
+              598,
+              164
+            ],
+            [
+              614,
+              164
+            ],
+            [
+              614,
+              194
+            ],
+            [
+              598,
+              194
+            ]
+          ]
+        ]
+      },
+      {
+        "id": "wheel-underbody",
+        "reason": "owner-evidenced photographed road/ground residue",
+        "polygons": [
+          [
+            [
+              644,
+              369
+            ],
+            [
+              655,
+              370
+            ],
+            [
+              664,
+              375
+            ],
+            [
+              669,
+              382
+            ],
+            [
+              672,
+              392
+            ],
+            [
+              673,
+              404
+            ],
+            [
+              674,
+              417
+            ],
+            [
+              677,
+              432
+            ],
+            [
+              681,
+              444
+            ],
+            [
+              686,
+              452
+            ],
+            [
+              689,
+              456
+            ],
+            [
+              685,
+              459
+            ],
+            [
+              679,
+              460
+            ],
+            [
+              672,
+              456
+            ],
+            [
+              665,
+              450
+            ],
+            [
+              659,
+              440
+            ],
+            [
+              655,
+              428
+            ],
+            [
+              653,
+              414
+            ],
+            [
+              652,
+              400
+            ],
+            [
+              653,
+              386
+            ],
+            [
+              650,
+              377
+            ],
+            [
+              644,
+              372
+            ]
+          ]
+        ]
+      }
+    ],
+    "method": "4x supersampled polygon subtraction multiplied into Candidate 03 alpha; RGB bytes preserved exactly",
+    "alphaSubtractiveOnly": true,
+    "outwardSupportAddition": false,
+    "rgbRetouch": false,
+    "perspectiveWarp": false,
+    "nonUniformScale": false,
+    "syntheticGeometry": false,
+    "externalProductionPixels": false
+  },
+  "candidate": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v04.png",
+    "sha256": "b81f9fbd476db73dc87bdabd80427eb8441ea2db2223fda8421cee51a859cc18",
+    "preview": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v04-preview.jpg",
+    "previewSha256": "c9edb08ec51b2b226544cc96402b52bcc715b2760c2d81e7df3c5b89cefbdaab",
+    "mimeType": "image/png",
+    "width": 1672,
+    "height": 615,
+    "hasAlpha": true,
+    "governanceState": "master-draft",
+    "cameraMatched": false,
+    "productionEligible": false
+  },
+  "mask": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-04-alpha-mask-v01.png",
+    "sha256": "6960094525f0a695516a0ed4588b60059077bf6ba5cc1e62696484da50b70c6a",
+    "width": 700,
+    "height": 525
+  },
+  "verification": {
+    "ownerSourceSha256Verified": true,
+    "candidate03Sha256Verified": true,
+    "authorisingReviewSha256Verified": true,
+    "rgbBytesChanged": 0,
+    "retainedRgbExactFraction": 1.0,
+    "retainedVisiblePixels": 117704,
+    "alphaSupportAddedPixels": 0,
+    "alphaSupportRemovedPixels": 1880,
+    "alphaChangedPixels": 2775,
+    "changedAlphaPixelsOutsideAuthorisedZones": 0,
+    "opaquePixels": 115108,
+    "semiTransparentPixels": 2596,
+    "transparentPixels": 910576,
+    "perspectiveWarp": false,
+    "syntheticGeometry": false,
+    "externalProductionPixels": false
+  },
+  "review": {
+    "state": "candidate04-exact-checksum-edge-review-required",
+    "edgeQuality": "hold",
+    "cleanNeutralReconstruction": "fail",
+    "f34FamilyAlignment": "hold",
+    "productionRights": "hold",
+    "masterApproval": "hold",
+    "wf5Promotion": "hold",
+    "cameraMatched": false,
+    "productionEligible": false
+  },
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-04-targeted-alpha-cleanup-v01.png",
+    "sha256": "c6336fd203043338dcd42992ee6a623697562d3984dbf6b99dc8fc57c34b36cc"
+  },
+  "externalExactVehiclePolicy": "External exact-vehicle images/3D remain reference-only unless source-specific production rights are separately recorded. Candidate 04 uses owner-source RGB only and introduces no external production pixels.",
+  "nextDependency": "F34 Candidate 05 remains first. If still unavailable, perform a fresh identified exact-checksum edge review of Y62-R34-V1-CANDIDATE-04. Do not begin clean neutral/professional reconstruction until that review passes the targeted residue boundaries. Production remains blocked behind F34-family alignment, production-binary rights, master approval and WF5."
+}

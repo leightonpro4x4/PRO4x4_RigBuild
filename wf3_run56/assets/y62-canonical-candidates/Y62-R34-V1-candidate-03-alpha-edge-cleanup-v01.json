@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.26.26",
+  "packageId": "Y62-R34-V1-CANDIDATE03-ALPHA-EDGE-CLEANUP-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "rear34",
+  "briefId": "Y62-R34-V1",
+  "candidateId": "Y62-R34-V1-CANDIDATE-03",
+  "source": {
+    "id": "OWNER-Y62-REAR34-01",
+    "file": "references/y62-owner/IMG_4540.jpeg",
+    "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+    "rights": "owner-project-approved",
+    "role": "primary authenticity + direct camera/RGB source"
+  },
+  "lineage": {
+    "fromCandidateId": "Y62-R34-V1-CANDIDATE-02",
+    "fromCandidateSha256": "b9258e98454d49b11197e5c04d89796eb3ad35dd064892f01f21490f2147b346",
+    "fromMaskSha256": "33571a82c811f6ad2d4d1a338f1bdaf0ffe92aafa91f8164b3cc00665c173859",
+    "edgeReviewPackageId": "Y62-R34-V1-CANDIDATE02-EDGE-REVIEW-01",
+    "returnedReason": "binary stair-step/clipping + boundary residue; this package addresses alpha antialias only"
+  },
+  "transformation": {
+    "type": "alpha-only-inward-antialias",
+    "sourceResize": {
+      "width": 700,
+      "height": 525,
+      "method": "LANCZOS-uniform-4:3"
+    },
+    "placement": {
+      "x": 486,
+      "y": 45
+    },
+    "canvas": {
+      "width": 1672,
+      "height": 615
+    },
+    "method": {
+      "distanceTransform": "OpenCV DIST_L2 mask support",
+      "featherDistancePx": 1.8,
+      "constraint": "new alpha > 0 iff Candidate 02 alpha > 0"
+    },
+    "perspectiveWarp": false,
+    "crop": false,
+    "nonUniformScale": false,
+    "syntheticGeometry": false,
+    "rgbRetouch": false,
+    "outwardSilhouetteExpansion": false
+  },
+  "candidate": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v03.png",
+    "sha256": "1260362df7d22c70dafbfd3deba3f767150496093fdaeb8178b826e0470fd6b7",
+    "mimeType": "image/png",
+    "width": 1672,
+    "height": 615,
+    "hasAlpha": true,
+    "preview": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v03-preview.jpg",
+    "previewSha256": "a4a97145c0bbea721d4f22304cd0c641f8d15beb35542a76774062ba716202a8",
+    "governanceState": "master-draft",
+    "cameraMatched": false,
+    "productionEligible": false
+  },
+  "mask": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-03-alpha-mask-v01.png",
+    "sha256": "c0d66588f0dbba6300383f7beffaf10524d93d6814aa7cb967a4324b708e0041",
+    "width": 700,
+    "height": 525
+  },
+  "verification": {
+    "ownerSourceSha256Verified": true,
+    "candidate02Sha256Verified": true,
+    "candidate02MaskSha256Verified": true,
+    "retainedRgbExactFraction": 1.0,
+    "retainedPixels": 119584,
+    "alphaSupportAddedPixels": 0,
+    "alphaSupportRemovedPixels": 0,
+    "alphaSupportByteIdentical": true,
+    "alphaChangedPixels": 1901,
+    "semiTransparentPixels": 1901,
+    "opaquePixels": 117683,
+    "transparentPixels": 908696,
+    "maxAlphaDelta": 113,
+    "meanChangedAlphaDelta": 100.7159,
+    "perspectiveWarp": false,
+    "syntheticGeometry": false,
+    "externalProductionPixels": false
+  },
+  "review": {
+    "state": "candidate03-edge-review-required",
+    "generationChecks": [
+      {
+        "id": "exact-owner-source-lineage",
+        "result": "pass"
+      },
+      {
+        "id": "same-alpha-support-as-candidate02",
+        "result": "pass"
+      },
+      {
+        "id": "retained-rgb-exact",
+        "result": "pass"
+      },
+      {
+        "id": "no-guessed-geometry",
+        "result": "pass"
+      },
+      {
+        "id": "camera-preservation",
+        "result": "pass"
+      },
+      {
+        "id": "edge-quality",
+        "result": "hold",
+        "basis": "must be judged against this exact Candidate 03 checksum; generation metrics are not semantic approval"
+      },
+      {
+        "id": "source-scene-boundary-residue",
+        "result": "hold",
+        "basis": "alpha antialiasing does not claim removal of all source-scene residue"
+      },
+      {
+        "id": "clean-neutral-reconstruction",
+        "result": "fail",
+        "basis": "photographed reflections/environment remain in body/glass RGB and were intentionally not repainted"
+      }
+    ],
+    "decision": "review-candidate03-exact-checksum-before-neutral-reconstruction",
+    "cameraGeometryMatched": false,
+    "productionEligible": false
+  },
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-03-alpha-edge-cleanup-v01.png",
+    "sha256": "14a7887110ba53c1c29992ccb310aeff879c2e5c22f544c85c63d12d9abffc7e"
+  },
+  "externalExactVehiclePolicy": "reference-only unless separately rights-recorded; no external exact-vehicle production pixels introduced",
+  "prohibitedUse": [
+    "customer resolver",
+    "production master",
+    "production camera lock",
+    "accessory compositing source"
+  ],
+  "nextDependency": "F34 Candidate 05 remains first. For R34, perform fresh identified exact-checksum edge review of Candidate 03. Do not begin clean neutral/professional reconstruction until Candidate 03 edge quality is reviewed; production lock remains blocked behind F34-family alignment, production-binary rights, master approval and WF5."
+}

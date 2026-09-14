@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "0.26.14",
+  "handoffId": "Y62-F34-V1-PRO-RECON-HANDOFF-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "vehicle": "2025 Series 5 Nissan Patrol Warrior by Premcar",
+  "viewId": "front34",
+  "cameraProfileId": "Y62-F34-V1",
+  "sourceCandidate": {
+    "id": "Y62-F34-V1-CANDIDATE-04",
+    "file": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-v04.png",
+    "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+    "state": "returned-professional-reconstruction-required"
+  },
+  "authenticityReferences": [
+    {
+      "id": "OWNER-Y62-F34-01",
+      "file": "references/y62-owner/IMG_4030.jpeg",
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+      "role": "primary-f34",
+      "sourceType": "owner-supplied",
+      "rights": "internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-F34-02",
+      "file": "references/y62-owner/IMG_3762.jpeg",
+      "sha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4",
+      "role": "support-f34",
+      "sourceType": "owner-supplied",
+      "rights": "internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-FRONT-01",
+      "file": "references/y62-owner/IMG_4028.jpeg",
+      "sha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e",
+      "role": "primary-front",
+      "sourceType": "owner-supplied",
+      "rights": "internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-FRONT-02",
+      "file": "references/y62-owner/IMG_4512.jpeg",
+      "sha256": "8fabad7df166ce1ac3e95b5fe38f13572e1d86e2c2d21343917a0842321d5739",
+      "role": "support-front",
+      "sourceType": "owner-supplied",
+      "rights": "internal-canonical-development"
+    }
+  ],
+  "immutableEvidence": {
+    "returnDecision": {
+      "id": "Y62-F34-V1-REVIEW-DECISION-01",
+      "reason": "clean-reconstruction",
+      "decision": "return"
+    },
+    "overlayEvidence": {
+      "id": "Y62-F34-V1-OVERLAY-EVIDENCE-02",
+      "file": "assets/y62-canonical-candidates/Y62-F34-V1-candidate-04-overlay-evidence-v02.png",
+      "sha256": "6b53745a23aaaedaf18d6f476381e0ff7192438e99d5dab7b556a7ff4d4afd96"
+    },
+    "neutralisationContract": {
+      "id": "Y62-F34-V1-NEUTRAL-RECONSTRUCTION-01",
+      "map": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-map-v01.png",
+      "mapSha256": "996d7d89b709d536bea628feb17d035bbc805c2031535fdbe9ccb17c30976c31",
+      "envelope": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-envelope-v01.png",
+      "envelopeSha256": "7ebf9e43e9a7676253f1e09307812026b13c1809d685da7954d3b31b65d8282b"
+    }
+  },
+  "reservedOutput": {
+    "candidateId": "Y62-F34-V1-CANDIDATE-05",
+    "assetClass": "canonical-master",
+    "initialGovernanceState": "master-draft",
+    "productionEligible": false,
+    "customerExposure": "never-before-approval",
+    "file": {
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 615,
+      "hasAlpha": true,
+      "background": "transparent"
+    }
+  },
+  "reconstructionInstructions": {
+    "objective": "Remove photographed workshop/building/sky reflection residue while preserving the authenticated MY25 Series 5 Warrior geometry, factory rolling stock, stance and locked F34 camera.",
+    "mustPreserve": [
+      "1672x615 canvas and canonical F34 framing",
+      "Candidate 04 alpha/silhouette exactly unless a separate geometry-review exception is explicitly recorded before editing",
+      "factory Warrior wheel and tyre geometry from the owner reference chain",
+      "wheel centres, roofline, glasshouse proportions, lamp/fascia anchors and bumper corner geometry",
+      "Premcar/Warrior stance and ride-height relationship",
+      "MY25 Series 5 body and trim identity"
+    ],
+    "permitted": [
+      "professional RGB retouch/reconstruction of photographed reflections and lighting contamination",
+      "paint/glass tonal neutralisation supported by the owner reference set",
+      "local cleanup that does not create, relocate or reshape vehicle geometry"
+    ],
+    "prohibited": [
+      "perspective warp, non-uniform scaling or camera reframing",
+      "AI/generative replacement of body, fascia, glass, wheel, tyre or trim geometry without separately reviewable reference evidence",
+      "replacement wheels/tyres or invented tread/sidewall geometry",
+      "new body lines, panel edges, apertures, lamps, grille detail, badging or accessories",
+      "use of external exact-vehicle imagery as production pixels unless its production rights are separately recorded",
+      "automatic master approval, customer exposure or WF5 promotion"
+    ],
+    "automatedEnvelopeNote": "The prior automated retouch envelope is evidence of what Candidate 04 changed, not permission to algorithmically expand edits. Any professional reconstruction beyond that envelope must remain geometry-neutral and is subject to fresh exact-checksum review."
+  },
+  "requiredProvenance": {
+    "retoucherIdentity": "required",
+    "completedAt": "required",
+    "toolsAndMethod": "required",
+    "productionPixelSources": "owner references / project-owned retouch only unless separately licensed",
+    "externalExactVehicleProductionSources": "must be none unless each source has a recorded production licence",
+    "productionBinaryRights": "must be explicitly recorded as project-owned or sufficiently licensed before master approval",
+    "rightsState": "pending"
+  },
+  "acceptanceGates": [
+    {
+      "id": "binary",
+      "required": true,
+      "rule": "PNG 1672x615 with verified alpha and new exact SHA-256"
+    },
+    {
+      "id": "alpha-silhouette",
+      "required": true,
+      "rule": "alpha byte-identical to Candidate 04 unless a pre-authorised geometry exception exists; no automatic exception"
+    },
+    {
+      "id": "camera-registration",
+      "required": true,
+      "rule": "fresh owner-source registration/overlay on Candidate 05 exact checksum; machine precheck plus identified reviewer"
+    },
+    {
+      "id": "identity",
+      "required": true,
+      "rule": "MY25 Series 5 Warrior identity and Premcar stance remain reference-backed"
+    },
+    {
+      "id": "factory-wheels",
+      "required": true,
+      "rule": "factory Warrior wheel/tyre geometry preserved and reviewer-approved"
+    },
+    {
+      "id": "clean-reconstruction",
+      "required": true,
+      "rule": "returned source-scene reflections removed to reviewer satisfaction without invented geometry"
+    },
+    {
+      "id": "provenance",
+      "required": true,
+      "rule": "retoucher, method, pixel-source and exact binary lineage recorded"
+    },
+    {
+      "id": "rights",
+      "required": true,
+      "rule": "production-binary rights separately recorded as project-owned/licensed"
+    },
+    {
+      "id": "master-review",
+      "required": true,
+      "rule": "identified reviewer PASS on Candidate 05 exact checksum"
+    },
+    {
+      "id": "wf5",
+      "required": true,
+      "rule": "WF5 exact-checksum integration/promotion gate PASS"
+    }
+  ],
+  "currentState": {
+    "handoffReady": true,
+    "candidate05Received": false,
+    "rightsRecorded": false,
+    "reviewPassed": false,
+    "wf5Passed": false,
+    "productionEligible": false
+  },
+  "nextDependency": "Receive a professionally reconstructed Candidate 05 plus retoucher/provenance and production-rights record. Then regenerate overlay/reviewer evidence against that exact checksum."
+}

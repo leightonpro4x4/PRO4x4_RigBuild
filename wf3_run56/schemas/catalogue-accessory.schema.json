@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pro4x4.com.au/schemas/catalogue-accessory-0.12.0.json",
+  "title": "PRO4X4 Accessory Record v0.12.0",
+  "type": "object",
+  "required": [
+    "id",
+    "brand",
+    "name",
+    "sku",
+    "category",
+    "status",
+    "layer",
+    "pricing",
+    "pricingRequired",
+    "fitment",
+    "source"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "confirmed",
+        "engineering",
+        "blocked"
+      ]
+    },
+    "layer": {
+      "type": "string"
+    },
+    "pricing": {
+      "$ref": "#/$defs/pricing"
+    },
+    "pricingRequired": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "parts",
+          "labour",
+          "paint",
+          "freight",
+          "engineering"
+        ]
+      }
+    },
+    "fitment": {
+      "type": "object",
+      "required": [
+        "compatibleVehicleIds",
+        "requiredParts",
+        "conflicts",
+        "reviewRequired"
+      ],
+      "properties": {
+        "compatibleVehicleIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requiredParts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "finishOptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "weightKg": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "install": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "estimateHoursMin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "estimateHoursMax": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sourceVerified": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "authority",
+        "url",
+        "verification"
+      ],
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "verification": {
+          "type": "string"
+        }
+      }
+    },
+    "sourceProductWeightKg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "removedVehicleMassKg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    }
+  },
+  "$defs": {
+    "pricing": {
+      "type": "object",
+      "required": [
+        "parts",
+        "labour",
+        "paint",
+        "freight",
+        "engineering"
+      ],
+      "properties": {
+        "parts": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "labour": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "paint": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "freight": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "engineering": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "handoffId": "Y62-F34-V1-PRO-RECON-HANDOFF-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "createdFor": "PRO4X4 Rig Builder WF3",
+  "vehicle": "2025 Series 5 Nissan Patrol Warrior by Premcar",
+  "viewId": "front34",
+  "cameraProfileId": "Y62-F34-V1",
+  "sourceCandidate": {
+    "id": "Y62-F34-V1-CANDIDATE-04",
+    "file": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-v04.png",
+    "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+    "state": "returned-professional-reconstruction-required"
+  },
+  "reservedOutput": {
+    "candidateId": "Y62-F34-V1-CANDIDATE-05",
+    "assetClass": "canonical-master",
+    "initialGovernanceState": "master-draft",
+    "productionEligible": false,
+    "customerExposure": "never-before-approval",
+    "file": {
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 615,
+      "hasAlpha": true,
+      "background": "transparent"
+    }
+  },
+  "rightsState": "pending",
+  "files": [
+    {
+      "name": "OWNER-Y62-F34-01_IMG_4030.jpeg",
+      "bytes": 756022,
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc"
+    },
+    {
+      "name": "OWNER-Y62-F34-02_IMG_3762.jpeg",
+      "bytes": 1002649,
+      "sha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4"
+    },
+    {
+      "name": "OWNER-Y62-FRONT-01_IMG_4028.jpeg",
+      "bytes": 748677,
+      "sha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e"
+    },
+    {
+      "name": "OWNER-Y62-FRONT-02_IMG_4512.jpeg",
+      "bytes": 914104,
+      "sha256": "8fabad7df166ce1ac3e95b5fe38f13572e1d86e2c2d21343917a0842321d5739"
+    },
+    {
+      "name": "Y62-F34-V1-CANDIDATE-04_SOURCE.png",
+      "bytes": 915397,
+      "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1"
+    },
+    {
+      "name": "Y62-F34-V1_CANDIDATE04_OVERLAY_EVIDENCE.png",
+      "bytes": 1108517,
+      "sha256": "6b53745a23aaaedaf18d6f476381e0ff7192438e99d5dab7b556a7ff4d4afd96"
+    },
+    {
+      "name": "Y62-F34-V1_GEOMETRY_RETOUCH_MAP.png",
+      "bytes": 297696,
+      "sha256": "996d7d89b709d536bea628feb17d035bbc805c2031535fdbe9ccb17c30976c31"
+    },
+    {
+      "name": "Y62-F34-V1_REVIEW_DECISION_GATE.png",
+      "bytes": 2245056,
+      "sha256": "97021196e2129573d6b6f1ca26d6421d67642de570c80f5e9938ab410761e763"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2168,
+      "sha256": "37355b7ce1fb807edd6950fb96dc377557f62a16b7b6a236161fb0d91e0d307a"
+    }
+  ],
+  "acceptanceGateIds": [
+    "binary",
+    "alpha-silhouette",
+    "camera-registration",
+    "identity",
+    "factory-wheels",
+    "clean-reconstruction",
+    "provenance",
+    "rights",
+    "master-review",
+    "wf5"
+  ],
+  "nextDependency": "Receive a professionally reconstructed Candidate 05 plus retoucher/provenance and production-rights record. Then regenerate overlay/reviewer evidence against that exact checksum."
+}

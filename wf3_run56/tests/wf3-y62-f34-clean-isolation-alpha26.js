@@ -1,0 +1,26 @@
+const assert=require('assert'),fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=path.join(__dirname,'..');
+const pack=require('../y62-reference-pack');
+const cands=require('../y62-canonical-candidates');
+const review=require('../y62-f34-candidate-03-review');
+const overlay=require('../y62-f34-overlay-review-contract');
+const cams=require('../camera-profiles-y62');
+const readiness=require('../y62-readiness-plan');
+const {inspect}=require('../server/asset-vault');
+(function(){
+  const history=cands.listHistory('front34');
+  assert.deepEqual(history.map(x=>x.candidateId),['Y62-F34-V1-CANDIDATE-01','Y62-F34-V1-CANDIDATE-02','Y62-F34-V1-CANDIDATE-03','Y62-F34-V1-CANDIDATE-04']);
+  const c=history.find(x=>x.candidateId==='Y62-F34-V1-CANDIDATE-03');
+  assert.ok(c);assert.equal(c.candidateId,'Y62-F34-V1-CANDIDATE-03');assert.equal(c.governance.state,'master-draft');assert.equal(c.file.mimeType,'image/png');assert.equal(c.file.width,1672);assert.equal(c.file.height,615);assert.equal(c.file.hasAlpha,true);assert.equal(cands.productionEligible(c),false);
+  const f=path.join(root,c.source);assert.ok(fs.existsSync(f));const buf=fs.readFileSync(f),sha=crypto.createHash('sha256').update(buf).digest('hex');assert.equal(sha,c.file.checksumSha256);assert.equal(sha,review.verification.checksum.sha256);
+  const meta=inspect(buf);assert.equal(meta.mimeType,'image/png');assert.equal(meta.width,1672);assert.equal(meta.height,615);assert.equal(meta.transparencyVerified,true);assert.equal(meta.hasAlpha,true);assert.equal(meta.checksumSha256,c.file.checksumSha256);
+  const build=JSON.parse(fs.readFileSync(path.join(root,review.buildEvidenceFile),'utf8'));assert.equal(build.candidateId,c.candidateId);assert.equal(build.sha256,c.file.checksumSha256);assert.ok(build.alpha.removedPixels>10000);assert.ok(build.alpha.removedPercentOfPriorMask>3);assert.ok(build.alpha.newNonZeroPixels<build.alpha.oldNonZeroPixels);
+  const primary=pack.references.find(x=>x.id===c.provenance.primaryReferenceId);assert(primary);assert.equal(primary.rights,'owner-project-approved');assert.equal(c.provenance.productionBinaryRights,'not-separately-recorded');assert.match(c.provenance.transformation,/alpha-only/i);assert.match(c.provenance.transformation,/no perspective warp/i);
+  assert.equal(review.candidateId,c.candidateId);assert.equal(review.promotionDecision,'held-for-identified-review');assert.equal(review.verification.retainedRgbIdentity.exactMatchFraction,1);assert.ok(review.verification.sourceSpaceOverlayPrecheck.inlierRatio>0.97);assert.ok(review.verification.sourceSpaceOverlayPrecheck.residualPx.p95<1);assert.ok(review.gateResults.some(x=>x.id==='transparency'&&x.result==='pass'));assert.ok(review.gateResults.some(x=>x.id==='edge-quality'&&x.result==='hold'));assert.ok(review.gateResults.some(x=>x.id==='clean-reconstruction'&&x.result==='fail'));assert.ok(review.gateResults.some(x=>x.id==='rights-for-production-binary'&&x.result==='hold'));assert.ok(review.prohibitedUse.includes('customer resolver'));
+  const assessed=overlay.assess(review.gateResults);assert.equal(assessed.passed,false);assert.deepEqual(assessed.failures,['edge-quality']);
+  const cam=cams.get('front34');assert.equal(cam.transparentCandidate.id,'Y62-F34-V1-CANDIDATE-04');assert.equal(cam.transparentCandidate.hasAlpha,true);assert.equal(cam.transparentCandidate.productionEligible,false);assert.equal(cam.transparentCandidate.cameraMatched,false);assert.equal(cam.transparentCandidate.overlayPrecheck.state,'ready-for-identified-review');assert.equal(cam.transparentCandidate.overlayPrecheck.priorCandidateEvidence.candidateId,c.candidateId);assert.equal(cam.transparentCandidate.overlayPrecheck.currentCandidateEvidence.candidateId,'Y62-F34-V1-CANDIDATE-04');
+  assert.equal(readiness.canonicalMasters.front34.latestCandidateId,'Y62-F34-V1-CANDIDATE-04');assert.equal(readiness.canonicalMasters.front34.state,'candidate-04-returned-pro-recon-handoff-ready');assert.equal(readiness.canonicalMasters.front34.productionEligible,false);assert.ok(readiness.canonicalMasters.front34.passed.includes('Candidate 04 exact-checksum locked overlay evidence bundle'));assert.ok(readiness.canonicalMasters.front34.blocked.some(x=>/professional reconstruction/i.test(x)));
+  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.equal(html.includes(c.source),false);assert.equal(html.includes('y62-f34-candidate-03-review.js'),false);assert.equal(html.includes('Y62-F34-V1-CANDIDATE-03'),false);
+  const reviewHtml=fs.readFileSync(path.join(root,'y62-canonical-review.html'),'utf8');assert.match(reviewHtml,/Candidate 04/);assert.match(reviewHtml,/Historical Candidate 03 evidence/);assert.match(reviewHtml,/NOT CUSTOMER VISIBLE/);
+  console.log('WF3 Y62 F34 clean isolation Candidate 03 Alpha 26: PASS');
+})();

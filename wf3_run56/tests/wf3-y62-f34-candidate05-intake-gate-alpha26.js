@@ -1,0 +1,24 @@
+const assert=require('assert'),fs=require('fs'),path=require('path');
+const root=path.join(__dirname,'..');
+const gate=require('../y62-f34-candidate05-intake-contract');
+const handoff=require('../y62-f34-professional-reconstruction-handoff');
+const readiness=require('../y62-readiness-plan');
+const board=require('../workflow-board-data');
+(function(){
+ assert.equal(gate.contractId,'Y62-F34-V1-CANDIDATE05-INTAKE-01');
+ assert.equal(gate.policy,'REFERENCE_BACKED_APPROVED_VISUALS_ONLY');
+ assert.equal(gate.expectedCandidateId,'Y62-F34-V1-CANDIDATE-05');
+ assert.equal(gate.predecessor.sha256,handoff.sourceCandidate.sha256);
+ assert.equal(gate.currentState.intakeGateReady,true);assert.equal(gate.currentState.productionEligible,false);
+ assert.deepEqual(gate.authenticityReferenceIds,handoff.authenticityReferences.map(x=>x.id));
+ const bad=gate.assessManifest({});assert.equal(bad.manifestStructurallyReady,false);assert.equal(bad.productionEligible,false);
+ const pending=gate.assessManifest({candidateId:'Y62-F34-V1-CANDIDATE-05',binaryFile:'Y62-F34-V1-CANDIDATE-05.png',retoucher:{id:'R1',name:'Retoucher',organisation:'Studio'},completedAt:'2026-09-14T05:00:00+09:30',toolsAndMethod:'manual retouch',productionPixelSources:[{sourceId:'Y62-F34-V1-CANDIDATE-04'}],externalExactVehicleProductionSources:[],rights:{productionBinaryState:'pending',productionBinaryBasis:'awaiting rights confirmation',recordedBy:'producer',recordedAt:'2026-09-14T05:01:00+09:30'}});assert.equal(pending.manifestStructurallyReady,true);assert.equal(pending.rightsReady,false);assert.equal(pending.productionEligible,false);
+ const ready=gate.assessManifest({candidateId:'Y62-F34-V1-CANDIDATE-05',binaryFile:'Y62-F34-V1-CANDIDATE-05.png',retoucher:{id:'R1',name:'Retoucher',organisation:'Studio'},completedAt:'2026-09-14T05:00:00+09:30',toolsAndMethod:'manual retouch',productionPixelSources:[{sourceId:'Y62-F34-V1-CANDIDATE-04'}],externalExactVehicleProductionSources:[],rights:{productionBinaryState:'project-owned',productionBinaryBasis:'commissioned work assigned to project',recordedBy:'producer',recordedAt:'2026-09-14T05:01:00+09:30'}});assert.equal(ready.manifestStructurallyReady,true);assert.equal(ready.rightsReady,true);assert.equal(ready.productionEligible,false);assert.equal(ready.nextGate,'deterministic-binary-alpha-validation');
+ const template=JSON.parse(fs.readFileSync(path.join(root,'assets/y62-canonical-candidates/Y62-F34-V1-candidate-05-intake-template.json'),'utf8'));assert.equal(template.contractId,gate.contractId);assert.equal(template.candidateId,gate.expectedCandidateId);assert.equal(template.promotion.productionEligible,false);assert.equal(template.externalExactVehicleProductionSources.length,0);
+ const validator=fs.readFileSync(path.join(root,'tools/validate-y62-f34-candidate05.py'),'utf8');assert.match(validator,/alphaByteIdenticalToCandidate04/);assert.match(validator,/productionEligible.*False/);assert.match(validator,/externalExactVehicleProductionSources/);
+ assert.equal(handoff.currentState.candidate05Received,false);assert.equal(handoff.currentState.productionEligible,false);
+ assert.equal(readiness.canonicalMasters.front34.intakeGate.contractId,gate.contractId);assert.equal(readiness.canonicalMasters.front34.intakeGate.ready,true);assert.equal(readiness.canonicalMasters.front34.productionEligible,false);
+ const wf3=board.workstreams.find(x=>x.id==='WF3');assert.match(wf3.completedPackage,/CANDIDATE05-INTAKE-01/);assert.match(wf3.nextPackage,/CANDIDATE-05|Candidate 05/i);
+ const customer=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.equal(customer.includes(gate.contractId),false);assert.equal(customer.includes('Y62-F34-V1-CANDIDATE-05'),false);
+ console.log('WF3 Y62 F34 Candidate 05 intake gate Alpha 26: PASS');
+})();

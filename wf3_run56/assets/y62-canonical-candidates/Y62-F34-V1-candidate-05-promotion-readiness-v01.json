@@ -1,0 +1,101 @@
+{
+  "authority": {
+    "productionEligible": false,
+    "productionRegistryWriteAllowed": false,
+    "readyForWF5Only": true
+  },
+  "candidateId": "Y62-F34-V1-CANDIDATE-05",
+  "currentReadiness": [
+    {
+      "gate": "Candidate 05 binary received",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Deterministic intake structurallyReady",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Exact SHA bound across intake/review/approval",
+      "state": "PENDING"
+    },
+    {
+      "gate": "1672x615 alpha + locked owner-backed frame",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Fresh Candidate 05 review evidence",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Identified semantic reviewer PASS",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Series 5 Warrior identity",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Factory Warrior wheels/tyres + Premcar stance",
+      "state": "PENDING"
+    },
+    {
+      "gate": "F34 camera/silhouette/fascia anchors",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Production-clean alpha edges",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Clean reconstruction / no scene residue",
+      "state": "PENDING"
+    },
+    {
+      "gate": "No guessed, warped or unsupported geometry",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Production-binary rights ready",
+      "state": "PENDING"
+    },
+    {
+      "gate": "External production source rights, if any",
+      "state": "PENDING"
+    },
+    {
+      "gate": "Identified canonical master approval",
+      "state": "PENDING"
+    },
+    {
+      "gate": "WF5 exact-checksum promotion",
+      "state": "NOT_RUN"
+    }
+  ],
+  "externalSourcePolicy": "Exact-vehicle images/3D remain reference-only unless source-specific production rights are separately recorded; rights do not confer geometry authority.",
+  "gateId": "Y62-F34-V1-CANDIDATE05-PROMOTION-READINESS-01",
+  "lockedFrame": {
+    "alphaRawSha256": "f8c0c48381120ddb1eef0c225959955820e1f4753a3905ec96d1e87506602d05",
+    "hasAlpha": true,
+    "height": 615,
+    "width": 1672
+  },
+  "nextDependency": "Receive professionally reconstructed Candidate 05 plus completed intake/provenance/rights manifest, then run intake and exact-checksum review.",
+  "ownerAuthenticityEvidence": [
+    "OWNER-Y62-F34-01",
+    "OWNER-Y62-F34-02",
+    "OWNER-Y62-FRONT-01",
+    "OWNER-Y62-FRONT-02"
+  ],
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "purpose": "Fail-closed WF3 readiness bridge to WF5; never self-promotes or writes production state.",
+  "requiredLineage": [
+    "Y62-F34-V1-PRO-RECON-HANDOFF-01",
+    "Y62-F34-V1-CANDIDATE05-INTAKE-01",
+    "Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01",
+    "Y62-F34-V1-CANDIDATE05-REVIEW-PIPELINE-01"
+  ],
+  "schemaVersion": "0.26.24",
+  "state": "READY_WAITING_CANDIDATE05",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "front34"
+}

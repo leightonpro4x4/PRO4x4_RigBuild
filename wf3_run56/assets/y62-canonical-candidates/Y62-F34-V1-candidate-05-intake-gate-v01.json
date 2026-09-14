@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.26.15",
+  "gateId": "Y62-F34-V1-CANDIDATE05-INTAKE-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "front34",
+  "cameraProfileId": "Y62-F34-V1",
+  "sourceCandidate": {
+    "id": "Y62-F34-V1-CANDIDATE-04",
+    "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+    "state": "returned-professional-reconstruction-required"
+  },
+  "reservedCandidate": {
+    "id": "Y62-F34-V1-CANDIDATE-05",
+    "received": false,
+    "productionEligible": false
+  },
+  "ownerAuthenticityEvidence": [
+    "OWNER-Y62-F34-01",
+    "OWNER-Y62-F34-02",
+    "OWNER-Y62-FRONT-01",
+    "OWNER-Y62-FRONT-02"
+  ],
+  "artifacts": {
+    "contract": {"file":"y62-f34-candidate05-intake-contract.js","sha256":"5bdc520d125f5d71c4d38b36963e75255d0df22b0ed7e63f049b219c35eab1ee"},
+    "manifestTemplate": {"file":"assets/y62-canonical-candidates/Y62-F34-V1-candidate-05-intake-template.json","sha256":"81040d1eebb7fb04f2c3dce14d6046fe37bc8c1ebd14d84cdbb8f7134ad1c708"},
+    "validator": {"file":"tools/validate-y62-f34-candidate05.py","sha256":"8ba3ab60a579102a1add9c5deb2d75854c7a722854a98671be26e19a5636e491"}
+  },
+  "currentState": {
+    "intakeGateReady": true,
+    "candidate05Received": false,
+    "binaryValidated": false,
+    "provenanceValidated": false,
+    "rightsReady": false,
+    "semanticReviewPassed": false,
+    "cameraGeometryMatched": false,
+    "productionEligible": false
+  },
+  "nextDependency": "Receive Candidate 05 with completed intake manifest; validate exact binary/alpha/provenance, then regenerate exact-checksum overlay and identified reviewer evidence."
+}

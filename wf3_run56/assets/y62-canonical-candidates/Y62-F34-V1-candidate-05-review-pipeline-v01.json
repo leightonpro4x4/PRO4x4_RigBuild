@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "0.26.21",
+  "pipelineId": "Y62-F34-V1-CANDIDATE05-REVIEW-PIPELINE-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "candidateId": "Y62-F34-V1-CANDIDATE-05",
+  "state": "READY_WAITING_CANDIDATE05",
+  "candidateReceived": false,
+  "inputs": {
+    "intakeContractId": "Y62-F34-V1-CANDIDATE05-INTAKE-01",
+    "cameraTransferContractId": "Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01",
+    "handoffId": "Y62-F34-V1-PRO-RECON-HANDOFF-01",
+    "primaryOwnerReferenceId": "OWNER-Y62-F34-01",
+    "primaryOwnerReferenceSha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+    "expectedAlphaRawSha256": "f8c0c48381120ddb1eef0c225959955820e1f4753a3905ec96d1e87506602d05",
+    "canvas": [
+      1672,
+      615
+    ]
+  },
+  "execution": [
+    "deterministic Candidate 05 intake structurallyReady=true",
+    "pin exact new Candidate 05 SHA-256",
+    "verify locked alpha/camera coordinate frame",
+    "generate fresh OWNER-Y62-F34-01 registration/overlay evidence",
+    "bind supporting owner references to checksum-specific semantic packet",
+    "identified reviewer completes mandatory camera/geometry/clean-reconstruction checks",
+    "rights gate remains separate",
+    "master/WF5 promotion remains separate"
+  ],
+  "machineAuthority": "preflight-only",
+  "cameraGeometryMatched": false,
+  "masterApproved": false,
+  "productionEligible": false,
+  "nextDependency": "Candidate 05 binary + completed intake manifest. No review evidence can be inherited from Candidate 04."
+}

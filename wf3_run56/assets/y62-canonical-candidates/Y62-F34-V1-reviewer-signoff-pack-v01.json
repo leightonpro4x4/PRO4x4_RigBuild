@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "0.26.8",
+  "packetId": "Y62-F34-V1-REVIEWER-SIGNOFF-01",
+  "candidateId": "Y62-F34-V1-CANDIDATE-03",
+  "candidateSha256": "67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e",
+  "reviewContractId": "Y62-F34-V1-OVERLAY-01",
+  "overlayEvidenceId": "Y62-F34-V1-OVERLAY-EVIDENCE-01",
+  "overlayEvidenceSha256": "522f7ac76841a023d0a1b5e3ae9da39d3f4747c59f9015f2e44a0b7c4e9ebaa1",
+  "purpose": "Immutable reviewer packet for semantic camera/identity/edge signoff. It must not self-approve the candidate.",
+  "referenceSet": [
+    {
+      "id": "OWNER-Y62-F34-01",
+      "file": "references/y62-owner/IMG_4030.jpeg",
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+      "role": "primary-f34",
+      "rights": "owner-project-approved-internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-F34-02",
+      "file": "references/y62-owner/IMG_3762.jpeg",
+      "sha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4",
+      "role": "support-f34",
+      "rights": "owner-project-approved-internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-FRONT-01",
+      "file": "references/y62-owner/IMG_4028.jpeg",
+      "sha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e",
+      "role": "primary-front",
+      "rights": "owner-project-approved-internal-canonical-development"
+    },
+    {
+      "id": "OWNER-Y62-FRONT-02",
+      "file": "references/y62-owner/IMG_4512.jpeg",
+      "sha256": "8fabad7df166ce1ac3e95b5fe38f13572e1d86e2c2d21343917a0842321d5739",
+      "role": "support-front",
+      "rights": "owner-project-approved-internal-canonical-development"
+    }
+  ],
+  "machineEvidence": {
+    "featureMatches": 1104,
+    "ransacInliers": 1082,
+    "inlierRatio": 0.980072463768116,
+    "residualP95Px": 0.5840778946876526,
+    "uniformScale": 0.7278773323633316,
+    "rotationDeg": -0.0031780435787166113,
+    "alphaConnectedComponents": 1,
+    "canvasBoundaryContact": false
+  },
+  "requiredReviewerChecks": [
+    {
+      "id": "identity",
+      "state": "pending-identified-reviewer",
+      "evidence": [
+        "OWNER-Y62-F34-01",
+        "OWNER-Y62-F34-02",
+        "OWNER-Y62-FRONT-01",
+        "OWNER-Y62-FRONT-02"
+      ]
+    },
+    {
+      "id": "stance",
+      "state": "pending-identified-reviewer",
+      "evidence": [
+        "OWNER-Y62-F34-01",
+        "OWNER-Y62-F34-02"
+      ]
+    },
+    {
+      "id": "wheel-centres",
+      "state": "pending-identified-reviewer",
+      "machineState": "precheck-pass"
+    },
+    {
+      "id": "silhouette",
+      "state": "pending-identified-reviewer",
+      "machineState": "precheck-pass"
+    },
+    {
+      "id": "roofline",
+      "state": "pending-identified-reviewer",
+      "machineState": "precheck-ready"
+    },
+    {
+      "id": "bumper-corner",
+      "state": "pending-identified-reviewer",
+      "machineState": "precheck-ready"
+    },
+    {
+      "id": "headlamp-anchor",
+      "state": "pending-identified-reviewer",
+      "machineState": "precheck-ready"
+    },
+    {
+      "id": "edge-quality",
+      "state": "pending-identified-reviewer",
+      "machineState": "transparency-structure-pass"
+    },
+    {
+      "id": "no-invented-accessories",
+      "state": "pending-identified-reviewer",
+      "evidence": [
+        "candidate provenance",
+        "owner reference set"
+      ]
+    }
+  ],
+  "reviewDecision": {
+    "reviewerId": null,
+    "reviewedAt": null,
+    "decision": "pending",
+    "cameraGeometryMatched": false,
+    "masterState": "master-draft"
+  },
+  "rightsGate": {
+    "ownerReferenceUse": "approved-for-internal-canonical-development",
+    "externalProductionSourcesUsed": false,
+    "directPhotoDerivedProductionBinaryRights": "not-separately-recorded",
+    "productionEligibility": "blocked"
+  },
+  "promotionRule": "Requires identified reviewer PASS for all semantic/edge checks, separately recorded production-binary rights or rights-cleared reconstruction, master-approved state, cameraGeometry.matched=true, and WF5 gate on this exact candidate checksum.",
+  "artifact": {
+    "file": "assets/y62-canonical-candidates/Y62-F34-V1-reviewer-signoff-pack-v01.png",
+    "sha256": "dbbb5d97749a8144d2ec6a3672f23532b1f5d9177dc585d11ad6d8d00da1eb86"
+  },
+  "productionEligible": false
+}

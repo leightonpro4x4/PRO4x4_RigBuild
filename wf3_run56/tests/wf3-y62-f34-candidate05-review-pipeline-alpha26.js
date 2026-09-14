@@ -1,0 +1,31 @@
+const assert=require('assert'),fs=require('fs'),path=require('path'),crypto=require('crypto'),cp=require('child_process'),os=require('os');
+const root=path.join(__dirname,'..');
+const pipe=require('../y62-f34-candidate05-review-pipeline');
+const readiness=require('../y62-readiness-plan');
+const brief=require('../y62-canonical-briefs');
+const board=require('../workflow-board-data');
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+(function(){
+ assert.equal(pipe.pipelineId,'Y62-F34-V1-CANDIDATE05-REVIEW-PIPELINE-01');
+ assert.equal(pipe.policy,'REFERENCE_BACKED_APPROVED_VISUALS_ONLY');
+ assert.equal(pipe.requiredInputs.candidateId,'Y62-F34-V1-CANDIDATE-05');
+ assert.equal(pipe.requiredInputs.intakeContractId,'Y62-F34-V1-CANDIDATE05-INTAKE-01');
+ assert.equal(pipe.requiredInputs.cameraTransferContractId,'Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01');
+ assert.equal(pipe.requiredInputs.primaryReference.id,'OWNER-Y62-F34-01');
+ assert.equal(pipe.requiredInputs.primaryReference.sha256,'400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc');
+ assert.equal(pipe.requiredReviewerChecks.length,12);assert.equal(pipe.machinePrecheck.authority,'preflight-only');assert.equal(pipe.currentState.productionEligible,false);
+ const bad=pipe.assessReviewGeneration({candidateId:'Y62-F34-V1-CANDIDATE-05'});assert.equal(bad.reviewGenerationAllowed,false);assert.equal(bad.productionEligible,false);
+ const good=pipe.assessReviewGeneration({candidateId:'Y62-F34-V1-CANDIDATE-05',intakeContractId:'Y62-F34-V1-CANDIDATE05-INTAKE-01',cameraTransferContractId:'Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01',structurallyReady:true,candidateSha256:'abc',intakeBinarySha256:'abc',width:1672,height:615,hasAlpha:true,alphaRawSha256:'f8c0c48381120ddb1eef0c225959955820e1f4753a3905ec96d1e87506602d05'});assert.equal(good.reviewGenerationAllowed,true);assert.equal(good.cameraGeometryMatched,false);assert.equal(good.masterApproved,false);assert.equal(good.productionEligible,false);
+ const art=path.join(root,'assets/y62-canonical-candidates/Y62-F34-V1-candidate-05-review-pipeline-v01.png');const man=path.join(root,'assets/y62-canonical-candidates/Y62-F34-V1-candidate-05-review-pipeline-v01.json');assert.ok(fs.existsSync(art)&&fs.existsSync(man));
+ assert.equal(sha(art),'e51044a5d93563ff7c2ded7870e3fbed4b0d3acf31ca20107e3935529ebfe785');assert.equal(sha(man),'7483c3abace2934eb2471808f44be25272b08b5697e0b107d629d3321d07114f');
+ const mj=JSON.parse(fs.readFileSync(man,'utf8'));assert.equal(mj.state,'READY_WAITING_CANDIDATE05');assert.equal(mj.productionEligible,false);
+ assert.equal(brief.briefs.front34.candidate05ReviewPipelineId,pipe.pipelineId);
+ assert.equal(readiness.canonicalMasters.front34.reviewPipeline.pipelineId,pipe.pipelineId);assert.equal(readiness.canonicalMasters.front34.reviewPipeline.candidateReceived,false);assert.equal(readiness.canonicalMasters.front34.reviewPipeline.productionEligible,false);
+ const wf3=board.workstreams.find(x=>x.id==='WF3');assert.equal(wf3.reviewPipelineStage,'F34_CANDIDATE05_REVIEW_PIPELINE_READY');assert.match(wf3.completedPackage,/CANDIDATE05-REVIEW-PIPELINE-01/);assert.match(wf3.nextPackage,/execute Y62-F34-V1-CANDIDATE05-REVIEW-PIPELINE-01/);
+ const customer=fs.readFileSync(path.join(root,'index.html'),'utf8');for(const token of [pipe.pipelineId,'Y62-F34-V1-candidate-05-review-pipeline-v01.png'])assert.equal(customer.includes(token),false);
+ // Executor must refuse Candidate 04 even when presented with a forged structurally-ready intake result.
+ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'y62-c05-review-'));const c04=path.join(root,'assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-v04.png');const c04sha=sha(c04);
+ const ir=path.join(tmp,'intake.json'),im=path.join(tmp,'manifest.json');fs.writeFileSync(ir,JSON.stringify({contractId:'Y62-F34-V1-CANDIDATE05-INTAKE-01',candidateId:'Y62-F34-V1-CANDIDATE-05',structurallyReady:true,binary:{sha256:c04sha}}));fs.writeFileSync(im,JSON.stringify({contractId:'Y62-F34-V1-CANDIDATE05-INTAKE-01',candidateId:'Y62-F34-V1-CANDIDATE-05',cameraTransferContractId:'Y62-F34-V1-CAMERA-TRANSFER-CONTRACT-01'}));
+ const r=cp.spawnSync('python',['tools/prepare-y62-f34-candidate05-review.py',c04,ir,im,'--out-dir',tmp],{cwd:root,encoding:'utf8'});assert.notEqual(r.status,0);assert.match(r.stdout,/Candidate 04 cannot be reused/);
+ console.log('WF3 Y62 F34 Candidate 05 exact-checksum review pipeline Alpha 26: PASS');
+})();

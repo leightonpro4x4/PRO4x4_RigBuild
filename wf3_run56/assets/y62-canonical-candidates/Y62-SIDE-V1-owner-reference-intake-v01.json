@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.26.16",
+  "intakeId": "Y62-SIDE-V1-OWNER-REFERENCE-INTAKE-01",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "side",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "decision": "SOURCE_GAP_CONFIRMED",
+  "candidateCreationAllowed": false,
+  "cameraLockAllowed": false,
+  "productionEligible": false,
+  "ownerReferenceVerification": [
+    {
+      "file": "references/y62-owner/5E67BCCD-7780-4D9E-B83F-418F253D64B3.jpeg",
+      "width": 1536,
+      "height": 864,
+      "sha256": "736d43c3cd14ffce043549b7d9abf5f8e6da0b57e2d451543ce4ba9fa3bfa747"
+    },
+    {
+      "file": "references/y62-owner/IMG_3745.jpeg",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "dea9b9b35332c5d4659e6d40eab38cb0786fce8c2dbe79d7b8ca48aa65e3ab58"
+    },
+    {
+      "file": "references/y62-owner/IMG_3762.jpeg",
+      "width": 1536,
+      "height": 1152,
+      "sha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4"
+    },
+    {
+      "file": "references/y62-owner/IMG_4028.jpeg",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e"
+    },
+    {
+      "file": "references/y62-owner/IMG_4030.jpeg",
+      "width": 1536,
+      "height": 1152,
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc"
+    },
+    {
+      "file": "references/y62-owner/IMG_4508.jpeg",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "a72cb38fc92c95afd86c6eab513904d056ae80b3123ccea64eea9cbd5c01627a"
+    },
+    {
+      "file": "references/y62-owner/IMG_4512.jpeg",
+      "width": 1536,
+      "height": 1152,
+      "sha256": "8fabad7df166ce1ac3e95b5fe38f13572e1d86e2c2d21343917a0842321d5739"
+    },
+    {
+      "file": "references/y62-owner/IMG_4540.jpeg",
+      "width": 1536,
+      "height": 1152,
+      "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2"
+    },
+    {
+      "file": "references/y62-owner/IMG_6320.jpeg",
+      "width": 1080,
+      "height": 1920,
+      "sha256": "5ffb0cb1465237dd8c8b021437037860562720026f74653247585495548af746"
+    }
+  ],
+  "board": "assets/y62-canonical-candidates/Y62-SIDE-V1-owner-reference-intake-v01.png",
+  "boardSha256": "7096474cdb955ad662c92709752a7b216ed2d51690723709a2845f2b85de1705",
+  "sideSource": {
+    "cleanRawSquareOnOwnerSide": false,
+    "derivativeDesignBoardSidePresent": true,
+    "derivativeDesignBoardProductionPixelUse": "prohibited"
+  },
+  "nextDependency": "Clean square-on raw owner side photo or separately rights-cleared measured reconstruction source with explicit provenance."
+}

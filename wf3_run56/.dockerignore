@@ -1,0 +1,6 @@
+runtime/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.git/
+PRO4X4_Rig_Builder_*.zip

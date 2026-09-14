@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "0.26.17",
+  "packageId": "Y62-R34-V1-OWNER-SOURCE-CANDIDATE-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "briefId": "Y62-R34-V1",
+  "viewId": "rear34",
+  "decision": "REVIEWABLE_OWNER_SOURCE_CANDIDATE_READY",
+  "primaryReference": {
+    "id": "OWNER-Y62-REAR34-01",
+    "file": "references/y62-owner/IMG_4540.jpeg",
+    "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+    "width": 1536,
+    "height": 1152,
+    "sourceType": "owner-supplied-raw-photo",
+    "geometryAuthority": "primary-for-r34-source-camera"
+  },
+  "supportingReferences": [
+    {
+      "id": "OWNER-Y62-REAR-01",
+      "file": "references/y62-owner/IMG_4508.jpeg",
+      "sha256": "a72cb38fc92c95afd86c6eab513904d056ae80b3123ccea64eea9cbd5c01627a",
+      "role": "rear fascia / tailgate / bumper symmetry support"
+    },
+    {
+      "id": "OWNER-Y62-F34-01",
+      "file": "references/y62-owner/IMG_4030.jpeg",
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+      "role": "family stance / factory Warrior rolling-stock support"
+    }
+  ],
+  "candidate": {
+    "candidateId": "Y62-R34-V1-CANDIDATE-01",
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-owner-source-v01.jpg",
+    "sha256": "8d61ff21aa2bc0ec61122ab1641a232a6e2f3781c0601da6154593f15844a67b",
+    "mimeType": "image/jpeg",
+    "width": 1672,
+    "height": 615,
+    "hasAlpha": false,
+    "governanceState": "master-draft",
+    "productionEligible": false
+  },
+  "transformation": {
+    "operation": "uniform-scale-and-centre-on-review-canvas",
+    "sourcePhotoScaledTo": {
+      "width": 700,
+      "height": 525
+    },
+    "sourcePhotoPlacement": {
+      "x": 486,
+      "y": 45
+    },
+    "crop": "none",
+    "perspectiveWarp": false,
+    "geometrySynthesis": false,
+    "pixelSource": "OWNER-Y62-REAR34-01 only inside source-photo panel",
+    "note": "Review board preserves source-camera geometry; frame/title/footer pixels are governance UI only and are not vehicle reconstruction pixels."
+  },
+  "cameraViewContract": {
+    "contractId": "Y62-R34-V1-VIEW-CONTRACT-01",
+    "state": "owner-source-review-ready",
+    "cameraLock": false,
+    "targetCanvas": {
+      "width": 1672,
+      "height": 615
+    },
+    "requirements": [
+      "retain owner-source rear-three-quarter azimuth/elevation as direct authenticity anchor",
+      "use rear owner photo to verify tailgate, tail-lamp, bumper and tow-area symmetry",
+      "match accepted F34 family scale/stance before any production lock",
+      "fresh transparent reconstruction must be overlay-reviewed against owner source"
+    ],
+    "prohibitions": [
+      "no perspective warp of the owner photograph into a different rear-three-quarter camera",
+      "no generative completion or invented rear/side geometry",
+      "no use of external exact-vehicle production pixels without separately recorded source-specific rights",
+      "no production promotion from this background-preserving review board"
+    ]
+  },
+  "externalReferencePolicy": {
+    "asset": "assets/y62-raslarr-rear.png",
+    "status": "reference-only-not-used-in-candidate",
+    "productionRightsRecorded": false,
+    "productionPixelUse": "prohibited"
+  },
+  "review": {
+    "state": "ready-for-manual-camera-and-semantic-review",
+    "checks": [
+      {
+        "id": "identity",
+        "state": "evidence-backed"
+      },
+      {
+        "id": "rear34-camera",
+        "state": "manual-review-required"
+      },
+      {
+        "id": "rear-quarter-silhouette",
+        "state": "manual-review-required"
+      },
+      {
+        "id": "factory-warrior-wheels",
+        "state": "evidence-backed"
+      },
+      {
+        "id": "stance",
+        "state": "evidence-backed"
+      },
+      {
+        "id": "tail-lamp-tailgate-bumper-anchors",
+        "state": "manual-review-required"
+      },
+      {
+        "id": "transparent-isolation",
+        "state": "not-started"
+      },
+      {
+        "id": "clean-reconstruction",
+        "state": "not-started"
+      },
+      {
+        "id": "production-rights",
+        "state": "hold"
+      }
+    ],
+    "blockers": [
+      "candidate is a background-preserving geometry board and not a transparent canonical production master",
+      "R34 camera is not production-locked until manual review and accepted F34 family alignment",
+      "clean reconstruction / exact-checksum overlay / production-binary rights are not complete"
+    ]
+  },
+  "productionEligible": false,
+  "nextDependency": "Identified R34 camera/semantic review of Candidate 01 against OWNER-Y62-REAR34-01 and OWNER-Y62-REAR-01; do not create a transparent production master until the camera target is accepted."
+}

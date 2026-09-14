@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "0.26.10",
+  "candidateId": "Y62-F34-V1-CANDIDATE-04",
+  "sourceCandidateId": "Y62-F34-V1-CANDIDATE-03",
+  "contractId": "Y62-F34-V1-NEUTRAL-RECONSTRUCTION-01",
+  "process": "deterministic RGB-only neutralisation inside the checksum-pinned Candidate 03 retouch envelope; alpha and all outside-envelope RGB bytes remain unchanged; no geometry or resampling operation",
+  "referenceIds": [
+    "OWNER-Y62-F34-01",
+    "OWNER-Y62-F34-02",
+    "OWNER-Y62-FRONT-01",
+    "OWNER-Y62-FRONT-02"
+  ],
+  "externalExactVehicleProductionSourcesUsed": false,
+  "canvas": {
+    "width": 1672,
+    "height": 615
+  },
+  "metrics": {
+    "eligiblePixels": 38943,
+    "changedEligiblePixels": 38419,
+    "changedOutsideEnvelopePixels": 0,
+    "changedEligiblePct": 98.6544,
+    "meanAbsChannelDelta": 3.3683,
+    "p95AbsChannelDelta": 9.0,
+    "maxAbsChannelDelta": 23,
+    "highFrequencyRmsBefore": 4.540131,
+    "highFrequencyRmsAfter": 3.733912,
+    "highFrequencyRmsReductionPct": 17.7576,
+    "meanLabChromaBefore": 6.619402,
+    "meanLabChromaAfter": 5.906011,
+    "meanLabChromaReductionPct": 10.7773,
+    "alphaByteIdentical": true,
+    "outsideEnvelopeRgbByteIdentical": true
+  },
+  "rightsState": {
+    "ownerReferences": "internal-canonical-development-approved",
+    "productionBinaryRights": "not-separately-recorded"
+  },
+  "reviewState": "candidate-review-ready",
+  "governanceState": "master-draft",
+  "cameraGeometryMatched": false,
+  "productionEligible": false,
+  "knownHold": "The locked envelope intentionally leaves many photographed reflection/detail edges unchanged; Candidate 04 is a conservative neutralisation attempt, not a clean canonical reconstruction approval.",
+  "sha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+  "previewSha256": "1d4c201c836c4e32ef7c804132868a4d87d5d4f563c9f772db0e5b6e2da37b34",
+  "deltaSha256": "051aad06cd97c7c673b67d3acbcbb05d3f7dac9cfab49ad0c95de277464d84d2",
+  "reviewBoardSha256": "58e3962211ea5e2bcf33946734572a1acf368dc96d04ade2aaff7248abace267",
+  "nextDependency": "Regenerate the locked F34 overlay evidence and reviewer signoff packet against Candidate 04 exact checksum. If reflection/scene residue still fails semantic review, do not widen the contract by inference; route to rights-cleared professional reconstruction or retain as review-only evidence."
+}

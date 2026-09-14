@@ -1,0 +1,73 @@
+(function(root,factory){const value=factory();if(typeof module==='object'&&module.exports)module.exports=value;else root.Y62_F34_CANDIDATE_03_REVIEW=value;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+ return {
+  schemaVersion:'0.26.9',
+  reviewId:'Y62-F34-V1-CANDIDATE-03-REVIEW-001',
+  candidateId:'Y62-F34-V1-CANDIDATE-03',
+  predecessorCandidateId:'Y62-F34-V1-CANDIDATE-02',
+  briefId:'Y62-F34-V1',
+  overlayContractId:'Y62-F34-V1-OVERLAY-01',
+  vehicleId:'nissan-y62-warrior-2025',
+  viewId:'front34',
+  status:'reviewer-signoff-ready',
+  promotionDecision:'held-for-identified-review',
+  sourceReferenceId:'OWNER-Y62-F34-01',
+  sourceFile:'references/y62-owner/IMG_4030.jpeg',
+  candidateFile:'assets/y62-canonical-candidates/Y62-F34-V1-transparent-isolation-v03.png',
+  previewFile:'assets/y62-canonical-candidates/Y62-F34-V1-transparent-isolation-v03-preview.jpg',
+  deltaFile:'assets/y62-canonical-candidates/Y62-F34-V1-candidate-03-mask-delta.png',
+  buildEvidenceFile:'assets/y62-canonical-candidates/Y62-F34-V1-candidate-03-build.json',
+  overlayEvidenceFile:'assets/y62-canonical-candidates/Y62-F34-V1-overlay-evidence-v01.json',
+  overlayEvidenceImage:'assets/y62-canonical-candidates/Y62-F34-V1-overlay-evidence-v01.png',
+  reviewerSignoffPacketFile:'assets/y62-canonical-candidates/Y62-F34-V1-reviewer-signoff-pack-v01.json',
+  reviewerSignoffPacketImage:'assets/y62-canonical-candidates/Y62-F34-V1-reviewer-signoff-pack-v01.png',
+  neutralReconstructionContractFile:'assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-map-v01.json',
+  neutralReconstructionBoard:'assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-map-v01.png',
+  neutralReconstructionEnvelope:'assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-envelope-v01.png',
+  process:'Non-generative edge-cleanup pass over Candidate 02. Existing owner-source RGB pixels are retained byte-for-byte wherever Candidate 03 remains opaque; only alpha segmentation is tightened. No perspective warp, repaint, body reconstruction, wheel replacement, stance change or accessory geometry is introduced.',
+  verification:{
+    canvas:{result:'pass',expected:'1672x615',actual:'1672x615'},
+    alphaChannel:{result:'pass',note:'PNG contains verified transparency and the prior visible roll-door/ground boundary contamination has been removed from the retained mask.'},
+    checksum:{result:'pass',sha256:'67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e'},
+    ownerReference:{result:'pass',referenceId:'OWNER-Y62-F34-01',rights:'owner-project-approved for internal canonical development'},
+    retainedRgbIdentity:{result:'pass',exactMatchFraction:1,note:'Every RGB pixel retained by Candidate 03 is byte-identical to Candidate 02 / the owner-photo-derived source transform.'},
+    alphaCleanup:{result:'pass',removedPixels:12138,removedPercentOfPriorMask:3.8396,note:'Edge-attached source-scene pixels were removed without adding or synthesising foreground pixels.'},
+    sourceSpaceOverlayPrecheck:{
+      result:'pass',
+      method:'SIFT feature alignment from OWNER-Y62-F34-01 to Candidate 03 retained source pixels; affine estimate is verification evidence only and does not replace reviewer approval.',
+      goodMatches:1104,inliers:1082,inlierRatio:0.9800724638,
+      uniformScale:0.7278773324,rotationDeg:-0.0031780436,translationPx:{x:316.8052523,y:-37.7478417},
+      residualPx:{mean:0.1648241431,p95:0.5840778947,max:1.5178861618}
+    },
+    geometryDerivation:{result:'pass',note:'Uniform source transform preserved; Candidate 03 changes alpha coverage only.'},
+    lockedOverlayEvidence:{result:'pass',evidenceId:'Y62-F34-V1-OVERLAY-EVIDENCE-01',artifactSha256:'522f7ac76841a023d0a1b5e3ae9da39d3f4747c59f9015f2e44a0b7c4e9ebaa1',connectedComponents:1,canvasBoundaryContact:false,semanticOverlayApproval:'pending-identified-reviewer',cameraGeometryMatched:false,note:'Deterministic registered-source/candidate overlay bundle is checksum-pinned for reviewer use. It does not self-approve semantic camera geometry.'},
+    reviewerSignoffPacket:{result:'pass',packetId:'Y62-F34-V1-REVIEWER-SIGNOFF-01',artifactSha256:'dbbb5d97749a8144d2ec6a3672f23532b1f5d9177dc585d11ad6d8d00da1eb86',candidateSha256:'67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e',referenceCount:4,reviewerId:null,decision:'pending',cameraGeometryMatched:false,productionEligible:false,note:'Owner-reference comparison, semantic review windows, rights state and immutable reviewer fields are consolidated into one checksum-pinned signoff packet. No reviewer identity or approval is fabricated.'},
+    neutralReconstructionContract:{result:'pass',contractId:'Y62-F34-V1-NEUTRAL-RECONSTRUCTION-01',boardSha256:'996d7d89b709d536bea628feb17d035bbc805c2031535fdbe9ccb17c30976c31',envelopeSha256:'7ebf9e43e9a7676253f1e09307812026b13c1809d685da7954d3b31b65d8282b',eligibleInteriorPixels:38943,eligiblePctOfForeground:12.8107,alphaChangesAllowed:false,geometryWarpAllowed:false,productionEligible:false,note:'Checksum-pinned RGB-only retouch envelope now defines where source-scene reflection neutralisation may be attempted while locking silhouette/detail geometry. This is a reconstruction aid only and does not approve Candidate 03.'}
+  },
+  gateResults:[
+    {id:'identity',result:'pass',note:'Exact owner-supplied MY25 Series 5 Y62 Warrior source.'},
+    {id:'stance',result:'pass',note:'Owner-source Warrior/Premcar stance preserved without lift/drop alteration.'},
+    {id:'wheel-centres',result:'pass',note:'Source-space overlay precheck shows no geometry drift; retained source transform residual P95 is <1 px. Reviewer camera-match signoff is still required.'},
+    {id:'silhouette',result:'pass',note:'Candidate 03 only removes alpha coverage from Candidate 02; retained vehicle source pixels are unchanged.'},
+    {id:'factory-wheels',result:'pass',note:'Factory Warrior wheel/tyre source pixels are preserved.'},
+    {id:'transparency',result:'pass',note:'The obvious source-scene boundary fragments present in Candidate 02 are removed from the retained alpha mask; server transparency verification is required at package test time.'},
+    {id:'edge-quality',result:'hold',note:'Isolation is materially cleaner, but final compositing-edge approval remains an identified-reviewer decision; photographed reflective edges are not retouched in this non-generative pass.'},
+    {id:'no-invented-accessories',result:'pass',note:'No accessory, trim or replacement geometry is introduced.'},
+    {id:'clean-reconstruction',result:'fail',note:'Owner-photo reflections and scene appearance remain on genuine body pixels. This is a clean isolation candidate, not a neutral reconstructed canonical render.'},
+    {id:'rights-for-production-binary',result:'hold',note:'Owner pack authorises internal canonical development; explicit production-binary rights for direct photo-pixel customer use remain unrecorded.'},
+    {id:'locked-overlay-evidence',result:'pass',note:'Checksum-pinned registered-source overlay bundle is ready for reviewer inspection; semantic signoff remains pending.'},
+    {id:'reviewer-signoff-packet',result:'pass',note:'Checksum-pinned packet consolidates the four owner references, candidate checksum, machine evidence, rights hold and null reviewer decision fields without self-approval.'},
+    {id:'neutral-reconstruction-contract',result:'pass',note:'RGB-only retouch envelope is checksum-pinned and locks alpha, silhouette, detail edges, lower geometry and front fascia anchors. It authorises no production promotion and introduces no vehicle pixels.'},
+    {id:'reviewer-master-approval',result:'hold',note:'Candidate remains master-draft and cameraGeometry.matched must remain false until an identified reviewer signs the locked F34 overlay.'}
+  ],
+  blockers:[
+    'identified reviewer compositing-edge and semantic overlay approval is still pending; reviewer packet is prepared but unsigned',
+    'source-scene reflections remain; neutral canonical reconstruction is incomplete, but a checksum-pinned no-geometry-guess retouch contract is now ready for Candidate 04',
+    'direct production-binary rights for photo-derived customer output are not separately recorded',
+    'identified reviewer master-approved state and cameraGeometry.matched are not recorded',
+    'WF5 promotion gate has not run on this candidate'
+  ],
+  acceptedUse:['staff review','geometry/authenticity evidence','locked-view overlay precheck','masking/reconstruction reference','neutral-reconstruction retouch contract'],
+  prohibitedUse:['customer resolver','quote imagery','product-layer compositing','production catalogue','master-approved promotion'],
+  nextDependency:'Create Candidate 04 under Y62-F34-V1-NEUTRAL-RECONSTRUCTION-01 without changing alpha or locked geometry, then rerun locked overlay/reviewer evidence. Separately record production rights and identified reviewer approval before cameraGeometry.matched can become true and the exact approved checksum can move to WF5.'
+ };
+});

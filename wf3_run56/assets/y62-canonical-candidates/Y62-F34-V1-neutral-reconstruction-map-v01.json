@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.26.9",
+  "contractId": "Y62-F34-V1-NEUTRAL-RECONSTRUCTION-01",
+  "candidateId": "Y62-F34-V1-CANDIDATE-03",
+  "candidateSha256": "67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e",
+  "purpose": "Conservative RGB-only neutralisation/retouch envelope for a future F34 reconstruction candidate. This artifact does not modify or approve Candidate 03.",
+  "referenceIds": [
+    "OWNER-Y62-F34-01",
+    "OWNER-Y62-F34-02",
+    "OWNER-Y62-FRONT-01",
+    "OWNER-Y62-FRONT-02"
+  ],
+  "externalExactVehicleProductionSourcesUsed": false,
+  "algorithm": {
+    "alphaBoundaryBufferPx": 18,
+    "detailEdgeDetector": "Canny 55/145",
+    "detailLockDilationPx": 7,
+    "lowerGeometryLockFromCanvasY": 430,
+    "frontFasciaLockRect": [
+      930,
+      190,
+      1260,
+      480
+    ],
+    "rule": "eligible envelope = opaque candidate pixels minus silhouette buffer, dilated image-detail edges and conservative high-risk geometry locks"
+  },
+  "metrics": {
+    "foregroundPixels": 303988,
+    "lockedForegroundPixels": 265045,
+    "eligibleInteriorPixels": 38943,
+    "eligiblePctOfForeground": 12.8107,
+    "envelopeTouchesSilhouetteBuffer": false
+  },
+  "immutableRules": {
+    "alphaChangesAllowed": false,
+    "geometryWarpAllowed": false,
+    "wheelOrTyreReplacementAllowed": false,
+    "accessoryGeometryAllowed": false,
+    "newBodyLinesAllowed": false,
+    "rgbNeutralisationInsideEnvelopeOnly": true,
+    "productionPromotionAllowedByThisContract": false
+  },
+  "rightsState": {
+    "ownerReferences": "internal-canonical-development-approved",
+    "directPhotoDerivedProductionBinaryRights": "not-separately-recorded",
+    "futureRetouchProductionRights": "must-be-recorded-before-promotion"
+  },
+  "artifacts": {
+    "envelopeFile": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-envelope-v01.png",
+    "envelopeSha256": "7ebf9e43e9a7676253f1e09307812026b13c1809d685da7954d3b31b65d8282b",
+    "boardFile": "assets/y62-canonical-candidates/Y62-F34-V1-neutral-reconstruction-map-v01.png",
+    "boardSha256": "996d7d89b709d536bea628feb17d035bbc805c2031535fdbe9ccb17c30976c31"
+  },
+  "productionEligible": false,
+  "nextDependency": "Create a neutralised Candidate 04 under this immutable geometry lock, then rerun overlay/reviewer evidence; separately record production rights and identified reviewer approval before WF5 promotion."
+}

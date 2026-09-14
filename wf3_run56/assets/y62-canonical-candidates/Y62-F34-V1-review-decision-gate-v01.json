@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.26.12",
+  "gateId": "Y62-F34-V1-REVIEW-DECISION-GATE-01",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "front34",
+  "candidateId": "Y62-F34-V1-CANDIDATE-04",
+  "candidateSha256": "bab5e059a6da3a4b7455777c9e23e593ed851fcedb709d44e10bbe54847b6bd1",
+  "reviewPacketId": "Y62-F34-V1-REVIEWER-SIGNOFF-02",
+  "reviewPacketArtifactSha256": "045c9891828df526e8336f13aab7428952d0b687e89aa0c63357482bdf759fab",
+  "overlayEvidenceId": "Y62-F34-V1-OVERLAY-EVIDENCE-02",
+  "overlayEvidenceSha256": "6b53745a23aaaedaf18d6f476381e0ff7192438e99d5dab7b556a7ff4d4afd96",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "primaryAuthenticityEvidence": [
+    "OWNER-Y62-F34-01",
+    "OWNER-Y62-F34-02",
+    "OWNER-Y62-FRONT-01",
+    "OWNER-Y62-FRONT-02"
+  ],
+  "machineLockedChecks": [
+    {
+      "id": "candidate-checksum",
+      "state": "pass",
+      "note": "Decision must target Candidate 04 exact SHA-256."
+    },
+    {
+      "id": "transparency-structure",
+      "state": "pass",
+      "note": "One connected foreground component; no canvas-boundary contact."
+    },
+    {
+      "id": "geometry-registration",
+      "state": "pass",
+      "note": "Candidate 04 exact-checksum overlay machine precheck passed; this is not semantic reviewer approval."
+    },
+    {
+      "id": "external-production-source-use",
+      "state": "pass",
+      "note": "No external exact-vehicle image contributes Candidate 04 production pixels or approval evidence."
+    }
+  ],
+  "requiredSemanticChecks": [
+    "identity",
+    "stance",
+    "factory-wheels",
+    "wheel-centres",
+    "silhouette",
+    "roofline",
+    "bumper-corner",
+    "headlamp-anchor",
+    "edge-quality",
+    "no-invented-accessories",
+    "clean-reconstruction"
+  ],
+  "decisionRules": {
+    "reviewerIdentityRequired": true,
+    "reviewedAtRequired": true,
+    "allowedCheckResults": [
+      "pass",
+      "return"
+    ],
+    "allowedDecisions": [
+      "pass",
+      "return"
+    ],
+    "passRequiresEverySemanticCheck": "pass",
+    "passRequiresCameraGeometryMatched": true,
+    "passDoesNotPromote": true,
+    "note": "A reviewer PASS only closes the semantic/camera/edge/clean-reconstruction review gate. Production-binary rights and WF5 exact-checksum promotion remain separate mandatory gates."
+  },
+  "cleanReconstructionRule": "Reviewer must explicitly PASS or RETURN the remaining photographed reflection/detail residue. RETURN routes to rights-cleared professional reconstruction; the geometry-lock/retouch envelope must not be widened by inference.",
+  "currentState": {
+    "reviewerId": null,
+    "reviewedAt": null,
+    "decision": "pending",
+    "cameraGeometryMatched": false,
+    "productionBinaryRights": "not-separately-recorded",
+    "wf5ExactChecksumGate": "not-run",
+    "masterState": "master-draft",
+    "productionEligible": false
+  },
+  "artifact": {
+    "file": "assets/y62-canonical-candidates/Y62-F34-V1-review-decision-gate-v01.png",
+    "sha256": "97021196e2129573d6b6f1ca26d6421d67642de570c80f5e9938ab410761e763"
+  },
+  "customerExposure": "never",
+  "nextDependency": "Identified reviewer must complete every required semantic check against Candidate 04 exact checksum. A PASS then proceeds to separately recorded production-binary rights and WF5 exact-checksum promotion; a RETURN stays review-only and routes to rights-cleared professional reconstruction."
+}

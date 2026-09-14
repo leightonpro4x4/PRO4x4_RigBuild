@@ -1,0 +1,70 @@
+(function(root,factory){
+  const value=factory();
+  if(typeof module==='object'&&module.exports) module.exports=value;
+  else root.PRO4X4_WORKSTREAMS=value;
+})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  return {
+    version:'0.25.0',
+    alpha:'Merged Alpha 25',
+    principles:{
+      design:'PRO4X4 dark digital-workshop / premium 4WD retail interface',
+      visualMilestone:'Nissan Patrol Y62 Warrior',
+      catalogueMilestone:'Next-Gen Ranger',
+      renderRule:'NO_FAKE_RENDER_LAYERS',
+      promotionModel:'ONE_ALPHA_ONE_BACKBONE'
+    },
+    mergeGate:{
+      branchPolicy:'workstream packages may advance independently but may not create separate product/runtime backbones',
+      requiredChecks:[
+        'package has exactly one owning workstream',
+        'package includes verification evidence',
+        'shared contracts remain backward-compatible or include a migration',
+        'Y62 render requests resolve exact available/missing/blocked state with no fallback',
+        'immutable project/revision/quote lineage remains intact',
+        'WF5 regression gate passes before Alpha promotion'
+      ]
+    },
+    workstreams:[
+      {
+        id:'WF1',name:'Customer Configurator / UX',status:'READY',priority:1,
+        owns:['customer builder shell','category/manufacturer/product browsing','product cards','pre-selection dependency/conflict messaging','build summary','save/share/quote customer flow'],
+        excludes:['supplier research','production render asset approval','backend expansion not required by customer flow'],
+        nextPackage:'Finish openable category → manufacturer/vendor → product menus and surface compatibility/dependency explanations before ADD.',
+        dependencies:['existing merged Ranger/Y62 project contract'],
+        doneWhen:['customer can browse gear without flat-list overload','blocked/required/conflicting selections are explained before selection','save/share/quote regression remains green']
+      },
+      {
+        id:'WF2',name:'Catalogue + Fitment Data',status:'READY',priority:2,
+        owns:['supplier/product records','SKU/RRP/install/weight normalization','vehicle fitment','dependencies/conflicts','required fitting parts','staff review gates'],
+        excludes:['customer layout/presentation','render compositing','quote UI'],
+        nextPackage:'Expand the verified Next-Gen Ranger catalogue/fitment dataset beyond the recovered 20 products, then prepare equivalent Y62 mappings.',
+        dependencies:['source-backed supplier data'],
+        doneWhen:['records are source-backed and deduplicated','vehicle applicability is explicit','unknown engineering/fitment states remain gated rather than inferred']
+      },
+      {
+        id:'WF3',name:'Y62 Visual Production',status:'BLOCKED_EXTERNAL_ASSET',priority:3,
+        owns:['Y62 camera/view contracts','render readiness matrix','asset provenance','candidate validation','production promotion','render delivery health'],
+        excludes:['synthetic production artwork','reference-board promotion','catalogue/UX blocking'],
+        nextPackage:'Ingest and validate genuine rights-cleared Black Obsidian Y62 Warrior Y62-F34-V1 base, then factory Warrior wheel/tyre layer.',
+        dependencies:['genuine rights-cleared 1672×615 transparent Y62-F34-V1 source asset'],
+        doneWhen:['exact source identity and rights are recorded','camera/profile contract passes','approved binary checksum is pinned','resolver returns available only for exact approved state']
+      },
+      {
+        id:'WF4',name:'Platform / Staff Tools',status:'READY',priority:4,
+        owns:['staff catalogue/fitment editor','review/approval workflow','render readiness controls','quote queue/project inspection','audit/production controls'],
+        excludes:['speculative backend infrastructure','supplier content creation','customer visual design'],
+        nextPackage:'Turn the catalogue/fitment staff workflow into an editable review surface using the existing governed contracts.',
+        dependencies:['catalogue store and immutable project contracts'],
+        doneWhen:['staff can inspect/edit governed fitment data','changes are auditable','customer-facing contracts consume approved state only']
+      },
+      {
+        id:'WF5',name:'QA / Integration Gate',status:'GATE',priority:5,
+        owns:['regression testing','integration verification','promotion decision','locked-package register'],
+        excludes:['feature implementation','catalogue research','visual asset creation'],
+        nextPackage:'Gate each WF1–WF4 package independently, then run the full Alpha chain before promotion.',
+        dependencies:['candidate packages from WF1–WF4'],
+        doneWhen:['package-specific acceptance tests pass','full regression chain passes','no fake render path exists','verified packages are locked unless a concrete regression is found']
+      }
+    ]
+  };
+});

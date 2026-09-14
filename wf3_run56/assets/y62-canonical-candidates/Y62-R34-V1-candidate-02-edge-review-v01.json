@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "0.26.25",
+  "packageId": "Y62-R34-V1-CANDIDATE02-EDGE-REVIEW-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "rear34",
+  "briefId": "Y62-R34-V1",
+  "candidate": {
+    "candidateId": "Y62-R34-V1-CANDIDATE-02",
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v02.png",
+    "sha256": "b9258e98454d49b11197e5c04d89796eb3ad35dd064892f01f21490f2147b346",
+    "width": 1672,
+    "height": 615,
+    "hasAlpha": true,
+    "governanceState": "master-draft",
+    "cameraMatched": false,
+    "productionEligible": false
+  },
+  "reviewer": {
+    "reviewerId": "OPENAI-WF3-VISUAL-QA-02",
+    "reviewerClass": "model-vision-edge-qa",
+    "authority": "edge-review-return-only",
+    "identified": true,
+    "masterApprovalAuthority": false,
+    "productionPassAuthority": false
+  },
+  "reviewedAt": "2026-09-14T16:05:02+09:30",
+  "ownerEvidence": [
+    {
+      "id": "OWNER-Y62-REAR34-01",
+      "file": "references/y62-owner/IMG_4540.jpeg",
+      "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+      "role": "primary camera/authenticity evidence"
+    },
+    {
+      "id": "OWNER-Y62-REAR-01",
+      "file": "references/y62-owner/IMG_4508.jpeg",
+      "sha256": "a72cb38fc92c95afd86c6eab513904d056ae80b3123ccea64eea9cbd5c01627a",
+      "role": "rear fascia/tailgate/bumper support"
+    },
+    {
+      "id": "OWNER-Y62-F34-01",
+      "file": "references/y62-owner/IMG_4030.jpeg",
+      "sha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+      "role": "Warrior identity/stance/factory rolling-stock family support"
+    }
+  ],
+  "alphaEvidence": {
+    "bbox": [
+      567,
+      118,
+      1025,
+      462
+    ],
+    "uniqueAlphaValues": [
+      0,
+      255
+    ],
+    "opaquePixels": 119584,
+    "semiTransparentPixels": 0,
+    "transparentPixels": 908696,
+    "finding": "Candidate 02 uses a fully binary alpha edge (0/255 only). At the current source scale, the resulting hard contour is visibly stair-stepped/clipped in multiple high-curvature regions and is not production-clean."
+  },
+  "checks": [
+    {
+      "id": "exact-checksum",
+      "result": "pass",
+      "basis": "candidate binary matches the checksum under review"
+    },
+    {
+      "id": "owner-camera-lineage",
+      "result": "pass",
+      "basis": "Candidate 02 derives from accepted owner-source R34 camera with uniform resize/fixed placement and no perspective warp"
+    },
+    {
+      "id": "no-guessed-geometry",
+      "result": "pass",
+      "basis": "review is observational only and authorises no repaint, generative completion, warp or replacement geometry"
+    },
+    {
+      "id": "roof-spoiler-edge",
+      "result": "return",
+      "basis": "visible hard stair-step/clipped contour on roof/spoiler edge at candidate scale"
+    },
+    {
+      "id": "mirror-front-side-boundary",
+      "result": "return",
+      "basis": "visible source-scene foliage/background residue remains adjacent to the near-side mirror/front-side boundary"
+    },
+    {
+      "id": "lower-bumper-tow-edge",
+      "result": "return",
+      "basis": "hard binary contour and clipped soft edge/detail remain around lower bumper/tow region"
+    },
+    {
+      "id": "clean-neutral-reconstruction",
+      "result": "fail",
+      "basis": "photographed environment reflections remain in body/glass RGB; edge cleanup alone will not satisfy neutral reconstruction"
+    },
+    {
+      "id": "f34-family-alignment",
+      "result": "hold",
+      "basis": "accepted F34 canonical master remains pending Candidate 05"
+    },
+    {
+      "id": "production-binary-rights",
+      "result": "hold",
+      "basis": "not separately recorded"
+    },
+    {
+      "id": "master-wf5",
+      "result": "hold",
+      "basis": "separate master approval and WF5 exact-checksum promotion gate not run"
+    }
+  ],
+  "decision": "return-edge-cleanup-before-neutral-reconstruction",
+  "edgeQuality": "return",
+  "reconstructionAllowed": true,
+  "cameraReviewAccepted": true,
+  "cameraGeometryMatched": false,
+  "productionEligible": false,
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-02-edge-review-v01.png",
+    "sha256": "f5a2cb86e74645bc75a8155ade94d16d988cdd5ca5349ef7af9a0e6d18296ae6"
+  },
+  "externalExactVehiclePolicy": "reference-only unless separately rights-recorded; no external exact-vehicle production pixels were introduced by Candidate 02 or this review",
+  "nextDependency": "F34 Candidate 05 remains first. For R34, create a checksum-new alpha-edge-cleaned Candidate 03 from the owner-source pixels only (no RGB repaint, perspective warp or synthetic geometry), then perform fresh exact-checksum edge review before any clean neutral/professional reconstruction. Production lock remains blocked behind accepted F34-family alignment, production-binary rights, master approval and WF5."
+}

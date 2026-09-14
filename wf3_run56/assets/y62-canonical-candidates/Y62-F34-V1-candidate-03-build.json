@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.26.6",
+  "candidateId": "Y62-F34-V1-CANDIDATE-03",
+  "sourceCandidateId": "Y62-F34-V1-CANDIDATE-02",
+  "process": "non-generative edge cleanup: GrabCut re-segmentation + one owner-reference-verified background exclusion polygon; RGB source pixels unchanged",
+  "canvas": {
+    "width": 1672,
+    "height": 615
+  },
+  "alpha": {
+    "oldNonZeroPixels": 316126,
+    "newNonZeroPixels": 303988,
+    "removedPixels": 12138,
+    "removedPercentOfPriorMask": 3.8396,
+    "bbox": [
+      463,
+      22,
+      1225,
+      596
+    ],
+    "min": 0,
+    "max": 255,
+    "uniqueLevels": 199
+  },
+  "sha256": "67fae4a0bec8ab714a852a8841e8ca5610cdb32fbf58506900e3fd1ec28bb64e",
+  "previewSha256": "266fea2679af35648d27e2c9271c4bea0d4a6638d18f27f179276a5a8dc61c46",
+  "deltaSha256": "a87adf8c3f2c69651194c85f9cbc7eda05c5a47597709bdd5fc8f70525920b2b"
+}

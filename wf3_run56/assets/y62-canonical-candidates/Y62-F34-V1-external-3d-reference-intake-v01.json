@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "0.26.19",
+  "intakeId": "Y62-F34-V1-EXTERNAL-3D-REFERENCE-INTAKE-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "vehicle": "2025 Series 5 Nissan Patrol Warrior by Premcar",
+  "viewPriority": "front34-first-then-side-rear34",
+  "source": {
+    "sourceType": "user-supplied-external-3d-pointer",
+    "provider": "Sketchfab",
+    "url": "https://skfb.ly/onCVs",
+    "suppliedBy": "owner/user",
+    "exactModelUrl": null,
+    "modelId": null,
+    "assetTitle": null,
+    "creator": null,
+    "downloadableFileReceived": false
+  },
+  "resolution": {
+    "state": "unresolved-origin-403",
+    "checkedAt": "2026-09-14T09:58:22+09:30",
+    "httpObservation": "Short-link fetch returned HTTP 403 in the available web runtime; redirect target could not be authenticated from the link alone.",
+    "sameAssetSearchMatchFound": false,
+    "guardrail": "Do not substitute another publicly indexed Y62 Sketchfab model for this owner-supplied pointer unless the exact target is proven."
+  },
+  "authenticityAuthority": {
+    "primary": "owner-supplied 2025 Series 5 Y62 Warrior reference pack",
+    "external3dAuthority": "none-until-resolved-and-compared",
+    "allowedCurrentUse": "reference-pointer-only",
+    "productionGeometryAuthority": false,
+    "mayOverrideOwnerEvidence": false
+  },
+  "rights": {
+    "licenseState": "unknown-not-recorded",
+    "rightsHolder": null,
+    "commercialDerivativeRightsRecorded": false,
+    "productionMeshUseAllowed": false,
+    "productionPixelUseAllowed": false,
+    "productionBinaryRightsReady": false,
+    "rule": "External exact-vehicle imagery or mesh remains reference-only unless source-specific rights are separately recorded."
+  },
+  "potentialWorkflowRole": {
+    "state": "pending-provenance-and-authenticity",
+    "couldAssist": [
+      "F34 clean reconstruction",
+      "SIDE measured geometry source gap",
+      "R34 family camera consistency"
+    ],
+    "cannotDoYet": [
+      "replace Candidate 05 intake requirements",
+      "authorise camera geometry",
+      "supply production pixels/mesh",
+      "unlock SIDE candidate creation",
+      "promote any canonical master"
+    ]
+  },
+  "requiredBeforeUse": [
+    "resolve the short link to an exact Sketchfab model URL / model ID",
+    "record model title, creator/rightsholder and source-specific licence terms",
+    "obtain the actual mesh/file or rights-cleared production access if production use is intended",
+    "compare body generation, Series 5 fascia, glasshouse, wheelbase, wheel arches, factory Warrior wheels/tyres and Premcar stance against the owner reference pack",
+    "record whether the mesh is stock Patrol, pre-Series-5 Patrol, Nismo or another non-Warrior derivative",
+    "if accepted only as measured/reference geometry, keep external source pixels/materials out of production binaries unless separately licensed",
+    "regenerate exact-checksum F34/SIDE/R34 evidence from the resulting project-owned/licensed output before promotion"
+  ],
+  "decision": {
+    "state": "REFERENCE_ONLY_UNRESOLVED",
+    "candidateGenerated": false,
+    "cameraLockChanged": false,
+    "productionPromotionAllowed": false,
+    "productionEligible": false
+  },
+  "nextDependency": "Resolve https://skfb.ly/onCVs to the exact model identity and record its licence/rights. If rights and Series 5 Warrior geometry are verified, ingest the mesh as a separately governed reconstruction source; otherwise keep the existing Candidate 05 professional reconstruction path unchanged."
+}
