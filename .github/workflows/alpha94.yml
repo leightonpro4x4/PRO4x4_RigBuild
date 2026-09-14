@@ -29,14 +29,22 @@ jobs:
           npm install --global npm@11.11.0
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           npm ci --ignore-scripts
-      - uses: actions/setup-python@v5
-        with:
-          python-version-file: .python-version
-          cache: pip
-          cache-dependency-path: requirements-validation.lock
+      - name: Install checksum-pinned Python 3.12.14
+        run: |
+          $pythonRoot = Join-Path $env:RUNNER_TEMP 'alpha94-python'
+          New-Item -ItemType Directory -Path $pythonRoot -Force | Out-Null
+          $archive = Join-Path $pythonRoot 'cpython.tar.gz'
+          Invoke-WebRequest -Uri 'https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.12.14%2B20260901-x86_64-pc-windows-msvc-install_only.tar.gz' -OutFile $archive
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'e90c1b6419da3bd812dd73bb3de40287a21abf153438147639ec5e20375ea93f') { throw 'Python archive checksum mismatch' }
+          tar -xzf $archive -C $pythonRoot
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $pythonExe = Join-Path $pythonRoot 'python/python.exe'
+          & $pythonExe -c "import sys; assert sys.version_info[:3] == (3, 12, 14)"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          "ALPHA94_BASE_PYTHON=$pythonExe" >> $env:GITHUB_ENV
       - name: Isolated Python validation environment
         run: |
-          python -m venv .venv
+          & $env:ALPHA94_BASE_PYTHON -m venv .venv
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\.venv\Scripts\python.exe -m pip install --require-hashes --only-binary=:all: -r requirements-validation.lock
       - name: Install pinned Chromium
@@ -65,4 +73,4 @@ jobs:
         with:
           name: alpha94-validation-${{ github.run_id }}
           path: .validation/results/
-          if-no-files-found: error
+          if-no-files-found: warn

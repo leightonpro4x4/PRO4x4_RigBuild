@@ -33,7 +33,7 @@
   "rootRunner": "PASS: all nine groups, ten entrypoints; normal Windows PowerShell",
   "browser": "PASS: three managed Playwright Chromium desktop journeys",
   "python": "PASS: 13 tests, zero failures/errors, declared .venv with pinned dependencies",
-  "githubActions": "PENDING: hosted run requires workflow push",
+  "githubActions": "Run 34897963413 failed at Python provisioning before tests; checksum-pinned standalone Python correction awaiting push/rerun",
   "glbHashes": "10 live and all 24 preserved hash-identical",
   "archivedFiles": 2407,
   "catalogue": {
