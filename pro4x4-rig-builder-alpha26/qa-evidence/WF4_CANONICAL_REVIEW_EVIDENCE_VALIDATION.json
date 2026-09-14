@@ -1,0 +1,37 @@
+{
+  "packageVersion": "0.26.11",
+  "javascript": {
+    "count": 100,
+    "failures": []
+  },
+  "json": {
+    "count": 12,
+    "failures": []
+  },
+  "htmlDependencies": {
+    "htmlFiles": 16,
+    "localReferences": 260,
+    "missing": []
+  },
+  "baselineSafety": {
+    "assetsTreeIdentical": true,
+    "referencesTreeIdentical": true,
+    "customerRuntimeFilesUnchanged": {
+      "index.html": true,
+      "app.js": true,
+      "merged-app.js": true,
+      "merged.css": true,
+      "data-y62.js": true,
+      "data-ranger.js": true,
+      "render-manifest-y62.js": true
+    }
+  },
+  "targetedGate": "PASS",
+  "fullAlphaRegression": "PASS",
+  "serverCheck": "PASS",
+  "wf5PromotionLifecycle": "PASS",
+  "wf5Acceptance": {
+    "status": "RED",
+    "onlyKnownFailure": "WF1-BOM-ANYOF"
+  }
+}

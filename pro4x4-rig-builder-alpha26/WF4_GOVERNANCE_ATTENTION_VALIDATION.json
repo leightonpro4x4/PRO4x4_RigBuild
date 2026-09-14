@@ -1,0 +1,98 @@
+{
+  "package": "A26-WF4-21",
+  "push": 49,
+  "wf4Push": 21,
+  "schemaVersion": "0.26.21",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "delivery": "Persisted Governance Attention Queue / Evidence Drift Inbox",
+  "scope": {
+    "singlePackageOnly": true,
+    "sharedRuntimeBackbonePreserved": true,
+    "parallelRegistryCreated": false,
+    "productionAuthority": "none \u2014 inspection-and-routing-only",
+    "backendChangesLimitedToActiveLane": true
+  },
+  "persistedGovernance": {
+    "canonicalMasters": 3,
+    "currentAttentionSnapshots": 3,
+    "openBlockers": 10,
+    "openStaffActions": 6,
+    "productionEligibleY62Visuals": 0,
+    "f34": {
+      "assetId": "Y62-F34-V1-MASTER",
+      "attentionSha256": "38837f3283d4ee8b67501b98d0491addfb79d4650e4efe5e6e6d80450034d547",
+      "blockers": 3,
+      "actions": 2,
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "handoffState": "blocked-upstream"
+    },
+    "side": {
+      "assetId": "Y62-SIDE-V1-MASTER",
+      "attentionSha256": "65c4c1148411b28006c9bfc5048b25ebc65a07896c11cdac595721acc1f623ce",
+      "requiredSourceGapRetained": true,
+      "handoffState": "awaiting-wf3-candidate"
+    },
+    "rear34": {
+      "assetId": "Y62-R34-V1-MASTER",
+      "attentionSha256": "951d6ed04132c3f8a2505e1b3ffae4ff3a15b2d2a74eaa733af1d9b06b1b377d",
+      "handoffState": "awaiting-wf3-candidate"
+    },
+    "referencePack": {
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342"
+    }
+  },
+  "adversarialVerification": {
+    "genericAttentionTamperBlocked": true,
+    "writeBoundaryProtectsGovernanceAttention": true,
+    "referenceChecksumDriftStalesSnapshot": true,
+    "syncRefreshesStaleSnapshot": true,
+    "referencePackProblemSurfacedAfterDrift": true,
+    "attentionRefreshDoesNotPromoteVisual": true,
+    "attentionRefreshAuditVisible": true,
+    "auditChainRetained": true
+  },
+  "staffVisibility": {
+    "productionReadinessQueue": true,
+    "renderAssetsSnapshotPanel": true,
+    "currentStaleInvalidMissingStates": true,
+    "referencePackCandidateReviewerReadinessSourceGapConsolidated": true,
+    "staffOnlyStylesheet": "governance-attention.css"
+  },
+  "verification": {
+    "targetedGovernanceAttentionRegression": "pass",
+    "completeAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5GovernedPromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": 1,
+      "onlyFailure": "WF1-BOM-ANYOF",
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "javascriptFiles": 122,
+      "javascriptFailures": 0,
+      "jsonFilesAtStaticRun": 42,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "localHtmlReferences": 289,
+      "missingHtmlReferences": 0
+    },
+    "visualIntegrity": {
+      "assetsAndReferencesBaselineFiles": 16,
+      "assetsAndReferencesByteIdentical": true,
+      "customerCriticalFilesChecked": 11,
+      "customerCriticalFilesByteIdentical": true,
+      "visualPromotions": 0
+    }
+  },
+  "nextDependency": {
+    "id": "A26-WF4-14B",
+    "owner": "WF3",
+    "description": "First genuinely clean Y62-F34-V1 canonical candidate with clean reconstruction/isolation, locked overlay and camera acceptance, production-rights provenance and identified reviewer evidence.",
+    "unlocks": "attention item resolution -> reviewer claim -> eight-check canonical review -> immutable production -> exact layer/composite eligibility -> sealed project/quote inspection"
+  },
+  "status": "pass-with-known-external-wf1-acceptance-failure"
+}

@@ -1,0 +1,14 @@
+{
+  "package": "A26-WF4-26",
+  "visualTrees": {
+    "files": 16,
+    "unchanged": true,
+    "changed": []
+  },
+  "customerCritical": {
+    "files": 11,
+    "unchanged": 11,
+    "allIdentical": true,
+    "changed": []
+  }
+}

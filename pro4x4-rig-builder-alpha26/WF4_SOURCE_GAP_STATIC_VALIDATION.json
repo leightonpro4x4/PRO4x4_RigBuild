@@ -1,0 +1,11 @@
+{
+  "package": "A26-WF4-28",
+  "javascriptFiles": 138,
+  "javascriptSyntaxFailures": 0,
+  "jsonFiles": 62,
+  "jsonParseFailures": 0,
+  "htmlFiles": 16,
+  "htmlLocalReferences": 303,
+  "htmlMissingReferences": 0,
+  "note": "Counts describe the final package after this static report and validation manifest are included."
+}

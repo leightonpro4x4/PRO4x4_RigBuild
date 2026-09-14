@@ -1,0 +1,56 @@
+## wf4-lineage existing
+{
+  "gate": "wf4-project-quote-lineage-alpha26",
+  "immutableProjectRevision": true,
+  "persistedLineageSeal": true,
+  "historicalShareBinding": true,
+  "frozenMissingStateNoFallback": true,
+  "approvedVersionEvidence": true,
+  "referenceOutputRejected": true,
+  "status": "pass"
+}
+(node:1762) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1769) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T02:38:36.811Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0MVTVN-9CW6B1","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":200,"durationMs":8,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:36.835Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU0MVTWI-1BF83X","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:36.836Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0MVTWI-1BF83X","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-project-quote-lineage-endpoint-alpha26",
+  "staffEndpoint": true,
+  "roleGuard": true,
+  "persistedSeal": true,
+  "frozenRenderState": true,
+  "status": "pass"
+}
+## wf4 quote visual seal new
+{
+  "gate": "wf4-quote-visual-governance-seal-alpha26",
+  "persistedSeal": true,
+  "canonicalMasterBound": true,
+  "referencePackVisible": true,
+  "ownerReferencesSnapshotted": 3,
+  "renderImmutable": true,
+  "driftVisible": true,
+  "sealedEvidenceTamperDetected": true,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1776) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1783) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T02:38:37.891Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0MVUPL-NFM7L3","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP/lineage","status":200,"durationMs":10,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:37.928Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU0MVUQU-DBNZJ1","method":"PATCH","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP","status":409,"code":"quote_visual_lineage_immutable","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:37.929Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0MVUQU-DBNZJ1","method":"PATCH","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP","status":409,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:37.934Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU0MVUR2-1R5S44","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP/lineage","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T02:38:37.935Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0MVUR2-1R5S44","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP/lineage","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-quote-visual-governance-seal-endpoint-alpha26",
+  "staffInspection": true,
+  "canonicalPackEvidence": true,
+  "renderTamper409": true,
+  "roleGuard": true,
+  "status": "pass"
+}

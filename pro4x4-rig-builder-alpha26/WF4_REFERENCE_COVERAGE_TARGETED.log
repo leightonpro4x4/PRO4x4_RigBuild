@@ -1,0 +1,23 @@
+{
+  "gate": "wf4-canonical-reference-coverage-registry-alpha26",
+  "schemaVersion": "0.26.27",
+  "canonicalViews": 3,
+  "currentAtBootstrap": 3,
+  "completeViews": 2,
+  "sideSourceGapBlocked": true,
+  "exactReferenceChecksumsBound": true,
+  "packMembershipBound": true,
+  "provenanceAttestationBound": true,
+  "referenceReviewDecisionBound": true,
+  "systemManagedWriteProtected": true,
+  "referenceDriftStalesCoverage": true,
+  "resyncSurfacesEvidenceDrift": true,
+  "readinessVisibility": true,
+  "masterSetVisibility": true,
+  "sharedBrowserServerBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:2123) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

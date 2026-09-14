@@ -1,0 +1,39 @@
+{
+  "gate": "wf4-canonical-source-gap-resolution-alpha26",
+  "schemaVersion": "0.26.28",
+  "requiredGapViews": 1,
+  "currentOpenAtBootstrap": 1,
+  "dedicatedDecisionAuthority": true,
+  "genericApprovalRemoved": true,
+  "writeBoundaryProtected": true,
+  "reviewedReconstructionFailsClosed": true,
+  "explicitReturnPersisted": true,
+  "requiredReferenceDriftStalesDecision": true,
+  "syncDoesNotRewriteExplicitDecision": true,
+  "auditVisible": true,
+  "staffRegistryVisible": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:3526) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3533) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T10:43:52.835Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU147VI7-93E5TQ","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":200,"durationMs":580,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.856Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU147VYR-H4MOQL","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":422,"code":"canonical_source_gap_resolution_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.857Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU147VYR-H4MOQL","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":422,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.862Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU147VZ2-NS4FXK","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.862Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU147VZ2-NS4FXK","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.870Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU147VZ6-NCF7YN","method":"PUT","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER","status":409,"code":"governance_metadata_protected","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T10:43:52.871Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU147VZ6-NCF7YN","method":"PUT","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER","status":409,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-source-gap-resolution-endpoint-alpha26",
+  "dedicatedEndpoint": true,
+  "returnDecision": true,
+  "approvalFailsClosed": true,
+  "salesMutationDenied": true,
+  "genericTamperHttp409": true,
+  "visualPromotion": false,
+  "status": "pass"
+}

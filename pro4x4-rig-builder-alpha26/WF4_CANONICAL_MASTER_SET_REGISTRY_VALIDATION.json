@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "0.26.24",
+  "package": "A26-WF4-24",
+  "push": 52,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageName": "Persisted Canonical Master-Set Registry / Vehicle Visual Truth Index",
+  "scope": "WF4 Platform / Staff Tools only",
+  "sharedBackbonePreserved": true,
+  "parallelRuntimeIntroduced": false,
+  "realVisualPromotion": false,
+  "governedState": {
+    "ownerReferences": 9,
+    "currentReferenceAttestations": 9,
+    "canonicalMasters": 3,
+    "productionEligibleVisuals": 0,
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "canonicalMasterSet": {
+      "views": 3,
+      "candidates": 1,
+      "reviewAssigned": 0,
+      "approvedDecisions": 0,
+      "productionSealed": 0,
+      "productionEligible": 0,
+      "openSetProblems": 1,
+      "state": "current",
+      "registryId": "nissan-y62-warrior-2025-CANONICAL-MASTER-SET-V1",
+      "registrySha256": "227716d663641484da80661508fe32840984de4acbd93f52095dc9ffdf2a7d91",
+      "basisSha256": "dadde979670f171d0d02cbaed1d91510b7e927809958cafc3cc94c9ec6563e97",
+      "problems": [
+        "Y62-SIDE-V1: required source geometry gap retained"
+      ]
+    },
+    "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+    "f34Intake": "blocked-upstream",
+    "sideIntake": "awaiting-wf3-candidate",
+    "rearIntake": "awaiting-wf3-candidate",
+    "governanceAttention": {
+      "current": 3,
+      "openBlockers": 10,
+      "openActions": 6
+    }
+  },
+  "verification": {
+    "targetedCanonicalMasterSet": "pass",
+    "completeAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "canonicalProductionSealRegression": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": [
+        "WF1-BOM-ANYOF"
+      ],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "javascriptFiles": 128,
+      "javascriptSyntaxFailures": 0,
+      "jsonFiles": 50,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 295,
+      "htmlMissingReferences": 0
+    },
+    "byteIdentity": {
+      "assetsAndReferencesFiles": 16,
+      "assetsAndReferencesChanged": 0,
+      "customerCriticalFiles": 11,
+      "customerCriticalChanged": 0
+    }
+  },
+  "registryContract": {
+    "schemaVersion": "0.26.24",
+    "purpose": "CANONICAL_MASTER_SET_REGISTRY",
+    "authority": "inspection-index-only",
+    "productionEligible": false,
+    "persistedOnCanonicalMasters": 3,
+    "referenceDriftStalesRegistry": true,
+    "genericEditProtected": true,
+    "staffSurfaces": [
+      "Render Assets",
+      "Production Readiness"
+    ]
+  },
+  "nextDependency": "A26-WF4-14B / WF3 \u2014 first genuinely clean Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay + camera acceptance, production-binary rights provenance and identified reviewer evidence."
+}

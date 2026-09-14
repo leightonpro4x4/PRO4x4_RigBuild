@@ -1,0 +1,32 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.15 test:wf5-acceptance
+> node tests/wf5-alpha26-acceptance-gate.js
+
+{
+  "gate": "wf5-alpha26-acceptance-gate",
+  "results": [
+    {
+      "id": "WF1-BOM-ANYOF",
+      "owner": "WF1",
+      "description": "Unsatisfied any-of fitment dependencies must survive into saved project/quote gates.",
+      "status": "fail",
+      "error": "Saved BOM has an unsatisfied anyOfRequiredParts dependency but no project/quote gate; it can be queued as compatible after the supporting bar is removed."
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-REVIEW",
+      "owner": "WF4",
+      "description": "Every production path must require immutable reviewer identity + review timestamp, including direct production upsert.",
+      "status": "pass"
+    },
+    {
+      "id": "WF5-CUSTOMER-DRAFT-ISOLATION",
+      "owner": "WF5",
+      "description": "Customer entrypoint must not load reference-only/master-draft production candidates or fallback imagery.",
+      "status": "pass"
+    }
+  ],
+  "failed": 1,
+  "status": "fail"
+}
+(node:1432) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

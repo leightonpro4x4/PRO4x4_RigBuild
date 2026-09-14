@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.26.25",
+  "ownerReferences": 9,
+  "currentReferenceAttestations": 9,
+  "currentApprovedReferenceReviewDecisions": 9,
+  "legacyMigratedOwnerApprovals": 9,
+  "governedCanonicalMasters": 3,
+  "referencePackStatus": "complete",
+  "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+  "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+  "productionEligibleVisuals": 0,
+  "productionReadySlots": 0,
+  "canonicalMasterSetState": "current",
+  "canonicalMasterSetViews": 3,
+  "canonicalMasterSetOpenProblems": 1,
+  "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+  "f34Intake": "blocked-upstream",
+  "sideIntake": "awaiting-wf3-candidate",
+  "rearIntake": "awaiting-wf3-candidate"
+}
+(node:8199) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

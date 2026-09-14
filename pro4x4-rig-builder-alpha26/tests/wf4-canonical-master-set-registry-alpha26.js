@@ -1,0 +1,42 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {RigDatabase}=require('../server/database');
+const setRegistry=require('../canonical-master-set-registry.js');
+const boundary=require('../visual-governance-write-boundary.js');
+const root=path.join(__dirname,'..');
+const vehicleId='nissan-y62-warrior-2025';
+const actor={actorId:'wf4-master-set-registry',displayName:'WF4 Master Set Registry',role:'admin'};
+const clone=v=>JSON.parse(JSON.stringify(v));
+const writeAsset=(db,a)=>db.db.prepare('UPDATE render_assets SET payload_json=? WHERE asset_id=?').run(JSON.stringify(a),a.assetId);
+const db=new RigDatabase(':memory:');
+try{
+  const sync=db.syncVisualGovernanceRegistry({vehicleId},{actor});
+  assert.equal(sync.summary.productionEligible,0,'governance sync must not promote any visual');
+  assert.equal(sync.summary.canonicalMasterSet.state,'current');
+  assert.equal(sync.summary.canonicalMasterSet.views,3);
+  assert.equal(sync.summary.canonicalMasterSet.candidates,1);
+  assert.equal(sync.summary.canonicalMasterSet.reviewAssigned,0);
+  assert.equal(sync.summary.canonicalMasterSet.approvedDecisions,0);
+  assert.equal(sync.summary.canonicalMasterSet.productionSealed,0);
+  assert.equal(sync.summary.canonicalMasterSet.productionEligible,0);
+  assert.equal(sync.setRegistryUpdatedCount,3);
+  const assets=db.listRenderAssets({vehicleId}),refs=assets.filter(x=>x.assetClass==='reference'),masters=assets.filter(x=>setRegistry.canonical(x));
+  assert.equal(masters.length,3);
+  const shas=new Set(masters.map(x=>x.canonicalMasterSetRegistry?.registrySha256));assert.equal(shas.size,1,'all canonical masters must expose the same vehicle-level truth index');
+  const snapshot=masters[0].canonicalMasterSetRegistry;assert.match(snapshot.registrySha256,/^[a-f0-9]{64}$/);assert.match(snapshot.basisSha256,/^[a-f0-9]{64}$/);assert.equal(snapshot.authority,'inspection-index-only');assert.equal(snapshot.productionEligible,false);assert.equal(snapshot.policy,'REFERENCE_BACKED_APPROVED_VISUALS_ONLY');
+  assert.equal(snapshot.basis.referencePack.packIds.length,1);assert.equal(snapshot.basis.referencePack.packIds[0],'Y62-OWNER-REFERENCE-PACK-V1');assert.equal(snapshot.basis.referencePack.manifestSha256s.length,1);assert.equal(snapshot.basis.masters.length,3);
+  const f34=snapshot.basis.masters.find(x=>x.viewId==='front34'),side=snapshot.basis.masters.find(x=>x.viewId==='side'),r34=snapshot.basis.masters.find(x=>x.viewId==='rear34');assert(f34&&side&&r34);assert.equal(f34.candidateHandoff.candidateId,'Y62-F34-V1-CANDIDATE-02');assert.equal(side.candidateHandoff.intakeState,'awaiting-wf3-candidate');assert.equal(r34.candidateHandoff.intakeState,'awaiting-wf3-candidate');assert.equal(side.sourceGap?.severity,'required','SIDE source geometry gap must remain explicit');
+  assert(snapshot.problems.some(x=>x.includes('required source geometry gap decision open/current')),'master-set index must surface the retained SIDE geometry gap');
+  for(const m of masters){assert.equal(setRegistry.freshness(m.canonicalMasterSetRegistry,{vehicleId,masters,references:refs}),'current');assert(boundary.summary(m).protectedPaths.includes('canonicalMasterSetRegistry'))}
+  const tamper=clone(masters[0]);tamper.canonicalMasterSetRegistry.registrySha256='f'.repeat(64);assert.throws(()=>db.upsertRenderAsset(tamper,{actor}),e=>e?.code==='governance_metadata_protected'&&e.changedPaths?.includes('canonicalMasterSetRegistry'),'generic editor must not forge the vehicle-level truth index');
+  const ref=clone(refs.find(x=>x.assetId===f34.referencePack.requiredReferenceIds[0]));ref.file={...ref.file,checksumSha256:'d'.repeat(64)};writeAsset(db,ref);
+  const changedRefs=db.listRenderAssets({vehicleId}).filter(x=>x.assetClass==='reference'),changedMasters=db.listRenderAssets({vehicleId}).filter(x=>setRegistry.canonical(x));assert.equal(setRegistry.freshness(snapshot,{vehicleId,masters:changedMasters,references:changedRefs}),'stale','reference checksum drift must stale the persisted master-set registry');
+  const resync=db.syncVisualGovernanceRegistry({vehicleId},{actor});assert.equal(resync.summary.canonicalMasterSet.state,'current');assert.equal(resync.summary.productionEligible,0);const refreshed=db.getRenderAsset('Y62-F34-V1-MASTER').canonicalMasterSetRegistry;assert.notEqual(refreshed.registrySha256,snapshot.registrySha256);assert(refreshed.problems.some(x=>x.includes('provenance attestation not current')),'refreshed index must surface stale reference provenance rather than silently accept drift');
+  const readiness=db.renderReadiness({vehicleId});assert.equal(readiness.canonicalMasterSet.state,'current');assert.equal(readiness.canonicalMasterSet.snapshot.registrySha256,refreshed.registrySha256);assert.equal(readiness.canonicalMasterSet.productionEligible,0);
+  const audit=db.listAudit({entityType:'visual-governance',entityId:vehicleId,action:'visual-governance.registry.synced',limit:10});assert(audit.some(x=>x.metadata?.setRegistryUpdatedCount===3),'registry refresh must remain visible on the existing visual-governance audit lane');
+} finally {db.close()}
+const readyHtml=fs.readFileSync(path.join(root,'readiness.html'),'utf8'),assetHtml=fs.readFileSync(path.join(root,'asset-registry.html'),'utf8'),readyUi=fs.readFileSync(path.join(root,'readiness.js'),'utf8'),assetUi=fs.readFileSync(path.join(root,'asset-registry.js'),'utf8'),store=fs.readFileSync(path.join(root,'asset-registry-store.js'),'utf8'),backend=fs.readFileSync(path.join(root,'backend-client.js'),'utf8');
+assert.match(readyHtml,/CANONICAL MASTER SET REGISTRY/);assert.match(readyHtml,/canonical-master-set-registry\.js/);assert.match(assetHtml,/canonical-master-set-registry\.js/);assert.match(readyUi,/renderCanonicalMasterSet/);assert.match(assetUi,/canonicalMasterSetRegistryHtml/);assert.match(store,/canonicalMasterSetRegistry/);assert.match(backend,/canonicalMasterSet/);
+console.log(JSON.stringify({gate:'wf4-canonical-master-set-registry-alpha26',schemaVersion:setRegistry.schemaVersion,persistedVehicleTruthIndex:true,canonicalViews:3,sharedReferencePackManifest:true,f34CandidateVisible:true,sideSourceGapRetained:true,crossViewReviewerApprovalProductionVisibility:true,systemManagedWriteProtected:true,referenceDriftStalesRegistry:true,resyncSurfacesProvenanceDrift:true,readinessExposesRegistry:true,sharedBrowserServerBackbone:true,visualPromotion:false,policy:setRegistry.policy,status:'pass'},null,2));

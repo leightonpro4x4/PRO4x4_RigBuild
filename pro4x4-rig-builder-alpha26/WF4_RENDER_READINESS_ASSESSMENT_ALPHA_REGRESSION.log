@@ -1,0 +1,568 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.12 test
+> node tests/smoke-alpha12.js && node tests/server-contract-alpha12.js && node tests/client-journey-alpha12.js && node tests/security-alpha12.js && node tests/hosted-alpha13.js && node tests/asset-registry-alpha14.js && node tests/asset-ingestion-alpha15.js && node tests/asset-vault-alpha16.js && node tests/asset-vault-lifecycle-alpha17.js && node tests/asset-version-lineage-alpha18.js && node tests/asset-delivery-storage-alpha19.js && node tests/render-resolver-alpha20.js && node tests/render-contract-alpha21.js && node tests/render-state-telemetry-alpha22.js && node tests/render-readiness-alpha23.js && node tests/merged-alpha23.js && node tests/merged-project-handoff-alpha24.js && node tests/multi-vehicle-pipeline-alpha24.js && node tests/parallel-workstreams-alpha25.js && node tests/alpha26-parallel-visual-governance.js && node tests/alpha26-parallel-push02.js && node tests/alpha26-wf4-persisted-visual-governance.js && node tests/wf1-save-share-integrity-alpha26.js && node tests/wf3-y62-f34-candidate-alpha26.js && node tests/alpha26-parallel-push03.js && node tests/alpha26-parallel-push04.js && node tests/alpha26-parallel-push05.js && node tests/alpha26-wf4-review-evidence-visibility.js && node tests/wf4-production-review-gate-alpha26.js && node tests/wf4-canonical-view-registry-alpha26.js && node tests/wf4-reference-intake-alpha26.js && node tests/wf4-catalogue-governance-alpha26.js && node tests/wf2-ranger-catalogue-alpha26.js && node tests/wf2-ranger-support-components-alpha26.js && node tests/wf3-y62-f34-transparent-candidate-alpha26.js && node tests/wf4-project-quote-lineage-alpha26.js && node tests/wf4-project-quote-lineage-endpoint-alpha26.js && node tests/wf4-audit-production-controls-alpha26.js && node tests/wf4-canonical-review-evidence-alpha26.js && node tests/wf4-render-readiness-assessment-alpha26.js
+
+{
+  "quotes": 1,
+  "catalogueAccessories": 11,
+  "auditEvents": 3,
+  "seedReport": {
+    "catalogues": 1,
+    "quotes": 0,
+    "projects": 0,
+    "errors": []
+  },
+  "projectId": "P4X4-PROJ-20260913-9YUIUPJO",
+  "shareStoredAsHash": true
+}
+(node:1297) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:01.354Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXHK-OHVP7I","method":"GET","path":"/api/v1/health","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.361Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXHS-JP3H2X","method":"GET","path":"/api/v1/catalogue/nissan-y62-warrior-2025","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.368Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXHY-S4K92O","method":"POST","path":"/api/v1/builds","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.369Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXI1-S4799L","method":"GET","path":"/api/v1/staff/quotes","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.371Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXI3-U9WIPM","method":"GET","path":"/api/v1/staff/quotes/P4X4-ALPHA11-CONTRACT","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.373Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXI5-Q23XE5","method":"PATCH","path":"/api/v1/staff/settings/quote","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.376Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXI8-L9NCD4","method":"POST","path":"/api/v1/staff/quotes/P4X4-ALPHA11-CONTRACT/finalise","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.379Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXI9-6745QI","method":"PUT","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.381Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIC-SMHP6Q","method":"GET","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.383Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIF-6876VM","method":"DELETE","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":204,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.385Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIG-MX712C","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.387Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXII-J58LHH","method":"GET","path":"/api/v1/projects","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.389Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIK-SSJGPZ","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.390Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXIM-MM2ZQV","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":409,"code":"version_conflict","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.390Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIM-MM2ZQV","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":409,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.392Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIN-CA18KW","method":"PUT","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/current-revision","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.393Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIP-9AM5GI","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/shares","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.394Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIQ-Z1GWB6","method":"GET","path":"/api/v1/shares/l5dpF14PM1bqt-6HXfllZlKxevtcxWdtPRykAepdwLg","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.396Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIR-UA02YZ","method":"DELETE","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/shares/d1590e3a971206a7f5eb32ab00aa8d39a7c6191567df7d095c7d77543450ea59","status":204,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.396Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIS-FEVEXC","method":"GET","path":"/api/v1/shares/l5dpF14PM1bqt-6HXfllZlKxevtcxWdtPRykAepdwLg","status":404,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.397Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXIT-PAHUWK","method":"GET","path":"/api/v1/projects/P4X4-PROJ-CONTRACT","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.397Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIT-PAHUWK","method":"GET","path":"/api/v1/projects/P4X4-PROJ-CONTRACT","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.398Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIU-UY54RX","method":"GET","path":"/api/v1/projects","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.399Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIU-X1FJBV","method":"GET","path":"/api/v1/staff/audit?limit=500","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.401Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXIW-SPR0NP","method":"GET","path":"/api/v1/admin/backup","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.401Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIW-SPR0NP","method":"GET","path":"/api/v1/admin/backup","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.403Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXIX-PAKWQK","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.406Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXJ1-BGM2YQ","method":"PATCH","path":"/api/v1/staff/settings/quote","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.409Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXJ3-GBEBBZ","method":"POST","path":"/api/v1/admin/backup/restore","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.410Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXJ6-A885J6","method":"GET","path":"/api/v1/staff/settings/quote","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.411Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXJ7-SM9UDF","method":"GET","path":"/sales.html","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.412Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXJ8-BPL40A","method":"GET","path":"/api/v1/staff/audit?limit=500","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "catalogueAccessories": 11,
+  "quotes": 1,
+  "projectRevision": "R0001",
+  "projectList": true,
+  "restoreRevision": true,
+  "ownerIsolation": true,
+  "auditEvents": 35,
+  "backupTables": [
+    "quotes",
+    "catalogueRevisions",
+    "projects",
+    "shares",
+    "auditEvents"
+  ],
+  "httpStatic": true
+}
+(node:1304) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:01.494Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXLF-QPJKUZ","method":"GET","path":"/api/v1/catalogue/nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.505Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXLS-4VFHCS","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789324921499/revisions","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.508Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXLV-HEP3N1","method":"GET","path":"/api/v1/projects","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.511Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXLY-53Q621","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789324921499/shares","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.513Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXM1-RS12AI","method":"GET","path":"/api/v1/shares/kEaZB3vdZqyMBj0HU0zyveDD3EnFmIPszhFpcMCzfPM","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.518Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXM4-C17LZ7","method":"POST","path":"/api/v1/builds","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.520Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXM7-LM3GRT","method":"PATCH","path":"/api/v1/staff/quotes/P4X4-CLIENT-1789324921499","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.523Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXMA-XBH2BW","method":"POST","path":"/api/v1/staff/quotes/P4X4-CLIENT-1789324921499/finalise","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.526Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXMD-EI9F7W","method":"DELETE","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789324921499/shares/2d0d4751e981bb25082b5e176491df14209f5c32ffb79b9a094b46e352eb5942","status":204,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "client": "browser-adapter-vm",
+  "backend": "http-server",
+  "catalogueAccessories": 11,
+  "projectRevision": "R0001",
+  "workflow": [
+    "save",
+    "list",
+    "share",
+    "queue",
+    "staff-review",
+    "formal-quote"
+  ],
+  "quoteTotal": 500,
+  "status": "pass"
+}
+(node:1311) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:01.628Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXP7-FMF702","method":"GET","path":"/api/v1/health","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.636Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPF-AP6YZN","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.639Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXPJ-EGZX0F","method":"GET","path":"/api/v1/staff/quotes","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.639Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPJ-EGZX0F","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.641Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXPK-ZALZUM","method":"GET","path":"/api/v1/staff/quotes","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.641Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPK-ZALZUM","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.645Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPO-4YUEKK","method":"POST","path":"/api/v1/auth/dev-login","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.647Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPR-ZRT9NW","method":"GET","path":"/api/v1/staff/quotes","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.648Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXPS-T2PP86","method":"POST","path":"/api/v1/builds","status":403,"code":"origin_forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.649Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPS-T2PP86","method":"POST","path":"/api/v1/builds","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.651Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXPV-P62AIR","method":"POST","path":"/api/v1/builds","status":413,"code":"payload_too_large","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.652Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPV-P62AIR","method":"POST","path":"/api/v1/builds","status":413,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.654Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXPX-8NAA9K","method":"POST","path":"/api/v1/auth/logout","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.657Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXQ0-K5GOTX","method":"GET","path":"/api/v1/staff/quotes","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.657Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXQ0-K5GOTX","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.668Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXQC-D0Y89J","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.670Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXQD-V5KM1N","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.670Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXQE-9AWO3G","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.671Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXQF-9OUC31","method":"GET","path":"/api/v1/auth/session","status":429,"code":"rate_limited","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.671Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXQF-9OUC31","method":"GET","path":"/api/v1/auth/session","status":429,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "sessionCookie": true,
+  "httpOnlyBoundary": true,
+  "prototypeHeadersRejected": true,
+  "ownerDefaultRole": "customer",
+  "databaseMigration": 3,
+  "securityHeaders": true,
+  "crossOriginMutationBlocked": true,
+  "bodyLimit": true,
+  "rateLimit": true,
+  "logoutRevocation": true,
+  "status": "pass"
+}
+(node:1318) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:01.757Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXSR-32TFB2","method":"GET","path":"/api/v1/ready","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.763Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXSZ-71ZU5C","method":"GET","path":"/metrics","status":401,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.765Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXT1-3RBONL","method":"GET","path":"/metrics","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.768Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXT3-TWY0ZX","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.770Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXT6-FWQBIY","method":"GET","path":"/api/v1/auth/session","status":401,"code":"invalid_gateway_signature","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.770Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXT6-FWQBIY","method":"GET","path":"/api/v1/auth/session","status":401,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+Alpha 13 hosted readiness test passed
+(node:1325) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:01.879Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXW5-PF6GJ2","method":"GET","path":"/api/v1/ready","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.886Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWD-G0SB8S","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.893Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXWK-NC57XT","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"code":"asset_gate_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.894Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWK-NC57XT","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.896Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWN-XX0TTZ","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.900Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UXWS-8P1CUW","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"code":"asset_gate_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.901Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWS-8P1CUW","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.904Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWU-DZEWSI","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:01.906Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXWY-M31EVU","method":"GET","path":"/api/v1/staff/audit?entityType=render-asset&limit=100","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 14,
+  "assets": 22,
+  "baseline": {
+    "reference-only": 7,
+    "asset-needed": 13,
+    "blocked-fitment": 2
+  },
+  "productionGateReject": true,
+  "candidatePromotion": true,
+  "productionApprovalRequiresVault": true,
+  "backupIncludesAssets": true,
+  "migrationVersion": 5,
+  "status": "pass"
+}
+(node:1332) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.012Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UXZU-7MU3SR","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.023Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UY05-57X6C2","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"code":"asset_gate_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.023Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY05-57X6C2","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.027Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UY0A-O4PDR6","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"code":"asset_gate_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.027Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY0A-O4PDR6","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 15,
+  "inspector": {
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "referenceHasAlpha": false,
+    "sha256": true
+  },
+  "cameraProfile": "Y62-F34-V1",
+  "lockedCanvas": {
+    "width": 1672,
+    "height": 615
+  },
+  "serverDimensionGate": true,
+  "productionApprovalRequiresVault": true,
+  "status": "pass"
+}
+(node:1343) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.148Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY3L-RCF3DI","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.164Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY3Y-9RQANY","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":6,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.168Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY46-ZEM5N0","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:02.173Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY4B-5DL5AH","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 16,
+  "vault": "content-addressed",
+  "dimensions": "1672x615",
+  "serverTransparencyVerified": true,
+  "productionApproval": true,
+  "publicImmutableBinary": true,
+  "dbMigration": 5,
+  "status": "pass"
+}
+(node:1350) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.297Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY7L-5Y2DSN","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":8,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.301Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY7W-HRPMOO","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.308Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY7Y-ANQQR3","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":7,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.310Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY85-XD7EEL","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.312Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY87-2HG9HW","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.315Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY88-DDP9G0","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.319Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UY8E-I6YJXO","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+Alpha 17 vault lifecycle: PASS · integrity, orphan dry-run/GC, backup manifest, corruption detection
+(node:1357) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.433Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBD-KK0GU9","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":8,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.437Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBN-EAUEKB","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.439Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBQ-9LNG6S","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.444Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBS-999D0D","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.445Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBW-0ZKX7M","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.446Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBY-FKDGCG","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.447Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYBZ-2WX7GR","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.450Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC0-998CQP","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002/promote","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.451Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC3-29A5GS","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.453Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC4-5SS1VF","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.456Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC5-2ZIY7I","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.457Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC8-Z30O57","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0003/reject","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.457Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYC9-HJ4AMZ","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.465Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCA-QG0MFO","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":7,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.466Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCH-N48O6S","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.469Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCJ-L1IV06","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.473Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCN-9TYIA5","method":"POST","path":"/api/v1/admin/backup/restore","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.474Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCQ-RO8RNI","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.475Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYCQ-N0S62Y","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 18,
+  "dbMigration": 5,
+  "versionLineage": 3,
+  "zeroDowntimeStaging": true,
+  "atomicPromotion": true,
+  "supersededBinaryRetained": true,
+  "rejectedBinaryRetained": true,
+  "vaultManifestHealthy": true,
+  "backupRestoreLineage": true,
+  "status": "pass"
+}
+(node:1364) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.577Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFD-VCL1Q9","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":8,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.581Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFN-AEVLV6","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.586Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFR-D3I7KK","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.588Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFV-GIAPKT","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.590Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFX-0OP3QH","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002/promote","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.592Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYFZ-9L64DX","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0001/delivery","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.594Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYG1-04QYSI","method":"GET","path":"/api/v1/render-assets/version-delivery/eyJhc3NldElkIjoiWTYyLUZST05UMzQtMDEtQkFTRSIsInZlcnNpb25JZCI6Ilk2Mi1GUk9OVDM0LTAxLUJBU0UtVjAwMDEiLCJvYmplY3RLZXkiOiJzaGEyNTYvOTUvOTUxZTE1NDFkMzgzNDBkN2Q0MmFiMjg1NTI3ODAzMTMwNGVlZmMyNWFjYzI5OWUzY2QzODhmMzQyNWY1MmYzOC5wbmciLCJjaGVja3N1bVNoYTI1NiI6Ijk1MWUxNTQxZDM4MzQwZDdkNDJhYjI4NTUyNzgwMzEzMDRlZWZjMjVhY2MyOTllM2NkMzg4ZjM0MjVmNTJmMzgiLCJleHAiOjE3ODkzMjUwNDJ9.L_4xe_vyj_ag1Qr06IBxkk2T5QrpXUiQRWhwuE2mEl4","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.596Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UYG4-M0W6D4","method":"GET","path":"/api/v1/render-assets/version-delivery/eyJhc3NldElkIjoiWTYyLUZST05UMzQtMDEtQkFTRSIsInZlcnNpb25JZCI6Ilk2Mi1GUk9OVDM0LTAxLUJBU0UtVjAwMDEiLCJvYmplY3RLZXkiOiJzaGEyNTYvOTUvOTUxZTE1NDFkMzgzNDBkN2Q0MmFiMjg1NTI3ODAzMTMwNGVlZmMyNWFjYzI5OWUzY2QzODhmMzQyNWY1MmYzOC5wbmciLCJjaGVja3N1bVNoYTI1NiI6Ijk1MWUxNTQxZDM4MzQwZDdkNDJhYjI4NTUyNzgwMzEzMDRlZWZjMjVhY2MyOTllM2NkMzg4ZjM0MjVmNTJmMzgiLCJleHAiOjE3ODkzMjUwNDJ9.L_4xe_vyj_ag1Qr06IBxkk2T5QrpXUiQRWhwuE2mElA","status":403,"code":"asset_delivery_invalid","fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.597Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYG4-M0W6D4","method":"GET","path":"/api/v1/render-assets/version-delivery/eyJhc3NldElkIjoiWTYyLUZST05UMzQtMDEtQkFTRSIsInZlcnNpb25JZCI6Ilk2Mi1GUk9OVDM0LTAxLUJBU0UtVjAwMDEiLCJvYmplY3RLZXkiOiJzaGEyNTYvOTUvOTUxZTE1NDFkMzgzNDBkN2Q0MmFiMjg1NTI3ODAzMTMwNGVlZmMyNWFjYzI5OWUzY2QzODhmMzQyNWY1MmYzOC5wbmciLCJjaGVja3N1bVNoYTI1NiI6Ijk1MWUxNTQxZDM4MzQwZDdkNDJhYjI4NTUyNzgwMzEzMDRlZWZjMjVhY2MyOTllM2NkMzg4ZjM0MjVmNTJmMzgiLCJleHAiOjE3ODkzMjUwNDJ9.L_4xe_vyj_ag1Qr06IBxkk2T5QrpXUiQRWhwuE2mElA","status":403,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.598Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYG5-HKU17H","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.651Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYGU-M4XJE8","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":29,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.653Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYHN-K10NF2","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.663Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYHR-BP1OI7","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0001/delivery","status":200,"durationMs":8,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.666Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYI2-ME7I3X","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":302,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.671Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYI3-ZYA4J0","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.671Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYI7-A23FWZ","method":"GET","path":"/asset-registry.html","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 19,
+  "dbMigration": 5,
+  "signedHistoricalDelivery": true,
+  "tamperRejected": true,
+  "productionPointerStable": true,
+  "s3SigV4": true,
+  "presignedHistoricalDelivery": true,
+  "cdnProductionRedirect": true,
+  "cdnCspAllowed": true,
+  "remoteIntegrityScan": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+(node:1371) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.773Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYKY-UD0NSF","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.776Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYL3-RCT1O5","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.783Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYL5-POEKR9","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.786Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYLC-5HBVI9","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.787Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYLE-OBQFQE","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.789Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYLG-TK3MP1","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary?sha=ffadaa37ecaa9f6a91bc7c7df4bd78f18ab05b1be135b7de05d7784c09c65941","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.791Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYLJ-5FD0FM","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary?sha=0000000000000000000000000000000000000000000000000000000000000000","status":409,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 20,
+  "dbMigration": 5,
+  "publicResolver": true,
+  "states": [
+    "available",
+    "missing",
+    "blocked"
+  ],
+  "exactSkuNoSubstitution": true,
+  "checksumPinnedBinary": true,
+  "customerReferenceFallback": "none",
+  "partialStackSupported": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+Alpha 21 render contract: PASS
+(node:1385) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.892Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYO8-TNWKND","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.900Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYOE-TV9OYD","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.903Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYOL-B6VI5F","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.904Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYOO-ILNO2Y","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.906Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYOP-1TAC6R","method":"POST","path":"/api/v1/render/telemetry","status":202,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.908Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYOR-7D1MRS","method":"GET","path":"/api/v1/staff/render-telemetry?vehicleId=nissan-y62-warrior-2025&viewId=front34&limit=10","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 22,
+  "dbMigration": 6,
+  "paintStateExactMatch": true,
+  "wheelStateExactMatch": true,
+  "validatedPaintsSelectable": 4,
+  "loadRetryAttempts": 3,
+  "telemetryPersisted": true,
+  "staffTelemetry": true,
+  "backupTelemetry": true,
+  "noFallback": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+(node:1392) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:02.983Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYQT-KX90ID","method":"GET","path":"/api/v1/staff/render-readiness?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.990Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYQY-PIVQEC","method":"POST","path":"/api/v1/staff/render-readiness/slots/sync","status":200,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-13T18:42:02.992Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYR3-MW231U","method":"POST","path":"/api/v1/staff/render-readiness/slots/sync","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 23,
+  "plannedCoreSlots": 15,
+  "existingCoreSlots": 6,
+  "createdAssetNeededSlots": 9,
+  "idempotentSync": true,
+  "productionReadySeed": 0,
+  "readinessMatrix": true,
+  "telemetryHealth": true,
+  "noFakeLayerRule": true,
+  "status": "pass"
+}
+merged-alpha23: PASS — 2 vehicles, original 20-product Ranger baseline preserved (39 current), Y62 Alpha 22 preserved
+merged-project-handoff-alpha24: PASS — Ranger + Y62 use one immutable project/quote/share contract with no render fallback
+multi-vehicle-pipeline-alpha24: PASS — both proof vehicles persist as immutable projects; Ranger queue handoff retains project lineage and fitment gate
+(node:1413) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Alpha 25 parallel workstream governance verified.
+Alpha 26 parallel visual governance: PASS
+Alpha 26 parallel push 02: PASS
+(node:1441) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:03.239Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYXW-EWIK8E","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.254Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYY9-YK1P2M","method":"POST","path":"/api/v1/staff/visual-governance/sync","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.257Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYYG-L6C1XN","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.260Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYYJ-29ZSCC","method":"GET","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/reference-source","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.265Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYYO-R3XOT3","method":"GET","path":"/references/y62-owner/IMG_4030.jpeg","status":404,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.268Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UYYR-IRF6Y7","method":"POST","path":"/api/v1/staff/visual-governance/sync","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": "26-wf4",
+  "package": "persisted-visual-governance",
+  "initialAssets": 22,
+  "persistedAssets": 34,
+  "ownerReferences": 9,
+  "canonicalMasterSlots": 3,
+  "idempotentSync": true,
+  "productionEligible": 0,
+  "staffReferenceVisibility": true,
+  "protectedReferenceDelivery": true,
+  "status": "pass"
+}
+WF1 Alpha 26 save/share integrity: PASS
+WF3 Y62 F34 candidate Alpha 26: PASS
+Alpha 26 parallel push 03: PASS
+(node:1462) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Alpha 26 parallel push 04: PASS
+(node:1469) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Alpha 26 parallel push 05: PASS
+{
+  "alpha": "26-wf4",
+  "package": "review-evidence-visibility",
+  "immutablePromotionEvidence": true,
+  "versionLifecycleVisible": true,
+  "canonicalReferencePackVisible": true,
+  "recordHistoryVisible": true,
+  "auditEvidenceVisible": true,
+  "status": "pass"
+}
+(node:1483) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "gate": "wf4-production-review-gate-alpha26",
+  "directUnreviewedRejected": true,
+  "reviewEvidencePersisted": true,
+  "auditEvidencePersisted": true,
+  "reviewEvidenceImmutable": true,
+  "status": "pass"
+}
+(node:1490) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "alpha": "26-wf4",
+  "package": "canonical-view-registry",
+  "canonicalMasters": 3,
+  "ownerReferences": 9,
+  "front34ReviewContract": "Y62-F34-V1-OVERLAY-01",
+  "sideSourceGapVisible": true,
+  "metadataBackfillPreservesReviewWork": true,
+  "idempotent": true,
+  "customerVisualPromotion": false,
+  "status": "pass"
+}
+(node:1497) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "alpha": "26-wf4",
+  "package": "reference-provenance-intake",
+  "ownerReferences": 9,
+  "externalReferencePersisted": true,
+  "canonicalBindingPersisted": true,
+  "serverReferenceGate": true,
+  "approvedReferenceStillNonProduction": true,
+  "staffIntakeVisible": true,
+  "status": "pass"
+}
+(node:1504) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "alpha": "26-wf4",
+  "package": "catalogue-fitment-governance",
+  "baselineErrors": 0,
+  "baselineWarnings": 12,
+  "draftBlockersPersisted": true,
+  "serverPublishGate": true,
+  "anyOfDependenciesGoverned": true,
+  "engineeringUncertaintyPreserved": true,
+  "immutableCatalogueRevisions": [
+    "Y62-CAT-001",
+    "Y62-CAT-002"
+  ],
+  "auditGovernancePersisted": true,
+  "staffGovernanceVisibility": true,
+  "status": "pass"
+}
+(node:1511) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "schemaVersion": "0.26.6",
+  "accessories": 39,
+  "previousManufacturerBackedSlice": 6,
+  "evidenceRows": 20,
+  "duplicateIds": 0,
+  "duplicateSkus": 0,
+  "unknownInstallPreserved": [
+    "oa-toro-indicator-harness-ranger"
+  ],
+  "staffReviewPreserved": [
+    "oa-egr-flare-endcaps-ranger",
+    "oa-rear-protection-ranger"
+  ],
+  "status": "pass"
+}
+{
+  "schemaVersion": "0.26.6",
+  "accessories": 39,
+  "newConfirmedRecords": 5,
+  "evidenceRows": 20,
+  "deferredForMissingExactFitment": [
+    "TB-COM-RAL-STE-2XEVO-ASM0"
+  ],
+  "unknownInstallPreserved": [
+    "oa-rally-hoop-stedi-pro-ranger",
+    "oa-rally-hoop-9in-ranger",
+    "oa-rally-hoop-7in-ranger",
+    "oa-22in-slim-lightbar-ranger",
+    "oa-deep-dish-floor-mats-ranger"
+  ],
+  "status": "pass"
+}
+WF3 Y62 F34 transparent candidate Alpha 26: PASS
+{
+  "gate": "wf4-project-quote-lineage-alpha26",
+  "immutableProjectRevision": true,
+  "persistedLineageSeal": true,
+  "historicalShareBinding": true,
+  "frozenMissingStateNoFallback": true,
+  "approvedVersionEvidence": true,
+  "referenceOutputRejected": true,
+  "status": "pass"
+}
+(node:1539) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1546) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:03.887Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZFW-RC06QC","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.894Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UZG5-XLP7ZU","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:03.894Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZG5-XLP7ZU","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-project-quote-lineage-endpoint-alpha26",
+  "staffEndpoint": true,
+  "roleGuard": true,
+  "persistedSeal": true,
+  "frozenRenderState": true,
+  "status": "pass"
+}
+(node:1553) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:04.019Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZJK-11A8CF","method":"GET","path":"/api/v1/staff/audit/integrity","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:04.027Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UZJV-MCUNB7","method":"GET","path":"/api/v1/staff/audit/integrity","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:04.027Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZJV-MCUNB7","method":"GET","path":"/api/v1/staff/audit/integrity","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:04.031Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZJY-I56TSZ","method":"GET","path":"/api/v1/staff/audit/integrity","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-audit-production-controls-alpha26",
+  "sha256StandardVector": true,
+  "fullySealedLedger": true,
+  "visualGovernanceEvidenceSealed": true,
+  "staffIntegrityEndpoint": true,
+  "roleGuard": true,
+  "tamperDetected": true,
+  "productionBlockedOnBrokenAudit": true,
+  "customerProductionPolicy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY unchanged",
+  "status": "pass"
+}
+{
+  "gate": "wf4-canonical-review-evidence-alpha26",
+  "canonicalMaster": "Y62-F34-V1-MASTER",
+  "reviewContract": "Y62-F34-V1-OVERLAY-01",
+  "requiredChecks": 8,
+  "referenceSnapshots": 3,
+  "directBypassBlocked": true,
+  "incompleteReviewBlocked": true,
+  "referenceMutationInvalidatesPromotion": true,
+  "immutableEvidencePersisted": true,
+  "referenceOnlyPreserved": true,
+  "customerVisualPromotion": "synthetic test database only",
+  "status": "pass"
+}
+(node:1560) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1567) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-13T18:42:04.232Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZPF-LPP09J","method":"POST","path":"/api/v1/staff/render-readiness/assess","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:04.239Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU05UZPQ-J9Z5TV","method":"POST","path":"/api/v1/staff/render-readiness/assess","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-13T18:42:04.239Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU05UZPQ-J9Z5TV","method":"POST","path":"/api/v1/staff/render-readiness/assess","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-render-readiness-assessment-alpha26",
+  "canonicalMastersAssessed": 3,
+  "persistedOnCanonicalMaster": true,
+  "sha256Fingerprint": true,
+  "ownerReferenceSnapshots": 3,
+  "staleOnReferenceMutation": true,
+  "reassessmentRestoresCurrent": true,
+  "auditChained": true,
+  "staffEndpoint": true,
+  "writeRoleGuard": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}

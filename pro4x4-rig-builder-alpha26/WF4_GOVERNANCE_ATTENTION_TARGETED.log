@@ -1,0 +1,18 @@
+{
+  "gate": "wf4-governance-attention-alpha26",
+  "canonicalMasters": 3,
+  "persistedAttentionSnapshots": true,
+  "initialOpenBlockers": 10,
+  "initialOpenActions": 6,
+  "f34CandidateDependency": true,
+  "sideSourceGapRetained": true,
+  "protectedSystemMetadata": true,
+  "referenceDriftStalesSnapshot": true,
+  "resyncRefreshesSnapshot": true,
+  "referencePackProblemSurfaced": true,
+  "auditVisible": true,
+  "browserServerSharedBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}

@@ -1,0 +1,23 @@
+{
+  "package": "A26-WF4-20",
+  "visualTrees": {
+    "baselineFiles": 16,
+    "currentFiles": 16,
+    "unchanged": true,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  "customerCritical": {
+    "baselineFiles": 11,
+    "unchangedCount": 10,
+    "changed": [
+      {
+        "path": "index.html",
+        "before": "897a1ca23d271f352fa70dc786c01fa39e2bf255824a6e489685a10566649f03",
+        "after": "39615ab211f223beb7665c27cd5c75536efe7aa3494e3fbe9783300572a537e8"
+      }
+    ],
+    "note": "index.html changed only to load the shared quote visual-governance seal module; visual/catalogue/render contracts remain byte-identical."
+  }
+}

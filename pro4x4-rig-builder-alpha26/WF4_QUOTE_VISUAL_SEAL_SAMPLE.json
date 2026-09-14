@@ -1,0 +1,147 @@
+{
+  "reference": "P4X4-WF4-PUSH20-SAMPLE",
+  "sealSha256": "4e1df26b8b7843870ed8d44298c74127bb8c31e9664de1d3636773ecadc25728",
+  "renderSnapshotSha256": "931e092bf501d16ef52ee06b2e4d26d1ef3f9dc97809e6921a2c7395a14cd0db",
+  "canonicalMaster": {
+    "assetClass": "canonical-master",
+    "assetId": "Y62-F34-V1-MASTER",
+    "candidateHandoff": {
+      "blockerCount": 12,
+      "candidateChecksumSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "handoffId": "Y62-F34-V1-WF3-HANDOFF",
+      "handoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+      "intakeState": "blocked-upstream",
+      "upstreamDecision": "returned-to-wf3"
+    },
+    "canonicalReviewEvidence": null,
+    "canonicalView": {
+      "briefId": "Y62-F34-V1",
+      "cameraMatched": false,
+      "cameraProfileId": "Y62-F34-V1",
+      "referenceGap": null,
+      "requiredCheckIds": [
+        "identity",
+        "stance",
+        "wheel-centres",
+        "silhouette",
+        "factory-wheels",
+        "transparency",
+        "edge-quality",
+        "no-invented-accessories"
+      ],
+      "reviewContractId": "Y62-F34-V1-OVERLAY-01"
+    },
+    "currentVersionId": null,
+    "fileChecksumSha256": null,
+    "governanceDossier": {
+      "dossierId": "Y62-F34-V1-GOVERNANCE-DOSSIER",
+      "dossierSha256": "5af0fa20e5c5e082d6ed3880daf5425a9771644652703910124bf731e8e33bf4",
+      "preparedAt": "2026-09-14T02:37:48.036Z",
+      "reviewerIntakeState": "blocked-upstream"
+    },
+    "governanceState": "master-draft",
+    "governanceWriteBoundary": {
+      "fingerprintSha256": null,
+      "freshness": null,
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY"
+    },
+    "layerId": "base",
+    "readinessAssessment": null,
+    "referencePack": {
+      "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "requiredReferenceIds": [
+        "OWNER-Y62-F34-01",
+        "OWNER-Y62-F34-02",
+        "OWNER-Y62-FRONT-01"
+      ]
+    },
+    "references": [
+      {
+        "assetId": "OWNER-Y62-F34-01",
+        "attestationBasisSha256": "6d3dbd54b2144c1bd94b3a2c6259fb76e27bb1d57c69e683ec896a78a2582d17",
+        "attestationId": "OWNER-Y62-F34-01-PROVENANCE-ATTESTATION",
+        "attestedAt": "2026-09-13T00:00:00.000Z",
+        "attestedBy": {
+          "actorId": "owner-source-intake",
+          "displayName": "Owner Source Intake",
+          "role": "admin"
+        },
+        "checksumSha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+        "governanceState": "reference-approved",
+        "licenceStatus": "owner-project-approved",
+        "productionEligible": false,
+        "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+        "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+        "sourceType": "owner-supplied",
+        "status": "reference-only"
+      },
+      {
+        "assetId": "OWNER-Y62-F34-02",
+        "attestationBasisSha256": "3ee7c2ff183ea8c15bcb8a14b0a889677dafd5c3c939c71ff60c16f27efc38b9",
+        "attestationId": "OWNER-Y62-F34-02-PROVENANCE-ATTESTATION",
+        "attestedAt": "2026-09-13T00:00:00.000Z",
+        "attestedBy": {
+          "actorId": "owner-source-intake",
+          "displayName": "Owner Source Intake",
+          "role": "admin"
+        },
+        "checksumSha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4",
+        "governanceState": "reference-approved",
+        "licenceStatus": "owner-project-approved",
+        "productionEligible": false,
+        "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+        "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+        "sourceType": "owner-supplied",
+        "status": "reference-only"
+      },
+      {
+        "assetId": "OWNER-Y62-FRONT-01",
+        "attestationBasisSha256": "ce93e40aeeca1fb1ee89adea606b178e7836da7894602dbd90fcb27886dec4a8",
+        "attestationId": "OWNER-Y62-FRONT-01-PROVENANCE-ATTESTATION",
+        "attestedAt": "2026-09-13T00:00:00.000Z",
+        "attestedBy": {
+          "actorId": "owner-source-intake",
+          "displayName": "Owner Source Intake",
+          "role": "admin"
+        },
+        "checksumSha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e",
+        "governanceState": "reference-approved",
+        "licenceStatus": "owner-project-approved",
+        "productionEligible": false,
+        "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+        "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+        "sourceType": "owner-supplied",
+        "status": "reference-only"
+      }
+    ],
+    "reviewWorkflow": {
+      "assignedAt": null,
+      "assignedReviewerId": null,
+      "bindingSha256": null,
+      "state": "blocked-upstream",
+      "workflowId": "Y62-F34-V1-REVIEW-WORKFLOW"
+    },
+    "reviewedAt": null,
+    "reviewedBy": null,
+    "status": "candidate",
+    "vehicleId": "nissan-y62-warrior-2025",
+    "viewId": "front34"
+  },
+  "referencePack": {
+    "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "requiredReferenceIds": [
+      "OWNER-Y62-F34-01",
+      "OWNER-Y62-F34-02",
+      "OWNER-Y62-FRONT-01"
+    ]
+  },
+  "inspection": {
+    "status": "verified",
+    "visualGovernanceState": "verified",
+    "warnings": [],
+    "problems": []
+  }
+}

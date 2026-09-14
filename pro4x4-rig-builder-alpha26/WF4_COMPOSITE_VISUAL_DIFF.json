@@ -1,0 +1,21 @@
+{
+  "assetsByteIdentical": true,
+  "assetFiles": 7,
+  "referencesByteIdentical": true,
+  "referenceFiles": 9,
+  "customerCriticalByteIdentical": true,
+  "customerFilesChecked": 11,
+  "customerResults": {
+    "index.html": true,
+    "merged-app.js": true,
+    "app.js": true,
+    "merged-project-contract.js": true,
+    "render-contracts-y62.js": true,
+    "render-manifest-y62.js": true,
+    "data-y62.js": true,
+    "data-ranger.js": true,
+    "styles.css": true,
+    "share.html": true,
+    "share.js": true
+  }
+}

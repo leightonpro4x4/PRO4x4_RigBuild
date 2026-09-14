@@ -1,0 +1,11 @@
+(function(){
+  const P=window.PRO4X4_PERSISTENCE.local;
+  const STORE=()=>window.PRO4X4_PROJECT_STORE;
+  const MARK='migration:alpha09-v1';
+  function getLegacyConcept(){try{return JSON.parse(localStorage.getItem('pro4x4-last-concept')||'null')}catch{return null}}
+  function getLegacyQueue(){try{return JSON.parse(localStorage.getItem(window.PRO4X4_QUOTE_CONTRACT?.storageKey||'pro4x4-sales-queue-v1')||'[]')}catch{return []}}
+  function inspect(){const concept=getLegacyConcept();const queue=getLegacyQueue();return {alreadyRun:!!P.get(MARK,false),conceptAvailable:!!concept,queueRecords:Array.isArray(queue)?queue.length:0,legacyUnversioned:Array.isArray(queue)?queue.filter(x=>!x.project?.id).length:0}}
+  function migrate(){const report={startedAt:new Date().toISOString(),concept:null,queueMigrated:0,queueSkipped:0,errors:[]};const store=STORE();if(!store)throw new Error('Project store unavailable');const concept=getLegacyConcept();try{if(concept&&!concept.project?.id){const saved=store.saveRevision(concept,{title:concept.lead?.name?`${concept.lead.name} · Imported Y62 Build`:'Imported Y62 Build',source:'legacy-concept-import'});report.concept={projectId:saved.project.id,revisionId:saved.revision.id};}}catch(e){report.errors.push(`concept: ${e.message}`)}
+    const queue=getLegacyQueue();if(Array.isArray(queue))queue.forEach((x,i)=>{if(x?.project?.id){report.queueSkipped++;return;}try{const saved=store.saveRevision(x,{title:x.lead?.name?`${x.lead.name} · Imported Queue Build`:'Imported Queue Build',source:'legacy-queue-import'});queue[i]=saved.snapshot;report.queueMigrated++;}catch(e){report.errors.push(`queue ${i+1}: ${e.message}`)}});if(Array.isArray(queue)){localStorage.setItem(window.PRO4X4_QUOTE_CONTRACT?.storageKey||'pro4x4-sales-queue-v1',JSON.stringify(queue));window.PRO4X4_SALES_STORE?.replace(queue);}report.completedAt=new Date().toISOString();P.set(MARK,report);window.PRO4X4_AUDIT_STORE?.append('migration.legacy.completed','system','alpha09',{queueMigrated:report.queueMigrated,queueSkipped:report.queueSkipped,conceptImported:!!report.concept,errorCount:report.errors.length});return report}
+  window.PRO4X4_MIGRATION={schemaVersion:'0.12.0',inspect,migrate,lastReport:()=>P.get(MARK,null)};
+})();

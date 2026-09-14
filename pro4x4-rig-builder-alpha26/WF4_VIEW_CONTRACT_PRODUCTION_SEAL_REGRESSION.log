@@ -1,0 +1,28 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.26 test:wf4-production-seal
+> node tests/wf4-canonical-production-seal-alpha26.js
+
+{
+  "gate": "wf4-canonical-production-seal-alpha26",
+  "schemaVersion": "0.26.25",
+  "versionPromotionSealed": true,
+  "directPromotionSealed": true,
+  "ownerReferencePackBound": true,
+  "referenceAttestationsBound": true,
+  "referenceReviewDecisionsBound": true,
+  "wf3HandoffBound": true,
+  "reviewerAssignmentBound": true,
+  "approvalDecisionBound": true,
+  "canonicalReviewEvidenceBound": true,
+  "binaryChecksumBound": true,
+  "auditChainHeadBound": true,
+  "immutableSealTamperBlocked": true,
+  "historicalSealSurvivesCurrentEvidenceDrift": true,
+  "currentEvidenceDriftVisible": true,
+  "productionEligibleBySeal": false,
+  "visualPromotion": "synthetic in-memory fixtures only",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:2024) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

@@ -1,0 +1,682 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test
+> node tests/smoke-alpha12.js && node tests/server-contract-alpha12.js && node tests/client-journey-alpha12.js && node tests/security-alpha12.js && node tests/hosted-alpha13.js && node tests/asset-registry-alpha14.js && node tests/asset-ingestion-alpha15.js && node tests/asset-vault-alpha16.js && node tests/asset-vault-lifecycle-alpha17.js && node tests/asset-version-lineage-alpha18.js && node tests/asset-delivery-storage-alpha19.js && node tests/render-resolver-alpha20.js && node tests/render-contract-alpha21.js && node tests/render-state-telemetry-alpha22.js && node tests/render-readiness-alpha23.js && node tests/merged-alpha23.js && node tests/merged-project-handoff-alpha24.js && node tests/multi-vehicle-pipeline-alpha24.js && node tests/parallel-workstreams-alpha25.js && node tests/alpha26-parallel-visual-governance.js && node tests/alpha26-parallel-push02.js && node tests/alpha26-wf4-persisted-visual-governance.js && node tests/wf1-save-share-integrity-alpha26.js && node tests/wf3-y62-f34-candidate-alpha26.js && node tests/alpha26-parallel-push03.js && node tests/alpha26-parallel-push04.js && node tests/alpha26-parallel-push05.js && node tests/alpha26-wf4-review-evidence-visibility.js && node tests/wf4-production-review-gate-alpha26.js && node tests/wf4-canonical-view-registry-alpha26.js && node tests/wf4-reference-intake-alpha26.js && node tests/wf4-catalogue-governance-alpha26.js && node tests/wf2-ranger-catalogue-alpha26.js && node tests/wf2-ranger-support-components-alpha26.js && node tests/wf3-y62-f34-transparent-candidate-alpha26.js && node tests/wf4-project-quote-lineage-alpha26.js && node tests/wf4-project-quote-lineage-endpoint-alpha26.js && node tests/wf4-audit-production-controls-alpha26.js && node tests/wf4-canonical-review-evidence-alpha26.js && node tests/wf4-render-readiness-assessment-alpha26.js && node tests/wf4-reference-pack-registry-alpha26.js && node tests/wf4-canonical-candidate-handoff-alpha26.js && node tests/wf4-canonical-governance-dossier-alpha26.js && node tests/wf4-canonical-review-workflow-alpha26.js && node tests/wf4-composite-eligibility-alpha26.js && node tests/wf4-reference-provenance-attestation-alpha26.js && node tests/wf4-governance-write-boundary-alpha26.js && node tests/wf4-governance-write-boundary-endpoint-alpha26.js && node tests/wf4-quote-visual-governance-seal-alpha26.js && node tests/wf4-quote-visual-governance-seal-endpoint-alpha26.js && node tests/wf4-governance-attention-alpha26.js
+
+{
+  "quotes": 1,
+  "catalogueAccessories": 11,
+  "auditEvents": 3,
+  "seedReport": {
+    "catalogues": 1,
+    "quotes": 0,
+    "projects": 0,
+    "errors": []
+  },
+  "projectId": "P4X4-PROJ-20260914-R9OPDG_A",
+  "shareStoredAsHash": true
+}
+{"ts":"2026-09-14T03:40:16.324Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34G0-ROBSWL","method":"GET","path":"/api/v1/health","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.346Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34GM-7T81MD","method":"GET","path":"/api/v1/catalogue/nissan-y62-warrior-2025","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.365Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34H3-EB9CHJ","method":"POST","path":"/api/v1/builds","status":201,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.368Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34HC-04E9W2","method":"GET","path":"/api/v1/staff/quotes","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.379Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34HM-Y21SO4","method":"GET","path":"/api/v1/staff/quotes/P4X4-ALPHA11-CONTRACT","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.384Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34HR-R51CEH","method":"PATCH","path":"/api/v1/staff/settings/quote","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.388Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34HV-KNVZ35","method":"POST","path":"/api/v1/staff/quotes/P4X4-ALPHA11-CONTRACT/finalise","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.394Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34HZ-IA07SI","method":"PUT","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.398Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34I5-3JC1XQ","method":"GET","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.407Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IE-QDKHU8","method":"DELETE","path":"/api/v1/staff/catalogue/nissan-y62-warrior-2025/draft","status":204,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.411Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IH-3PWVW0","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":201,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.414Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IL-5M5XEX","method":"GET","path":"/api/v1/projects","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.416Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IN-URHSFP","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.419Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IQ-4YNK48","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/revisions","status":409,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.421Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IS-VY9AZI","method":"PUT","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/current-revision","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.425Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IV-S3ZRGR","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/shares","status":201,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.426Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34IY-RHQNB8","method":"GET","path":"/api/v1/shares/qeLspMW3T5JkyY4XIwJDen1sMkXKw79_z7PKPGU-RrQ","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.432Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34J3-YPHCLC","method":"DELETE","path":"/api/v1/projects/P4X4-PROJ-CONTRACT/shares/338cb17055d17f25009d069d738def41aae164ee57a2956dbb5ff5b113456df7","status":204,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.433Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34J5-BY0IU9","method":"GET","path":"/api/v1/shares/qeLspMW3T5JkyY4XIwJDen1sMkXKw79_z7PKPGU-RrQ","status":404,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.435Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34J6-VQS4W0","method":"GET","path":"/api/v1/projects/P4X4-PROJ-CONTRACT","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.436Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34J8-YBQ65C","method":"GET","path":"/api/v1/projects","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.438Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34J9-N2B5FC","method":"GET","path":"/api/v1/staff/audit?limit=500","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.440Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34JC-N1LXNJ","method":"GET","path":"/api/v1/admin/backup","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.448Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34JD-MWVS30","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":7,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.454Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34JP-7FKPRJ","method":"PATCH","path":"/api/v1/staff/settings/quote","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.466Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34JU-4S8LPG","method":"POST","path":"/api/v1/admin/backup/restore","status":200,"durationMs":8,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.468Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34K3-3CYLTA","method":"GET","path":"/api/v1/staff/settings/quote","status":200,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.470Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34K5-NZ2QI9","method":"GET","path":"/sales.html","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.473Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34K8-6844B3","method":"GET","path":"/api/v1/staff/audit?limit=500","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "catalogueAccessories": 11,
+  "quotes": 1,
+  "projectRevision": "R0001",
+  "projectList": true,
+  "restoreRevision": true,
+  "ownerIsolation": true,
+  "auditEvents": 35,
+  "backupTables": [
+    "quotes",
+    "catalogueRevisions",
+    "projects",
+    "shares",
+    "auditEvents"
+  ],
+  "httpStatic": true
+}
+{"ts":"2026-09-14T03:40:16.799Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34T7-0RQ0NW","method":"GET","path":"/api/v1/catalogue/nissan-y62-warrior-2025","status":200,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.826Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34TZ-ADLG3H","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789357216814/revisions","status":201,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.831Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34U6-4JQVMZ","method":"GET","path":"/api/v1/projects","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.840Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34UE-MQ8CL7","method":"POST","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789357216814/shares","status":201,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.844Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34UI-KIG5MG","method":"GET","path":"/api/v1/shares/JcuEwpwRaiRszi4f1a9MiAlXJYZSCBAPN640biOGluE","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.850Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34UN-B2SUU6","method":"POST","path":"/api/v1/builds","status":201,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.854Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34UT-IZQQ44","method":"PATCH","path":"/api/v1/staff/quotes/P4X4-CLIENT-1789357216814","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.858Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34UX-HVSS7B","method":"POST","path":"/api/v1/staff/quotes/P4X4-CLIENT-1789357216814/finalise","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:16.862Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P34V1-DOK8IF","method":"DELETE","path":"/api/v1/projects/P4X4-PROJ-CLIENT-1789357216814/shares/66c40f263b50ed1b2c93b7fd49e6951282ae8dcb558f134b3164ddf342f65a3d","status":204,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "client": "browser-adapter-vm",
+  "backend": "http-server",
+  "catalogueAccessories": 11,
+  "projectRevision": "R0001",
+  "workflow": [
+    "save",
+    "list",
+    "share",
+    "queue",
+    "staff-review",
+    "formal-quote"
+  ],
+  "quoteTotal": 500,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:17.291Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P356V-ZWOC2F","method":"GET","path":"/api/v1/health","status":200,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.311Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P357H-Z87C4H","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.319Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P357P-RKEUZM","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.324Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P357U-GXGMQ1","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.340Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3589-SFQD3Z","method":"POST","path":"/api/v1/auth/dev-login","status":201,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.345Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P358G-SGMP0W","method":"GET","path":"/api/v1/staff/quotes","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.354Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P358O-AWTY2O","method":"POST","path":"/api/v1/builds","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.359Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P358U-XF5IRL","method":"POST","path":"/api/v1/builds","status":413,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.366Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3590-YLRKU7","method":"POST","path":"/api/v1/auth/logout","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.375Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3599-F1LFR5","method":"GET","path":"/api/v1/staff/quotes","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.414Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35AD-V6TAWE","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.418Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35AH-UCSR1T","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.420Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35AJ-B2558A","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.422Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35AL-EAJIX2","method":"GET","path":"/api/v1/auth/session","status":429,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "schemaVersion": "0.12.0",
+  "sessionCookie": true,
+  "httpOnlyBoundary": true,
+  "prototypeHeadersRejected": true,
+  "ownerDefaultRole": "customer",
+  "databaseMigration": 3,
+  "securityHeaders": true,
+  "crossOriginMutationBlocked": true,
+  "bodyLimit": true,
+  "rateLimit": true,
+  "logoutRevocation": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:17.859Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35MO-BMIRWK","method":"GET","path":"/api/v1/ready","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.876Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35N8-ZKU5ZQ","method":"GET","path":"/metrics","status":401,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.880Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35NB-Z7XOUE","method":"GET","path":"/metrics","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.886Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35NG-8X3Z0P","method":"GET","path":"/api/v1/auth/session","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:17.891Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P35NL-ATFDY0","method":"GET","path":"/api/v1/auth/session","status":401,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+Alpha 13 hosted readiness test passed
+{"ts":"2026-09-14T03:40:18.344Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3605-MS80DL","method":"GET","path":"/api/v1/ready","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.363Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P360P-F1D6DC","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.390Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3619-OFDY3R","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":9,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.401Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P361R-DYOC3Q","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.409Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P361Y-4V181B","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.419Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3624-RD06B8","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":6,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.428Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P362I-BEZ3VE","method":"GET","path":"/api/v1/staff/audit?entityType=render-asset&limit=100","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 14,
+  "assets": 22,
+  "baseline": {
+    "reference-only": 7,
+    "asset-needed": 13,
+    "blocked-fitment": 2
+  },
+  "productionGateReject": true,
+  "candidatePromotion": true,
+  "productionApprovalRequiresVault": true,
+  "backupIncludesAssets": true,
+  "migrationVersion": 5,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:18.894Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36FD-JPRJ6X","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.921Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36G3-8PCT05","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":6,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:18.930Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36GF-O2OT32","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-05-ELECTRICAL-FRONT","status":422,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 15,
+  "inspector": {
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "referenceHasAlpha": false,
+    "sha256": true
+  },
+  "cameraProfile": "Y62-F34-V1",
+  "lockedCanvas": {
+    "width": 1672,
+    "height": 615
+  },
+  "serverDimensionGate": true,
+  "productionApprovalRequiresVault": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:19.380Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36SW-TWTQTF","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:19.443Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36TO-VPDC45","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":39,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:19.457Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36V0-WHPXKT","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:19.462Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P36V8-OVPZUF","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": 16,
+  "vault": "content-addressed",
+  "dimensions": "1672x615",
+  "serverTransparencyVerified": true,
+  "productionApproval": true,
+  "publicImmutableBinary": true,
+  "dbMigration": 5,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:19.956Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P377T-F3DGPU","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":43,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.963Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3794-7W11O1","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.982Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P379A-2XZ3D1","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":16,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.985Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P379S-SGCEW6","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.988Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P379U-FOFJL1","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.993Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P379X-S6C96B","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:19.997Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37A4-5ACJQN","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+Alpha 17 vault lifecycle: PASS · integrity, orphan dry-run/GC, backup manifest, corruption detection
+{"ts":"2026-09-14T03:40:20.475Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37M8-ORCKMC","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":43,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.486Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37NM-VNPAS6","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.489Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37NR-YHH5TV","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.498Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37NW-YOEZME","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":7,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.501Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37O4-21J7WA","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.503Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37O6-WTXLVN","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.507Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37O9-HCNVER","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.515Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OD-MA52IS","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002/promote","status":200,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.517Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OK-U9IO0P","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.520Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OO-1QHNLJ","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.525Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OP-UUDPH3","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":4,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.527Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OU-LF5B2I","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0003/reject","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.530Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OX-8XDP9N","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.549Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37OZ-HZBC61","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":18,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.553Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37PI-1U6AL9","method":"POST","path":"/api/v1/admin/asset-vault/gc","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.560Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37PM-DCV3IY","method":"GET","path":"/api/v1/admin/backup","status":200,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.572Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37PZ-33YM41","method":"POST","path":"/api/v1/admin/backup/restore","status":200,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.573Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37Q5-KB32TF","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.574Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P37Q6-0MZNIA","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":0,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 18,
+  "dbMigration": 5,
+  "versionLineage": 3,
+  "zeroDowntimeStaging": true,
+  "atomicPromotion": true,
+  "supersededBinaryRetained": true,
+  "rejectedBinaryRetained": true,
+  "vaultManifestHealthy": true,
+  "backupRestoreLineage": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:20.984Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P380D-Y9F0EH","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":42,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:20.994Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P381P-AUXD0N","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":5,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.002Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P381W-CIT04W","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions","status":201,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.007Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3824-8ZAG73","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.013Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3828-TDQ21P","method":"POST","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0002/promote","status":200,"durationMs":5,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.018Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P382G-H6VIJL","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0001/delivery","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.021Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P382J-KGQUD9","method":"GET","path":"/api/v1/render-assets/version-delivery/eyJhc3NldElkIjoiWTYyLUZST05UMzQtMDEtQkFTRSIsInZlcnNpb25JZCI6Ilk2Mi1GUk9OVDM0LTAxLUJBU0UtVjAwMDEiLCJvYmplY3RLZXkiOiJzaGEyNTYvOTUvOTUxZTE1NDFkMzgzNDBkN2Q0MmFiMjg1NTI3ODAzMTMwNGVlZmMyNWFjYzI5OWUzY2QzODhmMzQyNWY1MmYzOC5wbmciLCJjaGVja3N1bVNoYTI1NiI6Ijk1MWUxNTQxZDM4MzQwZDdkNDJhYjI4NTUyNzgwMzEzMDRlZWZjMjVhY2MyOTllM2NkMzg4ZjM0MjVmNTJmMzgiLCJleHAiOjE3ODkzNTczNDF9.pbDm1gNpUZrBNvzhpYwvX1UOkiSCPSJIZJ1aNT5qs6c","status":200,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.025Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P382O-PSSLBF","method":"GET","path":"/api/v1/render-assets/version-delivery/eyJhc3NldElkIjoiWTYyLUZST05UMzQtMDEtQkFTRSIsInZlcnNpb25JZCI6Ilk2Mi1GUk9OVDM0LTAxLUJBU0UtVjAwMDEiLCJvYmplY3RLZXkiOiJzaGEyNTYvOTUvOTUxZTE1NDFkMzgzNDBkN2Q0MmFiMjg1NTI3ODAzMTMwNGVlZmMyNWFjYzI5OWUzY2QzODhmMzQyNWY1MmYzOC5wbmciLCJjaGVja3N1bVNoYTI1NiI6Ijk1MWUxNTQxZDM4MzQwZDdkNDJhYjI4NTUyNzgwMzEzMDRlZWZjMjVhY2MyOTllM2NkMzg4ZjM0MjVmNTJmMzgiLCJleHAiOjE3ODkzNTczNDF9.pbDm1gNpUZrBNvzhpYwvX1UOkiSCPSJIZJ1aNT5qs6A","status":403,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.028Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P382R-UJQYXN","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.143Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P384B-VGRQJH","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":60,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.147Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3861-R7D147","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.164Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3865-R9O944","method":"GET","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/versions/Y62-FRONT34-01-BASE-V0001/delivery","status":200,"durationMs":15,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.177Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P386U-4O4OL4","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary","status":302,"durationMs":3,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.192Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P386Y-JWZKXE","method":"GET","path":"/api/v1/admin/asset-vault/status","status":200,"durationMs":14,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.193Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P387D-YDZK9R","method":"GET","path":"/asset-registry.html","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 19,
+  "dbMigration": 5,
+  "signedHistoricalDelivery": true,
+  "tamperRejected": true,
+  "productionPointerStable": true,
+  "s3SigV4": true,
+  "presignedHistoricalDelivery": true,
+  "cdnProductionRedirect": true,
+  "cdnCspAllowed": true,
+  "remoteIntegrityScan": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:21.610Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38IQ-356FMI","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":7,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.616Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38J2-H7OMQ8","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.661Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38J6-RCDR19","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":43,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.668Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38KF-MWMF71","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":5,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.674Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38KO-47UVVF","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.677Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38KR-73U39U","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary?sha=ffadaa37ecaa9f6a91bc7c7df4bd78f18ab05b1be135b7de05d7784c09c65941","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:21.681Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38KV-AEYTDN","method":"GET","path":"/api/v1/render-assets/Y62-FRONT34-01-BASE/binary?sha=0000000000000000000000000000000000000000000000000000000000000000","status":409,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 20,
+  "dbMigration": 5,
+  "publicResolver": true,
+  "states": [
+    "available",
+    "missing",
+    "blocked"
+  ],
+  "exactSkuNoSubstitution": true,
+  "checksumPinnedBinary": true,
+  "customerReferenceFallback": "none",
+  "partialStackSupported": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+Alpha 21 render contract: PASS
+{"ts":"2026-09-14T03:40:22.147Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38XO-DIPBZ0","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":6,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.190Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38XZ-R1888Z","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE/binary","status":201,"durationMs":38,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.197Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38Z4-03MUFS","method":"PUT","path":"/api/v1/staff/render-assets/Y62-FRONT34-01-BASE","status":200,"durationMs":5,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.202Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38ZD-7HJKSI","method":"POST","path":"/api/v1/render/resolve","status":200,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.205Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38ZG-8O0I33","method":"POST","path":"/api/v1/render/telemetry","status":202,"durationMs":2,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.207Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P38ZI-XJKPXD","method":"GET","path":"/api/v1/staff/render-telemetry?vehicleId=nissan-y62-warrior-2025&viewId=front34&limit=10","status":200,"durationMs":1,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 22,
+  "dbMigration": 6,
+  "paintStateExactMatch": true,
+  "wheelStateExactMatch": true,
+  "validatedPaintsSelectable": 4,
+  "loadRetryAttempts": 3,
+  "telemetryPersisted": true,
+  "staffTelemetry": true,
+  "backupTelemetry": true,
+  "noFallback": true,
+  "noFakeProductionSeed": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:22.503Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P397K-0ZU6TP","method":"GET","path":"/api/v1/staff/render-readiness?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":7,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.531Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3981-AZDNVI","method":"POST","path":"/api/v1/staff/render-readiness/slots/sync","status":200,"durationMs":18,"fingerprint":"b07a760ab58004d3"}
+{"ts":"2026-09-14T03:40:22.539Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P398M-RGDX26","method":"POST","path":"/api/v1/staff/render-readiness/slots/sync","status":200,"durationMs":5,"fingerprint":"b07a760ab58004d3"}
+{
+  "alpha": 23,
+  "plannedCoreSlots": 15,
+  "existingCoreSlots": 6,
+  "createdAssetNeededSlots": 9,
+  "idempotentSync": true,
+  "productionReadySeed": 0,
+  "readinessMatrix": true,
+  "telemetryHealth": true,
+  "noFakeLayerRule": true,
+  "status": "pass"
+}
+merged-alpha23: PASS — 2 vehicles, original 20-product Ranger baseline preserved (39 current), Y62 Alpha 22 preserved
+merged-project-handoff-alpha24: PASS — Ranger + Y62 use one immutable project/quote/share contract with no render fallback
+multi-vehicle-pipeline-alpha24: PASS — both proof vehicles persist as immutable projects; Ranger queue handoff retains project lineage and fitment gate
+Alpha 25 parallel workstream governance verified.
+Alpha 26 parallel visual governance: PASS
+Alpha 26 parallel push 02: PASS
+{"ts":"2026-09-14T03:40:23.954Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3ABX-ML53WH","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:24.133Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3ACU-HT3WI8","method":"POST","path":"/api/v1/staff/visual-governance/sync","status":200,"durationMs":151,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:24.144Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3AH5-GQKDPX","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":7,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:24.161Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3AHL-9MHYCI","method":"GET","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/reference-source","status":200,"durationMs":7,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:24.181Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3AIC-5HVR9K","method":"GET","path":"/references/y62-owner/IMG_4030.jpeg","status":404,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:24.329Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3AIO-B5G9UJ","method":"POST","path":"/api/v1/staff/visual-governance/sync","status":200,"durationMs":137,"fingerprint":"1049becf6f27b9b2"}
+{
+  "alpha": "26-wf4",
+  "package": "persisted-visual-governance",
+  "initialAssets": 22,
+  "persistedAssets": 34,
+  "ownerReferences": 9,
+  "canonicalMasterSlots": 3,
+  "idempotentSync": true,
+  "productionEligible": 0,
+  "staffReferenceVisibility": true,
+  "protectedReferenceDelivery": true,
+  "status": "pass"
+}
+WF1 Alpha 26 save/share integrity: PASS
+WF3 Y62 F34 candidate Alpha 26: PASS
+Alpha 26 parallel push 03: PASS
+Alpha 26 parallel push 04: PASS
+Alpha 26 parallel push 05: PASS
+{
+  "alpha": "26-wf4",
+  "package": "review-evidence-visibility",
+  "immutablePromotionEvidence": true,
+  "versionLifecycleVisible": true,
+  "canonicalReferencePackVisible": true,
+  "recordHistoryVisible": true,
+  "auditEvidenceVisible": true,
+  "status": "pass"
+}
+{
+  "gate": "wf4-production-review-gate-alpha26",
+  "directUnreviewedRejected": true,
+  "reviewEvidencePersisted": true,
+  "auditEvidencePersisted": true,
+  "reviewEvidenceImmutable": true,
+  "status": "pass"
+}
+{
+  "alpha": "26-wf4",
+  "package": "canonical-view-registry",
+  "canonicalMasters": 3,
+  "ownerReferences": 9,
+  "front34ReviewContract": "Y62-F34-V1-OVERLAY-01",
+  "sideSourceGapVisible": true,
+  "metadataBackfillPreservesReviewWork": true,
+  "idempotent": true,
+  "customerVisualPromotion": false,
+  "status": "pass"
+}
+{
+  "alpha": "26-wf4",
+  "package": "reference-provenance-intake",
+  "ownerReferences": 9,
+  "externalReferencePersisted": true,
+  "canonicalBindingPersisted": true,
+  "serverReferenceGate": true,
+  "approvedReferenceStillNonProduction": true,
+  "staffIntakeVisible": true,
+  "status": "pass"
+}
+{
+  "alpha": "26-wf4",
+  "package": "catalogue-fitment-governance",
+  "baselineErrors": 0,
+  "baselineWarnings": 12,
+  "draftBlockersPersisted": true,
+  "serverPublishGate": true,
+  "anyOfDependenciesGoverned": true,
+  "engineeringUncertaintyPreserved": true,
+  "immutableCatalogueRevisions": [
+    "Y62-CAT-001",
+    "Y62-CAT-002"
+  ],
+  "auditGovernancePersisted": true,
+  "staffGovernanceVisibility": true,
+  "status": "pass"
+}
+{
+  "schemaVersion": "0.26.6",
+  "accessories": 39,
+  "previousManufacturerBackedSlice": 6,
+  "evidenceRows": 20,
+  "duplicateIds": 0,
+  "duplicateSkus": 0,
+  "unknownInstallPreserved": [
+    "oa-toro-indicator-harness-ranger"
+  ],
+  "staffReviewPreserved": [
+    "oa-egr-flare-endcaps-ranger",
+    "oa-rear-protection-ranger"
+  ],
+  "status": "pass"
+}
+{
+  "schemaVersion": "0.26.6",
+  "accessories": 39,
+  "newConfirmedRecords": 5,
+  "evidenceRows": 20,
+  "deferredForMissingExactFitment": [
+    "TB-COM-RAL-STE-2XEVO-ASM0"
+  ],
+  "unknownInstallPreserved": [
+    "oa-rally-hoop-stedi-pro-ranger",
+    "oa-rally-hoop-9in-ranger",
+    "oa-rally-hoop-7in-ranger",
+    "oa-22in-slim-lightbar-ranger",
+    "oa-deep-dish-floor-mats-ranger"
+  ],
+  "status": "pass"
+}
+WF3 Y62 F34 transparent candidate Alpha 26: PASS
+{
+  "gate": "wf4-project-quote-lineage-alpha26",
+  "immutableProjectRevision": true,
+  "persistedLineageSeal": true,
+  "historicalShareBinding": true,
+  "frozenMissingStateNoFallback": true,
+  "approvedVersionEvidence": true,
+  "referenceOutputRejected": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:28.273Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3DNQ-O4JULY","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":200,"durationMs":10,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:28.298Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3DOP-N8YFA3","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-LINEAGE-HTTP/lineage","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-project-quote-lineage-endpoint-alpha26",
+  "staffEndpoint": true,
+  "roleGuard": true,
+  "persistedSeal": true,
+  "frozenRenderState": true,
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:28.739Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3E0T-VE5HWW","method":"GET","path":"/api/v1/staff/audit/integrity","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:28.758Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3E1G-4XH6CV","method":"GET","path":"/api/v1/staff/audit/integrity","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:28.771Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3E1U-W0TRQS","method":"GET","path":"/api/v1/staff/audit/integrity","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-audit-production-controls-alpha26",
+  "sha256StandardVector": true,
+  "fullySealedLedger": true,
+  "visualGovernanceEvidenceSealed": true,
+  "staffIntegrityEndpoint": true,
+  "roleGuard": true,
+  "tamperDetected": true,
+  "productionBlockedOnBrokenAudit": true,
+  "customerProductionPolicy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY unchanged",
+  "status": "pass"
+}
+{
+  "gate": "wf4-canonical-review-evidence-alpha26",
+  "canonicalMaster": "Y62-F34-V1-MASTER",
+  "reviewContract": "Y62-F34-V1-OVERLAY-01",
+  "requiredChecks": 8,
+  "referenceSnapshots": 3,
+  "directBypassBlocked": true,
+  "incompleteReviewBlocked": true,
+  "referenceMutationInvalidatesPromotion": true,
+  "immutableEvidencePersisted": true,
+  "referenceOnlyPreserved": true,
+  "customerVisualPromotion": "synthetic test database only",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:30.153Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3F2R-W20RPG","method":"POST","path":"/api/v1/staff/render-readiness/assess","status":200,"durationMs":53,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:30.173Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3F4S-SE9LSU","method":"POST","path":"/api/v1/staff/render-readiness/assess","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-render-readiness-assessment-alpha26",
+  "canonicalMastersAssessed": 3,
+  "persistedOnCanonicalMaster": true,
+  "sha256Fingerprint": true,
+  "ownerReferenceSnapshots": 3,
+  "staleOnReferenceMutation": true,
+  "reassessmentRestoresCurrent": true,
+  "auditChained": true,
+  "staffEndpoint": true,
+  "writeRoleGuard": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:31.102Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3FT0-W2ZG8H","method":"GET","path":"/api/v1/staff/render-readiness?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":58,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-reference-pack-registry-alpha26",
+  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+  "declaredReferences": 9,
+  "canonicalMasters": 3,
+  "packComplete": true,
+  "checksumTamperDetected": true,
+  "staleBindingDetected": true,
+  "syncRestoresBinding": true,
+  "canonicalReviewPackGate": true,
+  "staffVisibility": true,
+  "referenceOnlyPreserved": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:32.003Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3GJD-RF0NDU","method":"GET","path":"/api/v1/staff/render-assets?vehicleId=nissan-y62-warrior-2025","status":200,"durationMs":9,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-candidate-handoff-alpha26",
+  "canonicalMasters": 3,
+  "f34Candidate": "Y62-F34-V1-CANDIDATE-02",
+  "candidateChecksum": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+  "handoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+  "f34State": "blocked-upstream",
+  "sideState": "awaiting-wf3-candidate",
+  "rearState": "awaiting-wf3-candidate",
+  "upstreamBlockers": 12,
+  "readinessFingerprintsHandoff": true,
+  "staleOnHandoffMutation": true,
+  "syncRestoresAuthoritativeHandoff": true,
+  "implicitVersionStaging": false,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:32.635Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3H12-P1K66I","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/governance-dossier","status":403,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:32.654Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3H1L-1MGI28","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/governance-dossier","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-governance-dossier-alpha26",
+  "canonicalMasters": 3,
+  "dossiersPrepared": 3,
+  "currentAtBootstrap": 3,
+  "f34ReviewerIntake": "blocked-upstream",
+  "sideReviewerIntake": "awaiting-wf3-candidate",
+  "rearReviewerIntake": "awaiting-wf3-candidate",
+  "f34RequiredChecks": 8,
+  "f34ReferenceSnapshots": 3,
+  "staleOnBackingEvidenceMutation": true,
+  "syncDoesNotHideStaleness": true,
+  "explicitRefreshRequired": true,
+  "fitmentRefreshEndpoint": true,
+  "salesRefreshDenied": true,
+  "implicitApproval": false,
+  "implicitVersionStaging": false,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:33.353Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3HL0-UQ6C2V","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":403,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:33.379Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3HLM-GXW02U","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":200,"durationMs":9,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-review-workflow-alpha26",
+  "canonicalMasters": 3,
+  "workflowPrepared": 3,
+  "f34BootstrapState": "blocked-upstream",
+  "sideBootstrapState": "awaiting-wf3-candidate",
+  "rearBootstrapState": "awaiting-wf3-candidate",
+  "claimBlockedUntilEvidenceReady": true,
+  "successfulGovernedClaimProved": true,
+  "assignmentBoundToExactCandidateChecksum": true,
+  "wrongReviewerBlocked": true,
+  "evidenceDriftStalesWorkflow": true,
+  "explicitRefreshInvalidatesClaim": true,
+  "salesMutationDenied": true,
+  "fitmentEndpoint": true,
+  "implicitApproval": false,
+  "implicitVersionStaging": false,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{
+  "gate": "wf4-composite-eligibility-alpha26",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "persistedLayerBinding": true,
+  "canonicalMasterBinding": "Y62-F34-V1-MASTER",
+  "approvedLayerAloneCustomerVisible": false,
+  "approvedMasterPlusLayerComposite": true,
+  "tamperedBindingFailClosed": true,
+  "syncRepairsBindingWithoutPromotion": true,
+  "visualPromotionFromSync": false,
+  "status": "pass"
+}
+{
+  "gate": "wf4-reference-provenance-attestation-alpha26",
+  "ownerReferences": 9,
+  "currentAtBootstrap": 9,
+  "packCompleteAtBootstrap": true,
+  "driftDetected": true,
+  "syncDoesNotHideDrift": true,
+  "canonicalReviewFailsClosed": true,
+  "forgedAttestationRejected": true,
+  "explicitReattestationRestoresPack": true,
+  "staffVisibility": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{
+  "gate": "wf4-governance-write-boundary-alpha26",
+  "canonicalMasters": 3,
+  "ownerReferences": 9,
+  "protectedPackBinding": true,
+  "protectedCanonicalContract": true,
+  "protectedCandidateHandoff": true,
+  "protectedReviewerDossier": true,
+  "protectedReviewWorkflow": true,
+  "protectedIdentity": true,
+  "protectedReferenceMembership": true,
+  "protectedProvenanceAttestation": true,
+  "dedicatedProvenanceWorkflow": true,
+  "persistedBoundaryMetadata": true,
+  "dedicatedDossierWorkflow": true,
+  "dedicatedReadinessWorkflow": true,
+  "blockedWritesAudited": true,
+  "browserLocalParity": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:35.570Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3JAH-MLYTLQ","method":"PUT","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER","status":409,"durationMs":9,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:35.588Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3JB5-59O3VQ","method":"POST","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/provenance-attestation","status":200,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:35.596Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3JBD-ORZYP9","method":"POST","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/provenance-attestation","status":403,"durationMs":3,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:35.602Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3JBI-9G4Q5A","method":"GET","path":"/api/v1/staff/audit?entityType=render-asset&entityId=Y62-F34-V1-MASTER&action=visual-governance.protected-write.blocked","status":200,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-governance-write-boundary-endpoint-alpha26",
+  "genericProtectedWriteHttp409": true,
+  "dedicatedProvenanceEndpoint": true,
+  "salesMutationDenied": true,
+  "blockedWriteAudited": true,
+  "visualPromotion": false,
+  "status": "pass"
+}
+{
+  "gate": "wf4-quote-visual-governance-seal-alpha26",
+  "persistedSeal": true,
+  "canonicalMasterBound": true,
+  "referencePackVisible": true,
+  "ownerReferencesSnapshotted": 3,
+  "renderImmutable": true,
+  "driftVisible": true,
+  "sealedEvidenceTamperDetected": true,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{"ts":"2026-09-14T03:40:36.645Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3K4D-4RIUE0","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP/lineage","status":200,"durationMs":8,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:36.673Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3K5A-WIDSE7","method":"PATCH","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP","status":409,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T03:40:36.676Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0P3K5G-A4DTJ4","method":"GET","path":"/api/v1/staff/quotes/P4X4-WF4-VISUAL-SEAL-HTTP/lineage","status":403,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-quote-visual-governance-seal-endpoint-alpha26",
+  "staffInspection": true,
+  "canonicalPackEvidence": true,
+  "renderTamper409": true,
+  "roleGuard": true,
+  "status": "pass"
+}
+{
+  "gate": "wf4-governance-attention-alpha26",
+  "canonicalMasters": 3,
+  "persistedAttentionSnapshots": true,
+  "initialOpenBlockers": 10,
+  "initialOpenActions": 6,
+  "f34CandidateDependency": true,
+  "sideSourceGapRetained": true,
+  "protectedSystemMetadata": true,
+  "referenceDriftStalesSnapshot": true,
+  "resyncRefreshesSnapshot": true,
+  "referencePackProblemSurfaced": true,
+  "auditVisible": true,
+  "browserServerSharedBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}

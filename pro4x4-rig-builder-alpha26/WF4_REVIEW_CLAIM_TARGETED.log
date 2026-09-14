@@ -1,0 +1,181 @@
+(node:1763) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T11:35:58.849Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162W01-O6CO4F","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:58.850Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162W01-O6CO4F","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:58.862Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162W08-VCX1I5","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":200,"durationMs":6,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-review-workflow-alpha26",
+  "canonicalMasters": 3,
+  "workflowPrepared": 3,
+  "f34BootstrapState": "blocked-upstream",
+  "sideBootstrapState": "awaiting-wf3-candidate",
+  "rearBootstrapState": "awaiting-wf3-candidate",
+  "claimBlockedUntilEvidenceReady": true,
+  "successfulGovernedClaimProved": true,
+  "assignmentBoundToExactCandidateChecksum": true,
+  "wrongReviewerBlocked": true,
+  "evidenceDriftStalesWorkflow": true,
+  "explicitRefreshInvalidatesClaim": true,
+  "salesMutationDenied": true,
+  "fitmentEndpoint": true,
+  "implicitApproval": false,
+  "implicitVersionStaging": false,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1770) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T11:35:59.305Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162WCL-E4LJ8O","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":409,"code":"review_claim_conflict","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:59.306Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162WCL-E4LJ8O","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":409,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:59.318Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162WCW-607FGN","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-workflow","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-review-claim-integrity-alpha26",
+  "schemaVersion": "0.26.29",
+  "signedClaimEnvelope": true,
+  "claimBoundToMaster": true,
+  "claimBoundToCandidate": true,
+  "claimBoundToEvidence": true,
+  "idempotentSameReviewerClaim": true,
+  "staleReleaseBlocked": true,
+  "currentReleaseAllowed": true,
+  "reclaimGetsNewIdentity": true,
+  "reviewDecisionBindsExactClaim": true,
+  "claimTamperDetected": true,
+  "httpConcurrencyGuard": true,
+  "staffVisibility": true,
+  "productionEligibleByClaim": false,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1777) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T11:35:59.753Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162WP4-9ADJ4D","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-decision","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:59.755Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162WP4-9ADJ4D","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-decision","status":403,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:35:59.766Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162WPD-7KTEA7","method":"POST","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER/review-decision","status":200,"durationMs":5,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-review-decision-alpha26",
+  "canonicalMasters": 3,
+  "cleanStateDecisions": 0,
+  "blockedBeforeAssignment": true,
+  "approvalRequiresAllLockedChecks": true,
+  "wrongReviewerBlocked": true,
+  "returnedDecisionPersisted": true,
+  "returnedDecisionNonPromotional": true,
+  "approvedDecisionPersisted": true,
+  "decisionFingerprintBound": true,
+  "candidateChecksumBound": true,
+  "genericTamperBlocked": true,
+  "salesMutationDenied": true,
+  "fitmentEndpoint": true,
+  "referenceDriftStalesDecision": true,
+  "productionGateRequiresCurrentApprovedDecision": true,
+  "auditSealed": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+{
+  "gate": "wf4-canonical-production-seal-alpha26",
+  "schemaVersion": "0.26.29",
+  "versionPromotionSealed": true,
+  "directPromotionSealed": true,
+  "ownerReferencePackBound": true,
+  "referenceAttestationsBound": true,
+  "referenceReviewDecisionsBound": true,
+  "wf3HandoffBound": true,
+  "reviewerAssignmentBound": true,
+  "approvalDecisionBound": true,
+  "canonicalReviewEvidenceBound": true,
+  "binaryChecksumBound": true,
+  "auditChainHeadBound": true,
+  "immutableSealTamperBlocked": true,
+  "historicalSealSurvivesCurrentEvidenceDrift": true,
+  "currentEvidenceDriftVisible": true,
+  "productionEligibleBySeal": false,
+  "visualPromotion": "synthetic in-memory fixtures only",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1784) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "gate": "wf4-canonical-master-set-registry-alpha26",
+  "schemaVersion": "0.26.29",
+  "persistedVehicleTruthIndex": true,
+  "canonicalViews": 3,
+  "sharedReferencePackManifest": true,
+  "f34CandidateVisible": true,
+  "sideSourceGapRetained": true,
+  "crossViewReviewerApprovalProductionVisibility": true,
+  "systemManagedWriteProtected": true,
+  "referenceDriftStalesRegistry": true,
+  "resyncSurfacesProvenanceDrift": true,
+  "readinessExposesRegistry": true,
+  "sharedBrowserServerBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1791) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "gate": "wf4-governance-attention-alpha26",
+  "canonicalMasters": 3,
+  "persistedAttentionSnapshots": true,
+  "initialOpenBlockers": 10,
+  "initialOpenActions": 6,
+  "f34CandidateDependency": true,
+  "sideSourceGapRetained": true,
+  "protectedSystemMetadata": true,
+  "referenceDriftStalesSnapshot": true,
+  "resyncRefreshesSnapshot": true,
+  "referencePackProblemSurfaced": true,
+  "auditVisible": true,
+  "browserServerSharedBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1798) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "gate": "wf4-canonical-source-gap-resolution-alpha26",
+  "schemaVersion": "0.26.28",
+  "requiredGapViews": 1,
+  "currentOpenAtBootstrap": 1,
+  "dedicatedDecisionAuthority": true,
+  "genericApprovalRemoved": true,
+  "writeBoundaryProtected": true,
+  "reviewedReconstructionFailsClosed": true,
+  "explicitReturnPersisted": true,
+  "requiredReferenceDriftStalesDecision": true,
+  "syncDoesNotRewriteExplicitDecision": true,
+  "auditVisible": true,
+  "staffRegistryVisible": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:1805) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1812) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T11:36:03.530Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162ZEF-9ADZAD","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":200,"durationMs":275,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.540Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162ZMA-PINGKU","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":422,"code":"canonical_source_gap_resolution_blocked","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.540Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162ZMA-PINGKU","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":422,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.542Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162ZME-6C2WK9","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.542Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162ZME-6C2WK9","method":"POST","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER/source-gap-resolution","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.547Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU162ZMG-T4SXQF","method":"PUT","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER","status":409,"code":"governance_metadata_protected","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T11:36:03.547Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU162ZMG-T4SXQF","method":"PUT","path":"/api/v1/staff/render-assets/Y62-SIDE-V1-MASTER","status":409,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-canonical-source-gap-resolution-endpoint-alpha26",
+  "dedicatedEndpoint": true,
+  "returnDecision": true,
+  "approvalFailsClosed": true,
+  "salesMutationDenied": true,
+  "genericTamperHttp409": true,
+  "visualPromotion": false,
+  "status": "pass"
+}

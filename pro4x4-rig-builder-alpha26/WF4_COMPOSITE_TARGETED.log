@@ -1,0 +1,14 @@
+{
+  "gate": "wf4-composite-eligibility-alpha26",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "persistedLayerBinding": true,
+  "canonicalMasterBinding": "Y62-F34-V1-MASTER",
+  "approvedLayerAloneCustomerVisible": false,
+  "approvedMasterPlusLayerComposite": true,
+  "tamperedBindingFailClosed": true,
+  "syncRepairsBindingWithoutPromotion": true,
+  "visualPromotionFromSync": false,
+  "status": "pass"
+}
+(node:2979) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.26.28",
+  "package": "A26-WF4-28",
+  "push": 56,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageName": "Persisted Canonical Source-Gap Resolution / Evidence-Bound Decision Controls",
+  "scope": "WF4 Platform / Staff Tools only",
+  "sharedBackbonePreserved": true,
+  "parallelRuntimeIntroduced": false,
+  "realVisualPromotion": false,
+  "governedState": {
+    "ownerReferences": 9,
+    "currentReferenceAttestations": 9,
+    "currentApprovedReferenceReviewDecisions": 9,
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "canonicalMasters": 3,
+    "requiredCanonicalSourceGaps": 1,
+    "currentSourceGapDecisions": 1,
+    "approvedSourceGapDecisions": 0,
+    "openSourceGapDecisions": 1,
+    "sideSourceGap": {
+      "resolutionId": "Y62-SIDE-V1-SOURCE-GAP-V1",
+      "decision": "open",
+      "resolutionMethod": null,
+      "evidenceReferenceIds": [],
+      "resolutionSha256": "824b156d14345a895c0afd40537e5ae125626cdd70e4f5b176fb0393a61c1e5f",
+      "basisSha256": "927b018cc21d259de000ad1206587ee9a2208664eb7e2297f425221321327652",
+      "freshness": "current",
+      "notes": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+      "decidedAt": "2026-09-14T10:43:08.924Z",
+      "decidedBy": {
+        "actorId": "validation",
+        "displayName": "WF4 Validation",
+        "role": "admin"
+      },
+      "authority": "source-gap-decision-only",
+      "productionEligible": false
+    },
+    "sideViewContract": {
+      "state": "calibration",
+      "freshness": "current"
+    },
+    "sideReferenceCoverage": {
+      "status": "blocked-source-gap",
+      "freshness": "current"
+    },
+    "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+    "f34Intake": "blocked-upstream",
+    "rearIntake": "awaiting-wf3-candidate",
+    "sideIntake": "awaiting-wf3-candidate",
+    "canonicalReviewAssignments": 0,
+    "canonicalApprovedDecisions": 0,
+    "canonicalProductionSeals": 0,
+    "productionEligibleVisuals": 0,
+    "canonicalMasterSetSha256": "e4ff1a1e54a053568853e73462b8b37f1a071b52f16baf375324505a7db38ac6",
+    "canonicalMasterSetOpenProblems": 4,
+    "canonicalMasterSetProblems": [
+      "Y62-SIDE-V1: canonical view contract calibration",
+      "Y62-SIDE-V1: canonical reference coverage blocked-source-gap",
+      "Y62-SIDE-V1: required source geometry gap decision open/current",
+      "Y62-R34-V1: canonical view contract calibration"
+    ]
+  },
+  "sourceGapResolution": {
+    "purpose": "CANONICAL_SOURCE_GAP_RESOLUTION",
+    "authority": "source-gap-decision-only",
+    "productionEligible": false,
+    "genericCanonicalReviewApprovalRemoved": true,
+    "systemManagedWriteProtected": true,
+    "dedicatedFitmentAdminEndpoint": true,
+    "salesInspectionOnly": true,
+    "requiredReferenceSnapshotsBound": true,
+    "referencePackBound": true,
+    "canonicalViewContractBound": true,
+    "additionalReferenceRequiresExactViewSamePackCurrentApprovedAttestedEvidence": true,
+    "reviewedReconstructionRequiresLockedViewContractChecksumCandidateReadyHandoffClaimedReviewerCameraMatch": true,
+    "evidenceDriftStalesDecision": true,
+    "syncNeverRewritesExplicitApprovedOrReturnedDecision": true,
+    "downstreamConsumers": [
+      "canonical reference coverage",
+      "canonical reviewer dossier",
+      "canonical review decision",
+      "canonical review evidence gate",
+      "render readiness",
+      "governance attention",
+      "canonical master-set registry"
+    ],
+    "staffSurfaces": [
+      "Render Assets",
+      "Production Readiness"
+    ]
+  },
+  "verification": {
+    "targetedSourceGapRegression": "pass",
+    "targetedSourceGapEndpointRegression": "pass",
+    "crossWf4RegressionMatrix": {
+      "status": "pass",
+      "gates": 7
+    },
+    "npmCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": [
+        "WF1-BOM-ANYOF"
+      ],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "package": "A26-WF4-28",
+      "javascriptFiles": 138,
+      "javascriptSyntaxFailures": 0,
+      "jsonFiles": 62,
+      "jsonParseFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 303,
+      "htmlMissingReferences": 0,
+      "note": "Counts describe the final package after this static report and validation manifest are included."
+    },
+    "byteIdentity": {
+      "assetsAndReferencesFiles": 16,
+      "assetsAndReferencesChanged": 0,
+      "customerCriticalFiles": 11,
+      "customerCriticalChanged": 0
+    },
+    "zipIntegrity": "pass"
+  },
+  "nextDependency": "A26-WF4-14B / WF3 — first genuinely clean Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay + camera acceptance, production-binary rights provenance and identified reviewer evidence. SIDE remains separately blocked until either a clean exact side reference is pack-governed or WF3 delivers a SIDE candidate under a locked view contract that can satisfy the reviewed-reconstruction source-gap path."
+}

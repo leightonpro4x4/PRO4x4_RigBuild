@@ -1,0 +1,66 @@
+{
+  "package": "A26-WF4-17",
+  "boardItem": "A26-WF4-02",
+  "title": "Layer Approval + Composite Eligibility Controls",
+  "schemaVersion": "0.26.17",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "scope": "one WF4 package only",
+  "runtime": {
+    "sharedBackbonePreserved": true,
+    "parallelVisualStoreIntroduced": false,
+    "backendChangeReason": "active WF4 production-render eligibility lane",
+    "persistedCompositeBindings": 19,
+    "productionEligibleVisuals": 0,
+    "canonicalTargets": [
+      "Y62-F34-V1-MASTER",
+      "Y62-SIDE-V1-MASTER",
+      "Y62-R34-V1-MASTER"
+    ],
+    "exactMatchRequired": true,
+    "fallbackPolicy": "none"
+  },
+  "controls": {
+    "productLayerBoundToVehicleViewSkuAndCanonicalMaster": true,
+    "approvedLayerWithoutApprovedBaseFailsClosed": true,
+    "staleOrTamperedBindingFailsClosed": true,
+    "staticBindingSyncCannotPromoteVisual": true,
+    "staffCanInspectCanonicalBindingAndMasterState": true,
+    "referenceAssetsRemainNonProduction": true
+  },
+  "targetedRegression": {
+    "gate": "wf4-composite-eligibility-alpha26",
+    "status": "pass",
+    "persistedLayerBinding": true,
+    "canonicalMasterBinding": "Y62-F34-V1-MASTER",
+    "approvedLayerAloneCustomerVisible": false,
+    "approvedMasterPlusLayerComposite": true,
+    "tamperedBindingFailClosed": true,
+    "syncRepairsBindingWithoutPromotion": true,
+    "visualPromotionFromSync": false
+  },
+  "verification": {
+    "fullAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5GovernedPromotionLifecycle": "pass",
+    "wf5Acceptance": "fail-existing-wf1-only",
+    "wf5RemainingFailure": "WF1-BOM-ANYOF",
+    "wf4DirectProductionReview": "pass",
+    "customerDraftReferenceIsolation": "pass",
+    "assetsByteIdenticalToPush16": true,
+    "referencesByteIdenticalToPush16": true,
+    "customerCriticalFilesByteIdenticalToPush16": true,
+    "staticValidation": {
+      "javascriptFiles": 112,
+      "javascriptFailures": 0,
+      "jsonFiles": 27,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 276,
+      "htmlMissing": 0
+    }
+  },
+  "currentDependency": {
+    "id": "A26-WF4-14B / WF3 clean F34 candidate",
+    "detail": "WF3 must provide a genuinely clean reviewable Y62-F34-V1 candidate with locked overlay/camera acceptance, production-rights provenance and identified reviewer evidence; after canonical promotion, the first exact approved accessory layer can exercise the real composite path."
+  }
+}

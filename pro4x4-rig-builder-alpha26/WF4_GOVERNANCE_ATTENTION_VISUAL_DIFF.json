@@ -1,0 +1,39 @@
+{
+  "package": "A26-WF4-21",
+  "visualTrees": {
+    "baselineFiles": 16,
+    "currentFiles": 16,
+    "unchanged": true,
+    "changed": [],
+    "added": [],
+    "removed": []
+  },
+  "customerCritical": {
+    "baselineFiles": 11,
+    "unchangedCount": 11,
+    "allIdentical": true,
+    "results": {
+      "index.html": true,
+      "merged-app.js": true,
+      "app.js": true,
+      "merged-project-contract.js": true,
+      "render-contracts-y62.js": true,
+      "render-manifest-y62.js": true,
+      "data-y62.js": true,
+      "data-ranger.js": true,
+      "styles.css": true,
+      "share.html": true,
+      "share.js": true
+    },
+    "changed": [],
+    "note": "Staff-only governance queue uses governance-attention.css; customer presentation/data/render-contract files remain byte-identical."
+  },
+  "sharedRuntimeBackbone": {
+    "intentionallyChanged": [
+      "backend-client.js",
+      "asset-registry-store.js",
+      "server/database.js"
+    ],
+    "reason": "Persist/expose the active WF4 governance-attention delivery lane on the existing shared runtime/backbone."
+  }
+}

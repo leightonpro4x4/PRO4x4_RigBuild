@@ -1,0 +1,41 @@
+{
+  "gate": "wf4-governance-write-boundary-alpha26",
+  "canonicalMasters": 3,
+  "ownerReferences": 9,
+  "protectedPackBinding": true,
+  "protectedCanonicalContract": true,
+  "protectedCandidateHandoff": true,
+  "protectedReviewerDossier": true,
+  "protectedReviewWorkflow": true,
+  "protectedIdentity": true,
+  "protectedReferenceMembership": true,
+  "protectedProvenanceAttestation": true,
+  "dedicatedProvenanceWorkflow": true,
+  "persistedBoundaryMetadata": true,
+  "dedicatedDossierWorkflow": true,
+  "dedicatedReadinessWorkflow": true,
+  "blockedWritesAudited": true,
+  "browserLocalParity": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:4792) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4790) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ts":"2026-09-14T01:46:16.939Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU0L0J54-RG94JF","method":"PUT","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER","status":409,"code":"governance_metadata_protected","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T01:46:16.940Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0L0J54-RG94JF","method":"PUT","path":"/api/v1/staff/render-assets/Y62-F34-V1-MASTER","status":409,"durationMs":4,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T01:46:16.951Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0L0J5G-RM5ETA","method":"POST","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/provenance-attestation","status":200,"durationMs":2,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T01:46:16.954Z","level":"error","service":"pro4x4-rig-builder","env":"development","event":"request.error","requestId":"REQ-MU0L0J5M-XXG980","method":"POST","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/provenance-attestation","status":403,"code":"forbidden","fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T01:46:16.954Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0L0J5M-XXG980","method":"POST","path":"/api/v1/staff/render-assets/OWNER-Y62-F34-01/provenance-attestation","status":403,"durationMs":0,"fingerprint":"1049becf6f27b9b2"}
+{"ts":"2026-09-14T01:46:16.957Z","level":"info","service":"pro4x4-rig-builder","env":"development","event":"request.complete","requestId":"REQ-MU0L0J5O-I46SV5","method":"GET","path":"/api/v1/staff/audit?entityType=render-asset&entityId=Y62-F34-V1-MASTER&action=visual-governance.protected-write.blocked","status":200,"durationMs":1,"fingerprint":"1049becf6f27b9b2"}
+{
+  "gate": "wf4-governance-write-boundary-endpoint-alpha26",
+  "genericProtectedWriteHttp409": true,
+  "dedicatedProvenanceEndpoint": true,
+  "salesMutationDenied": true,
+  "blockedWriteAudited": true,
+  "visualPromotion": false,
+  "status": "pass"
+}

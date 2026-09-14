@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.26.23",
+  "package": "A26-WF4-23",
+  "push": 51,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageName": "Immutable Canonical Production Evidence Seal / Approval-to-Production Lineage",
+  "scope": "WF4 Platform / Staff Tools only",
+  "sharedBackbonePreserved": true,
+  "parallelRuntimeIntroduced": false,
+  "realVisualPromotion": false,
+  "governedState": {
+    "ownerReferences": 9,
+    "currentReferenceAttestations": 9,
+    "canonicalMasters": 3,
+    "productionEligibleVisuals": 0,
+    "canonicalProductionSeals": 0,
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+    "f34Intake": "blocked-upstream",
+    "sideIntake": "awaiting-wf3-candidate",
+    "rearIntake": "awaiting-wf3-candidate",
+    "reviewDecisionsRecorded": 0,
+    "governanceAttention": {
+      "current": 3,
+      "openBlockers": 10,
+      "openActions": 6
+    }
+  },
+  "verification": {
+    "targetedCanonicalProductionSeal": "pass",
+    "completeAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": ["WF1-BOM-ANYOF"],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "javascriptFiles": 126,
+      "javascriptSyntaxFailures": 0,
+      "jsonFiles": 47,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 293,
+      "htmlMissingReferences": 0
+    },
+    "byteIdentity": {
+      "assetsAndReferencesFiles": 16,
+      "assetsAndReferencesChanged": 0,
+      "customerCriticalFiles": 11,
+      "customerCriticalChanged": 0
+    }
+  },
+  "sealContract": {
+    "schemaVersion": "0.26.23",
+    "purpose": "CANONICAL_PRODUCTION_EVIDENCE_SEAL",
+    "authority": "immutable-production-evidence-only",
+    "productionEligible": false,
+    "promotionLanes": ["version-promotion", "direct-upsert"],
+    "historicalEvidenceRewrittenOnDrift": false,
+    "currentEvidenceDriftSurfaced": true
+  },
+  "nextDependency": "A26-WF4-14B / WF3 — first genuinely clean Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay + camera acceptance, production-binary rights provenance and identified reviewer evidence."
+}

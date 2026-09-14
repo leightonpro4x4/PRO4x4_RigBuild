@@ -1,0 +1,104 @@
+{
+  "vehicleId": "nissan-y62-warrior-2025",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+  "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+  "ownerReferences": 9,
+  "currentReferenceAttestations": 9,
+  "currentApprovedReferenceReviewDecisions": 9,
+  "canonicalMasters": 3,
+  "sourceGapSummary": {
+    "schemaVersion": "0.26.28",
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "totalRequired": 1,
+    "current": 1,
+    "approved": 0,
+    "open": 1,
+    "returned": 0,
+    "stale": 0,
+    "invalid": 0,
+    "missing": 0,
+    "rows": [
+      {
+        "assetId": "Y62-SIDE-V1-MASTER",
+        "briefId": "Y62-SIDE-V1",
+        "viewId": "side",
+        "resolutionId": "Y62-SIDE-V1-SOURCE-GAP-V1",
+        "decision": "open",
+        "resolutionMethod": null,
+        "evidenceReferenceIds": [],
+        "resolutionSha256": "824b156d14345a895c0afd40537e5ae125626cdd70e4f5b176fb0393a61c1e5f",
+        "basisSha256": "927b018cc21d259de000ad1206587ee9a2208664eb7e2297f425221321327652",
+        "freshness": "current",
+        "notes": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+        "decidedAt": "2026-09-14T10:43:08.924Z",
+        "decidedBy": {
+          "actorId": "validation",
+          "displayName": "WF4 Validation",
+          "role": "admin"
+        },
+        "authority": "source-gap-decision-only",
+        "productionEligible": false
+      }
+    ]
+  },
+  "side": {
+    "assetId": "Y62-SIDE-V1-MASTER",
+    "viewContract": {
+      "state": "calibration",
+      "freshness": "current"
+    },
+    "decision": {
+      "resolutionId": "Y62-SIDE-V1-SOURCE-GAP-V1",
+      "decision": "open",
+      "resolutionMethod": null,
+      "evidenceReferenceIds": [],
+      "resolutionSha256": "824b156d14345a895c0afd40537e5ae125626cdd70e4f5b176fb0393a61c1e5f",
+      "basisSha256": "927b018cc21d259de000ad1206587ee9a2208664eb7e2297f425221321327652",
+      "freshness": "current",
+      "notes": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+      "decidedAt": "2026-09-14T10:43:08.924Z",
+      "decidedBy": {
+        "actorId": "validation",
+        "displayName": "WF4 Validation",
+        "role": "admin"
+      },
+      "authority": "source-gap-decision-only",
+      "productionEligible": false
+    },
+    "referenceCoverage": {
+      "status": "blocked-source-gap",
+      "freshness": "current"
+    }
+  },
+  "candidateStates": [
+    {
+      "viewId": "front34",
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "intake": "blocked-upstream"
+    },
+    {
+      "viewId": "rear34",
+      "candidateId": null,
+      "intake": "awaiting-wf3-candidate"
+    },
+    {
+      "viewId": "side",
+      "candidateId": null,
+      "intake": "awaiting-wf3-candidate"
+    }
+  ],
+  "reviewAssignments": 0,
+  "approvedCanonicalDecisions": 0,
+  "productionSeals": 0,
+  "productionEligibleVisuals": 0,
+  "masterSet": {
+    "sha256": "e4ff1a1e54a053568853e73462b8b37f1a071b52f16baf375324505a7db38ac6",
+    "problems": [
+      "Y62-SIDE-V1: canonical view contract calibration",
+      "Y62-SIDE-V1: canonical reference coverage blocked-source-gap",
+      "Y62-SIDE-V1: required source geometry gap decision open/current",
+      "Y62-R34-V1: canonical view contract calibration"
+    ]
+  }
+}

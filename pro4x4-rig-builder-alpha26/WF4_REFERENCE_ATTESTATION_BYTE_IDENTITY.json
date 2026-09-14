@@ -1,0 +1,63 @@
+{
+  "assets": {
+    "currentFiles": 7,
+    "baselineFiles": 7,
+    "identical": true,
+    "changed": []
+  },
+  "references": {
+    "currentFiles": 9,
+    "baselineFiles": 9,
+    "identical": true,
+    "changed": []
+  },
+  "customerCritical": {
+    "files": [
+      {
+        "file": "index.html",
+        "identical": true
+      },
+      {
+        "file": "merged-app.js",
+        "identical": true
+      },
+      {
+        "file": "app.js",
+        "identical": true
+      },
+      {
+        "file": "merged.css",
+        "identical": true
+      },
+      {
+        "file": "product-visual-contract.js",
+        "identical": true
+      },
+      {
+        "file": "data-y62.js",
+        "identical": true
+      },
+      {
+        "file": "catalogue-store.js",
+        "identical": true
+      },
+      {
+        "file": "project-store.js",
+        "identical": true
+      },
+      {
+        "file": "share.js",
+        "identical": true
+      },
+      {
+        "file": "quote.js",
+        "identical": true
+      },
+      {
+        "file": "render-manifest-y62.js",
+        "identical": true
+      }
+    ],
+    "identical": true
+  }
+}

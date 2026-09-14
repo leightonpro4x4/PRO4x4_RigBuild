@@ -1,0 +1,1080 @@
+{
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "syncSummary": {
+    "total": 34,
+    "byClass": {
+      "reference": 9,
+      "canonical-master": 9,
+      "product-layer": 16
+    },
+    "byGovernance": {
+      "reference-approved": 9,
+      "master-draft": 3,
+      "reference-only": 7,
+      "held": 13,
+      "blocked": 2
+    },
+    "productionEligible": 0,
+    "compositeBindings": 19,
+    "dossiers": {
+      "schemaVersion": "0.26.18",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "total": 3,
+      "current": 3,
+      "stale": 0,
+      "invalid": 0,
+      "unprepared": 0,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "blocked-upstream",
+            "blockers": [
+              "visible source-scene contamination remains at the isolation boundary",
+              "owner-photo reflections remain; neutral reconstruction incomplete",
+              "canonical overlay acceptance pending",
+              "production-binary rights not separately recorded",
+              "clean transparent isolation / edge cleanup is incomplete",
+              "source-scene reflections remain and are not a neutral canonical reconstruction",
+              "locked-profile overlay acceptance is still pending",
+              "production-binary rights for a direct photo-derived master are not separately recorded",
+              "reviewer approval state remains master-draft",
+              "WF3 review decision returned this candidate for reconstruction / correction.",
+              "Candidate governance remains master-draft; this handoff cannot grant approval.",
+              "Production-binary rights are not cleared for direct promotion."
+            ],
+            "requiredChecks": 8,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 8,
+            "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+          }
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master."
+            ],
+            "requiredChecks": 0,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 0,
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master.",
+              "required canonical source gap is unresolved"
+            ],
+            "requiredChecks": 0,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 0,
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        }
+      ]
+    },
+    "canonicalViewContracts": {
+      "schemaVersion": "0.26.26",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "total": 3,
+      "current": 3,
+      "locked": 1,
+      "calibration": 2,
+      "stale": 0,
+      "invalid": 0,
+      "missing": 0,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "viewId": "front34",
+          "state": "locked",
+          "freshness": "current",
+          "contractSha256": "303bc938a957a99c703a78bf8b2a6c6f6e77464a919b1e41c834f7aac6d9e4e0"
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "viewId": "rear34",
+          "state": "calibration",
+          "freshness": "current",
+          "contractSha256": "c8a0f27ee0154aa3051b891d5f3383793582f2f111d27ea5f1d97bb1e4525a9f"
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "viewId": "side",
+          "state": "calibration",
+          "freshness": "current",
+          "contractSha256": "c048d68f7893e385ac76d22f040b4f42a72ae20e538764f3ae8d25dfaf428dae"
+        }
+      ]
+    },
+    "canonicalReferenceCoverage": {
+      "schemaVersion": "0.26.27",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "total": 3,
+      "current": 3,
+      "complete": 2,
+      "blockedSourceGap": 1,
+      "blockedEvidence": 0,
+      "stale": 0,
+      "invalid": 0,
+      "missing": 0,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "viewId": "front34",
+          "status": "complete",
+          "freshness": "current",
+          "coverageSha256": "83689b01b235650a3dc2e341584071f2fdb39ed7f38c5f2d7be6ac6840e014ff",
+          "required": 3,
+          "registered": 3,
+          "requiredGaps": 0
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "viewId": "rear34",
+          "status": "complete",
+          "freshness": "current",
+          "coverageSha256": "523f1b50c7a8cded265cc1c6d482e9afb6c8aecb04947592c30d3ac8354cc3f7",
+          "required": 2,
+          "registered": 2,
+          "requiredGaps": 0
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "viewId": "side",
+          "status": "blocked-source-gap",
+          "freshness": "current",
+          "coverageSha256": "e5779d1a6cef6781f794cabcb8147712acabc9e57b7f15f0986f7d94f0f92b7b",
+          "required": 3,
+          "registered": 3,
+          "requiredGaps": 1
+        }
+      ]
+    },
+    "reviewWorkflows": {
+      "schemaVersion": "0.26.16",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "total": 3,
+      "current": 3,
+      "stale": 0,
+      "invalid": 0,
+      "unprepared": 0,
+      "claimed": 0,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "freshness": "current",
+          "state": "blocked-upstream",
+          "assignment": null,
+          "intake": {
+            "state": "blocked-upstream",
+            "sourceState": "blocked-upstream",
+            "blockers": [
+              "visible source-scene contamination remains at the isolation boundary",
+              "owner-photo reflections remain; neutral reconstruction incomplete",
+              "canonical overlay acceptance pending",
+              "production-binary rights not separately recorded",
+              "clean transparent isolation / edge cleanup is incomplete",
+              "source-scene reflections remain and are not a neutral canonical reconstruction",
+              "locked-profile overlay acceptance is still pending",
+              "production-binary rights for a direct photo-derived master are not separately recorded",
+              "reviewer approval state remains master-draft",
+              "WF3 review decision returned this candidate for reconstruction / correction.",
+              "Candidate governance remains master-draft; this handoff cannot grant approval.",
+              "Production-binary rights are not cleared for direct promotion."
+            ],
+            "canClaim": false,
+            "dossierFreshness": "current",
+            "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+          }
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "freshness": "current",
+          "state": "awaiting-wf3-candidate",
+          "assignment": null,
+          "intake": {
+            "state": "awaiting-wf3-candidate",
+            "sourceState": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master."
+            ],
+            "canClaim": false,
+            "dossierFreshness": "current",
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "freshness": "current",
+          "state": "awaiting-wf3-candidate",
+          "assignment": null,
+          "intake": {
+            "state": "awaiting-wf3-candidate",
+            "sourceState": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master.",
+              "required canonical source gap is unresolved"
+            ],
+            "canClaim": false,
+            "dossierFreshness": "current",
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        }
+      ]
+    },
+    "governanceAttention": {
+      "schemaVersion": "0.26.22",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+      "total": 3,
+      "current": 3,
+      "stale": 0,
+      "invalid": 0,
+      "missing": 0,
+      "openBlockers": 10,
+      "openActions": 6,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "viewId": "front34",
+          "freshness": "current",
+          "persisted": {
+            "schemaVersion": "0.26.22",
+            "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+            "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+            "authority": "inspection-and-routing-only",
+            "productionEligible": false,
+            "attentionId": "Y62-F34-V1-GOVERNANCE-ATTENTION",
+            "basisSha256": "f83a4e9517ea1b11fe9e96a3be8ec1f53acda2c06532502e9b54292ffa5a0b40",
+            "attentionSha256": "8cc899e6eac0e049e8f9c4175f7f67f63a149ce762d1a17a462034a5c1af8c89",
+            "generatedAt": "2026-09-14T09:39:41.886Z",
+            "generatedBy": {
+              "actorId": "wf4-push55-governed-state",
+              "displayName": "WF4 Push55",
+              "role": "admin"
+            },
+            "summary": {
+              "total": 5,
+              "blockers": 3,
+              "actions": 2,
+              "warnings": 0,
+              "lanes": [
+                "wf3-handoff",
+                "reviewer",
+                "readiness",
+                "production"
+              ]
+            },
+            "basis": {
+              "canonicalMaster": {
+                "assetId": "Y62-F34-V1-MASTER",
+                "briefId": "Y62-F34-V1",
+                "cameraMatched": false,
+                "candidateHandoff": {
+                  "candidateChecksumSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+                  "candidateId": "Y62-F34-V1-CANDIDATE-02",
+                  "handoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+                  "intakeState": "blocked-upstream"
+                },
+                "canonicalReview": {
+                  "candidateChecksumSha256": null,
+                  "verdict": null
+                },
+                "governanceDossier": {
+                  "dossierSha256": "384c6de319b064b671a800486d6dd5630c261a9b3c9e90523982e8a572475f10",
+                  "freshness": "current"
+                },
+                "governanceState": "master-draft",
+                "licenceStatus": "pending-render",
+                "readiness": {
+                  "fingerprintSha256": null,
+                  "freshness": "unassessed",
+                  "verdict": "blocked"
+                },
+                "referenceGap": null,
+                "referencePack": {
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "requiredReferenceIds": [
+                    "OWNER-Y62-F34-01",
+                    "OWNER-Y62-F34-02",
+                    "OWNER-Y62-FRONT-01"
+                  ]
+                },
+                "reviewDecision": {
+                  "basisSha256": null,
+                  "candidateChecksumSha256": null,
+                  "decision": null,
+                  "decisionSha256": null,
+                  "freshness": "unrecorded",
+                  "reviewerActorId": null
+                },
+                "reviewWorkflow": {
+                  "assignment": null,
+                  "freshness": "current",
+                  "state": "blocked-upstream",
+                  "workflowSha256": "95af991f34841fb3ea39b4b53f9c22ae61bae1b3e45242ae31d2587595957020"
+                },
+                "status": "candidate",
+                "vehicleId": "nissan-y62-warrior-2025",
+                "viewId": "front34",
+                "writeBoundary": {
+                  "freshness": "current",
+                  "schemaVersion": "0.26.27"
+                }
+              },
+              "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+              "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+              "references": [
+                {
+                  "assetId": "OWNER-Y62-F34-01",
+                  "attestationBasisSha256": "ad6d905447e8172cf555c243afd10f0ba6a84d16dd1d092134b3194e8cb5a943",
+                  "checksumSha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                },
+                {
+                  "assetId": "OWNER-Y62-F34-02",
+                  "attestationBasisSha256": "f9bad6a8e0cad48081e04ab70fbfddd2b4d1f95389d7e22878256a5b66a40d81",
+                  "checksumSha256": "5a3f5209582446cb21622c7c4a5b2741437c55095c7ce7276a9c22e6adb1dfd4",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                },
+                {
+                  "assetId": "OWNER-Y62-FRONT-01",
+                  "attestationBasisSha256": "7c19f4a556328ab3cd9fbcd189d7a19a86bc31ed3ad9fa852d35de9d7c0fd568",
+                  "checksumSha256": "96e9d873a7fc7eeff48a95eab46896e4572549c8e6a8e286e631a269d42cfb8e",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                }
+              ],
+              "schemaVersion": "0.26.22",
+              "versions": []
+            },
+            "issues": [
+              {
+                "id": "WF3_CANDIDATE",
+                "severity": "blocker",
+                "lane": "wf3-handoff",
+                "title": "WF3 candidate remains blocked",
+                "detail": "12 upstream blockers remain; intake state is blocked-upstream.",
+                "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+              },
+              {
+                "id": "REVIEW_NOT_CLAIMABLE",
+                "severity": "action",
+                "lane": "reviewer",
+                "title": "Canonical review cannot yet be claimed",
+                "detail": "12 claim blockers remain; intake state is blocked-upstream.",
+                "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+              },
+              {
+                "id": "CANONICAL_REVIEW",
+                "severity": "blocker",
+                "lane": "reviewer",
+                "title": "Canonical review evidence incomplete",
+                "detail": "9 canonical review evidence problems remain.",
+                "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+              },
+              {
+                "id": "READINESS_UNASSESSED",
+                "severity": "action",
+                "lane": "readiness",
+                "title": "Canonical readiness has not been persisted",
+                "detail": "No current persisted readiness assessment is attached to this canonical master.",
+                "nextAction": "Run ASSESS + PERSIST READINESS."
+              },
+              {
+                "id": "PRODUCTION_READINESS",
+                "severity": "blocker",
+                "lane": "production",
+                "title": "Canonical master is not production-ready",
+                "detail": "7 production-readiness blockers remain.",
+                "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+              }
+            ]
+          },
+          "currentSummary": {
+            "total": 5,
+            "blockers": 3,
+            "actions": 2,
+            "warnings": 0,
+            "lanes": [
+              "wf3-handoff",
+              "reviewer",
+              "readiness",
+              "production"
+            ]
+          },
+          "currentIssues": [
+            {
+              "id": "WF3_CANDIDATE",
+              "severity": "blocker",
+              "lane": "wf3-handoff",
+              "title": "WF3 candidate remains blocked",
+              "detail": "12 upstream blockers remain; intake state is blocked-upstream.",
+              "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+            },
+            {
+              "id": "REVIEW_NOT_CLAIMABLE",
+              "severity": "action",
+              "lane": "reviewer",
+              "title": "Canonical review cannot yet be claimed",
+              "detail": "12 claim blockers remain; intake state is blocked-upstream.",
+              "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+            },
+            {
+              "id": "CANONICAL_REVIEW",
+              "severity": "blocker",
+              "lane": "reviewer",
+              "title": "Canonical review evidence incomplete",
+              "detail": "9 canonical review evidence problems remain.",
+              "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+            },
+            {
+              "id": "READINESS_UNASSESSED",
+              "severity": "action",
+              "lane": "readiness",
+              "title": "Canonical readiness has not been persisted",
+              "detail": "No current persisted readiness assessment is attached to this canonical master.",
+              "nextAction": "Run ASSESS + PERSIST READINESS."
+            },
+            {
+              "id": "PRODUCTION_READINESS",
+              "severity": "blocker",
+              "lane": "production",
+              "title": "Canonical master is not production-ready",
+              "detail": "7 production-readiness blockers remain.",
+              "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+            }
+          ]
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "viewId": "rear34",
+          "freshness": "current",
+          "persisted": {
+            "schemaVersion": "0.26.22",
+            "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+            "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+            "authority": "inspection-and-routing-only",
+            "productionEligible": false,
+            "attentionId": "Y62-R34-V1-GOVERNANCE-ATTENTION",
+            "basisSha256": "28b8bf63ccffccc55067c86d1f02d6d530c18090d1c0fd3156197962dca8dae3",
+            "attentionSha256": "3fd7eb9029cf54e2e5375d7e95e982d305e2bce2437121e816cc395ec5eec485",
+            "generatedAt": "2026-09-14T09:39:41.901Z",
+            "generatedBy": {
+              "actorId": "wf4-push55-governed-state",
+              "displayName": "WF4 Push55",
+              "role": "admin"
+            },
+            "summary": {
+              "total": 5,
+              "blockers": 3,
+              "actions": 2,
+              "warnings": 0,
+              "lanes": [
+                "wf3-handoff",
+                "reviewer",
+                "readiness",
+                "production"
+              ]
+            },
+            "basis": {
+              "canonicalMaster": {
+                "assetId": "Y62-R34-V1-MASTER",
+                "briefId": "Y62-R34-V1",
+                "cameraMatched": false,
+                "candidateHandoff": {
+                  "candidateChecksumSha256": null,
+                  "candidateId": null,
+                  "handoffSha256": "f1c732b81b7a298a66d4b89ee2aefa5b568f62724427e1425a662c92f04c2261",
+                  "intakeState": "awaiting-wf3-candidate"
+                },
+                "canonicalReview": {
+                  "candidateChecksumSha256": null,
+                  "verdict": null
+                },
+                "governanceDossier": {
+                  "dossierSha256": "473bb374c14054473b77c5717f5e57d9655669f4fa6e494eaac775747bf729ab",
+                  "freshness": "current"
+                },
+                "governanceState": "master-draft",
+                "licenceStatus": "pending-render",
+                "readiness": {
+                  "fingerprintSha256": null,
+                  "freshness": "unassessed",
+                  "verdict": "blocked"
+                },
+                "referenceGap": null,
+                "referencePack": {
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "requiredReferenceIds": [
+                    "OWNER-Y62-REAR34-01",
+                    "OWNER-Y62-REAR-01"
+                  ]
+                },
+                "reviewDecision": {
+                  "basisSha256": null,
+                  "candidateChecksumSha256": null,
+                  "decision": null,
+                  "decisionSha256": null,
+                  "freshness": "unrecorded",
+                  "reviewerActorId": null
+                },
+                "reviewWorkflow": {
+                  "assignment": null,
+                  "freshness": "current",
+                  "state": "awaiting-wf3-candidate",
+                  "workflowSha256": "becf794a5ad037e483642aa78af6f217aa775dd577e36936aeb6010ae5672d2b"
+                },
+                "status": "candidate",
+                "vehicleId": "nissan-y62-warrior-2025",
+                "viewId": "rear34",
+                "writeBoundary": {
+                  "freshness": "current",
+                  "schemaVersion": "0.26.27"
+                }
+              },
+              "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+              "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+              "references": [
+                {
+                  "assetId": "OWNER-Y62-REAR34-01",
+                  "attestationBasisSha256": "39daa24c0574670e3d7a47fcd9e6cbd74f6365324f7592dce605e45f69295750",
+                  "checksumSha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                },
+                {
+                  "assetId": "OWNER-Y62-REAR-01",
+                  "attestationBasisSha256": "5e070044f0f093a32f8b3efa410d28ec6b1c9936e67d3b54fa49a59d41123481",
+                  "checksumSha256": "a72cb38fc92c95afd86c6eab513904d056ae80b3123ccea64eea9cbd5c01627a",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                }
+              ],
+              "schemaVersion": "0.26.22",
+              "versions": []
+            },
+            "issues": [
+              {
+                "id": "WF3_CANDIDATE",
+                "severity": "blocker",
+                "lane": "wf3-handoff",
+                "title": "WF3 canonical candidate not supplied",
+                "detail": "No governed canonical candidate is registered for this canonical view.",
+                "nextAction": "Await a reference-backed WF3 canonical candidate for this exact brief/view."
+              },
+              {
+                "id": "REVIEW_NOT_CLAIMABLE",
+                "severity": "action",
+                "lane": "reviewer",
+                "title": "Canonical review cannot yet be claimed",
+                "detail": "1 claim blocker remain; intake state is awaiting-wf3-candidate.",
+                "nextAction": "Await WF3 canonical candidate handoff."
+              },
+              {
+                "id": "CANONICAL_REVIEW",
+                "severity": "blocker",
+                "lane": "reviewer",
+                "title": "Canonical review evidence incomplete",
+                "detail": "1 canonical review evidence problem remain.",
+                "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+              },
+              {
+                "id": "READINESS_UNASSESSED",
+                "severity": "action",
+                "lane": "readiness",
+                "title": "Canonical readiness has not been persisted",
+                "detail": "No current persisted readiness assessment is attached to this canonical master.",
+                "nextAction": "Run ASSESS + PERSIST READINESS."
+              },
+              {
+                "id": "PRODUCTION_READINESS",
+                "severity": "blocker",
+                "lane": "production",
+                "title": "Canonical master is not production-ready",
+                "detail": "8 production-readiness blockers remain.",
+                "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+              }
+            ]
+          },
+          "currentSummary": {
+            "total": 5,
+            "blockers": 3,
+            "actions": 2,
+            "warnings": 0,
+            "lanes": [
+              "wf3-handoff",
+              "reviewer",
+              "readiness",
+              "production"
+            ]
+          },
+          "currentIssues": [
+            {
+              "id": "WF3_CANDIDATE",
+              "severity": "blocker",
+              "lane": "wf3-handoff",
+              "title": "WF3 canonical candidate not supplied",
+              "detail": "No governed canonical candidate is registered for this canonical view.",
+              "nextAction": "Await a reference-backed WF3 canonical candidate for this exact brief/view."
+            },
+            {
+              "id": "REVIEW_NOT_CLAIMABLE",
+              "severity": "action",
+              "lane": "reviewer",
+              "title": "Canonical review cannot yet be claimed",
+              "detail": "1 claim blocker remain; intake state is awaiting-wf3-candidate.",
+              "nextAction": "Await WF3 canonical candidate handoff."
+            },
+            {
+              "id": "CANONICAL_REVIEW",
+              "severity": "blocker",
+              "lane": "reviewer",
+              "title": "Canonical review evidence incomplete",
+              "detail": "1 canonical review evidence problem remain.",
+              "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+            },
+            {
+              "id": "READINESS_UNASSESSED",
+              "severity": "action",
+              "lane": "readiness",
+              "title": "Canonical readiness has not been persisted",
+              "detail": "No current persisted readiness assessment is attached to this canonical master.",
+              "nextAction": "Run ASSESS + PERSIST READINESS."
+            },
+            {
+              "id": "PRODUCTION_READINESS",
+              "severity": "blocker",
+              "lane": "production",
+              "title": "Canonical master is not production-ready",
+              "detail": "8 production-readiness blockers remain.",
+              "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+            }
+          ]
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "viewId": "side",
+          "freshness": "current",
+          "persisted": {
+            "schemaVersion": "0.26.22",
+            "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+            "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+            "authority": "inspection-and-routing-only",
+            "productionEligible": false,
+            "attentionId": "Y62-SIDE-V1-GOVERNANCE-ATTENTION",
+            "basisSha256": "73133465bfcdc388e182e275f9ce6b08d088906b6ee7af86a07a9f3f1ca34fba",
+            "attentionSha256": "c0bce5ea9f97ddfa4f5ef5303b71f5d8f4b388d84dcb97bcf7d3e9354f5023f7",
+            "generatedAt": "2026-09-14T09:39:41.913Z",
+            "generatedBy": {
+              "actorId": "wf4-push55-governed-state",
+              "displayName": "WF4 Push55",
+              "role": "admin"
+            },
+            "summary": {
+              "total": 6,
+              "blockers": 4,
+              "actions": 2,
+              "warnings": 0,
+              "lanes": [
+                "wf3-handoff",
+                "reviewer",
+                "readiness",
+                "production",
+                "reference-pack"
+              ]
+            },
+            "basis": {
+              "canonicalMaster": {
+                "assetId": "Y62-SIDE-V1-MASTER",
+                "briefId": "Y62-SIDE-V1",
+                "cameraMatched": false,
+                "candidateHandoff": {
+                  "candidateChecksumSha256": null,
+                  "candidateId": null,
+                  "handoffSha256": "b0f512a7f8fd2bde2ddbbc2d24dc58633a4201a4ca0aebfce74aff1e5653cf17",
+                  "intakeState": "awaiting-wf3-candidate"
+                },
+                "canonicalReview": {
+                  "candidateChecksumSha256": null,
+                  "verdict": null
+                },
+                "governanceDossier": {
+                  "dossierSha256": "8bb5da108cc3f7d8fb7a364f0b87eb6faae2add16291addf44f429b1578a038c",
+                  "freshness": "current"
+                },
+                "governanceState": "master-draft",
+                "licenceStatus": "pending-render",
+                "readiness": {
+                  "fingerprintSha256": null,
+                  "freshness": "unassessed",
+                  "verdict": "blocked"
+                },
+                "referenceGap": {
+                  "note": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+                  "severity": "required",
+                  "view": "side"
+                },
+                "referencePack": {
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "requiredReferenceIds": [
+                    "OWNER-Y62-DESIGNBOARD-01",
+                    "OWNER-Y62-F34-01",
+                    "OWNER-Y62-REAR34-01"
+                  ]
+                },
+                "reviewDecision": {
+                  "basisSha256": null,
+                  "candidateChecksumSha256": null,
+                  "decision": null,
+                  "decisionSha256": null,
+                  "freshness": "unrecorded",
+                  "reviewerActorId": null
+                },
+                "reviewWorkflow": {
+                  "assignment": null,
+                  "freshness": "current",
+                  "state": "awaiting-wf3-candidate",
+                  "workflowSha256": "e1b961f858f1c74e45feaa71d3a7865105e9e2da26fdfd7053d02a14356bb8ab"
+                },
+                "status": "candidate",
+                "vehicleId": "nissan-y62-warrior-2025",
+                "viewId": "side",
+                "writeBoundary": {
+                  "freshness": "current",
+                  "schemaVersion": "0.26.27"
+                }
+              },
+              "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+              "purpose": "CANONICAL_GOVERNANCE_ATTENTION_SNAPSHOT",
+              "references": [
+                {
+                  "assetId": "OWNER-Y62-DESIGNBOARD-01",
+                  "attestationBasisSha256": "c7c373bacab93c6eed78f5f1b887dd24a13652c2739949e88ed2226a3ceee3c2",
+                  "checksumSha256": "736d43c3cd14ffce043549b7d9abf5f8e6da0b57e2d451543ce4ba9fa3bfa747",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                },
+                {
+                  "assetId": "OWNER-Y62-F34-01",
+                  "attestationBasisSha256": "ad6d905447e8172cf555c243afd10f0ba6a84d16dd1d092134b3194e8cb5a943",
+                  "checksumSha256": "400a6e3f7fddeb5dba175173491ddd2bab62c0cea6fd286b5c4e6119d9a72fdc",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                },
+                {
+                  "assetId": "OWNER-Y62-REAR34-01",
+                  "attestationBasisSha256": "39daa24c0574670e3d7a47fcd9e6cbd74f6365324f7592dce605e45f69295750",
+                  "checksumSha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+                  "governanceState": "reference-approved",
+                  "licenceStatus": "owner-project-approved",
+                  "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+                  "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+                  "present": true
+                }
+              ],
+              "schemaVersion": "0.26.22",
+              "versions": []
+            },
+            "issues": [
+              {
+                "id": "WF3_CANDIDATE",
+                "severity": "blocker",
+                "lane": "wf3-handoff",
+                "title": "WF3 canonical candidate not supplied",
+                "detail": "No governed canonical candidate is registered for this canonical view.",
+                "nextAction": "Await a reference-backed WF3 canonical candidate for this exact brief/view."
+              },
+              {
+                "id": "REVIEW_NOT_CLAIMABLE",
+                "severity": "action",
+                "lane": "reviewer",
+                "title": "Canonical review cannot yet be claimed",
+                "detail": "2 claim blockers remain; intake state is awaiting-wf3-candidate.",
+                "nextAction": "Await WF3 canonical candidate handoff."
+              },
+              {
+                "id": "CANONICAL_REVIEW",
+                "severity": "blocker",
+                "lane": "reviewer",
+                "title": "Canonical review evidence incomplete",
+                "detail": "2 canonical review evidence problems remain.",
+                "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+              },
+              {
+                "id": "READINESS_UNASSESSED",
+                "severity": "action",
+                "lane": "readiness",
+                "title": "Canonical readiness has not been persisted",
+                "detail": "No current persisted readiness assessment is attached to this canonical master.",
+                "nextAction": "Run ASSESS + PERSIST READINESS."
+              },
+              {
+                "id": "PRODUCTION_READINESS",
+                "severity": "blocker",
+                "lane": "production",
+                "title": "Canonical master is not production-ready",
+                "detail": "10 production-readiness blockers remain.",
+                "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+              },
+              {
+                "id": "SOURCE_GAP",
+                "severity": "blocker",
+                "lane": "reference-pack",
+                "title": "Required source geometry gap remains open",
+                "detail": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+                "nextAction": "Supply and approve exact supporting geometry evidence; do not infer missing geometry."
+              }
+            ]
+          },
+          "currentSummary": {
+            "total": 6,
+            "blockers": 4,
+            "actions": 2,
+            "warnings": 0,
+            "lanes": [
+              "wf3-handoff",
+              "reviewer",
+              "readiness",
+              "production",
+              "reference-pack"
+            ]
+          },
+          "currentIssues": [
+            {
+              "id": "WF3_CANDIDATE",
+              "severity": "blocker",
+              "lane": "wf3-handoff",
+              "title": "WF3 canonical candidate not supplied",
+              "detail": "No governed canonical candidate is registered for this canonical view.",
+              "nextAction": "Await a reference-backed WF3 canonical candidate for this exact brief/view."
+            },
+            {
+              "id": "REVIEW_NOT_CLAIMABLE",
+              "severity": "action",
+              "lane": "reviewer",
+              "title": "Canonical review cannot yet be claimed",
+              "detail": "2 claim blockers remain; intake state is awaiting-wf3-candidate.",
+              "nextAction": "Await WF3 canonical candidate handoff."
+            },
+            {
+              "id": "CANONICAL_REVIEW",
+              "severity": "blocker",
+              "lane": "reviewer",
+              "title": "Canonical review evidence incomplete",
+              "detail": "2 canonical review evidence problems remain.",
+              "nextAction": "Complete the locked canonical review contract against the exact candidate checksum."
+            },
+            {
+              "id": "READINESS_UNASSESSED",
+              "severity": "action",
+              "lane": "readiness",
+              "title": "Canonical readiness has not been persisted",
+              "detail": "No current persisted readiness assessment is attached to this canonical master.",
+              "nextAction": "Run ASSESS + PERSIST READINESS."
+            },
+            {
+              "id": "PRODUCTION_READINESS",
+              "severity": "blocker",
+              "lane": "production",
+              "title": "Canonical master is not production-ready",
+              "detail": "10 production-readiness blockers remain.",
+              "nextAction": "Resolve the current production-readiness blockers; do not substitute reference or draft imagery."
+            },
+            {
+              "id": "SOURCE_GAP",
+              "severity": "blocker",
+              "lane": "reference-pack",
+              "title": "Required source geometry gap remains open",
+              "detail": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+              "nextAction": "Supply and approve exact supporting geometry evidence; do not infer missing geometry."
+            }
+          ]
+        }
+      ]
+    },
+    "canonicalMasterSet": {
+      "state": "current",
+      "registryId": "nissan-y62-warrior-2025-CANONICAL-MASTER-SET-V1",
+      "registrySha256": "832cc9d63a29c94cd32fd426a696971c02ab62aa0659f7c47af51f7edf0d58ed",
+      "views": 3,
+      "candidates": 1,
+      "reviewAssigned": 0,
+      "approvedDecisions": 0,
+      "productionSealed": 0,
+      "productionEligible": 0,
+      "openSetProblems": 4
+    }
+  },
+  "readinessSummary": {
+    "plannedSlots": 15,
+    "registeredSlots": 6,
+    "missingSlots": 9,
+    "productionReadySlots": 0,
+    "coveragePct": 0,
+    "front34ProductionReady": 0,
+    "front34Planned": 5,
+    "health": "red",
+    "healthReason": "Front 3/4 validated core state coverage is incomplete."
+  },
+  "canonicalReferenceCoverage": {
+    "schemaVersion": "0.26.27",
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "total": 3,
+    "current": 3,
+    "complete": 2,
+    "blockedSourceGap": 1,
+    "blockedEvidence": 0,
+    "stale": 0,
+    "invalid": 0,
+    "missing": 0,
+    "rows": [
+      {
+        "assetId": "Y62-F34-V1-MASTER",
+        "briefId": "Y62-F34-V1",
+        "viewId": "front34",
+        "status": "complete",
+        "freshness": "current",
+        "coverageSha256": "83689b01b235650a3dc2e341584071f2fdb39ed7f38c5f2d7be6ac6840e014ff",
+        "required": 3,
+        "registered": 3,
+        "requiredGaps": 0
+      },
+      {
+        "assetId": "Y62-R34-V1-MASTER",
+        "briefId": "Y62-R34-V1",
+        "viewId": "rear34",
+        "status": "complete",
+        "freshness": "current",
+        "coverageSha256": "523f1b50c7a8cded265cc1c6d482e9afb6c8aecb04947592c30d3ac8354cc3f7",
+        "required": 2,
+        "registered": 2,
+        "requiredGaps": 0
+      },
+      {
+        "assetId": "Y62-SIDE-V1-MASTER",
+        "briefId": "Y62-SIDE-V1",
+        "viewId": "side",
+        "status": "blocked-source-gap",
+        "freshness": "current",
+        "coverageSha256": "e5779d1a6cef6781f794cabcb8147712acabc9e57b7f15f0986f7d94f0f92b7b",
+        "required": 3,
+        "registered": 3,
+        "requiredGaps": 1
+      }
+    ]
+  },
+  "views": {
+    "front34": {
+      "assetId": "Y62-F34-V1-MASTER",
+      "status": "complete",
+      "freshness": "current",
+      "coverageSha256": "83689b01b235650a3dc2e341584071f2fdb39ed7f38c5f2d7be6ac6840e014ff",
+      "summary": {
+        "required": 3,
+        "registered": 3,
+        "checksumMatched": 3,
+        "packBound": 3,
+        "attested": 3,
+        "reviewApproved": 3,
+        "requiredGaps": 0
+      }
+    },
+    "rear34": {
+      "assetId": "Y62-R34-V1-MASTER",
+      "status": "complete",
+      "freshness": "current",
+      "coverageSha256": "523f1b50c7a8cded265cc1c6d482e9afb6c8aecb04947592c30d3ac8354cc3f7",
+      "summary": {
+        "required": 2,
+        "registered": 2,
+        "checksumMatched": 2,
+        "packBound": 2,
+        "attested": 2,
+        "reviewApproved": 2,
+        "requiredGaps": 0
+      }
+    },
+    "side": {
+      "assetId": "Y62-SIDE-V1-MASTER",
+      "status": "blocked-source-gap",
+      "freshness": "current",
+      "coverageSha256": "e5779d1a6cef6781f794cabcb8147712acabc9e57b7f15f0986f7d94f0f92b7b",
+      "summary": {
+        "required": 3,
+        "registered": 3,
+        "checksumMatched": 3,
+        "packBound": 3,
+        "attested": 3,
+        "reviewApproved": 3,
+        "requiredGaps": 1
+      }
+    }
+  },
+  "masterSet": {
+    "freshness": "current",
+    "registrySha256": "832cc9d63a29c94cd32fd426a696971c02ab62aa0659f7c47af51f7edf0d58ed",
+    "problemCount": 4,
+    "problems": [
+      "Y62-SIDE-V1: canonical view contract calibration",
+      "Y62-SIDE-V1: canonical reference coverage blocked-source-gap",
+      "Y62-SIDE-V1: required source geometry gap retained",
+      "Y62-R34-V1: canonical view contract calibration"
+    ]
+  },
+  "ownerReferences": 9,
+  "productionEligible": 0
+}

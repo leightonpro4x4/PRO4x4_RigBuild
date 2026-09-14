@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.26.21",
+  "productionEligible": 0,
+  "attention": {
+    "total": 3,
+    "current": 3,
+    "openBlockers": 10,
+    "openActions": 6
+  },
+  "masters": {
+    "Y62-F34-V1-MASTER": {
+      "briefId": "Y62-F34-V1",
+      "attentionSha256": "38837f3283d4ee8b67501b98d0491addfb79d4650e4efe5e6e6d80450034d547",
+      "basisSha256": "b9e2aa02d6b0dffcb024b2aeb842ac8e68b6785f82729009aeebabcfbc84177e",
+      "blockers": 3,
+      "actions": 2,
+      "issueIds": [
+        "WF3_CANDIDATE",
+        "REVIEW_NOT_CLAIMABLE",
+        "CANONICAL_REVIEW",
+        "READINESS_UNASSESSED",
+        "PRODUCTION_READINESS"
+      ],
+      "handoffState": "blocked-upstream",
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "packManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342"
+    },
+    "Y62-SIDE-V1-MASTER": {
+      "briefId": "Y62-SIDE-V1",
+      "attentionSha256": "65c4c1148411b28006c9bfc5048b25ebc65a07896c11cdac595721acc1f623ce",
+      "basisSha256": "aa740e8f15ff5dbb1760b1251f9bde71cd150d6a8f5572dd53ae1f448de1d185",
+      "blockers": 4,
+      "actions": 2,
+      "issueIds": [
+        "WF3_CANDIDATE",
+        "REVIEW_NOT_CLAIMABLE",
+        "CANONICAL_REVIEW",
+        "READINESS_UNASSESSED",
+        "PRODUCTION_READINESS",
+        "SOURCE_GAP"
+      ],
+      "handoffState": "awaiting-wf3-candidate",
+      "candidateId": null,
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "packManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342"
+    },
+    "Y62-R34-V1-MASTER": {
+      "briefId": "Y62-R34-V1",
+      "attentionSha256": "951d6ed04132c3f8a2505e1b3ffae4ff3a15b2d2a74eaa733af1d9b06b1b377d",
+      "basisSha256": "a5bc8ef6105fade61670ee32b4f7cfdaeceafdec5e5ab9e78e79c02919bd3afa",
+      "blockers": 3,
+      "actions": 2,
+      "issueIds": [
+        "WF3_CANDIDATE",
+        "REVIEW_NOT_CLAIMABLE",
+        "CANONICAL_REVIEW",
+        "READINESS_UNASSESSED",
+        "PRODUCTION_READINESS"
+      ],
+      "handoffState": "awaiting-wf3-candidate",
+      "candidateId": null,
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "packManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342"
+    }
+  }
+}

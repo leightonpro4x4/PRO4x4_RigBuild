@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "0.26.27",
+  "package": "A26-WF4-27",
+  "push": 55,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageName": "Persisted Canonical Reference Coverage Registry / Source-Gap Evidence Controls",
+  "scope": "WF4 Platform / Staff Tools only",
+  "sharedBackbonePreserved": true,
+  "parallelRuntimeIntroduced": false,
+  "realVisualPromotion": false,
+  "governedState": {
+    "ownerReferences": 9,
+    "currentReferenceAttestations": 9,
+    "currentApprovedReferenceReviewDecisions": 9,
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "canonicalMasters": 3,
+    "canonicalReferenceCoverageCurrent": 3,
+    "canonicalReferenceCoverageComplete": 2,
+    "canonicalReferenceCoverageBlockedSourceGap": 1,
+    "canonicalReferenceCoverageBlockedEvidence": 0,
+    "f34ReferenceCoverage": {
+      "status": "complete",
+      "required": 3,
+      "registered": 3,
+      "attested": 3,
+      "reviewApproved": 3,
+      "requiredGaps": 0,
+      "coverageSha256": "83689b01b235650a3dc2e341584071f2fdb39ed7f38c5f2d7be6ac6840e014ff"
+    },
+    "sideReferenceCoverage": {
+      "status": "blocked-source-gap",
+      "required": 3,
+      "registered": 3,
+      "attested": 3,
+      "reviewApproved": 3,
+      "requiredGaps": 1,
+      "coverageSha256": "e5779d1a6cef6781f794cabcb8147712acabc9e57b7f15f0986f7d94f0f92b7b"
+    },
+    "rearReferenceCoverage": {
+      "status": "complete",
+      "required": 2,
+      "registered": 2,
+      "attested": 2,
+      "reviewApproved": 2,
+      "requiredGaps": 0,
+      "coverageSha256": "523f1b50c7a8cded265cc1c6d482e9afb6c8aecb04947592c30d3ac8354cc3f7"
+    },
+    "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+    "f34Intake": "blocked-upstream",
+    "sideIntake": "awaiting-wf3-candidate",
+    "rearIntake": "awaiting-wf3-candidate",
+    "canonicalReviewAssignments": 0,
+    "canonicalApprovedDecisions": 0,
+    "canonicalProductionSeals": 0,
+    "productionEligibleVisuals": 0,
+    "canonicalMasterSetState": "current",
+    "canonicalMasterSetSha256": "832cc9d63a29c94cd32fd426a696971c02ab62aa0659f7c47af51f7edf0d58ed",
+    "canonicalMasterSetOpenProblems": 4,
+    "requiredSideSourceGeometryGapRetained": true
+  },
+  "referenceCoverage": {
+    "purpose": "CANONICAL_REFERENCE_COVERAGE_REGISTRY",
+    "authority": "reference-coverage-evidence-only",
+    "productionEligible": false,
+    "referencePackManifestBound": true,
+    "exactRequiredReferenceIdsBound": true,
+    "registeredChecksumsBound": true,
+    "packMembershipBound": true,
+    "canonicalViewDeclarationBound": true,
+    "provenanceAttestationBound": true,
+    "referenceReviewDecisionBound": true,
+    "sourceGapsBound": true,
+    "systemManagedWriteProtected": true,
+    "driftStalesCoverage": true,
+    "resyncSurfacesEvidenceDrift": true,
+    "renderReadinessConsumesCoverage": true,
+    "canonicalMasterSetConsumesCoverage": true,
+    "staffSurfaces": [
+      "Render Assets",
+      "Production Readiness"
+    ]
+  },
+  "verification": {
+    "targetedCanonicalReferenceCoverage": "pass",
+    "completeAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "canonicalProductionSealRegression": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": [
+        "WF1-BOM-ANYOF"
+      ],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "javascriptFiles": 135,
+      "javascriptSyntaxFailures": 0,
+      "jsonFiles": 58,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 301,
+      "htmlMissingReferences": 0
+    },
+    "byteIdentity": {
+      "assetsAndReferencesFiles": 16,
+      "assetsAndReferencesChanged": 0,
+      "customerCriticalFiles": 11,
+      "customerCriticalChanged": 0
+    },
+    "zipIntegrity": "pass"
+  },
+  "nextDependency": "A26-WF4-14B / WF3 \u2014 first genuinely clean Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay + camera acceptance, production-binary rights provenance and identified reviewer evidence. SIDE/R34 remain candidate/calibration dependent; SIDE additionally retains its declared source-geometry gap."
+}

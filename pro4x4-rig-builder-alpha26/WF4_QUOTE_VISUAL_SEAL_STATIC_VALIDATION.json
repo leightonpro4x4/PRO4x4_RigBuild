@@ -1,0 +1,17 @@
+{
+  "package": "A26-WF4-20",
+  "status": "pass",
+  "javascript": {
+    "files": 120,
+    "failures": []
+  },
+  "json": {
+    "files": 38,
+    "failures": []
+  },
+  "html": {
+    "files": 16,
+    "localReferences": 284,
+    "missing": []
+  }
+}

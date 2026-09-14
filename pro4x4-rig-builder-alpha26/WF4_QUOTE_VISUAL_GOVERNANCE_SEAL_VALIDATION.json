@@ -1,0 +1,69 @@
+{
+  "package": "A26-WF4-20",
+  "push": 48,
+  "wf4Push": 20,
+  "schemaVersion": "0.26.20",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageScope": "Persisted quote visual-governance evidence seal and staff canonical/reference-pack inspection",
+  "results": {
+    "persistedQuoteVisualGovernanceSeal": "pass",
+    "canonicalMasterBoundAtQuoteTime": "pass",
+    "referencePackBoundAtQuoteTime": "pass",
+    "ownerReferenceProvenanceSnapshots": "pass",
+    "quoteRenderSnapshotImmutable": "pass",
+    "sealTamperDetection": "pass",
+    "currentGovernanceDriftVisibleWithoutHistoricalRewrite": "pass",
+    "staffInspectionEndpointRoleGuard": "pass",
+    "sharedServerLocalMockRuntimeParity": "pass",
+    "visualPromotion": false
+  },
+  "sampleEvidence": {
+    "quoteReference": "P4X4-WF4-PUSH20-SAMPLE",
+    "sealSha256": "4e1df26b8b7843870ed8d44298c74127bb8c31e9664de1d3636773ecadc25728",
+    "renderSnapshotSha256": "931e092bf501d16ef52ee06b2e4d26d1ef3f9dc97809e6921a2c7395a14cd0db",
+    "canonicalMasterAssetId": "Y62-F34-V1-MASTER",
+    "canonicalBriefId": "Y62-F34-V1",
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "sealedOwnerReferenceCount": 3,
+    "candidateId": "Y62-F34-V1-CANDIDATE-02",
+    "candidateSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+    "candidateHandoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+    "candidateIntakeState": "blocked-upstream"
+  },
+  "verification": {
+    "targetedWF4QuoteLineageAndSeal": "pass",
+    "fullAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "browserJourney": "skipped: managed browser policy blocks local HTTP navigation in this environment",
+    "wf5Acceptance": "expected red: WF1-BOM-ANYOF only; WF4-DIRECT-PRODUCTION-REVIEW pass; WF5-CUSTOMER-DRAFT-ISOLATION pass",
+    "staticValidation": {
+      "package": "A26-WF4-20",
+      "status": "pass",
+      "javascript": {
+        "files": 120,
+        "failures": []
+      },
+      "json": {
+        "files": 38,
+        "failures": []
+      },
+      "html": {
+        "files": 16,
+        "localReferences": 284,
+        "missing": []
+      }
+    },
+    "zipIntegrity": "pass (final archive verified after packaging)"
+  },
+  "visualSafety": {
+    "assetsAndReferencesByteIdenticalToPush19": true,
+    "baselineVisualFiles": 16,
+    "currentVisualFiles": 16,
+    "productionReadyY62VisualsAfterGovernanceSync": 0,
+    "customerVisualCatalogueRenderContractsByteIdentical": true,
+    "customerEntrypointChange": "index.html adds the shared quote visual-governance seal module only"
+  },
+  "nextDependency": "A26-WF4-14B \u2014 first genuinely clean reviewable Y62-F34-V1 candidate from WF3 with clean reconstruction/isolation, locked overlay + camera acceptance, production-rights provenance and identified reviewer evidence."
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "0.26.16",
+  "package": "A26-WF4-16",
+  "push": 44,
+  "title": "Persisted Canonical Review Queue / Assignment Controls",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "scope": "reviewer/approval workflow only",
+  "runtimeBackbone": "shared render-asset registry / version / audit runtime",
+  "canonicalMasters": {
+    "total": 3,
+    "claimed": 0,
+    "Y62-F34-V1-MASTER": {
+      "workflowState": "blocked-upstream",
+      "freshness": "current",
+      "workflowSha256": "bd4bea985fb63f2103f2555ea8af7ae123d40fb8dacb9e433b0dd74ef87896cf",
+      "evidenceBindingSha256": "ac979e535f3db6dad4c028d3205d78345703856d1c2f278a14fbbe174e9205fa",
+      "assignedReviewer": null,
+      "claimable": false,
+      "upstreamBlockers": 12,
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "candidateSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28"
+    },
+    "Y62-SIDE-V1-MASTER": {
+      "workflowState": "awaiting-wf3-candidate",
+      "freshness": "current",
+      "assignedReviewer": null,
+      "claimable": false,
+      "requiredSourceGapRetained": true
+    },
+    "Y62-R34-V1-MASTER": {
+      "workflowState": "awaiting-wf3-candidate",
+      "freshness": "current",
+      "assignedReviewer": null,
+      "claimable": false
+    }
+  },
+  "controls": {
+    "assignmentAuthorityOnly": true,
+    "productionEligible": false,
+    "claimRequiresFitmentOrAdmin": true,
+    "salesMutationDenied": true,
+    "evidenceBoundAssignment": true,
+    "candidateChecksumBound": true,
+    "wrongReviewerBlockedAtProduction": true,
+    "evidenceDriftStalesAssignment": true,
+    "explicitRefreshInvalidatesChangedEvidenceClaim": true,
+    "claimDoesNotApproveMaster": true,
+    "claimDoesNotStageBinary": true,
+    "claimDoesNotMoveProductionPointer": true,
+    "visualPromotion": false
+  },
+  "verification": {
+    "targetedReviewWorkflowRegression": "pass",
+    "fullAlphaRegressionChain": "pass",
+    "npmCheck": "pass",
+    "wf5GovernedPromotionLifecycle": "pass",
+    "wf5AcceptanceGate": {
+      "status": "fail",
+      "failed": 1,
+      "knownExternalDefect": "WF1-BOM-ANYOF",
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "javascript": {
+      "files": 110,
+      "failures": 0
+    },
+    "json": {
+      "files": 24,
+      "failures": 0
+    },
+    "html": {
+      "files": 16,
+      "localReferences": 274,
+      "missing": 0
+    },
+    "assetsTreeByteDiffLinesVsPush15": 0,
+    "referencesTreeByteDiffLinesVsPush15": 0,
+    "customerCriticalEntrypointsUnchanged": true
+  },
+  "nextDependency": "A26-WF4-14B \u2014 first genuinely clean reviewable Y62-F34-V1 candidate from WF3 with clean isolation/reconstruction, locked overlay and camera acceptance, production-rights provenance and identified reviewer evidence."
+}

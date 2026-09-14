@@ -1,0 +1,32 @@
+# PRO4X4 Rig Builder — Push 47 / A26-WF4-19
+## Persisted Governance-Managed Metadata Write Boundary + Staff Visibility Controls
+
+### Package advanced
+One WF4 package only: **audit/production controls over persisted visual-governance metadata**. The clean F34 production exercise remains blocked upstream by WF3, so this push closes the highest-priority unblocked integrity gap in the existing staff platform: system-owned reference-pack/canonical-master governance metadata can no longer be rewritten through the generic render-asset editor. No catalogue expansion, WF3 visual production, customer UX redesign or parallel backend/persistence system was introduced.
+
+### Concrete progress
+A shared `visual-governance-write-boundary.js` policy now declares and validates the system-owned fields on the existing render-asset backbone. Visual-governance sync persists that declaration onto all **3 governed Y62 canonical masters** and all **9 governed owner references**. In clean state all 12 declarations are **CURRENT**. Each canonical master exposes **18 protected paths** (six record-identity fields plus 12 governance-managed bindings); each pack-bound owner reference exposes **19**, adding the protected `referenceEvidence` membership/usage binding.
+
+The protected governance set now includes `referencePack`, `canonicalView`, `candidateHandoff`, `compositeEligibility`, `governanceDossier`, `reviewWorkflow`, `readinessAssessment`, `canonicalReviewEvidence`, `provenanceAttestation`, immutable `lineage`, `approval.reviewEvidence`, and the `governanceWriteBoundary` declaration itself. Generic staff updates attempting to change one of those fields fail closed with **HTTP 409 / `governance_metadata_protected`**, do not alter the persisted record, and write a `visual-governance.protected-write.blocked` event with the exact changed field paths to the existing tamper-evident audit ledger.
+
+Dedicated workflow ownership remains narrow rather than becoming read-only deadlock. Readiness assessment, governance-dossier refresh and canonical reviewer assignment retain their existing workflow-specific write authority. Because source/rights attestation is now protected from generic rewriting, this package adds only the backend surface required by that active lane: **`POST /api/v1/staff/render-assets/:assetId/provenance-attestation`**. It uses the same render-asset record, provenance-attestation contract and audit backbone; fitment/admin can re-attest reviewed source/rights evidence while sales remains inspection-only. Browser-local staff mode uses the same protected-path contract and narrow allow-list semantics.
+
+### Staff visibility
+Render Assets now exposes **GOVERNANCE WRITE BOUNDARY / SYSTEM-MANAGED METADATA LOCK** on governed reference/canonical records, including persisted freshness, policy and protected paths. Production Readiness exposes the same write-boundary freshness on each canonical master next to the existing owner-reference pack, WF3 handoff, reviewer dossier/workflow and readiness evidence. A missing, stale or invalid declaration is visible rather than silently treated as current.
+
+This makes the ownership model explicit to staff: the generic editor remains useful for reviewer-owned working metadata, but pack identity, canonical contracts, provenance attestations, WF3 handoff, reviewer assignment/evidence and production lineage can only move through their governing workflow.
+
+### Governance state preserved
+**`REFERENCE_BACKED_APPROVED_VISUALS_ONLY` remains authoritative.** The active pack remains **`Y62-OWNER-REFERENCE-PACK-V1`** with manifest SHA-256 **`260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342`**. `Y62-F34-V1-MASTER` remains bound to `Y62-F34-V1-CANDIDATE-02` SHA-256 **`a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28`** and handoff SHA-256 **`65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba`**, still **blocked-upstream**. SIDE remains `awaiting-wf3-candidate` with its required source gap preserved. The governed Y62 registry remains at **0 production-ready visuals** and this package promoted nothing.
+
+The complete `assets/` tree (**7 files**) and `references/` tree (**9 files**) are byte-for-byte identical to Push 18. The same prior 11 customer presentation/data/render-contract files also remain byte-identical. Shared runtime adapters (`persistence.js`, `backend-client.js`, `asset-registry-store.js`) were intentionally changed because the one-runtime rule requires the new staff governance boundary to behave consistently in hosted and browser-local modes; no customer visual data, artwork, fallback policy or customer-facing render contract was changed.
+
+### Verification
+Both new adversarial regressions pass. The database/browser contract test proves pack/canonical/handoff/dossier/workflow/identity/reference-membership/provenance-attestation mutations are blocked, dedicated provenance/dossier/readiness workflows remain writable, blocked attempts are audit-visible and no visual is promoted. The HTTP test proves the generic staff route returns **409**, the dedicated provenance route succeeds for admin, sales mutation is **403**, and the blocked bypass appears in staff audit history.
+
+The complete Alpha regression chain passes, including the prior canonical-view backfill regression updated to simulate legacy/corrupt persisted metadata beneath the new staff write boundary rather than bypassing it through the generic editor. `npm run check` passes. The WF5 governed promotion lifecycle passes. Static validation passes at **117 JavaScript files / 0 syntax failures, 34 JSON files / 0 parse failures, 16 HTML files / 280 local references / 0 missing**.
+
+The broader WF5 acceptance gate remains red for exactly the existing **WF1 `WF1-BOM-ANYOF`** defect. `WF4-DIRECT-PRODUCTION-REVIEW` remains PASS and `WF5-CUSTOMER-DRAFT-ISOLATION` remains PASS. This WF4 push does not expand into WF1 to repair that separate customer BOM-lineage defect.
+
+### Next dependency
+The next primary WF4 dependency remains **A26-WF4-14B**: WF3 must supply the first genuinely clean, reviewable **`Y62-F34-V1`** candidate with clean isolation/reconstruction, locked overlay + camera acceptance, production-rights provenance and identified reviewer evidence. Once supplied, WF4 can exercise the real **attested owner reference pack → persisted WF3 handoff → evidence-bound reviewer claim → eight-check canonical review → immutable production → sealed audit → exact layer/composite eligibility → project/quote inspection** chain end-to-end.

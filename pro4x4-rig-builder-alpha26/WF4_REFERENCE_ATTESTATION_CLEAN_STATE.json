@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.26.18",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "ownerReferences": 9,
+  "currentProvenanceAttestations": 9,
+  "referencePack": {
+    "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "status": "complete",
+    "declaredReferenceCount": 9,
+    "approvedReferenceCount": 9,
+    "attestedReferenceCount": 9,
+    "primaryCount": 4,
+    "supportCount": 5,
+    "requiredSideGapPreserved": true
+  },
+  "productionReadyCount": 0,
+  "governanceSyncProductionEligible": 0,
+  "status": "pass"
+}

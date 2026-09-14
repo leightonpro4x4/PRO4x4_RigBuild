@@ -1,0 +1,26 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.26 test:wf4-view-contract
+> node tests/wf4-canonical-view-contract-registry-alpha26.js
+
+{
+  "gate": "wf4-canonical-view-contract-registry-alpha26",
+  "schemaVersion": "0.26.26",
+  "persistedCanonicalViewContracts": 3,
+  "current": 3,
+  "locked": 1,
+  "calibration": 2,
+  "f34ContractSha256": "303bc938a957a99c703a78bf8b2a6c6f6e77464a919b1e41c834f7aac6d9e4e0",
+  "briefAndCameraEvidenceBound": true,
+  "sharedReferencePackBound": true,
+  "systemManagedWriteProtected": true,
+  "contractDriftFailsClosed": true,
+  "contractTamperDetected": true,
+  "readinessVisibility": true,
+  "masterSetVisibility": true,
+  "sharedBrowserServerBackbone": true,
+  "visualPromotion": false,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "status": "pass"
+}
+(node:3052) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

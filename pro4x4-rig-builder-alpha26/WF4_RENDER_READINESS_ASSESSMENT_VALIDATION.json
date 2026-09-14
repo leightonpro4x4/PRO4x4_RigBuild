@@ -1,0 +1,73 @@
+{
+  "package": "A26-WF4-12",
+  "jsFiles": 102,
+  "jsFailures": [],
+  "jsonFiles": 12,
+  "jsonFailures": [],
+  "htmlFiles": 16,
+  "htmlLocalReferences": 261,
+  "htmlMissing": [],
+  "treeComparisons": {
+    "assets": {
+      "push11_sha256": "f4e42e32b7db748a43ce516c5a3b265336a0d09e7b159bfb5729776f10f2da4e",
+      "push12_sha256": "f4e42e32b7db748a43ce516c5a3b265336a0d09e7b159bfb5729776f10f2da4e",
+      "fileCountPush11": 7,
+      "fileCountPush12": 7,
+      "byteIdentical": true
+    },
+    "references": {
+      "push11_sha256": "f11d7acd6cc478283fed2662fb8d27949447dff75cd98b9f03301aeea9efe041",
+      "push12_sha256": "f11d7acd6cc478283fed2662fb8d27949447dff75cd98b9f03301aeea9efe041",
+      "fileCountPush11": 9,
+      "fileCountPush12": 9,
+      "byteIdentical": true
+    }
+  },
+  "customerRuntimeFiles": [
+    {
+      "file": "index.html",
+      "byteIdentical": true
+    },
+    {
+      "file": "app.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "merged-app.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "merged.css",
+      "byteIdentical": true
+    },
+    {
+      "file": "data-y62.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "data-ranger.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "render-manifest-y62.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "product-visual-contract.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "quote.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "share.js",
+      "byteIdentical": true
+    },
+    {
+      "file": "projects.js",
+      "byteIdentical": true
+    }
+  ],
+  "customerRuntimeAllIdentical": true
+}

@@ -1,0 +1,37 @@
+{
+  "package": "A26-WF4-29",
+  "visualTrees": {
+    "files": 16,
+    "unchanged": true,
+    "changed": []
+  },
+  "customerCritical": {
+    "files": 11,
+    "unchanged": 11,
+    "allIdentical": true,
+    "results": {
+      "index.html": true,
+      "merged-app.js": true,
+      "app.js": true,
+      "merged-project-contract.js": true,
+      "render-contracts-y62.js": true,
+      "render-manifest-y62.js": true,
+      "data-y62.js": true,
+      "data-ranger.js": true,
+      "styles.css": true,
+      "share.html": true,
+      "share.js": true
+    },
+    "changed": []
+  },
+  "sharedRuntimeBackbone": {
+    "intentionallyChanged": [
+      "backend-client.js",
+      "persistence.js",
+      "asset-registry-store.js",
+      "server/database.js",
+      "server/server.js"
+    ],
+    "reason": "Reviewer claim integrity/concurrency is implemented on the existing reviewer-workflow lane and shared registry/runtime; no parallel backend introduced."
+  }
+}

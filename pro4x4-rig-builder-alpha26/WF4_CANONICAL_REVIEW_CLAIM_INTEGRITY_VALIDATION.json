@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "0.26.29",
+  "package": "A26-WF4-29",
+  "push": 57,
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "packageName": "Persisted Canonical Reviewer Claim Integrity / Concurrency Guard",
+  "scope": "WF4 Platform / Staff Tools only",
+  "sharedBackbonePreserved": true,
+  "parallelRuntimeIntroduced": false,
+  "realVisualPromotion": false,
+  "governedState": {
+    "schemaVersion": "0.26.29",
+    "package": "A26-WF4-29",
+    "push": 57,
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "vehicleId": "nissan-y62-warrior-2025",
+    "syncSchemaVersion": "0.26.29",
+    "ownerReferences": 9,
+    "currentReferenceAttestations": 9,
+    "currentApprovedReferenceReviewDecisions": 9,
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "canonicalMasters": 3,
+    "reviewWorkflows": [
+      {
+        "assetId": "Y62-F34-V1-MASTER",
+        "briefId": "Y62-F34-V1",
+        "schemaVersion": "0.26.29",
+        "state": "blocked-upstream",
+        "freshness": "current",
+        "assignment": null,
+        "claimIntegrity": null
+      },
+      {
+        "assetId": "Y62-R34-V1-MASTER",
+        "briefId": "Y62-R34-V1",
+        "schemaVersion": "0.26.29",
+        "state": "awaiting-wf3-candidate",
+        "freshness": "current",
+        "assignment": null,
+        "claimIntegrity": null
+      },
+      {
+        "assetId": "Y62-SIDE-V1-MASTER",
+        "briefId": "Y62-SIDE-V1",
+        "schemaVersion": "0.26.29",
+        "state": "awaiting-wf3-candidate",
+        "freshness": "current",
+        "assignment": null,
+        "claimIntegrity": null
+      }
+    ],
+    "activeReviewerClaims": 0,
+    "validReviewerClaims": 0,
+    "canonicalApprovedDecisions": 0,
+    "canonicalProductionSeals": 0,
+    "productionEligibleVisuals": 0,
+    "f34": {
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "intakeState": "blocked-upstream",
+      "viewContract": {
+        "state": "locked",
+        "freshness": "current"
+      },
+      "referenceCoverage": {
+        "status": "complete",
+        "freshness": "current"
+      }
+    },
+    "side": {
+      "intakeState": "awaiting-wf3-candidate",
+      "viewContract": {
+        "state": "calibration",
+        "freshness": "current"
+      },
+      "referenceCoverage": {
+        "status": "blocked-source-gap",
+        "freshness": "current"
+      },
+      "sourceGap": {
+        "briefId": "Y62-SIDE-V1",
+        "resolutionId": "Y62-SIDE-V1-SOURCE-GAP-V1",
+        "decision": "open",
+        "resolutionMethod": null,
+        "evidenceReferenceIds": [],
+        "resolutionSha256": "4f0d638b767bbc03fb97fcc1927aaf7c05f05e36f3d2ed324f31179889d9539b",
+        "basisSha256": "927b018cc21d259de000ad1206587ee9a2208664eb7e2297f425221321327652",
+        "freshness": "current",
+        "notes": "No clean square-on raw side-profile owner photo in current pack. Multi-reference reconstruction may be used for canonical render only if geometry review passes; direct third-party photo promotion is prohibited.",
+        "decidedAt": "2026-09-14T11:36:47.413Z",
+        "decidedBy": {
+          "actorId": "validation",
+          "displayName": "WF4 Validation",
+          "role": "admin"
+        },
+        "authority": "source-gap-decision-only",
+        "productionEligible": false
+      }
+    },
+    "rear": {
+      "intakeState": "awaiting-wf3-candidate",
+      "viewContract": {
+        "state": "calibration",
+        "freshness": "current"
+      },
+      "referenceCoverage": {
+        "status": "complete",
+        "freshness": "current"
+      }
+    },
+    "canonicalMasterSet": {
+      "schemaVersion": "0.26.29",
+      "state": "current",
+      "registrySha256": "845b06d275265d8b66eb8838bec81e2ef629487f8fb9784c647800f9bb186ac6",
+      "openSetProblems": 4,
+      "problems": [
+        "Y62-SIDE-V1: canonical view contract calibration",
+        "Y62-SIDE-V1: canonical reference coverage blocked-source-gap",
+        "Y62-SIDE-V1: required source geometry gap decision open/current",
+        "Y62-R34-V1: canonical view contract calibration"
+      ]
+    },
+    "auditIntegrity": "sealed"
+  },
+  "reviewerClaimIntegrity": {
+    "purpose": "CANONICAL_REVIEW_ASSIGNMENT_WORKFLOW",
+    "claimAuthority": "review-claim-only",
+    "productionEligible": false,
+    "signedClaimEnvelope": true,
+    "claimBoundToCanonicalMasterAndBrief": true,
+    "claimBoundToWorkflowEvidence": true,
+    "claimBoundToExactCandidateChecksum": true,
+    "claimBoundToReviewerIdentityAndTime": true,
+    "sameReviewerRetryIdempotent": true,
+    "releaseOptimisticConcurrencyGuard": true,
+    "staleReleaseReturns": "409 review_claim_conflict",
+    "claimTamperDetected": true,
+    "evidenceDriftInvalidatesClaim": true,
+    "canonicalReviewDecisionBindsExactClaim": true,
+    "canonicalProductionSealBindsExactClaim": true,
+    "staffSurfaces": [
+      "Render Assets",
+      "Production Readiness"
+    ],
+    "salesInspectionOnly": true
+  },
+  "verification": {
+    "targetedReviewerClaimMatrix": "pass",
+    "npmCheck": "pass",
+    "fullAlphaRegression": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failed": [
+        "WF1-BOM-ANYOF"
+      ],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftReferenceIsolation": "pass"
+    },
+    "static": {
+      "package": "A26-WF4-29",
+      "javascriptFiles": 139,
+      "javascriptSyntaxFailures": 0,
+      "jsonFiles": 66,
+      "jsonParseFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 303,
+      "htmlMissingReferences": 0,
+      "note": "Counts describe the final package after this static report and validation manifest are included."
+    },
+    "byteIdentity": {
+      "package": "A26-WF4-29",
+      "visualTrees": {
+        "files": 16,
+        "unchanged": true,
+        "changed": []
+      },
+      "customerCritical": {
+        "files": 11,
+        "unchanged": 11,
+        "allIdentical": true,
+        "results": {
+          "index.html": true,
+          "merged-app.js": true,
+          "app.js": true,
+          "merged-project-contract.js": true,
+          "render-contracts-y62.js": true,
+          "render-manifest-y62.js": true,
+          "data-y62.js": true,
+          "data-ranger.js": true,
+          "styles.css": true,
+          "share.html": true,
+          "share.js": true
+        },
+        "changed": []
+      },
+      "sharedRuntimeBackbone": {
+        "intentionallyChanged": [
+          "backend-client.js",
+          "persistence.js",
+          "asset-registry-store.js",
+          "server/database.js",
+          "server/server.js"
+        ],
+        "reason": "Reviewer claim integrity/concurrency is implemented on the existing reviewer-workflow lane and shared registry/runtime; no parallel backend introduced."
+      }
+    },
+    "zipIntegrity": "pass"
+  },
+  "nextDependency": "A26-WF4-14B / WF3 \u2014 first genuinely clean Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay + camera acceptance, production-binary rights provenance and identified reviewer evidence. SIDE remains separately blocked until its source-gap/view-contract path is satisfied."
+}

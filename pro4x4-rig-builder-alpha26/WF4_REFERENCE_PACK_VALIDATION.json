@@ -1,0 +1,43 @@
+{
+  "package": "A26-WF4-13",
+  "schemaVersion": "0.26.13",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "referencePack": {
+    "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "declaredReferences": 9,
+    "primaryReferences": 4,
+    "supportReferences": 5,
+    "declaredGaps": 1,
+    "canonicalMastersBound": 3,
+    "integrityState": "complete",
+    "visualPromotion": false
+  },
+  "canonicalBindings": {
+    "Y62-F34-V1": ["OWNER-Y62-F34-01", "OWNER-Y62-F34-02", "OWNER-Y62-FRONT-01"],
+    "Y62-SIDE-V1": ["OWNER-Y62-DESIGNBOARD-01", "OWNER-Y62-F34-01", "OWNER-Y62-REAR34-01"],
+    "Y62-R34-V1": ["OWNER-Y62-REAR34-01", "OWNER-Y62-REAR-01"]
+  },
+  "knownGap": {
+    "view": "side",
+    "severity": "required",
+    "preserved": true
+  },
+  "verification": {
+    "fullAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": {
+      "status": "fail",
+      "failedGate": "WF1-BOM-ANYOF",
+      "wf4DirectProductionReview": "pass",
+      "customerDraftIsolation": "pass"
+    },
+    "javascript": {"files": 104, "failures": 0},
+    "json": {"files": 15, "failures": 0},
+    "html": {"files": 16, "localReferences": 264, "missing": 0},
+    "assetsTreeVsPush12": "byte-identical",
+    "referencesTreeVsPush12": "byte-identical",
+    "customerRuntimeFilesVsPush12": "byte-identical"
+  }
+}

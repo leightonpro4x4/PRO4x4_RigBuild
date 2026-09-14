@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pro4x4.com.au/schemas/project-0.12.0.json",
+  "title": "PRO4X4 Rig Builder Saved Project v0.12.0",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "vehicleId",
+    "ownerId",
+    "createdAt",
+    "updatedAt",
+    "version",
+    "currentRevisionId",
+    "revisions",
+    "shares",
+    "archived"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.12.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^P4X4-PROJ-"
+    },
+    "title": {
+      "type": "string"
+    },
+    "vehicleId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "currentRevisionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^R[0-9]{4}$"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "shares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tokenHash",
+          "tokenHint",
+          "revisionId",
+          "role",
+          "createdAt",
+          "expiresAt",
+          "revokedAt"
+        ],
+        "properties": {
+          "tokenHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "tokenHint": {
+            "type": "string",
+            "minLength": 6,
+            "maxLength": 6
+          },
+          "revisionId": {
+            "type": "string",
+            "pattern": "^R[0-9]{4}$"
+          },
+          "role": {
+            "enum": [
+              "customer-view",
+              "staff-review"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expiresAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "revokedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "number",
+          "createdAt",
+          "source",
+          "actor",
+          "checksum",
+          "summary",
+          "snapshot"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^R[0-9]{4}$"
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source": {
+            "type": "string"
+          },
+          "actor": {
+            "type": "object",
+            "required": [
+              "actorId",
+              "role"
+            ],
+            "properties": {
+              "actorId": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "role": {
+                "enum": [
+                  "customer",
+                  "sales",
+                  "fitment",
+                  "admin"
+                ]
+              },
+              "prototype": {
+                "type": "boolean"
+              }
+            }
+          },
+          "checksum": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}$"
+          },
+          "summary": {
+            "type": "object"
+          },
+          "snapshot": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

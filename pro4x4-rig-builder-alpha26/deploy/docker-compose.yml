@@ -1,0 +1,18 @@
+services:
+  rigbuilder:
+    build: ..
+    restart: unless-stopped
+    env_file: ../.env
+    volumes:
+      - rigbuilder_data:/app/runtime
+    expose:
+      - "4180"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4180/api/v1/ready').then(r=>{if(!r.ok)process.exit(1)})"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  # TLS / SSO gateway is intentionally external to this compose file.
+  # Point your reverse proxy at rigbuilder:4180 and sign staff identity headers.
+volumes:
+  rigbuilder_data:

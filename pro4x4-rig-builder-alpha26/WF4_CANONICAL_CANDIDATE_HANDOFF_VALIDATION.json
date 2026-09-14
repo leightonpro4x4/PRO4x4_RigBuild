@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "0.26.14",
+  "package": "A26-WF4-14A",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "sync": {
+    "createdCount": 12,
+    "metadataUpdatedCount": 0
+  },
+  "summary": {
+    "schemaVersion": "0.26.14",
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "total": 3,
+    "withCandidate": 1,
+    "awaitingCandidate": 2,
+    "blockedUpstream": 1,
+    "receivedWithBlockers": 0,
+    "readyForWf4Review": 0
+  },
+  "masters": [
+    {
+      "assetId": "Y62-F34-V1-MASTER",
+      "briefId": "Y62-F34-V1",
+      "viewId": "front34",
+      "handoffId": "Y62-F34-V1-WF3-HANDOFF",
+      "handoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+      "state": "blocked-upstream",
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "candidateChecksumSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+      "upstreamDecision": "returned-to-wf3",
+      "blockers": 12,
+      "productionEligible": false,
+      "implicitPromotionAllowed": false,
+      "integrityProblems": []
+    },
+    {
+      "assetId": "Y62-SIDE-V1-MASTER",
+      "briefId": "Y62-SIDE-V1",
+      "viewId": "side",
+      "handoffId": "Y62-SIDE-V1-WF3-HANDOFF",
+      "handoffSha256": "b0f512a7f8fd2bde2ddbbc2d24dc58633a4201a4ca0aebfce74aff1e5653cf17",
+      "state": "awaiting-wf3-candidate",
+      "candidateId": null,
+      "candidateChecksumSha256": null,
+      "upstreamDecision": null,
+      "blockers": 1,
+      "productionEligible": false,
+      "implicitPromotionAllowed": false,
+      "integrityProblems": []
+    },
+    {
+      "assetId": "Y62-R34-V1-MASTER",
+      "briefId": "Y62-R34-V1",
+      "viewId": "rear34",
+      "handoffId": "Y62-R34-V1-WF3-HANDOFF",
+      "handoffSha256": "f1c732b81b7a298a66d4b89ee2aefa5b568f62724427e1425a662c92f04c2261",
+      "state": "awaiting-wf3-candidate",
+      "candidateId": null,
+      "candidateChecksumSha256": null,
+      "upstreamDecision": null,
+      "blockers": 1,
+      "productionEligible": false,
+      "implicitPromotionAllowed": false,
+      "integrityProblems": []
+    }
+  ],
+  "readiness": {
+    "canonicalMasters": 3,
+    "ready": 0,
+    "blocked": 3
+  },
+  "visualPromotion": false
+}

@@ -1,0 +1,40 @@
+{
+  "sourcePackage": "Push18",
+  "assets": {
+    "identical": true,
+    "currentFiles": 7,
+    "sourceFiles": 7,
+    "changed": []
+  },
+  "references": {
+    "identical": true,
+    "currentFiles": 9,
+    "sourceFiles": 9,
+    "changed": []
+  },
+  "priorElevenPresentationAndContractFiles": {
+    "filesChecked": 11,
+    "allIdentical": true,
+    "results": {
+      "index.html": true,
+      "merged-app.js": true,
+      "app.js": true,
+      "merged-project-contract.js": true,
+      "render-contracts-y62.js": true,
+      "render-manifest-y62.js": true,
+      "data-y62.js": true,
+      "data-ranger.js": true,
+      "styles.css": true,
+      "share.html": true,
+      "share.js": true
+    }
+  },
+  "sharedRuntimeAdapters": {
+    "intentionallyChanged": true,
+    "results": {
+      "persistence.js": false,
+      "backend-client.js": false,
+      "asset-registry-store.js": false
+    }
+  }
+}

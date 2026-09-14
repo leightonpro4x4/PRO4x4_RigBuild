@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "0.26.26",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "ownerReferences": 9,
+  "currentReferenceAttestations": 9,
+  "currentApprovedReferenceReviewDecisions": 9,
+  "canonicalMasters": 3,
+  "canonicalViewContracts": {
+    "schemaVersion": "0.26.26",
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "total": 3,
+    "current": 3,
+    "locked": 1,
+    "calibration": 2,
+    "stale": 0,
+    "invalid": 0,
+    "missing": 0,
+    "rows": [
+      {
+        "assetId": "Y62-F34-V1-MASTER",
+        "briefId": "Y62-F34-V1",
+        "viewId": "front34",
+        "state": "locked",
+        "freshness": "current",
+        "contractSha256": "303bc938a957a99c703a78bf8b2a6c6f6e77464a919b1e41c834f7aac6d9e4e0"
+      },
+      {
+        "assetId": "Y62-R34-V1-MASTER",
+        "briefId": "Y62-R34-V1",
+        "viewId": "rear34",
+        "state": "calibration",
+        "freshness": "current",
+        "contractSha256": "c8a0f27ee0154aa3051b891d5f3383793582f2f111d27ea5f1d97bb1e4525a9f"
+      },
+      {
+        "assetId": "Y62-SIDE-V1-MASTER",
+        "briefId": "Y62-SIDE-V1",
+        "viewId": "side",
+        "state": "calibration",
+        "freshness": "current",
+        "contractSha256": "c048d68f7893e385ac76d22f040b4f42a72ae20e538764f3ae8d25dfaf428dae"
+      }
+    ]
+  },
+  "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+  "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+  "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+  "f34Intake": "blocked-upstream",
+  "sideIntake": "awaiting-wf3-candidate",
+  "rearIntake": "awaiting-wf3-candidate",
+  "canonicalReviewAssignments": 0,
+  "canonicalApprovedDecisions": 0,
+  "canonicalProductionSeals": 0,
+  "productionEligibleVisuals": 0,
+  "canonicalMasterSet": {
+    "state": "current",
+    "registryId": "nissan-y62-warrior-2025-CANONICAL-MASTER-SET-V1",
+    "registrySha256": "a094178219e45e652f49099fe4582357f49de03e7f893cac290aa2ff6cf74e66",
+    "views": 3,
+    "candidates": 1,
+    "reviewAssigned": 0,
+    "approvedDecisions": 0,
+    "productionSealed": 0,
+    "productionEligible": 0,
+    "openSetProblems": 3
+  },
+  "requiredSideSourceGeometryGapRetained": true,
+  "readinessCanonicalViewContracts": {
+    "schemaVersion": "0.26.26",
+    "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+    "total": 3,
+    "current": 3,
+    "locked": 1,
+    "calibration": 2,
+    "stale": 0,
+    "invalid": 0,
+    "missing": 0,
+    "rows": [
+      {
+        "assetId": "Y62-F34-V1-MASTER",
+        "briefId": "Y62-F34-V1",
+        "viewId": "front34",
+        "state": "locked",
+        "freshness": "current",
+        "contractSha256": "303bc938a957a99c703a78bf8b2a6c6f6e77464a919b1e41c834f7aac6d9e4e0"
+      },
+      {
+        "assetId": "Y62-R34-V1-MASTER",
+        "briefId": "Y62-R34-V1",
+        "viewId": "rear34",
+        "state": "calibration",
+        "freshness": "current",
+        "contractSha256": "c8a0f27ee0154aa3051b891d5f3383793582f2f111d27ea5f1d97bb1e4525a9f"
+      },
+      {
+        "assetId": "Y62-SIDE-V1-MASTER",
+        "briefId": "Y62-SIDE-V1",
+        "viewId": "side",
+        "state": "calibration",
+        "freshness": "current",
+        "contractSha256": "c048d68f7893e385ac76d22f040b4f42a72ae20e538764f3ae8d25dfaf428dae"
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "0.26.15",
+  "package": "A26-WF4-15 — Canonical Governance Dossier / Reviewer Evidence Packet",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "sync": {
+    "createdCount": 12,
+    "dossierPreparedCount": 3,
+    "dossierSummary": {
+      "schemaVersion": "0.26.15",
+      "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+      "total": 3,
+      "current": 3,
+      "stale": 0,
+      "invalid": 0,
+      "unprepared": 0,
+      "rows": [
+        {
+          "assetId": "Y62-F34-V1-MASTER",
+          "briefId": "Y62-F34-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "blocked-upstream",
+            "blockers": [
+              "visible source-scene contamination remains at the isolation boundary",
+              "owner-photo reflections remain; neutral reconstruction incomplete",
+              "canonical overlay acceptance pending",
+              "production-binary rights not separately recorded",
+              "clean transparent isolation / edge cleanup is incomplete",
+              "source-scene reflections remain and are not a neutral canonical reconstruction",
+              "locked-profile overlay acceptance is still pending",
+              "production-binary rights for a direct photo-derived master are not separately recorded",
+              "reviewer approval state remains master-draft",
+              "WF3 review decision returned this candidate for reconstruction / correction.",
+              "Candidate governance remains master-draft; this handoff cannot grant approval.",
+              "Production-binary rights are not cleared for direct promotion."
+            ],
+            "requiredChecks": 8,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 8,
+            "nextAction": "Produce a clean reference-backed F34 reconstruction or professional isolation/retouch candidate that removes source-scene contamination without inventing geometry, then run the locked Y62-F34-V1 overlay contract and reviewer approval workflow."
+          }
+        },
+        {
+          "assetId": "Y62-R34-V1-MASTER",
+          "briefId": "Y62-R34-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master."
+            ],
+            "requiredChecks": 0,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 0,
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        },
+        {
+          "assetId": "Y62-SIDE-V1-MASTER",
+          "briefId": "Y62-SIDE-V1",
+          "freshness": "current",
+          "reviewerIntake": {
+            "state": "awaiting-wf3-candidate",
+            "blockers": [
+              "WF3 has not supplied a canonical candidate for this master.",
+              "required canonical source gap is unresolved"
+            ],
+            "requiredChecks": 0,
+            "passedChecks": 0,
+            "failedChecks": 0,
+            "pendingChecks": 0,
+            "nextAction": "Await WF3 canonical candidate handoff."
+          }
+        }
+      ]
+    }
+  },
+  "canonicalMasters": [
+    {
+      "assetId": "Y62-F34-V1-MASTER",
+      "briefId": "Y62-F34-V1",
+      "dossierId": "Y62-F34-V1-GOVERNANCE-DOSSIER",
+      "dossierSha256": "612955c612a8182e7ae3eae9a635b8dbf6c140bf01f1af6ce832fc8901405e7c",
+      "freshness": "current",
+      "reviewerIntake": "blocked-upstream",
+      "reviewerIntakeBlockers": 12,
+      "referenceSnapshots": 3,
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "candidateChecksumSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+      "handoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+      "requiredChecks": 8,
+      "productionEligible": false,
+      "authority": "inspection-only",
+      "status": "candidate",
+      "governanceState": "master-draft"
+    },
+    {
+      "assetId": "Y62-R34-V1-MASTER",
+      "briefId": "Y62-R34-V1",
+      "dossierId": "Y62-R34-V1-GOVERNANCE-DOSSIER",
+      "dossierSha256": "47afa8ea1d501be05f73b2dc3889fc0d63d393b49cacde93c6caf485d8dd22bc",
+      "freshness": "current",
+      "reviewerIntake": "awaiting-wf3-candidate",
+      "reviewerIntakeBlockers": 1,
+      "referenceSnapshots": 2,
+      "candidateId": null,
+      "candidateChecksumSha256": null,
+      "handoffSha256": "f1c732b81b7a298a66d4b89ee2aefa5b568f62724427e1425a662c92f04c2261",
+      "requiredChecks": 0,
+      "productionEligible": false,
+      "authority": "inspection-only",
+      "status": "candidate",
+      "governanceState": "master-draft"
+    },
+    {
+      "assetId": "Y62-SIDE-V1-MASTER",
+      "briefId": "Y62-SIDE-V1",
+      "dossierId": "Y62-SIDE-V1-GOVERNANCE-DOSSIER",
+      "dossierSha256": "04279355559040a4857bd107276b1676b7f9205aff2e63e097f5e7053749932f",
+      "freshness": "current",
+      "reviewerIntake": "awaiting-wf3-candidate",
+      "reviewerIntakeBlockers": 2,
+      "referenceSnapshots": 3,
+      "candidateId": null,
+      "candidateChecksumSha256": null,
+      "handoffSha256": "b0f512a7f8fd2bde2ddbbc2d24dc58633a4201a4ca0aebfce74aff1e5653cf17",
+      "requiredChecks": 0,
+      "productionEligible": false,
+      "authority": "inspection-only",
+      "status": "candidate",
+      "governanceState": "master-draft"
+    }
+  ],
+  "referencePack": {
+    "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "ownerReferences": 9
+  },
+  "invariants": {
+    "sharedRuntimeBackbone": true,
+    "inspectionOnly": true,
+    "implicitApproval": false,
+    "implicitVersionStaging": false,
+    "visualPromotion": false,
+    "assetsReferencesByteIdenticalToPush14": true,
+    "customerCriticalEntrypointsByteIdenticalToPush14": true
+  },
+  "wf5Acceptance": {
+    "overall": "fail",
+    "knownExternalBlocker": "WF1-BOM-ANYOF",
+    "wf4DirectProductionReview": "pass",
+    "customerDraftIsolation": "pass"
+  },
+  "nextDependency": "A26-WF4-14B — first genuinely clean/reviewable Y62-F34-V1 candidate from WF3 with locked overlay/camera acceptance, production-rights provenance and identified reviewer evidence.",
+  "status": "pass",
+  "verification": {
+    "targeted": "pass",
+    "fullAlphaRegression": "pass",
+    "serverCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "javascriptSyntax": {
+      "files": 108,
+      "failures": 0
+    },
+    "jsonParse": {
+      "files": 23,
+      "failures": 0
+    },
+    "htmlDependencies": {
+      "htmlFiles": 16,
+      "localReferences": 268,
+      "missing": 0
+    },
+    "visualTreesVsPush14": "identical",
+    "customerCriticalFilesVsPush14": "identical"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "0.26.22",
+  "package": "A26-WF4-22",
+  "push": 50,
+  "title": "Persisted Canonical Review Decision / Approval Envelope",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "scope": "WF4 only; one shared runtime/backbone; no artwork or customer-runtime change",
+  "cleanState": {
+    "ownerReferences": 9,
+    "canonicalMasters": 3,
+    "productionEligible": 0,
+    "reviewDecisions": {
+      "total": 3,
+      "current": 0,
+      "approved": 0,
+      "returned": 0,
+      "stale": 0,
+      "invalid": 0,
+      "unrecorded": 3
+    },
+    "attention": {
+      "total": 3,
+      "current": 3,
+      "stale": 0,
+      "invalid": 0,
+      "openBlockers": 10,
+      "openActions": 6
+    },
+    "referencePack": {
+      "packId": "Y62-OWNER-REFERENCE-PACK-V1",
+      "manifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342"
+    },
+    "f34": {
+      "assetId": "Y62-F34-V1-MASTER",
+      "viewId": "front34",
+      "candidateId": "Y62-F34-V1-CANDIDATE-02",
+      "handoffState": "blocked-upstream",
+      "reviewAssignment": null,
+      "reviewDecision": null,
+      "decisionFreshness": "unrecorded",
+      "governanceState": "master-draft",
+      "status": "candidate"
+    },
+    "side": {
+      "assetId": "Y62-SIDE-V1-MASTER",
+      "viewId": "side",
+      "candidateId": null,
+      "handoffState": "awaiting-wf3-candidate",
+      "reviewAssignment": null,
+      "reviewDecision": null,
+      "decisionFreshness": "unrecorded",
+      "governanceState": "master-draft",
+      "status": "candidate"
+    },
+    "rear34": {
+      "assetId": "Y62-R34-V1-MASTER",
+      "viewId": "rear34",
+      "candidateId": null,
+      "handoffState": "awaiting-wf3-candidate",
+      "reviewAssignment": null,
+      "reviewDecision": null,
+      "decisionFreshness": "unrecorded",
+      "governanceState": "master-draft",
+      "status": "candidate"
+    }
+  },
+  "delivery": {
+    "persistedReviewDecisionEnvelope": true,
+    "sha256EvidenceBasisBinding": true,
+    "exactCandidateChecksumBinding": true,
+    "assignedReviewerBinding": true,
+    "lockedReviewChecksPersisted": true,
+    "approvedAndReturnedVerdicts": true,
+    "genericGovernanceTamperBlocked": true,
+    "dedicatedReviewerDecisionEndpoint": true,
+    "staffRenderAssetsVisibility": true,
+    "staffProductionReadinessVisibility": true,
+    "readinessFreshnessIntegration": true,
+    "governanceAttentionIntegration": true,
+    "immutableProductionEvidenceMirror": true,
+    "salesInspectionOnly": true,
+    "noParallelRuntimeOrStore": true,
+    "referenceBackedApprovedVisualsOnlyPreserved": true
+  },
+  "verification": {
+    "targeted": "pass",
+    "alphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5Promotion": "pass",
+    "wf5Acceptance": {
+      "status": "expected-fail",
+      "failed": [
+        "WF1-BOM-ANYOF"
+      ],
+      "wf4DirectProductionReview": "pass",
+      "customerDraftIsolation": "pass"
+    },
+    "static": {
+      "javascript": {
+        "files": 124,
+        "failures": 0
+      },
+      "json": {
+        "files": 46,
+        "failures": 0
+      },
+      "html": {
+        "files": 16,
+        "localReferences": 291,
+        "missing": 0
+      }
+    },
+    "byteIdentity": {
+      "assetsReferences": {
+        "files": 16,
+        "changed": 0,
+        "identical": true
+      },
+      "customerCritical": {
+        "files": 11,
+        "changed": 0,
+        "identical": true
+      }
+    },
+    "zipIntegrity": "pass (provisional package structure test; final package rechecked after creation)"
+  },
+  "nextDependency": "A26-WF4-14B / WF3: first genuinely clean reviewable Y62-F34-V1 candidate with clean reconstruction/isolation, locked overlay and camera acceptance, production-rights provenance, and identified reviewer evidence."
+}

@@ -1,0 +1,111 @@
+{
+  "package": "A26-WF4-19",
+  "title": "Persisted Governance-Managed Metadata Write Boundary + Staff Visibility Controls",
+  "schemaVersion": "0.26.19",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "scope": {
+    "oneWf4PackageOnly": true,
+    "lane": "audit/production controls over persisted visual-governance metadata",
+    "newPersistenceBackbone": false,
+    "sharedRenderAssetBackbonePreserved": true,
+    "backendChangeRequiredByActiveLane": true,
+    "dedicatedProvenanceEndpointUsesExistingRenderAssetBackbone": true
+  },
+  "persistedWriteBoundary": {
+    "canonicalMasters": 3,
+    "canonicalMastersCurrent": 3,
+    "canonicalMasterProtectedPathsEach": 18,
+    "ownerReferences": 9,
+    "ownerReferencesCurrent": 9,
+    "ownerReferenceProtectedPathsEach": 19,
+    "protectedGovernance": [
+      "referencePack",
+      "canonicalView",
+      "candidateHandoff",
+      "compositeEligibility",
+      "governanceDossier",
+      "reviewWorkflow",
+      "readinessAssessment",
+      "canonicalReviewEvidence",
+      "provenanceAttestation",
+      "lineage",
+      "approval.reviewEvidence",
+      "governanceWriteBoundary"
+    ],
+    "packReferenceAdditionalProtection": "referenceEvidence",
+    "identityProtected": ["assetId", "vehicleId", "viewId", "layerId", "exactSku", "assetClass"],
+    "genericMutationError": "governance_metadata_protected",
+    "genericMutationHttpStatus": 409,
+    "blockedWriteAuditAction": "visual-governance.protected-write.blocked"
+  },
+  "dedicatedWorkflowAuthority": {
+    "provenanceAttestationEndpoint": "POST /api/v1/staff/render-assets/:assetId/provenance-attestation",
+    "provenanceRoles": ["fitment", "admin"],
+    "salesMutationDenied": true,
+    "readinessWorkflowStillWritable": true,
+    "dossierWorkflowStillWritable": true,
+    "reviewWorkflowStillWritable": true,
+    "genericProvenanceAttestationRewriteBlocked": true
+  },
+  "staffVisibility": {
+    "renderAssetsGovernanceWriteBoundaryPanel": true,
+    "productionReadinessCanonicalBoundarySummary": true,
+    "persistedFreshnessStates": ["current", "stale", "missing", "invalid"],
+    "referencePackAndCanonicalMasterBindingsVisible": true,
+    "blockedBypassAuditVisible": true
+  },
+  "governanceState": {
+    "referencePackId": "Y62-OWNER-REFERENCE-PACK-V1",
+    "referencePackManifestSha256": "260a875ef1a787d477178faaa21e897a225a8113fa6d02cab73840e012fe0342",
+    "f34CandidateId": "Y62-F34-V1-CANDIDATE-02",
+    "f34CandidateSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+    "f34HandoffSha256": "65499126b33adddd48591a2d35a4ad33f773c4c3659bfa4c5289567333160cba",
+    "f34State": "blocked-upstream",
+    "sideState": "awaiting-wf3-candidate",
+    "sideSourceGapPreserved": true,
+    "productionReadyY62Visuals": 0,
+    "visualPromotions": 0
+  },
+  "verification": {
+    "targetedWriteBoundaryRegression": "pass",
+    "targetedHttpEndpointRegression": "pass",
+    "referenceProvenanceRegression": "pass",
+    "fullAlphaRegression": "pass",
+    "npmCheck": "pass",
+    "wf5PromotionLifecycle": "pass",
+    "wf5Acceptance": "fail-existing-wf1-only",
+    "wf5AcceptanceExistingFailure": "WF1-BOM-ANYOF",
+    "wf4DirectProductionReview": "pass",
+    "wf5CustomerDraftIsolation": "pass",
+    "staticValidation": "pass",
+    "zipIntegrity": "pass",
+    "staticCounts": {
+      "javascriptFiles": 117,
+      "javascriptFailures": 0,
+      "jsonFiles": 34,
+      "jsonFailures": 0,
+      "htmlFiles": 16,
+      "htmlLocalReferences": 280,
+      "htmlMissing": 0
+    }
+  },
+  "byteIdentity": {
+    "comparisonSource": "Push18",
+    "assetsTreeIdentical": true,
+    "assetFiles": 7,
+    "referencesTreeIdentical": true,
+    "referenceFiles": 9,
+    "priorElevenPresentationAndContractFilesCompared": 11,
+    "priorElevenPresentationAndContractFilesIdentical": true,
+    "sharedRuntimeAdaptersIntentionallyChanged": ["persistence.js", "backend-client.js", "asset-registry-store.js"],
+    "customerVisualDataOrArtworkChanged": false
+  },
+  "upstreamDependency": {
+    "package": "A26-WF4-14B",
+    "canonicalView": "Y62-F34-V1",
+    "candidateId": "Y62-F34-V1-CANDIDATE-02",
+    "candidateChecksumSha256": "a353980a92131b960fed91baa46609bc63c1ec07a485fd4612fa305f0f7cea28",
+    "state": "returned-to-wf3",
+    "next": "clean isolation/reconstruction, locked overlay + camera acceptance, production-rights provenance and identified reviewer evidence"
+  }
+}
