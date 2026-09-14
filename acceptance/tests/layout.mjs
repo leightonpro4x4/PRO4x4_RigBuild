@@ -46,7 +46,7 @@ for (const source of manifest.sources) {
     sourceCount++;
   }
 }
-for (const item of manifest.alpha93Relocations) assert.equal(hash(read(item.destination)), item.sha256, item.destination);
+for (const item of manifest.alpha93Relocations) assert.equal(hash(read(item.source==='index.html'?'evidence/archive/alpha93/runtime/index.html.source':item.destination)), item.sha256, item.destination);
 const files = fs.readdirSync(path.join(root, 'public'));
 assert.deepEqual(files.filter(f => f.endsWith('.html')), ['index.html']);
 assert.equal(files.length, 11);

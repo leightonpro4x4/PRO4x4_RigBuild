@@ -6,12 +6,13 @@ import { fileURLToPath } from 'node:url';
 const webRoot = fileURLToPath(new URL('../public/', import.meta.url));
 // Local preview only. No business API, directory listing, archive or second app.
 const allowed = new Set(['index.html', ...(await fs.readdir(webRoot)).filter(p => p.endsWith('.glb'))]);
+const modules=new Set(['subsystems/customer-app/app.mjs','subsystems/visual-runtime/ranger.mjs','subsystems/visual-runtime/session.mjs','subsystems/visual-eligibility/adapter.mjs','subsystems/domain/engine.mjs','subsystems/domain/fixture.mjs','subsystems/catalogue/catalogue.json','subsystems/catalogue/alpha93-fixture.json','subsystems/catalogue/alpha93-mapping.json']);
 export async function handle(req, res) {
   const name = new URL(req.url, 'http://localhost').pathname.slice(1) || 'index.html';
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); res.end(); return; }
-  if (!allowed.has(name)) { res.writeHead(404); res.end(); return; }
-  const bytes = await fs.readFile(path.join(webRoot, name));
-  res.writeHead(200, { 'Content-Type': name.endsWith('.glb') ? 'model/gltf-binary' : 'text/html; charset=utf-8', 'Content-Length': bytes.length });
+  if (!allowed.has(name)&&!modules.has(name)) { res.writeHead(404); res.end(); return; }
+  const bytes = await fs.readFile(path.join(modules.has(name)?path.dirname(webRoot.replace(/[\\/]$/,'')):webRoot, name));
+  res.writeHead(200, { 'Content-Type': name.endsWith('.glb') ? 'model/gltf-binary' : name.endsWith('.mjs')?'text/javascript':name.endsWith('.json')?'application/json':'text/html; charset=utf-8', 'Content-Length': bytes.length });
   res.end(req.method === 'HEAD' ? undefined : bytes);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

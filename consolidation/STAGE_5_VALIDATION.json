@@ -1,0 +1,30 @@
+{
+  "stage": 5,
+  "status": "PASS",
+  "automatedVisualTests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "domainTests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "priorPreservationAndCatalogueGates": "PASS",
+  "alpha93GlbsByteIdentical": 24,
+  "requiredAssetHTTPAndHashChecks": "10/10 PASS",
+  "actualBrowserGLBLoad": "10/10 PASS",
+  "replacementStateTests": "4/4 PASS",
+  "fixtureVisualProducts": 7,
+  "fixturePartsAUD": 10239,
+  "restoredRenderState": "PASS",
+  "browserBlocker": "Resolved by normal Windows PowerShell execution; Codex browser subprocess limitation remains",
+  "previewURL": "http://127.0.0.1:8094/",
+  "iOS": "NOT TESTED",
+  "sourceBranchesUnchanged": true,
+  "stage6Started": false,
+  "desktopSmoke": {
+    "status": "PASS",
+    "evidence": "consolidation/STAGE_5_DESKTOP.json",
+    "execution": "User ran prepared smoke test in normal Windows PowerShell; saved result and screenshot agree"
+  }
+}

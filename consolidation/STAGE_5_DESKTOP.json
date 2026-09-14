@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "browser": "Edge desktop headless",
+  "assetLoad": "10/10",
+  "replacementCombinations": 4,
+  "fixtureTotalAUD": 10239,
+  "persistedReload": "PASS",
+  "orbitZoomInputs": "PASS",
+  "pageErrors": [],
+  "iOS": "NOT TESTED"
+}

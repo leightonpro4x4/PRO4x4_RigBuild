@@ -62,7 +62,7 @@ assert.equal(y62.visualAvailability.approvedProduction3DBase,false);assert.equal
 assert.equal(fixture.partsTotal,10239);assert.equal(Object.values(fixture.products).reduce((sum,p)=>sum+p.price,0),10239);
 assert.equal(fixture.products.tubrack.price,1300);assert.equal(fixture.productionQuote,false);
 // Fixture remains tied to the unchanged app, not an invented product list.
-const scripts=[...read('public/index.html').toString().matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)];
+const scripts=[...read('evidence/archive/alpha93/runtime/index.html.source').toString().matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)];
 const body=scripts.find(s=>!s[1].includes('type'))[2];const context=vm.createContext({});
 vm.runInContext(body.slice(0,body.indexOf('let selected'))+';globalThis.fixture=PRODUCTS;',context);
 assert.deepEqual(fixture.products,JSON.parse(JSON.stringify(context.fixture)));

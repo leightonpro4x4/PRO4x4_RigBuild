@@ -1,8 +1,8 @@
 # PRO4X4 Alpha 94 consolidation — baseline, catalogue and shared domain
 
-Stages 1–4 are established. WF2 catalogue data and the shared domain decision engine remain outside the unchanged Alpha 93 application. Stage 5 renderer integration is deferred.
+Stages 1–5 are validated. Stage 5 connects the Ranger preview through canonical domain decisions; automated gates and the Edge desktop smoke test pass. iOS acceptance is not tested. Stage 6 remains deferred.
 
-Run `npm start` and open `http://127.0.0.1:8094/`. This serves only `public/`, containing the unchanged Alpha 93 HTML and its ten live GLBs. Three.js remains the original pinned CDN dependency; internet access is required for it. The local server adds no quote API or persistence service.
+Run `npm start` and open `http://127.0.0.1:8094/`. The server serves one public entrypoint, ten unchanged GLBs, and an explicit allowlist of domain/runtime modules and catalogue JSON. Source archives and nested apps remain inaccessible. Three.js remains the original pinned CDN dependency; internet access is required for it. No quote API or persistence service is added.
 
 Run `npm test` for archive/source hashes, all 45 Alpha 93 relocations, 24 GLBs, ten live asset report hashes, script syntax, import-map resolution and the serving boundary. Run `npm run check` for infrastructure syntax.
 
@@ -21,7 +21,7 @@ Run `npm test` for archive/source hashes, all 45 Alpha 93 relocations, 24 GLBs, 
 | Acceptance/tests | `acceptance/tests/` |
 | Evidence archive | `evidence/archive/` — excluded from web serving |
 
-The preserved monolithic application is intentionally not refactored at this stage. Boundaries other than catalogue/domain remain reserved documentation. Do not deploy the repository root; `public/` is the sole web root.
+The original monolithic HTML is archived with its exact hash; the active entrypoint loads the integrated customer/runtime modules. Do not serve the repository root. Use the allowlisted preview server or an equivalent deployment mapping.
 
 See `consolidation/manifest.json` for the complete machine-readable baseline, `consolidation/BASELINE.md` for limitations and source classifications, and `consolidation/STAGE_2_VALIDATION.json` for the gate record. Original branch histories remain the source references; snapshot ZIPs are preservation containers, not applications to deploy.
 
