@@ -1,0 +1,13 @@
+{
+  "checkpoint": "Alpha 80",
+  "status": "first-real-accessory-live-scene",
+  "vehicle": "canonical-derived Ranger mobile LOD2 PBR",
+  "accessory": "Offroad Animal Predator V2 visual replica QA",
+  "sku": "FB-FRA-NG-22-PR-ASM0",
+  "priceAUD": 3100,
+  "selectionBehaviour": "ADD/REMOVE toggles independent Predator mesh in same 3D scene",
+  "depthBuffer": "shared",
+  "proxyFallback": false,
+  "quoteFlow": "retained in Alpha 80 test shell",
+  "nextDependency": "visual alignment/refinement of Predator against approved Alpha 79 Ranger presentation"
+}

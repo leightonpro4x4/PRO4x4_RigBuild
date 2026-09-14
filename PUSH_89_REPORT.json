@@ -1,0 +1,20 @@
+{
+  "checkpoint": "Alpha 89",
+  "status": "front-roof-side-runtime",
+  "advanced": [
+    "reconnected Clearview Power Boards PB-FD-005 as fifth independent visual product",
+    "added Side Steps + Access -> Clearview -> Power Boards customer path",
+    "Power Boards selection updates live scene, build persistence, total and quote snapshot",
+    "kept Power Boards independent of Predator/front dependency chain",
+    "retained retracted QA state; deployment animation remains blocked until governed deployed transform is visually validated"
+  ],
+  "verified": {
+    "sku": "PB-FD-005",
+    "priceAUD": 1649,
+    "fitment": "Ford NG Ranger Dual Cab 2022 on",
+    "officialInstallationGuide": "PB-FD-005 / Ford Next Gen Ranger 2022-current",
+    "javascriptSyntax": "pass",
+    "fullCurrentVisualBuildPartsAUD": 6999
+  },
+  "nextDependency": "Nice Tub Rack reconnect, then rear protection bumper"
+}

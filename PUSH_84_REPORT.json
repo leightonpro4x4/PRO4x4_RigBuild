@@ -1,0 +1,19 @@
+{
+  "checkpoint": "Alpha 84",
+  "status": "material-aware-front-segmentation-v2-qa",
+  "switchableFaces": 2485,
+  "staticFaces": 46197,
+  "verifiedAgainstOfficialCurrentEvidence": {
+    "bumperReplacement": true,
+    "noGrilleCutting": true,
+    "factoryFogLightsSupported": true
+  },
+  "advanced": [
+    "removed blunt all-material front cut",
+    "preserved fog-light glass",
+    "preserved upper grille/headlamp geometry",
+    "isolated lower bumper by material class",
+    "runtime still restores exact stock front when Predator removed"
+  ],
+  "nextDependency": "on-device visual acceptance of V2 boundary, then promote replacement contract and attach Rally Hoop/lights"
+}

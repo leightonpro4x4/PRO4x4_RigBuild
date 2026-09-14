@@ -1,0 +1,32 @@
+{
+  "checkpoint": "Alpha 86",
+  "products": [
+    {
+      "id": "oa-rally-hoop-7",
+      "sku": "TB-COM-RAL-ORA-2X7-ASM0",
+      "name": "Rally Hoop to Suit Offroad Animal Butt Kicker 7inch Driving Lights",
+      "priceAUD": 315,
+      "weightKg": 8,
+      "requires": [
+        "offroad-predator"
+      ],
+      "mesh": "rally-hoop-v3.glb",
+      "status": "visual-replica-qa"
+    },
+    {
+      "id": "oa-butt-kicker-7-pair",
+      "sku": "ORA-ALO-R5-C10D1",
+      "name": "Offroad Animal Butt Kicker 7in Round LED Driving Light/Spotlight (pair)",
+      "priceAUD": 415,
+      "weightKg": 7,
+      "requires": [
+        "oa-rally-hoop-7",
+        "offroad-predator"
+      ],
+      "mesh": "butt-kicker-7-pair-v1.glb",
+      "status": "visual-replica-qa"
+    }
+  ],
+  "correction": "The $315 Rally Hoop and $415 Butt Kicker light pair are separate current catalogue products. Alpha 85 incorrectly treated the lights as included in the hoop's $315 product representation.",
+  "combinedPartsAUD": 730
+}

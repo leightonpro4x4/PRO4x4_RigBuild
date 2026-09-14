@@ -1,0 +1,19 @@
+{
+  "checkpoint": "Alpha 88",
+  "status": "front-plus-roof-runtime",
+  "advanced": [
+    "reconnected Scout Roof Rack as fourth independent customer-selectable mesh",
+    "added Touring + Roof Storage -> Offroad Animal -> Scout category/vendor/product path",
+    "Scout selection updates live 3D, parts total, saved build and quote snapshot",
+    "Scout remains independent of Predator/front dependencies",
+    "current official Offroad Animal price reverified at $1,520 for RR-FRA-PU-22-SCT-ASM0"
+  ],
+  "verified": {
+    "sku": "RR-FRA-PU-22-SCT-ASM0",
+    "priceAUD": 1520,
+    "fitment": "Next Gen Ranger 2022 to current",
+    "javascriptSyntax": "pass",
+    "fullCurrentVisualBuildPartsAUD": 5350
+  },
+  "nextDependency": "reconnect side-zone product next: Clearview Power Boards, then Nice Tub Rack and rear bumper"
+}

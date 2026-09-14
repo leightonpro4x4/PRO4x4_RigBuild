@@ -1,0 +1,18 @@
+{
+  "checkpoint": "Alpha 85",
+  "advanced": [
+    "accepted Alpha 84 material-aware factory-front split as current governed QA path",
+    "rebuilt Rally Hoop + twin 7-inch lighting as independent dependent mesh",
+    "Rally assembly requires Predator at catalogue and scene level",
+    "removing Predator suppresses Rally assembly",
+    "factory front remains hidden only while Predator replacement state is active"
+  ],
+  "verified": {
+    "predatorReplacementContract": "governed-qa-path",
+    "rallyDependency": "enforced",
+    "lampCount": 2,
+    "nominalLampDiameterMm": 178,
+    "sharedDepthScene": true
+  },
+  "nextDependency": "visual refinement of hoop/lamp spacing and mounting height against official product imagery, then return to broader real-product coverage"
+}

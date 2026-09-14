@@ -1,0 +1,17 @@
+{
+  "checkpoint": "Alpha 82",
+  "assetId": "OA-PREDATOR-RANGER-P703-VISUAL-V4",
+  "sha256": "2f2c4fcf091162735e270ca4ea092dbe89bf0aaa385dbac2b6ef627446249519",
+  "status": "visual-replica-qa",
+  "sku": "FB-FRA-NG-22-PR-ASM0",
+  "changes": [
+    "lower/open centre profile",
+    "official-image-derived wing silhouette",
+    "more accurate faceted outer returns",
+    "revised wing mesh apertures",
+    "revised winch/fairlead bay",
+    "revised bash/under-pan proportions",
+    "replacement-accessory contract added"
+  ],
+  "productionBlocker": "canonical Ranger factory bumper geometry must be cleanly segmented/suppressed for true replacement-part rendering"
+}

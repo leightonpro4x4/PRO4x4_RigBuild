@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "1.0",
+  "productId": "offroad-predator",
+  "sku": "FB-FRA-NG-22-PR-ASM0",
+  "fitmentType": "factory-front-replacement",
+  "visualAsset": "predator-v4.glb",
+  "visualStatus": "visual-replica-qa",
+  "sourceEvidence": {
+    "officialProductPage": "Offroad Animal Predator Bull bar, Ford Ranger Next Gen RA 2022 ON",
+    "officialFittingInstruction": "FB-FRA-NG-22-PR-ASM0 Rev D",
+    "verifiedParts": [
+      "bash plate",
+      "side under panels",
+      "inside metal infill panels",
+      "pan brace",
+      "radar mount plate",
+      "number plate bracket",
+      "grille support bracket",
+      "radar cover panel",
+      "sensor holders"
+    ]
+  },
+  "baseInteraction": {
+    "requiresFactoryBumperSuppression": true,
+    "currentStatus": "switchable-factory-front-v2-material-aware-qa",
+    "rule": "Use material-aware V2 split for all current Predator-dependent visual work. Full-canonical production split remains a later release gate.",
+    "staticVehicleAsset": "ranger-static.glb",
+    "switchableFactoryFrontAsset": "factory-front.glb",
+    "segmentationEnvelope": {
+      "zMin": 2.02,
+      "yMax": 0.88,
+      "absXMax": 1.09
+    },
+    "behaviour": {
+      "stock": "static vehicle + factory-front visible",
+      "predatorSelected": "static vehicle + factory-front hidden + Predator visible"
+    },
+    "qaWarning": "Triangle-centroid segmentation is a governed QA split of the canonical-derived mobile LOD. Final production split should be authored on the full canonical master after visual acceptance.",
+    "segmentationMethod": "material-aware + spatial lower-bumper envelope",
+    "preservationRules": {
+      "factoryFogLights": "retained (official product supports factory fog lights)",
+      "upperGrille": "retained (official product states no grille cutting)",
+      "headlights": "retained",
+      "bonnetAndGuards": "retained",
+      "blackGlossUpperGrille": "retained"
+    },
+    "removedClasses": [
+      "lower chrome bumper elements",
+      "lower black bumper fascia",
+      "lower fascia material 27",
+      "lower grille/bumper material 31",
+      "lower painted bumper facets"
+    ],
+    "qaDecision": "accepted-for-next-accessory-integration",
+    "promotionStatus": "governed-qa-path"
+  },
+  "noFakeRule": "Do not solve replacement fitment by covering the factory bumper with an opaque fake panel.",
+  "segmentationAudit": [
+    {
+      "geometry": "chrome",
+      "facesTotal": 9244,
+      "facesFactoryFront": 704,
+      "facesStatic": 8540
+    },
+    {
+      "geometry": "disc",
+      "facesTotal": 1183,
+      "facesFactoryFront": 0,
+      "facesStatic": 1183
+    },
+    {
+      "geometry": "Material__34",
+      "facesTotal": 2696,
+      "facesFactoryFront": 0,
+      "facesStatic": 2696
+    },
+    {
+      "geometry": "black_rim",
+      "facesTotal": 6957,
+      "facesFactoryFront": 0,
+      "facesStatic": 6957
+    },
+    {
+      "geometry": "tyre",
+      "facesTotal": 509,
+      "facesFactoryFront": 0,
+      "facesStatic": 509
+    },
+    {
+      "geometry": "windows_glass",
+      "facesTotal": 245,
+      "facesFactoryFront": 0,
+      "facesStatic": 245
+    },
+    {
+      "geometry": "interior",
+      "facesTotal": 1506,
+      "facesFactoryFront": 0,
+      "facesStatic": 1506
+    },
+    {
+      "geometry": "black",
+      "facesTotal": 8055,
+      "facesFactoryFront": 1709,
+      "facesStatic": 6346
+    },
+    {
+      "geometry": "mirror",
+      "facesTotal": 131,
+      "facesFactoryFront": 0,
+      "facesStatic": 131
+    },
+    {
+      "geometry": "redglass",
+      "facesTotal": 5002,
+      "facesFactoryFront": 0,
+      "facesStatic": 5002
+    },
+    {
+      "geometry": "clearglass",
+      "facesTotal": 5969,
+      "facesFactoryFront": 352,
+      "facesStatic": 5617
+    },
+    {
+      "geometry": "red",
+      "facesTotal": 746,
+      "facesFactoryFront": 0,
+      "facesStatic": 746
+    },
+    {
+      "geometry": "Material__27",
+      "facesTotal": 1456,
+      "facesFactoryFront": 119,
+      "facesStatic": 1337
+    },
+    {
+      "geometry": "Material__29",
+      "facesTotal": 210,
+      "facesFactoryFront": 0,
+      "facesStatic": 210
+    },
+    {
+      "geometry": "Material__32",
+      "facesTotal": 150,
+      "facesFactoryFront": 0,
+      "facesStatic": 150
+    },
+    {
+      "geometry": "Material__31",
+      "facesTotal": 741,
+      "facesFactoryFront": 741,
+      "facesStatic": 0
+    },
+    {
+      "geometry": "black_gloss",
+      "facesTotal": 508,
+      "facesFactoryFront": 0,
+      "facesStatic": 508
+    },
+    {
+      "geometry": "carpaint",
+      "facesTotal": 3374,
+      "facesFactoryFront": 92,
+      "facesStatic": 3282
+    }
+  ],
+  "segmentationAuditV2": [
+    {
+      "geometry": "chrome",
+      "total": 9244,
+      "switchable": 366,
+      "static": 8878
+    },
+    {
+      "geometry": "disc",
+      "total": 1183,
+      "switchable": 0,
+      "static": 1183
+    },
+    {
+      "geometry": "Material__34",
+      "total": 2696,
+      "switchable": 0,
+      "static": 2696
+    },
+    {
+      "geometry": "black_rim",
+      "total": 6957,
+      "switchable": 0,
+      "static": 6957
+    },
+    {
+      "geometry": "tyre",
+      "total": 509,
+      "switchable": 0,
+      "static": 509
+    },
+    {
+      "geometry": "windows_glass",
+      "total": 245,
+      "switchable": 0,
+      "static": 245
+    },
+    {
+      "geometry": "interior",
+      "total": 1506,
+      "switchable": 0,
+      "static": 1506
+    },
+    {
+      "geometry": "black",
+      "total": 8055,
+      "switchable": 1235,
+      "static": 6820
+    },
+    {
+      "geometry": "mirror",
+      "total": 131,
+      "switchable": 0,
+      "static": 131
+    },
+    {
+      "geometry": "redglass",
+      "total": 5002,
+      "switchable": 0,
+      "static": 5002
+    },
+    {
+      "geometry": "clearglass",
+      "total": 5969,
+      "switchable": 0,
+      "static": 5969
+    },
+    {
+      "geometry": "red",
+      "total": 746,
+      "switchable": 0,
+      "static": 746
+    },
+    {
+      "geometry": "Material__27",
+      "total": 1456,
+      "switchable": 119,
+      "static": 1337
+    },
+    {
+      "geometry": "Material__29",
+      "total": 210,
+      "switchable": 0,
+      "static": 210
+    },
+    {
+      "geometry": "Material__32",
+      "total": 150,
+      "switchable": 0,
+      "static": 150
+    },
+    {
+      "geometry": "Material__31",
+      "total": 741,
+      "switchable": 741,
+      "static": 0
+    },
+    {
+      "geometry": "black_gloss",
+      "total": 508,
+      "switchable": 0,
+      "static": 508
+    },
+    {
+      "geometry": "carpaint",
+      "total": 3374,
+      "switchable": 24,
+      "static": 3350
+    }
+  ]
+}

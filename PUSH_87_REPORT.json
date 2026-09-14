@@ -1,0 +1,19 @@
+{
+  "checkpoint": "Alpha 87",
+  "status": "corrected-front-commercial-runtime",
+  "advanced": [
+    "Rally Hoop and Butt Kicker lights are now separate selectable catalogue products in the customer runtime",
+    "correct dependency chain enforced: Predator -> Rally Hoop -> Butt Kicker pair",
+    "correct live parts pricing: Predator $3,100; Rally Hoop $315; Butt Kicker pair $415",
+    "full front package parts total is $3,830",
+    "quote snapshot now records all selected SKUs, prices and dependencies",
+    "live scene separately toggles factory front, Predator, Rally Hoop and Butt Kicker meshes",
+    "repaired malformed Alpha 85 inherited importmap/runtime script"
+  ],
+  "verified": {
+    "javascriptSyntax": "pass",
+    "fullFrontPartsAUD": 3830,
+    "products": 3
+  },
+  "nextDependency": "host Alpha 87 for iOS regression, then reconnect Scout Rack as next breadth product"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "2.0",
+  "assetId": "OA-RALLY-HOOP-2X7-RANGER-P703-VISUAL-V2",
+  "productId": "oa-rally-hoop-7",
+  "sku": "TB-COM-RAL-ORA-2X7-ASM0",
+  "status": "visual-replica-qa",
+  "sha256": "6dfbb5f78d9b51d686611245361513f8b2ee08b499dba9d1fc67e324374c7f1b",
+  "fitmentType": "dependent-accessory",
+  "requires": [
+    "offroad-predator"
+  ],
+  "parentContract": "PREDATOR_REPLACEMENT_CONTRACT.json",
+  "geometry": {
+    "lampNominalDiameterMm": 178,
+    "lampCount": 2,
+    "components": [
+      "hoop feet",
+      "hoop legs",
+      "top tube",
+      "lamp mounts",
+      "lamp housings",
+      "bezels",
+      "lenses",
+      "reflectors",
+      "centre badges"
+    ]
+  },
+  "runtimeRule": "Rally/light assembly may render only while Predator is selected and the factory-front replacement state is active.",
+  "noFakeRule": "Do not render Rally Hoop or lights directly on the stock factory bumper."
+}

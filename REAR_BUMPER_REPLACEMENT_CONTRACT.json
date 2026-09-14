@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0",
+  "productId": "rearbumper",
+  "sku": "RB-FRA-NG-22-ASM0",
+  "fitmentType": "factory-rear-bumper-replacement",
+  "visualStatus": "visual-replica-qa",
+  "baseInteraction": {
+    "permanentVehicleAsset": "ranger-static-front-rear.glb",
+    "switchableFactoryRearAsset": "factory-rear.glb",
+    "stockState": "permanent vehicle + factory-front + factory-rear",
+    "rearBumperSelected": "permanent vehicle + factory-front state unchanged + factory-rear hidden + rear bumper visible",
+    "preserved": [
+      "tail lamps",
+      "upper painted tub/quarters",
+      "unrelated body geometry"
+    ],
+    "rule": "Rear replacement must not be represented as an additive overlay over the factory rear bumper."
+  },
+  "fitmentNotes": {
+    "factoryTowbarRequired": true,
+    "factoryParkingSensorsSupported": true
+  },
+  "segmentationAudit": [
+    {
+      "geometry": "chrome",
+      "total": 8878,
+      "switchableRear": 66,
+      "permanent": 8812
+    },
+    {
+      "geometry": "disc",
+      "total": 1183,
+      "switchableRear": 0,
+      "permanent": 1183
+    },
+    {
+      "geometry": "Material__34",
+      "total": 2696,
+      "switchableRear": 0,
+      "permanent": 2696
+    },
+    {
+      "geometry": "black_rim",
+      "total": 6957,
+      "switchableRear": 0,
+      "permanent": 6957
+    },
+    {
+      "geometry": "tyre",
+      "total": 509,
+      "switchableRear": 0,
+      "permanent": 509
+    },
+    {
+      "geometry": "windows_glass",
+      "total": 245,
+      "switchableRear": 0,
+      "permanent": 245
+    },
+    {
+      "geometry": "interior",
+      "total": 1506,
+      "switchableRear": 0,
+      "permanent": 1506
+    },
+    {
+      "geometry": "black",
+      "total": 6820,
+      "switchableRear": 723,
+      "permanent": 6097
+    },
+    {
+      "geometry": "mirror",
+      "total": 131,
+      "switchableRear": 0,
+      "permanent": 131
+    },
+    {
+      "geometry": "redglass",
+      "total": 5002,
+      "switchableRear": 0,
+      "permanent": 5002
+    },
+    {
+      "geometry": "clearglass",
+      "total": 5969,
+      "switchableRear": 0,
+      "permanent": 5969
+    },
+    {
+      "geometry": "red",
+      "total": 746,
+      "switchableRear": 0,
+      "permanent": 746
+    },
+    {
+      "geometry": "Material__27",
+      "total": 1337,
+      "switchableRear": 0,
+      "permanent": 1337
+    },
+    {
+      "geometry": "Material__29",
+      "total": 210,
+      "switchableRear": 0,
+      "permanent": 210
+    },
+    {
+      "geometry": "Material__32",
+      "total": 150,
+      "switchableRear": 42,
+      "permanent": 108
+    },
+    {
+      "geometry": "black_gloss",
+      "total": 508,
+      "switchableRear": 0,
+      "permanent": 508
+    },
+    {
+      "geometry": "carpaint",
+      "total": 3350,
+      "switchableRear": 0,
+      "permanent": 3350
+    }
+  ],
+  "noFakeRule": "Do not conceal the factory rear bumper with an opaque panel."
+}

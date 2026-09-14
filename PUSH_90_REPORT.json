@@ -1,0 +1,20 @@
+{
+  "checkpoint": "Alpha 90",
+  "status": "front-roof-side-tub-runtime",
+  "advanced": [
+    "reconnected Offroad Animal The Nice Tub Rack as sixth independent customer-selectable visual product",
+    "added Tub + Load Carrying -> Offroad Animal -> Nice Tub Rack navigation path",
+    "Tub Rack selection now updates live 3D, saved build, parts total and quote snapshot",
+    "kept rack independent of front/lighting dependencies",
+    "preserved adjustable-height state as future governed configuration rather than inventing an unverified position"
+  ],
+  "verified": {
+    "sku": "TR-NR-COM-ASM1",
+    "priceAUD": 1300,
+    "weightKg": 23,
+    "heightAdjustmentMm": 200,
+    "javascriptSyntax": "pass",
+    "fullCurrentVisualBuildPartsAUD": 8299
+  },
+  "nextDependency": "reconnect rear protection bumper to complete front + lighting + roof + side + tub + rear coverage on the proper Ranger runtime"
+}

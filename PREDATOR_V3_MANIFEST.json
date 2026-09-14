@@ -1,0 +1,30 @@
+{
+  "checkpoint": "Alpha 81",
+  "assetId": "OA-PREDATOR-RANGER-P703-VISUAL-V3.1",
+  "sku": "FB-FRA-NG-22-PR-ASM0",
+  "status": "visual-replica-qa",
+  "sha256": "5d2f307dc26b2e5d883e189c1a88cc65447b70b47184c8008269bc1fe6acba47",
+  "refinements": [
+    "panel-based geometry replacing box proof",
+    "swept/chamfered wings",
+    "headlight-side taper",
+    "wing ventilation apertures",
+    "central winch opening",
+    "fairlead treatment",
+    "tapered silver bash plate",
+    "lower recovery points",
+    "under-panel returns"
+  ],
+  "evidence": [
+    "Offroad Animal official product imagery",
+    "Offroad Animal Rev D fitting instructions",
+    "canonical P703 Ranger fitment relationship"
+  ],
+  "rule": "Still QA; not manufacturing CAD. Official geometry supersedes.",
+  "fitmentRefinement": {
+    "zShiftM": -0.15,
+    "rearFaceZ": 2.4,
+    "rangerFrontEnvelopeZ": 2.4257,
+    "purpose": "remove floating gap and seat rear bar geometry into canonical Ranger front envelope"
+  }
+}

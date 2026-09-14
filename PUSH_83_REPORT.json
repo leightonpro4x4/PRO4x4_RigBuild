@@ -1,0 +1,15 @@
+{
+  "checkpoint": "Alpha 83",
+  "status": "switchable-factory-front-qa",
+  "advanced": [
+    "canonical-derived Ranger split into static body + switchable factory-front",
+    "Predator selection hides factory-front and shows Predator",
+    "removing Predator restores exact factory-front asset",
+    "no opaque masking panel used"
+  ],
+  "factoryFrontFaces": 3717,
+  "staticFaces": 44965,
+  "factoryFrontSha256": "b4728e22060c6305c64be02bd94410a795ecabe62ccb1a0543a1d9cada84593a",
+  "staticSha256": "892b9b5c4076a62032679c5f19bd67ce9a830b71ac5246e86a37b1ba6c0146ce",
+  "nextDependency": "visual QA the segmentation boundary; tighten full-canonical production split if no headlight/grille/guard loss is observed"
+}

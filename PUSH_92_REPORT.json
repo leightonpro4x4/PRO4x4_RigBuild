@@ -1,0 +1,18 @@
+{
+  "checkpoint": "Alpha 92",
+  "status": "dual-replacement-runtime",
+  "advanced": [
+    "corrected rear bar from additive overlay to factory-rear replacement architecture",
+    "segmented a governed switchable factory rear from the canonical-derived Ranger",
+    "rear bumper selection now hides only the switchable factory rear and shows the Offroad Animal rear bumper",
+    "removing rear bumper restores the exact factory rear asset",
+    "front Predator replacement state remains independent and intact"
+  ],
+  "verified": {
+    "switchableRearFaces": 831,
+    "javascriptSyntax": "pass",
+    "visualProductCount": 7,
+    "partsTotalUnchangedAUD": 10239
+  },
+  "nextDependency": "host dual-replacement Alpha 92 for iPhone regression; then expand beyond current seven-product proof set"
+}

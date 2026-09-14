@@ -1,0 +1,22 @@
+{
+  "checkpoint": "Alpha 91",
+  "status": "full-multi-zone-runtime",
+  "advanced": [
+    "reconnected Offroad Animal Rear Protection Bumper as seventh independent visual product",
+    "added Rear Protection -> Offroad Animal -> Rear Protection Bumper path",
+    "rear selection updates live scene, local saved build, parts total and quote snapshot",
+    "proper Ranger runtime now covers front protection, dependent lighting, roof, side, tub and rear"
+  ],
+  "verified": {
+    "sku": "RB-FRA-NG-22-ASM0",
+    "currentPriceAUD": 1940,
+    "weightKg": 36,
+    "fitment": "Ford Ranger RA Next Gen 2022-current with factory towbar",
+    "factoryParkingSensorsSupported": true,
+    "factoryTowbarRequired": true,
+    "javascriptSyntax": "pass",
+    "visualProductCount": 7,
+    "fullCurrentVisualBuildPartsAUD": 10239
+  },
+  "nextDependency": "host Alpha 91 for iPhone regression of complete multi-zone build before adding more product breadth"
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint": "Alpha 80",
+  "vehicle": {
+    "file": "ranger.glb",
+    "sha256": "c5c211972cd5a2ddcdb74aa86abdde64be29ea87d7f46c2ffc488daec7887cd0"
+  },
+  "accessory": {
+    "file": "predator.glb",
+    "sku": "FB-FRA-NG-22-PR-ASM0",
+    "status": "visual-replica-qa",
+    "sha256": "19283d73fc5ebf202dfc64b235de18fa65c3c8b0e0b59f45f083ab811e1081fe"
+  },
+  "milestone": "first selectable accessory mesh on real Ranger live scene"
+}

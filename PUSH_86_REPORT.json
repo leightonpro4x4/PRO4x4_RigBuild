@@ -1,0 +1,19 @@
+{
+  "checkpoint": "Alpha 86",
+  "advanced": [
+    "corrected Rally Hoop geometry from tube-style proof to two-piece steel pod/cheek architecture with speed-hole treatment",
+    "separated Butt Kicker lights into their own real catalogue product and independent mesh",
+    "corrected pricing: Rally Hoop $315 + Butt Kicker 7in pair $415 = $730 parts",
+    "dependency chain defined: Predator -> Rally Hoop -> Butt Kicker lights"
+  ],
+  "verified": {
+    "rallySku": "TB-COM-RAL-ORA-2X7-ASM0",
+    "rallyPriceAUD": 315,
+    "rallyWeightKg": 8,
+    "lightsSku": "ORA-ALO-R5-C10D1",
+    "lightsPriceAUD": 415,
+    "lightsWeightKg": 7,
+    "rangerFitment": "Rally Hoop page lists Ford Ranger RA 2022-on / FB-FRA-NG-22-PR-ASM0 as Good Fit; camera relocation required"
+  },
+  "nextDependency": "wire the separated Hoop and Butt Kicker products into the customer runtime/quote totals, then return to Scout/Power Boards/tub/rear breadth"
+}
