@@ -1,0 +1,59 @@
+{
+  "stage": 7,
+  "status": "PASS",
+  "parentCommit": "216a95950917dc307761571014fd1c2e1d028155",
+  "counts": {
+    "references": 9,
+    "approvedReferences": 9,
+    "referenceAttestations": 9,
+    "masters": 3,
+    "candidates": 9,
+    "claims": 0,
+    "canonicalDecisions": 0,
+    "seals": 0,
+    "Y62Production": 0
+  },
+  "tests": {
+    "domain": 29,
+    "visualRuntime": 17,
+    "persistence": 32,
+    "governance": 34,
+    "wf5IntegrationChecks": 5,
+    "wf5CurrentAssertionBindings": 34
+  },
+  "archiveFilesVerified": 2407,
+  "Alpha93GLBsVerified": 24,
+  "liveGLBsVerified": 10,
+  "sourceAssets": "hash-identical",
+  "catalogue": {
+    "rangerAccessories": 73,
+    "rangerEvidence": 54,
+    "y62Accessories": 26,
+    "y62Evidence": 15
+  },
+  "fixturePartsAUD": 10239,
+  "desktop": {
+    "status": "PASS",
+    "desktopVisual": "PASS",
+    "desktopProjects": "PASS",
+    "governanceRegistryIsolation": "PASS",
+    "Y62Production": 0,
+    "iOS": "NOT TESTED",
+    "execution": "User normal Windows PowerShell; saved evidence inspected",
+    "preview": "http://127.0.0.1:8097",
+    "script": "acceptance/tests/desktop-governance.mjs",
+    "priorSandboxBlocker": "Node-to-Edge spawn EPERM; resolved by normal PowerShell execution"
+  },
+  "iOS": "NOT TESTED",
+  "protectedBranches": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "sourceBranchesUnchanged": true,
+  "stage8Started": false
+}

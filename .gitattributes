@@ -5,3 +5,5 @@ evidence/archive/** -text
 *.glb binary
 subsystems/catalogue/source-wf2/** -text
 subsystems/server-persistence/vendor/** -text
+
+subsystems/governance/vendor/** -text

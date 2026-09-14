@@ -1,11 +1,12 @@
+import {governancePolicy} from './governance-policy.mjs';
 export const assets={base:'ranger-static-front-rear.glb',factoryFront:'factory-front.glb',factoryRear:'factory-rear.glb',predator:'predator.glb',rally:'rally-hoop-v3.glb',lights:'butt-kicker-7-pair-v1.glb',scout:'scout.glb',powerboards:'powerboards.glb',tubrack:'tubrack.glb',rearbumper:'rearbumper.glb'};
 // Only caller-supplied, trusted production records can elevate the preserved preview.
 // This stage supplies no approvals, and never derives them from mesh load success.
-export function eligibility({decision,mapping,profile='catalogue',trustedApprovals=[],assetHashes={}}) {
+export function eligibility({decision,mapping,profile='catalogue',assetHashes={}}) {
   const ranger=profile==='checkpoint'?decision.vehicleId==='alpha93-regression-only':decision.vehicleId===mapping.vehicleId;
   const state={vehicleId:decision.vehicleId,profile,baseState:ranger?'preview':'unavailable',productionApproved:false,fallback:'none',layers:{}};
   for(const [layer,file] of Object.entries(assets))state.layers[layer]={file,visible:false,state:'unavailable'};
-  if(!ranger)return state;
+  if(!ranger){if(decision.vehicleId===governancePolicy.y62.vehicleId){state.governanceState=governancePolicy.y62.state;state.governanceViews=governancePolicy.y62.views;}return state;}
   if(decision.outcome==='blocked'){state.baseState='blocked';for(const l of Object.values(state.layers))l.state='blocked';return state;}
   const selected=new Set(decision.selected);
   for(const row of mapping.mappings){
@@ -26,8 +27,11 @@ export function eligibility({decision,mapping,profile='catalogue',trustedApprova
   state.layers.factoryRear.visible=!state.layers.rearbumper.visible;
   for(const name of ['base','factoryFront','factoryRear'])state.layers[name].state='preview';
   for(const layer of Object.values(state.layers)){
-    const approval=trustedApprovals.find(a=>a.status==='production-approved'&&a.recordId&&a.vehicleId===decision.vehicleId&&a.file===layer.file&&a.sha256&&a.sha256===assetHashes[layer.file]);
-    if(approval&&layer.state==='preview')layer.state='approved';
+    const record=governancePolicy.ranger.assets.find(a=>a.file===layer.file);
+    // Current source has checkpoint permission only. Hash mismatch fails closed.
+    if(!record||(assetHashes[layer.file]&&assetHashes[layer.file]!==record.sha256)){layer.state='unavailable';layer.visible=false;}
+    else if(layer.state==='preview')layer.state=record.state;
+
   }
   state.baseState=state.layers.base.state;
   state.productionApproved=Object.values(state.layers).filter(l=>l.visible).every(l=>l.state==='approved');

@@ -25,5 +25,5 @@ await page.selectOption('#vehicle','nissan-y62-warrior-2025');s=await state();as
 await page.selectOption('#vehicle','ford-ranger-nextgen-2025');await page.selectOption('#profile','checkpoint');await page.click('#loadFullBuild');
 assert.deepEqual(errors,[]);
 console.log(JSON.stringify({status:'PASS',browser:'Edge desktop headless',assetLoad:'10/10',combinations:4,restoration:'PASS',persistedReload:'PASS',fullFixture:'PASS',partsTotal:10239,catalogueCameraRequirement:'PASS',y62NoFallback:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'}));
-fs.writeFileSync(new URL('../../consolidation/STAGE_5_DESKTOP.json',import.meta.url),JSON.stringify({status:'PASS',browser:'Edge desktop headless',assetLoad:'10/10',replacementCombinations:4,fixtureTotalAUD:10239,persistedReload:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'},null,2));
+fs.writeFileSync(new URL('../../consolidation/'+(process.env.ALPHA94_VALIDATION_STAGE==='7'?'STAGE_7_VISUAL_DESKTOP.json':'STAGE_5_DESKTOP.json'),import.meta.url),JSON.stringify({status:'PASS',browser:'Edge desktop headless',assetLoad:'10/10',replacementCombinations:4,fixtureTotalAUD:10239,persistedReload:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'},null,2));
 await browser.close();

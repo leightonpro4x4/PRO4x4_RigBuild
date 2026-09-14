@@ -8,6 +8,7 @@ const webRoot = fileURLToPath(new URL('../public/', import.meta.url));
 const allowed = new Set(['index.html', ...(await fs.readdir(webRoot)).filter(p => p.endsWith('.glb'))]);
 const modules=new Set(['subsystems/customer-app/app.mjs','subsystems/visual-runtime/ranger.mjs','subsystems/visual-runtime/session.mjs','subsystems/visual-eligibility/adapter.mjs','subsystems/domain/engine.mjs','subsystems/domain/fixture.mjs','subsystems/catalogue/catalogue.json','subsystems/catalogue/alpha93-fixture.json','subsystems/catalogue/alpha93-mapping.json']);
 modules.add('subsystems/customer-app/projects.mjs');
+modules.add('subsystems/visual-eligibility/governance-policy.mjs');
 export async function handle(req, res) {
   const name = new URL(req.url, 'http://localhost').pathname.slice(1) || 'index.html';
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); res.end(); return; }

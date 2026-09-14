@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "desktopVisual": "PASS",
+  "desktopProjects": "PASS",
+  "governanceRegistryIsolation": "PASS",
+  "Y62Production": 0,
+  "iOS": "NOT TESTED"
+}

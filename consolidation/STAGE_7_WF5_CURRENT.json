@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "historicalAssertions": 34,
+  "currentBindings": 34,
+  "additionalIntegrationChecks": 5,
+  "crosswalk": [
+    {
+      "id": "WF1-BOM-ANYOF",
+      "file": "wf5-current.mjs",
+      "assertion": "const orphan="
+    },
+    {
+      "id": "WF1-QUOTE-ANYOF",
+      "file": "wf5-current.mjs",
+      "assertion": "q.quoteReady"
+    },
+    {
+      "id": "WF1-BOM-ANYOF-SATISFIED",
+      "file": "wf5-current.mjs",
+      "assertion": "oa-toro-ranger"
+    },
+    {
+      "id": "WF1-REMOVE-ANYOF",
+      "file": "wf5-current.mjs",
+      "assertion": "const removal="
+    },
+    {
+      "id": "WF1-CONDITIONAL-FITMENT-GATE",
+      "file": "wf5-current.mjs",
+      "assertion": "const scout="
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-REVIEW",
+      "file": "governance.mjs",
+      "assertion": "WF4-DIRECT-PRODUCTION-REVIEW"
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-EVIDENCE",
+      "file": "governance.mjs",
+      "assertion": "WF4-DIRECT-PRODUCTION-REVIEW/EVIDENCE"
+    },
+    {
+      "id": "WF4-REVIEWER-IDENTITY-AUTHENTICITY",
+      "file": "governance.mjs",
+      "assertion": "WF4-REVIEWER-IDENTITY-AUTHENTICITY"
+    },
+    {
+      "id": "WF4-MASTER-REFERENCE-BACKING",
+      "file": "governance.mjs",
+      "assertion": "WF4-MASTER-REFERENCE-BACKING"
+    },
+    {
+      "id": "WF4-QUOTE-GATE-TRUST-BOUNDARY",
+      "file": "wf5-current.mjs",
+      "assertion": "revision_content_mismatch"
+    },
+    {
+      "id": "WF5-OWNER-REFERENCE-PACK-INTEGRITY",
+      "file": "governance.mjs",
+      "assertion": "WF5-OWNER-REFERENCE-PACK-INTEGRITY"
+    },
+    {
+      "id": "WF4-MASTER-REFERENCE-ID-VALIDITY",
+      "file": "governance.mjs",
+      "assertion": "WF4-MASTER-REFERENCE-ID-VALIDITY"
+    },
+    {
+      "id": "WF4-MASTER-BRIEF-REFERENCE-BINDING",
+      "file": "governance.mjs",
+      "assertion": "WF4-MASTER-BRIEF-REFERENCE-BINDING"
+    },
+    {
+      "id": "WF4-PRODUCTION-BINARY-IMMUTABILITY",
+      "file": "governance.mjs",
+      "assertion": "WF4-PRODUCTION-BINARY/IDENTITY-IMMUTABILITY"
+    },
+    {
+      "id": "WF4-PRODUCTION-IDENTITY-IMMUTABILITY",
+      "file": "governance.mjs",
+      "assertion": "WF4-PRODUCTION-BINARY/IDENTITY-IMMUTABILITY"
+    },
+    {
+      "id": "WF4-CANDIDATE-EVIDENCE-RESET",
+      "file": "governance.mjs",
+      "assertion": "WF4-CANDIDATE-EVIDENCE-RESET"
+    },
+    {
+      "id": "WF4-BLOCKED-FITMENT-PRECEDENCE",
+      "file": "governance.mjs",
+      "assertion": "WF4-BLOCKED-FITMENT-PRECEDENCE"
+    },
+    {
+      "id": "WF4-RENDER-STATE-EXACTNESS",
+      "file": "governance.mjs",
+      "assertion": "WF4-RENDER-STATE-EXACTNESS"
+    },
+    {
+      "id": "WF4-PRODUCTION-TUPLE-UNIQUENESS",
+      "file": "governance.mjs",
+      "assertion": "WF4-PRODUCTION-TUPLE-UNIQUENESS"
+    },
+    {
+      "id": "WF4-PROJECT-RENDER-TRUST-BOUNDARY",
+      "file": "persistence.mjs",
+      "assertion": "caller render mismatch and null rejected"
+    },
+    {
+      "id": "WF4-QUOTE-PROJECT-REVISION-BINDING",
+      "file": "persistence.mjs",
+      "assertion": "caller revision content mismatch rejected"
+    },
+    {
+      "id": "WF4-QUOTE-LINEAGE-REQUIRED",
+      "file": "persistence.mjs",
+      "assertion": "quote without lineage rejected"
+    },
+    {
+      "id": "WF4-QUOTE-LINEAGE-EXISTENCE",
+      "file": "persistence.mjs",
+      "assertion": "nonexistent project/revision rejected"
+    },
+    {
+      "id": "WF4-QUOTE-LINEAGE-OWNERSHIP",
+      "file": "persistence.mjs",
+      "assertion": "wrong owner cannot read revision/save/quote/share"
+    },
+    {
+      "id": "WF4-QUOTE-REFERENCE-OWNERSHIP",
+      "file": "persistence.mjs",
+      "assertion": "quote ownership enforced on reads and drafts"
+    },
+    {
+      "id": "WF4-QUOTE-FINALISATION-AUTHORITY",
+      "file": "persistence.mjs",
+      "assertion": "finaliser identity and role required"
+    },
+    {
+      "id": "WF4-QUOTE-REFINALISATION-IMMUTABILITY",
+      "file": "persistence.mjs",
+      "assertion": "different re-finalisation key/issuer rejected"
+    },
+    {
+      "id": "WF4-FINALISED-QUOTE-IMMUTABILITY",
+      "file": "persistence.mjs",
+      "assertion": "finalised customer mutation rejected"
+    },
+    {
+      "id": "WF4-FINALISED-QUOTE-STAFF-MUTATION",
+      "file": "persistence.mjs",
+      "assertion": "finalised staff mutation rejected"
+    },
+    {
+      "id": "WF4-QUOTE-FINALISER-IDENTITY",
+      "file": "persistence.mjs",
+      "assertion": "terminal issuance binds issuer/checksum/total"
+    },
+    {
+      "id": "WF4-QUOTE-REVISION-CHECKSUM-BINDING",
+      "file": "persistence.mjs",
+      "assertion": "checksum absent or mismatched rejected"
+    },
+    {
+      "id": "WF4-SHARE-REVISION-ISOLATION",
+      "file": "persistence.mjs",
+      "assertion": "share exposes pinned revision only"
+    },
+    {
+      "id": "WF4-SHARE-REGISTRY-ISOLATION",
+      "file": "persistence.mjs",
+      "assertion": "share does not expose governance/reviewer registries"
+    },
+    {
+      "id": "WF5-CUSTOMER-DRAFT-ISOLATION",
+      "file": "governance.mjs",
+      "assertion": "WF5-CUSTOMER-DRAFT-ISOLATION"
+    }
+  ]
+}

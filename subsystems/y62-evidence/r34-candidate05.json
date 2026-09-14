@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.26.30",
+  "packageId": "Y62-R34-V1-CANDIDATE05-SECOND-TARGETED-ALPHA-CLEANUP-01",
+  "policy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "viewId": "rear34",
+  "briefId": "Y62-R34-V1",
+  "candidateId": "Y62-R34-V1-CANDIDATE-05",
+  "source": {
+    "id": "OWNER-Y62-REAR34-01",
+    "file": "references/y62-owner/IMG_4540.jpeg",
+    "sha256": "747c9edf7b39fca2cb9fa9dde0bf329cdbec8dc2c08643d873317b50c27d28e2",
+    "rights": "owner-project-approved",
+    "role": "primary exact-vehicle authenticity/camera/RGB/boundary authority"
+  },
+  "lineage": {
+    "fromCandidateId": "Y62-R34-V1-CANDIDATE-04",
+    "fromCandidateSha256": "b81f9fbd476db73dc87bdabd80427eb8441ea2db2223fda8421cee51a859cc18",
+    "fromGenerationManifestSha256": "a9e44c975f7feacabdfab8324ed390595e088001960ec1809368606ca7b4701c",
+    "authorisingReviewId": "Y62-R34-V1-CANDIDATE04-EDGE-REVIEW-01",
+    "authorisingReviewSha256": "775dd37da1e6bdfb1d288a160458c9e73f37c091e6e603cad414ade156691bd3"
+  },
+  "transformation": {
+    "kind": "second-targeted-alpha-subtractive-residue-cleanup",
+    "alphaOnly": true,
+    "rgbChanged": false,
+    "perspectiveWarp": false,
+    "nonUniformScale": false,
+    "syntheticGeometry": false,
+    "externalProductionPixels": false,
+    "supportExpansion": false,
+    "authority": "exact Candidate 04 edge-review return + owner-source evidence",
+    "method": "binary zeroing only inside conservative owner-evidenced source-scene polygons; uncertain vehicle pixels retained"
+  },
+  "authorisedZones": [
+    {
+      "id": "mirror-foliage-background",
+      "basis": "unambiguous foliage/background and pole pixels left/above mirror and between mirror/A-pillar, inset from mirror housing/body/A-pillar uncertainty"
+    },
+    {
+      "id": "wheel-underbody-road-ground",
+      "basis": "unambiguous road/kerb and ground pixels below running board and left of tyre, inset from tyre/mudflap/underbody uncertainty"
+    }
+  ],
+  "metrics": {
+    "canvas": [
+      1672,
+      615
+    ],
+    "bbox": [
+      567,
+      118,
+      1024,
+      461
+    ],
+    "supportAddedPixels": 0,
+    "supportRemovedPixelsVsCandidate04": 1099,
+    "alphaChangedPixels": 1099,
+    "changedAlphaPixelsOutsideAuthorisedZones": 0,
+    "opaquePixels": 114685,
+    "semiTransparentPixels": 1920,
+    "transparentPixels": 911675,
+    "nonzeroSupportPixels": 116605,
+    "retainedRgbExactFraction": 1
+  },
+  "candidate": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v05.png",
+    "sha256": "bb5de7a857d4cab02095678bed816e66520faf606c27a2b7b2cc34bd7cba54af",
+    "width": 1672,
+    "height": 615,
+    "hasAlpha": true,
+    "governanceState": "master-draft",
+    "cameraMatched": false,
+    "productionEligible": false
+  },
+  "mask": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-05-alpha-mask-v01.png",
+    "sha256": "91aedcb94de4727a560af9d461cbe8a0f220088a909a28b84bea012318abee2f"
+  },
+  "preview": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-transparent-isolation-v05-preview.jpg",
+    "sha256": "2c8d57dd3af160a8724f20aed15550c61feb5c0c1e4e0180765e91a29de054dc"
+  },
+  "board": {
+    "file": "assets/y62-canonical-candidates/Y62-R34-V1-candidate-05-second-targeted-alpha-cleanup-v01.png",
+    "sha256": "79685f0f0965f94a7fd493d60b2053c7f51e8d798bd73cef87685a9cc27c690b"
+  },
+  "review": {
+    "state": "candidate05-exact-checksum-edge-review-required",
+    "edgeAccepted": false,
+    "cleanNeutralReconstruction": "fail",
+    "f34FamilyAlignment": "hold",
+    "productionBinaryRights": "hold",
+    "masterWF5": "hold"
+  },
+  "externalExactVehiclePolicy": "reference-only unless source-specific production rights are separately recorded; no external exact-vehicle pixels were introduced",
+  "nextDependency": "F34 Candidate 05 remains the first WF3 production dependency. If still absent, perform a fresh identified exact-checksum edge review of this R34 Candidate 05. Do not begin neutral/professional reconstruction until its isolation edge is accepted. Production remains blocked behind accepted F34-family alignment, production-binary rights, master approval and WF5."
+}

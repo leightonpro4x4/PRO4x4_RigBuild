@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "tests": 34,
+  "results": [
+    {
+      "name": "WF5-OWNER-REFERENCE-PACK-INTEGRITY and all WF3 source hashes",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact WF4 validator source bytes retained",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4 approved reference decisions remain current; three masters retained",
+      "status": "PASS"
+    },
+    {
+      "name": "Nine unique vehicle variant view version identities; no generic Candidate 05",
+      "status": "PASS"
+    },
+    {
+      "name": "R34 Candidate 05 exact binary mask provenance and unresolved evidence retained",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4 registry decisions not overwritten by newer R34 evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Safe policy has no registry/reviewer/candidate binaries and no Y62 production",
+      "status": "PASS"
+    },
+    {
+      "name": "WF5-CUSTOMER-DRAFT-ISOLATION: blocked Y62 has no 3D fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-DIRECT-PRODUCTION-REVIEW/EVIDENCE: direct production rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-MASTER-REFERENCE-ID-VALIDITY: invalid reference rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-MASTER-REFERENCE-BACKING: nonexistent master rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-MASTER-BRIEF-REFERENCE-BINDING: unrelated valid reference rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Wrong vehicle/view/variant candidate binding rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-REVIEWER-IDENTITY-AUTHENTICITY: unauthorized reviewer rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing production binary rights cannot promote",
+      "status": "PASS"
+    },
+    {
+      "name": "Camera mismatch cannot promote",
+      "status": "PASS"
+    },
+    {
+      "name": "Clean-neutral reconstruction failure cannot promote",
+      "status": "PASS"
+    },
+    {
+      "name": "Required WF4 review check failure cannot promote",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate binary changed after evidence rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Source evidence bytes changed after claim rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Changed camera contract invalidates production eligibility",
+      "status": "PASS"
+    },
+    {
+      "name": "Candidate bytes changed after production have no customer fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "Stale claim after source reference change rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Evidence refresh invalidates existing claim/decision",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-CANDIDATE-EVIDENCE-RESET on identity/binary replacement",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-PRODUCTION-BINARY/IDENTITY-IMMUTABILITY",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-PRODUCTION-TUPLE-UNIQUENESS rejects second approved tuple",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-BLOCKED-FITMENT-PRECEDENCE overrides approved visual",
+      "status": "PASS"
+    },
+    {
+      "name": "WF4-RENDER-STATE-EXACTNESS and exact SKU no fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "Full reference-master-candidate-claim-decision-seal-production positive control",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim retry idempotent and stale/foreign claim rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Production seal cannot bypass reviewer decision or be forged",
+      "status": "PASS"
+    },
+    {
+      "name": "F34-first enforced for complete R34 synthetic evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Durable governance ledger reload, tamper rejection and no customer grants",
+      "status": "PASS"
+    }
+  ]
+}

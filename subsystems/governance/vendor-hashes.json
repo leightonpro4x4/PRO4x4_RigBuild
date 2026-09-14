@@ -1,0 +1,58 @@
+[
+  {
+    "path": "audit-integrity.js",
+    "sha256": "27fe43d2eaf4a4101320a887e7f998681764e0938090a32bdc41a22231a88ef9"
+  },
+  {
+    "path": "camera-profiles-y62.js",
+    "sha256": "f41167f27428252cfadca1e1d635d9e68dbbb2cd2522c04b325b4865a10a5f2c"
+  },
+  {
+    "path": "canonical-candidate-handoff.js",
+    "sha256": "e8784cfdfd289440e170de8dd919e150602428bb543bbd8d0ae24a37e20f8df1"
+  },
+  {
+    "path": "canonical-governance-dossier.js",
+    "sha256": "424f53efb40bbcf42869e5527564c9c072f5d374d9aaa6d26fb38b421421e9fe"
+  },
+  {
+    "path": "canonical-production-seal.js",
+    "sha256": "afe301278d4f7581d24287656a95ea8ac22d16a76860aa466ed89153a8c6e79b"
+  },
+  {
+    "path": "canonical-review-decision.js",
+    "sha256": "7cbc386f4364551bde54c65f372a0e666165070a9a7277091e9710f1d863ae92"
+  },
+  {
+    "path": "canonical-review-gate.js",
+    "sha256": "3c60aeefc04c5af89b070edacf5cebf0fd2c13f6d74e10b5b1b4028175f842c9"
+  },
+  {
+    "path": "canonical-review-workflow.js",
+    "sha256": "4cb2e73eaa0eb85c902d4f4805b83048165638b4b6e5e963acf892626e5aaf9b"
+  },
+  {
+    "path": "canonical-source-gap-resolution.js",
+    "sha256": "89d01869316f974078e30d228add864ff76a07b97ccab2b9b89f446deee0b3e4"
+  },
+  {
+    "path": "canonical-view-contract-registry.js",
+    "sha256": "d6f6ec08163308c950cc7e25b61c44491c74bca2945930c6bdedf58bb1df83e8"
+  },
+  {
+    "path": "reference-provenance-attestation.js",
+    "sha256": "03129e12a74d478568c91e63214344e7109d78d7e49b4d8fbdae4de0713cf60e"
+  },
+  {
+    "path": "reference-review-decision.js",
+    "sha256": "094d5b00dbf6a2ea21d3a9b9df6cad37f8a8a575b13983ad3c68b2437e05d6b2"
+  },
+  {
+    "path": "visual-governance.js",
+    "sha256": "babe00d52ff6e2f531e7f3bc9c0e0e54551318e369916dfb4c4986879e6e072c"
+  },
+  {
+    "path": "y62-canonical-briefs.js",
+    "sha256": "92954a681fd29fd36b74451557a5e309190537900d633f2095ef1f1c2b7a9dfe"
+  }
+]

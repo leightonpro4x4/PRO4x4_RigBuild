@@ -31,5 +31,5 @@ try{
  const shared=await (await page.request.get(shareURL)).json();assert.equal(shared.revision.revisionId,'R000001');assert(!JSON.stringify(shared).includes('R000002'));assert(!Object.hasOwn(shared,'project'));assert(!Object.hasOwn(shared.revision,'ownerId'));
  assert.deepEqual(errors,[]);
  const result={status:'PASS',browser:'Edge desktop headless',visualRegression:'PASS',projectSaveReload:'PASS',dirtyQuoteGuard:'PASS',immutableRevisionNavigation:'PASS',quoteHandoff:'PASS / review required',publicShareIsolation:'PASS',pageErrors:errors,iOS:'NOT TESTED'};
- fs.writeFileSync(new URL('../../consolidation/STAGE_6_DESKTOP.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+ fs.writeFileSync(new URL('../../consolidation/'+(process.env.ALPHA94_VALIDATION_STAGE==='7'?'STAGE_7_PROJECTS_DESKTOP.json':'STAGE_6_DESKTOP.json'),import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await browser.close();}

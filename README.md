@@ -16,8 +16,8 @@ Run `npm test` for archive/source hashes, all 45 Alpha 93 relocations, 24 GLBs, 
 | Visual runtime | Unchanged inline runtime and assets in `public/`; `subsystems/visual-runtime/` contract |
 | Visual eligibility adapter | `subsystems/visual-eligibility/` — reserved |
 | Server/persistence | `subsystems/server-persistence/` — SQLite, WF4 auth/audit foundation, server canonicalization and ownership/quote boundaries |
-| Governance | `subsystems/governance/` — reserved |
-| Y62 evidence pipeline | `subsystems/y62-evidence/` — reserved |
+| Governance | `subsystems/governance/` — reconciled evidence and authorized lifecycle |
+| Y62 evidence pipeline | `subsystems/y62-evidence/` — scoped candidate provenance |
 | Acceptance/tests | `acceptance/tests/` |
 | Evidence archive | `evidence/archive/` — excluded from web serving |
 
@@ -30,3 +30,5 @@ See `consolidation/STAGE_3.md` and `consolidation/STAGE_3_VALIDATION.json` for t
 Stage 4 adds 29 domain tests to npm test. See subsystems/domain/README.md and consolidation/STAGE_4_VALIDATION.json for the semantics, limitations and gate record. No customer app behavior, production quote workflow or Y62 visual has been changed.
 
 The current test chain also includes 17 visual-runtime tests and 32 Stage 6 persistence/adversarial/API/workflow tests. See subsystems/server-persistence/README.md for schema, migration, session identity, terminal quote and public-share policies. Historical stage reports describe their original checkpoint; the current Stage 6 report records the new lifecycle. Server review requests are not emailed or externally delivered by this implementation.
+
+Stage 7 preserves zero Y62 production visuals and all Ranger checkpoint previews. See consolidation/STAGE_7.md for the current gate state and subsystems/governance/README.md for lifecycle/authorization boundaries. All 34 original WF5 acceptance assertions bind to current Alpha94 tests. Stage 8 has not started.
