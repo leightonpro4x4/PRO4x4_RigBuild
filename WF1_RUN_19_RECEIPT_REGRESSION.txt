@@ -1,0 +1,5 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.22 test:wf1-receipt
+> node tests/wf1-handoff-receipt-alpha26.js
+
+WF1 Alpha 26 immutable handoff receipt / return journey: PASS

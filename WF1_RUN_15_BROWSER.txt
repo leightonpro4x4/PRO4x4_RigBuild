@@ -1,0 +1,12 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.18 test:browser
+> node tests/browser-journey-alpha12.js
+
+(node:1101) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "schemaVersion": "0.12.0",
+  "browser": "chromium-cdp",
+  "status": "skipped",
+  "reason": "Managed browser policy blocks local HTTP navigation in this environment"
+}

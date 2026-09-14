@@ -1,0 +1,5 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.14 test:wf1-handoff-visual
+> node tests/wf1-immutable-handoff-visual-detail-alpha26.js
+
+WF1 Alpha 26 immutable handoff visual-state detail: PASS

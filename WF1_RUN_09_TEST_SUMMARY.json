@@ -1,0 +1,25 @@
+{
+  "package": "WF1 Run 09 — exact production visual-state explainability",
+  "version": "0.26.12",
+  "targeted": "pass",
+  "fullRegression": "pass",
+  "serverCheck": "pass",
+  "wf5Promotion": "pass",
+  "wf5Acceptance": {
+    "status": "held",
+    "WF1-BOM-ANYOF": "pass",
+    "WF5-CUSTOMER-DRAFT-ISOLATION": "pass",
+    "WF4-DIRECT-PRODUCTION-REVIEW": "fail-existing"
+  },
+  "static": {
+    "javascriptFiles": 97,
+    "javascriptFailures": 0,
+    "jsonFiles": 9,
+    "jsonFailures": 0,
+    "htmlFiles": 16,
+    "htmlLocalReferences": 245,
+    "htmlMissingReferences": 0
+  },
+  "visualRule": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "fallbackPolicy": "none"
+}

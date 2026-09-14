@@ -1,0 +1,131 @@
+window.RIG_DATA = {
+  schemaVersion: '0.12.0',
+  vehicle: {
+    id: 'nissan-y62-warrior-2025',
+    yearRange: '2025', make: 'Nissan', model: 'Patrol Y62', series: 'Series 5 / MY25', trim: 'Warrior by Premcar',
+    bodyStyle: '4WD Wagon', drivetrain: '4WD', wheelbaseMm: 3075,
+    baseline: { paint: 'Black Obsidian', wheel: '18 x 9J Patrol Warrior', tyre: 'Yokohama Geolandar G015 295/70R18', factoryLiftMm: 50 },
+    weights: { kerbMassKg:2884, gvmKg:3620, nominalPayloadKg:736, confidence:'planning-guide', source:{ authority:'2025 Patrol Warrior published specification cross-check', url:'https://www.carexpert.com.au/car-reviews/2025-nissan-patrol-review' }, note:'Planning estimate only. Final GVM/axle/load compliance must be confirmed against the exact vehicle and weighbridge data.' },
+    constraints: [
+      'Warrior already includes a factory 50 mm total lift; additional suspension height requires engineering review.',
+      'Clearview PB-NN-003 supplier suitability does not cover Warrior; custom-fit path must be verified before formal quote.'
+    ],
+    source: { authority:'Premcar Warrior specification', url:'https://premcar.au/announcement-nissan-patrol-warrior-by-premcar-detailed/' },
+    views: {
+      front34: { label: '3/4 FRONT', src: 'assets/y62-slx-front.png' },
+      side: { label: 'SIDE', src: 'assets/y62-profile-board.png' },
+      rear34: { label: 'REAR 3/4', src: 'assets/y62-raslarr-rear.png' }
+    },
+    paints: [
+      { id:'black-obsidian', label:'Black Obsidian', swatch:'#111214', validated:true, visualReady:true, renderStateKey:'paint:black-obsidian', source:'Nissan Australia MY25 palette' },
+      { id:'gun-metallic', label:'Gun Metallic', swatch:'#65686a', validated:true, visualReady:false, renderStateKey:'paint:gun-metallic', source:'Nissan Australia MY25 palette' },
+      { id:'moonstone-white', label:'Moonstone White', swatch:'#e8e7e1', validated:true, visualReady:false, renderStateKey:'paint:moonstone-white', source:'Nissan Australia MY25 palette' },
+      { id:'brilliant-silver', label:'Brilliant Silver', swatch:'#b8bec3', validated:true, visualReady:false, renderStateKey:'paint:brilliant-silver', source:'Nissan Australia MY25 palette' }
+    ],
+    wheelTyres: [
+      { id:'factory-warrior', label:'Warrior 18 × 9J + 295/70R18 G015', price:0, validated:true, sku:'FACTORY-WARRIOR-18X9-G015', renderStateKey:'wheel:factory-warrior' },
+      { id:'aftermarket-pending', label:'Aftermarket wheel + tyre package', price:null, validated:false, sku:null }
+    ]
+  },
+  accessories: [
+    {
+      id:'scout-rack', brand:'Offroad Animal', name:'Scout Roof Rack', sku:'RR-NPT-Y62-13-SCT-ASM0', category:'Touring', status:'confirmed', selected:true, layer:'roof',
+      pricing:{ parts:1850, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:[], conflicts:[], reviewRequired:false },
+      finishOptions:['Black'], weightKg:32, install:{estimateHoursMin:1,estimateHoursMax:2,sourceVerified:true},
+      source:{ authority:'Offroad Animal', url:'https://offroadanimal.com.au/scout-roof-rack-to-suit-nissan-patrol-y62-2013-on/', verification:'authoritative-verified-2026-09-13' },
+      note:'Retail confirmed. Rack weight 32 kg and 1–2 hour fitting estimate are source-verified; labour and freight remain quote items.'
+    },
+    {
+      id:'slx-x1', brand:'SLX 4x4', name:'Extreme X-1 Bullbar', sku:'Y62 S5 GEN-X', category:'Protection', status:'confirmed', selected:true, layer:'front',
+      pricing:{ parts:3569, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:[], conflicts:[], reviewRequired:false },
+      finishOptions:['Black powdercoat','Colour coded — quote'], weightKg:40, sourceProductWeightKg:63, removedVehicleMassKg:23, install:{estimateHoursMin:4,estimateHoursMax:4,sourceVerified:true},
+      source:{ authority:'SLX 4x4', url:'https://www.slx4x4.com.au/products/extreme-series-bullbar-x-1-nissan-y62-patrol-s5-black-powdercoat-gen-x', verification:'authoritative-verified-2026-09-13' },
+      note:'Base bar retail loaded. Source lists 63 kg total product, 23 kg removed during fitment and 40 kg net mass added to vehicle; 4 hour install timeframe is source-verified. Payload planning uses the 40 kg net added mass.'
+    },
+    {
+      id:'hbmc-lift', brand:'PRO4X4', name:'Further 50 mm HBMC Lift Allowance', sku:'ALLOWANCE-HBMC-Y62', category:'Suspension', status:'engineering', selected:true, layer:'stance',
+      pricing:{ parts:null, labour:null, paint:null, freight:null, engineering:2755.40 }, provisionalComponents:['engineering'],
+      pricingRequired:['parts','labour','engineering'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:[], conflicts:['factory-warrior-50mm-lift'], reviewRequired:true },
+      finishOptions:[], weightKg:null,
+      source:{ authority:'Project allowance / Ride Master reference', url:'https://www.4wddepot.com.au/lift-kit-for-nissan-patrol-y62-hbmc-with-2-springs', verification:'allowance-only' },
+      note:'Current project allowance only. Warrior already has 50 mm factory lift; final system and engineered fitment require validation.'
+    },
+    {
+      id:'clearview-powerboards', brand:'Clearview', name:'Power Boards', sku:'PB-NN-003', category:'Touring', status:'blocked', selected:true, layer:'sides',
+      pricing:{ parts:1649, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:[], requiredParts:['custom-warrior-adaptation'], conflicts:['supplier-excludes-warrior'], reviewRequired:true },
+      finishOptions:['Black'], weightKg:null,
+      source:{ authority:'Clearview Accessories', url:'https://www.clearviewaccessories.com.au/product/power-boards-pair-nissan-patrol-y62/', verification:'supplier-conflict-recorded' },
+      note:'Supplier suitability conflict for Warrior. Retail retained for concept reference only; no fitted quote until custom path is verified.'
+    },
+    {
+      id:'raslarr-rear', brand:'Raslarr', name:'V2 Rear Bar', sku:'NIPATY62RB04', category:'Protection', status:'confirmed', selected:true, layer:'rear',
+      pricing:{ parts:2750, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:[], conflicts:[], reviewRequired:false },
+      finishOptions:['Black','Colour coded'], weightKg:null,
+      source:{ authority:'Raslarr Engineering', url:'https://www.raslarr.com.au/products/s5-y62-nissan-patrol-v2-rear-bar', verification:'project-sourced' },
+      note:'Base rear bar retail loaded. Labour/freight remain quote items.'
+    },
+    {
+      id:'raslarr-wheel', brand:'Raslarr', name:'Wheel Carrier', sku:'NIPATY62WC02', category:'Storage', status:'confirmed', selected:false, layer:'rear-wheel',
+      pricing:{ parts:850, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:['raslarr-rear'], conflicts:[], reviewRequired:false },
+      finishOptions:['Black','Colour coded with carrier set'], weightKg:null,
+      source:{ authority:'Raslarr Engineering', url:'https://www.raslarr.com.au/products/lhs-wheel-carrier', verification:'project-sourced' },
+      note:'One carrier; requires Raslarr rear bar. Matching spare wheel/tyre additional.'
+    },
+    {
+      id:'raslarr-jerry', brand:'Raslarr', name:'Dual Jerry Carrier', sku:'NIPATY62DJ01', category:'Storage', status:'confirmed', selected:false, layer:'rear-jerry',
+      pricing:{ parts:950, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour','freight'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:['raslarr-rear'], conflicts:[], reviewRequired:false },
+      finishOptions:['Black','Colour coded with carrier set'], weightKg:null,
+      source:{ authority:'Raslarr Engineering', url:'https://www.raslarr.com.au/products/lhs-dual-jerry-can-holder', verification:'project-sourced' },
+      note:'Holder only; requires Raslarr rear bar. Jerry cans additional.'
+    },
+    {
+      id:'raslarr-colour', brand:'Raslarr', name:'Rear Bar Colour Coding', sku:'RY62RBC', category:'Protection', status:'confirmed', selected:false, layer:'rear',
+      pricing:{ parts:null, labour:null, paint:790, freight:null, engineering:null },
+      pricingRequired:['paint'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:['raslarr-rear'], conflicts:[], reviewRequired:false },
+      finishOptions:['Non-pearl colour code'], weightKg:null,
+      source:{ authority:'Raslarr Engineering', url:'https://www.raslarr.com.au/products/s5-y62-nissan-patrol-v2-rear-bar', verification:'project-sourced' },
+      note:'Non-pearl paint service price loaded. Exact paint code required; pearl may add cost.'
+    },
+    {
+      id:'raslarr-camera', brand:'Raslarr', name:'Camera Relocation Kit', sku:'RASLY62CK-1', category:'Electrical', status:'confirmed', selected:false, layer:'rear-camera',
+      pricing:{ parts:295, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:['raslarr-rear'], conflicts:[], reviewRequired:false },
+      finishOptions:[], weightKg:null,
+      source:{ authority:'Raslarr Engineering', url:'https://www.raslarr.com.au/products/s4-5-y62-nissan-patrol-camera-relocation-kit', verification:'project-sourced' },
+      note:'Optional camera relocation hardware. Requires Raslarr rear bar; labour still quote item.'
+    },
+    {
+      id:'gme-aerial', brand:'GME', name:'AE4705B UHF Aerial', sku:'AE4705B', category:'Electrical', status:'confirmed', selected:true, layer:'electrical-front',
+      pricing:{ parts:369, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:['gmf-bracket'], conflicts:[], reviewRequired:false },
+      finishOptions:['Black'], weightKg:null, install:{estimateHoursMin:null,estimateHoursMax:null,sourceVerified:false},
+      source:{ authority:'GME', url:'https://www.gme.net.au/au/antennas/ae4705b/', verification:'authoritative-verified-2026-09-13' },
+      note:'Exact AE4705B specification and RRP verified against GME. Current Y62 concept uses GMF4x4 bonnet bracket; installation labour still quote item.'
+    },
+    {
+      id:'gmf-bracket', brand:'GMF4x4', name:'Bonnet Aerial Bracket', sku:'BB-015P', category:'Electrical', status:'confirmed', selected:true, layer:'electrical-front',
+      pricing:{ parts:85, labour:null, paint:null, freight:null, engineering:null },
+      pricingRequired:['parts','labour'],
+      fitment:{ compatibleVehicleIds:['nissan-y62-warrior-2025'], requiredParts:[], conflicts:[], reviewRequired:false },
+      finishOptions:['Black'], weightKg:0.3, install:{estimateHoursMin:null,estimateHoursMax:null,sourceVerified:false},
+      source:{ authority:'GMF4x4 / Overland 4WD exact listing', url:'https://www.overland4wd.com.au/product/gmf-4x4-bonnet-aerial-uhf-antenna-bracket-y62/', verification:'exact-sku-retailer-verified-2026-09-13' },
+      note:'Passenger-side bonnet bracket.'
+    }
+  ]
+};

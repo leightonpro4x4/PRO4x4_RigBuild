@@ -1,0 +1,22 @@
+{
+  "javascript": {
+    "files": 109,
+    "failures": []
+  },
+  "json": {
+    "files": 21,
+    "failures": []
+  },
+  "html": {
+    "files": 16,
+    "localReferences": 250,
+    "missing": []
+  },
+  "visualBinaryComparison": {
+    "previous": 15,
+    "current": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}

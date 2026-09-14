@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pro4x4.local/schemas/render-asset.schema.json",
+  "title": "PRO4X4 Render Asset Record",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "assetId",
+    "vehicleId",
+    "viewId",
+    "layerId",
+    "status",
+    "provenance",
+    "cameraGeometry",
+    "approval",
+    "history"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.15.0"
+    },
+    "assetId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "vehicleId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "viewId": {
+      "enum": [
+        "front34",
+        "side",
+        "rear34"
+      ]
+    },
+    "layerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "exactSku": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "asset-needed",
+        "reference-only",
+        "blocked-fitment",
+        "candidate",
+        "production-ready",
+        "retired"
+      ]
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "sourceType",
+        "sourceUrl",
+        "licenceStatus",
+        "licenceNote",
+        "capturedAt"
+      ],
+      "properties": {
+        "sourceType": {
+          "enum": [
+            "manufacturer",
+            "supplier",
+            "pro4x4-original",
+            "licensed-third-party",
+            "generated-reference",
+            "unknown"
+          ]
+        },
+        "sourceUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licenceStatus": {
+          "enum": [
+            "owned",
+            "licensed",
+            "permission-pending",
+            "reference-only",
+            "unknown"
+          ]
+        },
+        "licenceNote": {
+          "type": "string"
+        },
+        "capturedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "file": {
+      "type": "object",
+      "required": [
+        "checksumSha256",
+        "mimeType",
+        "width",
+        "height",
+        "hasAlpha"
+      ],
+      "properties": {
+        "checksumSha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mimeType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "hasAlpha": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fileName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sizeBytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "inspectedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alphaCapable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "cameraGeometry": {
+      "type": "object",
+      "required": [
+        "profileId",
+        "matched",
+        "notes"
+      ],
+      "properties": {
+        "profileId": {
+          "type": "string"
+        },
+        "matched": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "fitmentScope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "state",
+        "approvedBy",
+        "approvedAt",
+        "notes"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "not-reviewed",
+            "rejected",
+            "approved-reference",
+            "approved-production"
+          ]
+        },
+        "approvedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approvedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "at",
+          "action",
+          "note"
+        ],
+        "properties": {
+          "at": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "vault": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "stored": {
+          "type": "boolean"
+        },
+        "objectKey": {
+          "type": "string"
+        },
+        "checksumSha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "sizeBytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "transparencyVerified": {
+          "type": "boolean"
+        },
+        "storedAt": {
+          "type": "string"
+        },
+        "storedBy": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

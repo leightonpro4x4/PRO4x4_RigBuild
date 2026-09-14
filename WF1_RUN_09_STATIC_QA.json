@@ -1,0 +1,16 @@
+{
+  "javascript": {
+    "files": 97,
+    "failed": 0
+  },
+  "json": {
+    "files": 9,
+    "failed": 0
+  },
+  "html": {
+    "files": 16,
+    "localReferences": 245,
+    "missing": 0
+  },
+  "missingExamples": []
+}

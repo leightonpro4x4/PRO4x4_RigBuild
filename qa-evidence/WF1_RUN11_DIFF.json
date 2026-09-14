@@ -1,0 +1,25 @@
+{
+  "added": [
+    "WF1_RUN_11_STATIC_QA.json",
+    "customer-shared-build.js",
+    "qa-evidence/WF1_RUN11_BROWSER.log",
+    "qa-evidence/WF1_RUN11_FULL_REGRESSION.log",
+    "qa-evidence/WF1_RUN11_HANDOFF_VISUAL.log",
+    "qa-evidence/WF1_RUN11_JS_CHECK.log",
+    "qa-evidence/WF1_RUN11_SAVE_SHARE_INTEGRITY.log",
+    "qa-evidence/WF1_RUN11_SERVER_CHECK.log",
+    "qa-evidence/WF1_RUN11_SHARE_PARITY.log",
+    "qa-evidence/WF1_RUN11_STATIC_QA.json",
+    "qa-evidence/WF1_RUN11_WF5_ACCEPTANCE.exitcode",
+    "qa-evidence/WF1_RUN11_WF5_ACCEPTANCE.log",
+    "qa-evidence/WF1_RUN11_WF5_PROMOTION.log",
+    "tests/wf1-shared-build-parity-alpha26.js"
+  ],
+  "removed": [],
+  "changed": [
+    "package.json",
+    "share.html",
+    "share.js",
+    "styles.css"
+  ]
+}

@@ -1,0 +1,1 @@
+WF1 Alpha 26 persisted receipt BOM parity + non-mutating catalogue inspection: PASS

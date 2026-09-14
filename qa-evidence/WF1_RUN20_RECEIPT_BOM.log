@@ -1,0 +1,5 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.23 test:wf1-receipt-bom
+> node tests/wf1-persisted-receipt-bom-parity-alpha26.js
+
+WF1 Alpha 26 persisted receipt BOM parity + non-mutating catalogue inspection: PASS

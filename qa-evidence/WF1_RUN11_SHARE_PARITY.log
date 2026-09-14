@@ -1,0 +1,5 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.14 test:wf1-share-parity
+> node tests/wf1-shared-build-parity-alpha26.js
+
+WF1 Alpha 26 revision-locked shared-build parity: PASS

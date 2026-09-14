@@ -1,0 +1,25 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test:wf1-handoff-nav
+> node tests/wf1-handoff-requirement-navigation-alpha26.js
+
+WF1 Alpha 26 handoff-review requirement return navigation: PASS
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test:wf1-handoff
+> node tests/wf1-immutable-handoff-review-alpha26.js
+
+WF1 Alpha 26 immutable handoff review: PASS
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test:wf1-summary-trace
+> node tests/wf1-build-summary-trace-alpha26.js
+
+WF1 Alpha 26 build-summary constraint traceability: PASS
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test:wf1-related-nav
+> node tests/wf1-preselection-related-navigation-alpha26.js
+
+WF1 Alpha 26 pre-selection related-product navigation: PASS
+
+> pro4x4-rig-builder-merged-alpha26@0.26.21 test:wf1-inspection-return
+> node tests/wf1-constraint-inspection-return-alpha26.js
+
+WF1 Alpha 26 related-fitment inspection return continuity: PASS

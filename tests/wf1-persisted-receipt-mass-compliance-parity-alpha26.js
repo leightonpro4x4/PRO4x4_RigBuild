@@ -1,0 +1,97 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const receipt=require('../customer-handoff-receipt.js');
+const contract=require('../merged-project-contract.js');
+global.window=global;
+require('../data-y62.js');
+const data=global.RIG_DATA;
+assert.equal(data.vehicle.id,'nissan-y62-warrior-2025','Y62 remains the first production visual milestone fixture');
+const rack=data.accessories.find(p=>p.id==='scout-rack');
+const hbmc=data.accessories.find(p=>p.id==='hbmc-lift');
+assert(rack&&hbmc,'governed Y62 mass fixtures must exist');
+const snapshot=contract.buildSnapshot({
+  data,
+  selectedProducts:[rack,hbmc],
+  lead:{name:'WF1 Mass State',phone:'0400000000'},
+  reference:'P4X4-WF1-MASS-STATE',
+  renderResolution:{productionReady:false,fallbackPolicy:'none',exactMatchRequired:true,layers:[]}
+});
+snapshot.project={id:'P4X4-PROJ-MASS',revisionId:'R0024',revisionNumber:24,savedAt:'2026-09-14T08:30:00.000Z',source:'merged-customer-builder',projectVersion:24};
+assert.equal(snapshot.weight.baseline.kerbMassKg,2884);
+assert.equal(snapshot.weight.baseline.gvmKg,3620);
+assert.equal(snapshot.weight.knownAccessoryMassKg,32);
+assert.equal(snapshot.weight.unknownAccessoryMassCount,1);
+const before=JSON.stringify(snapshot);
+const model=receipt.build(snapshot,{mode:'quote',queueReference:'P4X4-Q-R0024'});
+assert.equal(JSON.stringify(snapshot),before,'receipt mass derivation must not mutate the persisted revision');
+assert.equal(model.schemaVersion,'0.26.29');
+assert.equal(model.massCompliance.snapshotSource,'persisted-revision.weight');
+assert.equal(model.massCompliance.calculationBasis,'persisted-weight-fields-only');
+assert.equal(model.massCompliance.baseline.kerbMassKg,2884);
+assert.equal(model.massCompliance.baseline.gvmKg,3620);
+assert.equal(model.massCompliance.baseline.nominalPayloadKg,736);
+assert.equal(model.massCompliance.knownAccessoryMassKg,32);
+assert.equal(model.massCompliance.unknownAccessoryMassCount,1);
+assert.equal(model.massCompliance.planningKerbMassKg,2916);
+assert.equal(model.massCompliance.remainingKnownPayloadKg,704);
+assert.equal(model.massCompliance.massState,'unknown-mass');
+assert.equal(model.massCompliance.complianceState,'review-required');
+assert.equal(model.verification.find(x=>x.type==='mass-compliance')?.state,'open');
+assert.match(model.verification.find(x=>x.type==='mass-compliance')?.detail||'',/unknown mass/);
+// Presentation stays pinned to the persisted weight object and never re-scans current selection/catalogue mass.
+snapshot.weight.baseline.kerbMassKg=1000;
+snapshot.weight.baseline.gvmKg=9000;
+snapshot.weight.knownAccessoryMassKg=999;
+snapshot.weight.unknownAccessoryMassCount=0;
+snapshot.selections[0].weightKg=777;
+assert.equal(model.massCompliance.baseline.kerbMassKg,2884);
+assert.equal(model.massCompliance.knownAccessoryMassKg,32);
+assert.equal(model.massCompliance.unknownAccessoryMassCount,1);
+assert.equal(model.massCompliance.remainingKnownPayloadKg,704);
+// Persisted weight is authoritative even when it deliberately differs from selection values.
+const pinned=contract.buildSnapshot({data,selectedProducts:[rack],renderResolution:{productionReady:false,layers:[]}});
+pinned.weight={baseline:{kerbMassKg:2884,gvmKg:3620,nominalPayloadKg:736,note:'Persisted planning baseline.'},knownAccessoryMassKg:17.5,unknownAccessoryMassCount:3};
+const pinnedModel=receipt.build(pinned,{mode:'save'});
+assert.equal(pinnedModel.massCompliance.knownAccessoryMassKg,17.5,'receipt must not recalculate accessory mass from selections');
+assert.equal(pinnedModel.massCompliance.unknownAccessoryMassCount,3,'receipt must not recalculate unknown count from selections');
+assert.equal(pinnedModel.massCompliance.planningKerbMassKg,2901.5);
+assert.equal(pinnedModel.massCompliance.remainingKnownPayloadKg,718.5);
+const complete=JSON.parse(JSON.stringify(pinned));
+complete.weight.unknownAccessoryMassCount=0;
+const completeModel=receipt.build(complete,{mode:'save'});
+assert.equal(completeModel.massCompliance.massState,'planning-record-complete');
+assert.equal(completeModel.verification.find(x=>x.type==='mass-compliance')?.state,'next','complete planning data must still not claim compliance clearance');
+const over=JSON.parse(JSON.stringify(complete));
+over.weight.knownAccessoryMassKg=800;
+const overModel=receipt.build(over,{mode:'save'});
+assert.equal(overModel.massCompliance.remainingKnownPayloadKg,-64);
+assert.equal(overModel.massCompliance.massState,'known-load-over-gvm');
+assert.equal(overModel.verification.find(x=>x.type==='mass-compliance')?.state,'open');
+assert.match(overModel.verification.find(x=>x.type==='mass-compliance')?.detail||'',/exceeds the persisted GVM/);
+const incomplete=JSON.parse(JSON.stringify(complete));
+delete incomplete.weight.baseline.gvmKg;
+assert.equal(receipt.build(incomplete,{mode:'save'}).massCompliance.massState,'incomplete','missing persisted baseline values must not be backfilled from current vehicle defaults');
+const root=path.join(__dirname,'..');
+const receiptSource=fs.readFileSync(path.join(root,'customer-handoff-receipt.js'),'utf8');
+const app=fs.readFileSync(path.join(root,'merged-app.js'),'utf8');
+const css=fs.readFileSync(path.join(root,'merged.css'),'utf8');
+assert.match(receiptSource,/function massDetail\(weight=\{\}\)/);
+const massStart=receiptSource.indexOf('function massDetail(weight={})'),massEnd=receiptSource.indexOf('\n  function build(',massStart);
+assert(massStart>=0&&massEnd>massStart,'mass detail model must exist');
+const massBlock=receiptSource.slice(massStart,massEnd);
+assert.doesNotMatch(massBlock,/selections|accessories|products|catalogue|current\(/,'receipt mass model must read persisted weight fields only');
+assert.match(app,/function renderReceiptMassCompliance\(/);
+assert.match(app,/MASS \/ COMPLIANCE STATE LOCKED TO THIS REVISION/);
+assert.match(app,/persisted-revision\.weight/);
+assert.match(app,/PLANNING ONLY · NOT WEIGHBRIDGE \/ AXLE \/ GVM SIGN-OFF/);
+assert.match(app,/current catalogue weights, vehicle defaults and later staff recalculations are not backfilled/);
+assert.match(app,/\$\{renderReceiptShareAccess\(model,runtime\)\}\$\{renderReceiptVehicleState\(model\)\}\$\{renderReceiptMassCompliance\(model\)\}\$\{renderReceiptCustomer\(model\)\}/);
+const renderStart=app.indexOf('function renderReceiptMassCompliance('),renderEnd=app.indexOf('\nasync function copyHandoffReceiptShare',renderStart);
+assert(renderStart>=0&&renderEnd>renderStart,'receipt mass renderer block must exist');
+const renderBlock=app.slice(renderStart,renderEnd);
+assert.doesNotMatch(renderBlock,/products\(|current\(|selectedProducts|resolveRenderStack|saveProject|createBuild|createProjectShare/,'receipt mass UI must not refresh catalogue/backend state or write project state');
+assert.match(css,/\.merge-receipt-mass/);
+assert.match(css,/\.merge-receipt-mass-state\.known-load-over-gvm/);
+console.log('WF1 Alpha 26 persisted receipt mass/compliance-state parity: PASS');

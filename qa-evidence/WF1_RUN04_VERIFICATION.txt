@@ -1,0 +1,9 @@
+WF1 Run 04 verification
+- npm run test:wf1-browse: PASS
+- npm test: PASS (Alpha 12 -> Alpha 26 + WF1 Run 04)
+- npm run check: PASS
+- npm run test:wf5-promotion: PASS
+- npm run test:wf5-acceptance: WF1-BOM-ANYOF PASS; WF5-CUSTOMER-DRAFT-ISOLATION PASS; pre-existing WF4-DIRECT-PRODUCTION-REVIEW FAIL only
+- JavaScript syntax: 87 files, 0 failures
+- JSON parse: 9 files, 0 failures
+- HTML local refs: 16 files / 240 refs / 0 missing

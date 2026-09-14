@@ -1,0 +1,5 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.19 test:wf1-related-nav
+> node tests/wf1-preselection-related-navigation-alpha26.js
+
+WF1 Alpha 26 pre-selection related-product navigation: PASS

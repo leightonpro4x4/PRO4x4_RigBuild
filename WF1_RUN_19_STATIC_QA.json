@@ -1,0 +1,19 @@
+{
+  "package": "WF1 Run 19 persisted receipt requirement detail + correction navigation",
+  "javascript": {
+    "files": 112,
+    "failures": 0,
+    "details": []
+  },
+  "json": {
+    "files": 24,
+    "failures": 0,
+    "details": []
+  },
+  "html": {
+    "files": 16,
+    "localReferences": 251,
+    "missing": 0,
+    "details": []
+  }
+}

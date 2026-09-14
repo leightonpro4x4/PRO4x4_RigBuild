@@ -1,0 +1,26 @@
+{
+  "package": "WF1 Run 20 persisted receipt BOM parity + non-mutating catalogue inspection",
+  "javascript": {
+    "files": 113,
+    "failures": 0,
+    "details": []
+  },
+  "json": {
+    "files": 26,
+    "failures": 0,
+    "details": []
+  },
+  "html": {
+    "files": 16,
+    "localReferences": 251,
+    "missing": 0,
+    "details": []
+  },
+  "visualComparisonRun19ToRun20": {
+    "beforeFiles": 15,
+    "afterFiles": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}

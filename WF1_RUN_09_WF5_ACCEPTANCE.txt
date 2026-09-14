@@ -1,0 +1,32 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.12 test:wf5-acceptance
+> node tests/wf5-alpha26-acceptance-gate.js
+
+{
+  "gate": "wf5-alpha26-acceptance-gate",
+  "results": [
+    {
+      "id": "WF1-BOM-ANYOF",
+      "owner": "WF1",
+      "description": "Unsatisfied any-of fitment dependencies must survive into saved project/quote gates.",
+      "status": "pass"
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-REVIEW",
+      "owner": "WF4",
+      "description": "Every production path must require immutable reviewer identity + review timestamp, including direct production upsert.",
+      "status": "fail",
+      "error": "Direct production upsert accepted master-approved metadata with no governance.reviewedBy/reviewedAt, bypassing immutable review evidence."
+    },
+    {
+      "id": "WF5-CUSTOMER-DRAFT-ISOLATION",
+      "owner": "WF5",
+      "description": "Customer entrypoint must not load reference-only/master-draft production candidates or fallback imagery.",
+      "status": "pass"
+    }
+  ],
+  "failed": 1,
+  "status": "fail"
+}
+(node:1552) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

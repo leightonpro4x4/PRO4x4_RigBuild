@@ -1,0 +1,3 @@
+npm test: PASS
+npm run check: PASS
+npm run test:wf5-promotion: PASS

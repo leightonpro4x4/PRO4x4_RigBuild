@@ -1,0 +1,10 @@
+const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'..');
+const sandbox={window:{}};vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(path.join(root,'data-ranger.js'),'utf8'),sandbox);
+const r=sandbox.window.RANGER_DATA;assert(r);assert.equal(r.vehicle.id,'ford-ranger-nextgen-2025');assert(r.accessories.length>=20,'Alpha 23 baseline requires at least the original 20 Ranger products');
+assert(r.accessories.some(x=>x.sku==='808-01'));assert(r.accessories.some(x=>x.sku==='022-LH-WHEEL'));
+const base=r.accessories.find(x=>x.id==='mcc-022-02-base'), arm=r.accessories.find(x=>x.id==='mcc-022-lh-wheel');assert(arm.requires.includes(base.id));
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');['data-vehicle="ranger"','data-vehicle="y62"','mergedProducts','quoteMerged','Y62 ENGINEERING VIEW'].forEach(x=>assert(html.includes(x),x));
+const y62=fs.readFileSync(path.join(root,'y62-alpha22.html'),'utf8');assert(y62.includes('ALPHA 22 · Y62 FIRST'));assert(y62.includes('render-contracts-y62.js'));
+console.log(`merged-alpha23: PASS — 2 vehicles, original 20-product Ranger baseline preserved (${r.accessories.length} current), Y62 Alpha 22 preserved`);
