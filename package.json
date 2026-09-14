@@ -1,0 +1,13 @@
+{
+  "name": "pro4x4-alpha94-consolidation",
+  "version": "0.94.0",
+  "private": true,
+  "description": "Stages 1/2 layout only; unchanged Alpha 93 application",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --experimental-vm-modules acceptance/tests/layout.mjs",
+    "check": "node --check tools/serve.mjs && node --check acceptance/tests/layout.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

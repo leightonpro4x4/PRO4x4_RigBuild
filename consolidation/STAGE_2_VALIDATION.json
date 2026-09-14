@@ -1,0 +1,31 @@
+{
+  "scope": "Stages 1 and 2 only",
+  "status": "PASS",
+  "sourceFilesVerified": 2407,
+  "sourceSnapshots": 6,
+  "alpha93FilesRelocated": 45,
+  "alpha93GlbsByteIdentical": 24,
+  "liveAssetsByteIdentical": 10,
+  "activeEntrypoints": 1,
+  "imports": "Unchanged pinned Three.js import map resolves all module specifiers; external CDN availability not asserted",
+  "nestedApplicationsServed": false,
+  "y62Promoted": false,
+  "protectedBranches": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "commands": [
+    "node --experimental-vm-modules acceptance/tests/layout.mjs",
+    "node --check tools/serve.mjs",
+    "node --check acceptance/tests/layout.mjs"
+  ],
+  "environmentNote": "npm is unavailable in this execution PATH; exact Node commands behind npm test/check executed successfully",
+  "businessSuitesRerun": false,
+  "deviceAcceptance": "not performed",
+  "nextStage": "STOP; Stage 3 not authorized"
+}

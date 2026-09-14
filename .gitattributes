@@ -1,0 +1,5 @@
+# Freeze imported bytes; do not convert checkpoint text on Windows checkout.
+public/** -text
+evidence/archive/** -text
+*.zip binary
+*.glb binary
