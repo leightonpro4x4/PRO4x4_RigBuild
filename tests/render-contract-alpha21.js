@@ -1,0 +1,5 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+const ctx={window:{}};vm.createContext(ctx);vm.runInContext(fs.readFileSync(path.join(root,'render-manifest-y62.js'),'utf8'),ctx);vm.runInContext(fs.readFileSync(path.join(root,'render-contracts-y62.js'),'utf8'),ctx);
+const m=ctx.window.Y62_RENDER_MANIFEST,c=ctx.window.Y62_RENDER_CONTRACTS;assert.ok(/^0\.2[1-9]\./.test(c.schemaVersion)||/^0\.[3-9]/.test(c.schemaVersion));assert.equal(c.vehicleId,m.vehicleId);const f=c.contracts.front34;assert.equal(f.cameraProfileId,'Y62-F34-V1');assert.deepEqual(Array.from(f.requiredCore),['base','wheels']);assert.match(f.failurePolicy,/never-substitute/);const ids=m.views.front34.layers.map(x=>x.id);for(const id of f.requiredOrder)assert.ok(ids.includes(id),`contract layer ${id} missing from manifest`);assert.equal(m.views.front34.layers.filter(x=>x.status==='reference-only').length,3);console.log('Alpha 21 render contract: PASS');

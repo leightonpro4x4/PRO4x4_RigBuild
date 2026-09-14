@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PRO4X4 Alpha 12 Browser Journey</title></head><body data-status="running"><pre id="result">RUNNING</pre>
+<script src="/persistence.js"></script><script src="/auth.js"></script><script src="/backend-client.js"></script>
+<script>
+(async()=>{
+  const out={steps:[]}; const mark=(name,data={})=>out.steps.push({name,...data});
+  try{
+    PRO4X4_AUTH.setLocalRole('admin','Browser Journey'); const backend=PRO4X4_BACKEND.active(); mark('backend',{mode:backend.mode});
+    const catalogue=await backend.getCatalogue('nissan-y62-warrior-2025'); mark('catalogue',{revision:catalogue.revision,count:catalogue.accessories.length});
+    const now=new Date().toISOString(),reference='P4X4-BROWSER-'+Date.now(),projectId='P4X4-PROJ-BROWSER-'+Date.now();
+    const build={schemaVersion:'0.12.0',reference,createdAt:now,channel:'browser-integration',lead:{name:'Browser Customer',phone:'0400000000',email:'browser@example.test',postcode:'5000',preferredContact:'phone',notes:'Alpha 12 browser journey'},vehicle:{id:'nissan-y62-warrior-2025',yearRange:'MY25',make:'Nissan',model:'Patrol Y62',trim:'Warrior by Premcar',paint:'black-obsidian',wheelTyre:'factory-warrior',view:'front34'},selections:[{id:'browser-item',brand:'PRO4X4',name:'Browser Test Item',sku:'BROWSER-001',status:'confirmed',layer:'test',pricing:{parts:250,labour:100,paint:null,freight:null,engineering:null},pricingRequired:['parts','labour'],fitment:{compatibleVehicleIds:['nissan-y62-warrior-2025'],requiredParts:[],conflicts:[],reviewRequired:false},weightKg:2,finishOptions:[],install:null,source:{authority:'integration-test'}}],pricing:{currency:'AUD'},weight:{baseline:{kerbMassKg:2884,gvmKg:3620},knownAccessoryMassKg:2,unknownAccessoryMassCount:0},gates:[],render:{view:'front34',manifestVersion:'browser-test',productionReady:false,activeLayers:[]},workflow:{status:'new',owner:null,staffNotes:'',lastUpdatedAt:now},catalogue:{schemaVersion:'0.12.0',revision:catalogue.revision,publishedAt:catalogue.publishedAt||null},contract:{version:'0.12.0',createEndpoint:'POST /api/v1/builds'}};
+    const saved=await backend.saveProjectRevision(projectId,build,{source:'browser-configurator',expectedVersion:0}); if(saved.project.version!==1)throw new Error('project save version mismatch'); mark('project-save',{revision:saved.revision.id});
+    const projects=await backend.listProjects(); if(!projects.some(p=>p.id===projectId))throw new Error('project missing from server list'); mark('project-list',{count:projects.length});
+    const share=await backend.createProjectShare(projectId,{role:'customer-view',revisionId:saved.revision.id,expiresDays:7}); const resolved=await backend.resolveProjectShare(share.token); if(resolved.project.id!==projectId)throw new Error('share resolution mismatch'); mark('share',{tokenHint:share.tokenHint});
+    const queued=await backend.createBuild(saved.snapshot); if(queued.reference!==reference)throw new Error('queue reference mismatch'); mark('queue',{status:queued.workflow.status});
+    const reviewed=await backend.updateQuote(reference,{...queued,workflow:{...queued.workflow,owner:'Browser Sales',staffNotes:'Browser-level staff review completed'}}); if(!reviewed.workflow.staffNotes)throw new Error('staff review not persisted'); mark('staff-review',{status:reviewed.workflow.status});
+    const finalised=await backend.finaliseQuote(reference,{}); if(finalised.workflow.status!=='quoted'||finalised.quoteFinalisation?.status!=='finalised')throw new Error('formal quote finalisation failed'); mark('formal-quote',{quoteNumber:finalised.quoteFinalisation.quoteNumber,total:finalised.quoteFinalisation.customerTotal});
+    await backend.revokeProjectShare(projectId,share.tokenHash); mark('share-revoke');
+    document.body.dataset.status='pass'; document.getElementById('result').textContent=JSON.stringify(out);
+  }catch(e){document.body.dataset.status='fail';document.getElementById('result').textContent=JSON.stringify({error:e.message,stack:e.stack,steps:out.steps});}
+})();
+</script></body></html>

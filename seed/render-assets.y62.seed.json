@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": "0.22.0",
+  "vehicleId": "nissan-y62-warrior-2025",
+  "assets": [
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-01-BASE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "base",
+      "exactSku": null,
+      "status": "reference-only",
+      "source": "assets/y62-slx-front.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "vehicle-state"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Current image is a complete stage render, not a clean factory base."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ],
+      "renderState": {
+        "paintId": "black-obsidian"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-02-STANCE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "stance",
+      "exactSku": "ALLOWANCE-HBMC-Y62",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "ALLOWANCE-HBMC-Y62"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Requires exact sidewall/arch/ride-height matched layer after engineering path is validated."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-03-WHEELS",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "wheels",
+      "exactSku": "FACTORY-WARRIOR-18X9-G015",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "FACTORY-WARRIOR-18X9-G015"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Factory rolling stock is data-locked but not isolated as a transparent layer."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ],
+      "renderState": {
+        "wheelTyreId": "factory-warrior"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-04-FRONT",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "front",
+      "exactSku": "Y62 S5 GEN-X",
+      "status": "reference-only",
+      "source": "assets/y62-slx-front.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "Y62 S5 GEN-X"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Visible in the stage reference; transparent exact-SKU extraction still required."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-05-ELECTRICAL-FRONT",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "electrical-front",
+      "exactSku": "AE4705B + BB-015P",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "AE4705B + BB-015P"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Must be aligned to passenger-side bonnet position used in the approved concept."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-06-ROOF",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "roof",
+      "exactSku": "RR-NPT-Y62-13-SCT-ASM0",
+      "status": "reference-only",
+      "source": "assets/y62-slx-front.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "RR-NPT-Y62-13-SCT-ASM0"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Visible in stage reference; needs isolated transparent exact-SKU layer."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-FRONT34-07-SIDES",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "front34",
+      "layerId": "sides",
+      "exactSku": "PB-NN-003",
+      "status": "blocked-fitment",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-F34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "PB-NN-003"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Do not generate production layer until Warrior fitment path is verified."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: blocked-fitment."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-01-BASE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "base",
+      "exactSku": null,
+      "status": "reference-only",
+      "source": "assets/y62-profile-board.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "vehicle-state"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Profile board is a multi-view reference image rather than a clean single-view base."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ],
+      "renderState": {
+        "paintId": "black-obsidian"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-02-STANCE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "stance",
+      "exactSku": "ALLOWANCE-HBMC-Y62",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "ALLOWANCE-HBMC-Y62"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Side view is the calibration view for ride height and tyre-to-guard relationship."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-03-WHEELS",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "wheels",
+      "exactSku": "FACTORY-WARRIOR-18X9-G015",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "FACTORY-WARRIOR-18X9-G015"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Transparent wheel/tyre mask needed."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ],
+      "renderState": {
+        "wheelTyreId": "factory-warrior"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-04-SIDES",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "sides",
+      "exactSku": "PB-NN-003",
+      "status": "blocked-fitment",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "PB-NN-003"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Warrior suitability unresolved."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: blocked-fitment."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-05-ROOF",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "roof",
+      "exactSku": "RR-NPT-Y62-13-SCT-ASM0",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "RR-NPT-Y62-13-SCT-ASM0"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Clean side layer needed."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-06-FRONT",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "front",
+      "exactSku": "Y62 S5 GEN-X",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "Y62 S5 GEN-X"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Side silhouette layer required."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-SIDE-07-REAR",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "side",
+      "layerId": "rear",
+      "exactSku": "NIPATY62RB04",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-SIDE-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "NIPATY62RB04"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Side overhang and carrier geometry must match rear-view assets."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-01-BASE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "base",
+      "exactSku": null,
+      "status": "reference-only",
+      "source": "assets/y62-raslarr-rear.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "vehicle-state"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Current image is a full build-stage reference."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ],
+      "renderState": {
+        "paintId": "black-obsidian"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-02-STANCE",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "stance",
+      "exactSku": "ALLOWANCE-HBMC-Y62",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "ALLOWANCE-HBMC-Y62"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Rear quarter ride-height layer needed."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-03-WHEELS",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "wheels",
+      "exactSku": "FACTORY-WARRIOR-18X9-G015",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "FACTORY-WARRIOR-18X9-G015"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Transparent rear-quarter rolling-stock layer needed."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ],
+      "renderState": {
+        "wheelTyreId": "factory-warrior"
+      }
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-04-REAR",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "rear",
+      "exactSku": "NIPATY62RB04",
+      "status": "reference-only",
+      "source": "assets/y62-raslarr-rear.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "NIPATY62RB04"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Visible in stage reference; isolated exact-SKU layer still required."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-05-REAR-WHEEL",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "rear-wheel",
+      "exactSku": "NIPATY62WC02",
+      "status": "reference-only",
+      "source": "assets/y62-raslarr-rear.png",
+      "provenance": {
+        "sourceType": "pro4x4-original",
+        "sourceUrl": null,
+        "licenceStatus": "reference-only",
+        "licenceNote": "Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": "image/png",
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "NIPATY62WC02"
+      ],
+      "approval": {
+        "state": "approved-reference",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Reference available; isolate only when the carrier option is selected."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: reference-only."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-06-REAR-JERRY",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "rear-jerry",
+      "exactSku": "NIPATY62DJ01",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "NIPATY62DJ01"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Separate transparent carrier layer required."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-07-REAR-CAMERA",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "rear-camera",
+      "exactSku": "RASLY62CK-1",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "RASLY62CK-1"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Small but functionally important layer/state marker."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    },
+    {
+      "schemaVersion": "0.22.0",
+      "assetId": "Y62-REAR34-08-ROOF",
+      "vehicleId": "nissan-y62-warrior-2025",
+      "viewId": "rear34",
+      "layerId": "roof",
+      "exactSku": "RR-NPT-Y62-13-SCT-ASM0",
+      "status": "asset-needed",
+      "source": null,
+      "provenance": {
+        "sourceType": "unknown",
+        "sourceUrl": null,
+        "licenceStatus": "unknown",
+        "licenceNote": "Source and usage rights must be recorded before candidate approval.",
+        "capturedAt": "2026-09-13"
+      },
+      "file": {
+        "checksumSha256": null,
+        "mimeType": null,
+        "width": null,
+        "height": null,
+        "hasAlpha": null
+      },
+      "cameraGeometry": {
+        "profileId": "Y62-R34-V1",
+        "matched": false,
+        "notes": "Must be matched to the locked Y62 view before production approval."
+      },
+      "fitmentScope": [
+        "nissan-y62-warrior-2025",
+        "RR-NPT-Y62-13-SCT-ASM0"
+      ],
+      "approval": {
+        "state": "not-reviewed",
+        "approvedBy": null,
+        "approvedAt": null,
+        "notes": "Rear-quarter roof layer required."
+      },
+      "history": [
+        {
+          "at": "2026-09-13T12:20:00+09:30",
+          "action": "registry.seeded",
+          "note": "Seeded from Y62 render manifest status: asset-needed."
+        }
+      ]
+    }
+  ]
+}

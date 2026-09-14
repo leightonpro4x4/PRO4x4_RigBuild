@@ -1,0 +1,12 @@
+const assert=require('assert');const fs=require('fs'),vm=require('vm'),path=require('path');
+const root=path.join(__dirname,'..');const ctx={window:{}};vm.createContext(ctx);vm.runInContext(fs.readFileSync(path.join(root,'data-ranger.js'),'utf8'),ctx);
+const d=ctx.window.RANGER_DATA,ev=require(path.join(root,'ranger-source-evidence.js'));
+assert.equal(d.schemaVersion,'0.26.22');assert.equal(ev.schemaVersion,'0.26.22');assert.equal(d.accessories.length,73);assert.equal(ev.sources.length,54);
+const byId=new Map(d.accessories.map(x=>[x.id,x]));const x=byId.get('stedi-st3k-21-5-ranger-predator');assert(x);
+assert.equal(x.sku,'LEDST3K-20L');assert.equal(x.brand,'STEDI');assert.equal(x.price,219);assert.equal(x.pricingMeta.rrpAud,null);assert.equal(x.weightKg,1.855);assert.equal(x.installTimeHours,null);assert.equal(x.status,'engineering');
+assert.deepEqual(x.requires,['oa-predator']);assert(x.fitment.requiredParts.includes('oa-predator'));assert(x.fitment.conflicts.includes('oa-22in-slim-lightbar-ranger'));assert.equal(x.fitment.directInBarRoute.state,'confirmed-physical-fitment');assert.equal(x.fitment.reviewRequired,true);assert.equal(x.fitment.electricalSupportState.exactHighBeamAdaptorSku,null);assert.equal(x.visual.status,'staff-review');assert.equal(x.visual.approved,false);
+const p=byId.get('oa-predator');assert(p.fitment.optionalParts.includes(x.id));const oa=byId.get('oa-22in-slim-lightbar-ranger');assert(oa.fitment.conflicts.includes(x.id));
+const e=ev.sources.find(y=>y.id===x.id);assert(e);assert.equal(e.sku,x.sku);assert.equal(e.rrpAud,null);assert.equal(e.currentAuRetailPriceAud,219);assert.equal(e.weightKg,1.855);assert.equal(e.installTimeHours,null);assert.equal(e.requiredParentSku,'FB-FRA-NG-22-PR-ASM0');assert(e.knownConflictSkus.includes('ORA-ALO-S5D1-20'));assert.equal(e.electricalState.exactHighBeamAdaptorSku,null);
+const ids=d.accessories.map(y=>y.id),skus=d.accessories.map(y=>y.sku).filter(Boolean);assert.equal(new Set(ids).size,ids.length);assert.equal(new Set(skus).size,skus.length);
+const eids=ev.sources.map(y=>y.id),eskus=ev.sources.map(y=>y.sku).filter(Boolean);assert.equal(new Set(eids).size,eids.length);assert.equal(new Set(eskus).size,eskus.length);
+console.log('PASS wf2-ranger-stedi-st3k-predator-alpha26');

@@ -1,0 +1,21 @@
+name: Rig Builder CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm install --ignore-scripts
+      - run: npm run check
+      - run: npm test
+      - name: Validate JSON
+        run: node -e "const fs=require('fs');for(const f of fs.readdirSync('schemas'))if(f.endsWith('.json'))JSON.parse(fs.readFileSync('schemas/'+f));JSON.parse(fs.readFileSync('seed/bootstrap.seed.json'));"
