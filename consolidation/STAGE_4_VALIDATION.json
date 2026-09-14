@@ -1,0 +1,50 @@
+{
+  "stage": 4,
+  "status": "PASS",
+  "semanticSource": "wf1:c33f2c61b1b5111c321c40739cd4ebffef32a584",
+  "dataSource": "wf2:ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+  "domainTests": {
+    "failed": 0,
+    "passed": 29
+  },
+  "clientServerParity": "same engine; all 99 products plus forged-payload trusted-context test pass",
+  "fixture": "Rally/Predator, lights chain, transitive front cascade, independent Scout/Powerboards/TubRack/rear bumper, A$10239 pass",
+  "previousStages": {
+    "rangerAccessories": 73,
+    "alpha93Files": 45,
+    "alpha93GlbsByteIdentical": 24,
+    "y62Evidence": 15,
+    "rangerEvidence": 54,
+    "sourceFiles": 2407,
+    "snapshots": 6,
+    "y62Accessories": 26
+  },
+  "retainedStates": [
+    "Rally camera relocation allOf",
+    "Butt Kicker explicit Predator/Toro alternatives and engineering",
+    "Scout unresolved conditions",
+    "Powerboards authoritative mapping gap",
+    "Tub Rack null price",
+    "Rear Bumper factory towbar, Hayman Reese incompatibility and review",
+    "Y62 no approved production 3D base"
+  ],
+  "limitations": [
+    "Unmodeled rich conditions remain structured evidence requiring review; no inferred satisfaction",
+    "Visual eligibility unavailable until governed exact assets/base integration",
+    "Server caller must provide authoritative catalogue and trusted context; no authentication or persistence added",
+    "npm absent in PATH: exact package-script Node commands run directly"
+  ],
+  "protectedBranches": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "rendererIntegrated": false,
+  "persistenceQuotesStarted": false,
+  "y62Promoted": false,
+  "stage5Started": false
+}
