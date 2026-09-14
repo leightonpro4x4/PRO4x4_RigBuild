@@ -1,2 +1,7 @@
 # Local authoritative database and session credentials; never publish.
 /.runtime/
+
+/node_modules/
+/.venv/
+/.validation/
+**/__pycache__/

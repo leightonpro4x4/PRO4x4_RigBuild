@@ -1,0 +1,68 @@
+name: Alpha94 root validation
+on:
+  push:
+    branches: [alpha94-consolidation]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: alpha94-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+defaults:
+  run:
+    working-directory: .
+    shell: pwsh
+jobs:
+  validate:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Pin npm and install locked dependencies
+        run: |
+          npm install --global npm@11.11.0
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm ci --ignore-scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements-validation.lock
+      - name: Isolated Python validation environment
+        run: |
+          python -m venv .venv
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\.venv\Scripts\python.exe -m pip install --require-hashes --only-binary=:all: -r requirements-validation.lock
+      - name: Install pinned Chromium
+        run: npx playwright install chromium
+      - name: Static, syntax, JSON and HTML
+        run: npm run test:static
+      - name: Catalogue and data regressions
+        run: npm run test:catalogue
+      - name: Domain and dependencies
+        run: npm run test:domain
+      - name: Visual runtime and frozen GLB integrity
+        run: npm run test:visual
+      - name: Projects, persistence and quote adversarial gates
+        run: npm run test:persistence
+      - name: Visual governance and reviewers
+        run: npm run test:governance
+      - name: Current WF5 acceptance and promotion assertions
+        run: npm run test:wf5
+      - name: Chromium desktop smoke journeys
+        run: npm run test:browser
+      - name: Python candidate and reconstruction evidence
+        run: npm run test:python
+      - name: Preserve validation results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpha94-validation-${{ github.run_id }}
+          path: .validation/results/
+          if-no-files-found: error

@@ -1,3 +1,4 @@
+import {resultURL} from '../support/results.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {sourceArchive} from '../../tools/source-archive.mjs';
@@ -47,6 +48,6 @@ const bindings={
  'WF4-SHARE-REGISTRY-ISOLATION':['persistence.mjs','share does not expose governance/reviewer registries']
 };
 const crosswalk=ids.map(id=>{const [file,assertion]=bindings[id]||['governance.mjs',id];assert(fs.readFileSync(new URL('acceptance/tests/'+file,root),'utf8').includes(assertion),'Missing current WF5 binding: '+id);return {id,file,assertion};});
-const scripts=json('package.json').scripts.test;for(const f of new Set(crosswalk.map(x=>x.file)))assert(scripts.includes('acceptance/tests/'+f));
+const scripts=JSON.stringify(json('validation.config.json').groups);for(const f of new Set(crosswalk.map(x=>x.file)))assert(scripts.includes('acceptance/tests/'+f));
 const report={status:'PASS',historicalAssertions:ids.length,currentBindings:crosswalk.length,additionalIntegrationChecks:5,crosswalk};
-fs.writeFileSync(new URL('consolidation/STAGE_7_WF5_CURRENT.json',root),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:'PASS',historicalAssertions:ids.length,currentBindings:crosswalk.length,additionalIntegrationChecks:5}));
+fs.writeFileSync(resultURL('wf5.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:'PASS',historicalAssertions:ids.length,currentBindings:crosswalk.length,additionalIntegrationChecks:5}));

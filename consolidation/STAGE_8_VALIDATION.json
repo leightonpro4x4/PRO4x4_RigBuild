@@ -1,0 +1,188 @@
+{
+  "stage": 8,
+  "status": "PASS_LOCAL_ROOT_VALIDATION",
+  "parentCommit": "72f8096200ee011e54ba79795ad81adbc03dac71",
+  "configuration": "validation.config.json",
+  "workflow": ".github/workflows/alpha94.yml",
+  "runtime": {
+    "node": "24.19.0",
+    "npm": "11.11.0",
+    "python": "3.12.14",
+    "playwright": "1.62.1",
+    "opencv": "5.0.0.93",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  },
+  "counts": {
+    "staticScripts": 54,
+    "activeJSON": 7,
+    "imports": 147,
+    "htmlEntrypoints": 1,
+    "catalogueGates": 1,
+    "domain": 29,
+    "visual": 17,
+    "persistence": 32,
+    "governance": 34,
+    "wf5Integration": 5,
+    "wf5AssertionBindings": 34,
+    "browserJourneys": 3,
+    "pythonTests": 13
+  },
+  "directJavaScriptGroups": "PASS",
+  "pythonSyntax": "PASS",
+  "rootRunner": "PASS: all nine groups, ten entrypoints; normal Windows PowerShell",
+  "browser": "PASS: three managed Playwright Chromium desktop journeys",
+  "python": "PASS: 13 tests, zero failures/errors, declared .venv with pinned dependencies",
+  "githubActions": "PENDING: hosted run requires workflow push",
+  "glbHashes": "10 live and all 24 preserved hash-identical",
+  "archivedFiles": 2407,
+  "catalogue": {
+    "rangerAccessories": 73,
+    "rangerEvidence": 54,
+    "y62Accessories": 26,
+    "y62Evidence": 15
+  },
+  "fixturePartsAUD": 10239,
+  "ranger": "preview",
+  "Y62Production": 0,
+  "protectedBranchesUnchanged": true,
+  "stage9Started": false,
+  "executionEnvironment": "Windows local PowerShell; same declared runtime and managed Chromium used by windows-2022 CI",
+  "verifiedRunResults": {
+    "run-static-catalogue-domain-visual-persistence-governance-wf5-browser-python.json": [
+      {
+        "group": "static",
+        "script": "acceptance/tests/static.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "catalogue",
+        "script": "acceptance/tests/catalogue.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "domain",
+        "script": "acceptance/tests/domain.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "visual",
+        "script": "acceptance/tests/layout.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "visual",
+        "script": "acceptance/tests/visual-runtime.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "persistence",
+        "script": "acceptance/tests/persistence.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "governance",
+        "script": "acceptance/tests/governance.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "wf5",
+        "script": "acceptance/tests/wf5-current.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "browser",
+        "script": "acceptance/tests/browser-ci.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "python",
+        "script": "acceptance/tests/candidates.py",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      }
+    ],
+    "static.json": {
+      "status": "PASS",
+      "scripts": 54,
+      "json": 7,
+      "imports": 147,
+      "htmlDocuments": 1,
+      "htmlReferences": 1,
+      "workflowGroups": 9,
+      "lockfile": "committed root package-lock.json",
+      "staleRuntimeBindings": 0
+    },
+    "browser-visual.json": {
+      "status": "PASS",
+      "browser": "Playwright Chromium 1.62.1 desktop headless",
+      "assetLoad": "10/10",
+      "replacementCombinations": 4,
+      "fixtureTotalAUD": 10239,
+      "persistedReload": "PASS",
+      "orbitZoomInputs": "PASS",
+      "pageErrors": [],
+      "iOS": "NOT TESTED"
+    },
+    "browser-projects.json": {
+      "status": "PASS",
+      "browser": "Playwright Chromium 1.62.1 desktop headless",
+      "visualRegression": "PASS",
+      "projectSaveReload": "PASS",
+      "dirtyQuoteGuard": "PASS",
+      "immutableRevisionNavigation": "PASS",
+      "quoteHandoff": "PASS / review required",
+      "publicShareIsolation": "PASS",
+      "pageErrors": [],
+      "iOS": "NOT TESTED"
+    },
+    "browser.json": {
+      "status": "PASS",
+      "desktopVisual": "PASS",
+      "desktopProjects": "PASS",
+      "governanceRegistryIsolation": "PASS",
+      "Y62Production": 0,
+      "iOS": "NOT TESTED"
+    },
+    "python.json": {
+      "status": "PASS",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "python": "3.12.14",
+      "isolatedPrefix": "C:\\Users\\Leighton.Calvert\\Documents\\Codex\\PRO4x4_RigBuild\\.venv",
+      "productionPromoted": false
+    }
+  },
+  "resultLogSHA256": {
+    "browser-browser-ci.mjs.log": "f47a61ce3d7611262f0353af54ff049e2d2d95739858f4c76fd6b45ae2661e06",
+    "catalogue-catalogue.mjs.log": "937420c5cbde869a7edd29ede2af54ace6e42c74c8684f8ffd5e6a49b20c0aa1",
+    "domain-domain.mjs.log": "3ef68689d08cafc8f6ae4e89836e78f9008cfd0cb60c5d0d0ee66a488ef70547",
+    "governance-governance.mjs.log": "ff4b76f1e873e2292e55f98a0b16475fc13ed0b09f264d1b995dba99e8c9749b",
+    "persistence-persistence.mjs.log": "1b110b6becd97ac99e25cb3a44eb90b2440572c6e5c0510b639c895cddbba590",
+    "python-candidates.py.log": "4770bc83deb90271bb43b977f930347904b0e273858fa09c34316a217b415106",
+    "static-static.mjs.log": "62399d8dc607a67a97b2cd2a60d6e27eac729f0cc93630f493d2697882c71ae0",
+    "visual-layout.mjs.log": "c4e0af393882143ee8ce9ff46bd518abb51336da243f9e3e6bc73ef313df5512",
+    "visual-visual-runtime.mjs.log": "0ce96c3c45652f5cd2e8f5e84cf23eea4a9890bd71e90dc2410ad194462b9b3a",
+    "wf5-wf5-current.mjs.log": "a08c324daa69f424aa2d4863c4146f7e7bd0f4b1d80abdf8c8d31075fd3e8377"
+  }
+}

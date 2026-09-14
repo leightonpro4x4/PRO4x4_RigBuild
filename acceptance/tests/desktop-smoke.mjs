@@ -1,9 +1,9 @@
-import path from 'node:path';
+import {resultURL} from '../support/results.mjs';
 import fs from 'node:fs';
-import {pathToFileURL} from 'node:url';
-const {chromium}=await import(pathToFileURL(path.resolve(path.dirname(process.execPath),'../node_modules/playwright/index.mjs')).href);
+import {launchBrowser,browserLabel} from '../support/browser.mjs';
 import assert from 'node:assert/strict';
-const browser=await chromium.launch({channel:'msedge',headless:true});
+const browser=await launchBrowser();
+try{
 const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 await page.goto(process.env.ALPHA94_PREVIEW_URL||'http://127.0.0.1:8094/');
@@ -24,6 +24,6 @@ await page.selectOption('#profile','catalogue');await page.click('#resetBuild');
 await page.selectOption('#vehicle','nissan-y62-warrior-2025');s=await state();assert(Object.values(s).every(v=>!v));
 await page.selectOption('#vehicle','ford-ranger-nextgen-2025');await page.selectOption('#profile','checkpoint');await page.click('#loadFullBuild');
 assert.deepEqual(errors,[]);
-console.log(JSON.stringify({status:'PASS',browser:'Edge desktop headless',assetLoad:'10/10',combinations:4,restoration:'PASS',persistedReload:'PASS',fullFixture:'PASS',partsTotal:10239,catalogueCameraRequirement:'PASS',y62NoFallback:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'}));
-fs.writeFileSync(new URL('../../consolidation/'+(process.env.ALPHA94_VALIDATION_STAGE==='7'?'STAGE_7_VISUAL_DESKTOP.json':'STAGE_5_DESKTOP.json'),import.meta.url),JSON.stringify({status:'PASS',browser:'Edge desktop headless',assetLoad:'10/10',replacementCombinations:4,fixtureTotalAUD:10239,persistedReload:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'},null,2));
-await browser.close();
+console.log(JSON.stringify({status:'PASS',browser:browserLabel,assetLoad:'10/10',combinations:4,restoration:'PASS',persistedReload:'PASS',fullFixture:'PASS',partsTotal:10239,catalogueCameraRequirement:'PASS',y62NoFallback:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'}));
+fs.writeFileSync(resultURL('browser-visual.json'),JSON.stringify({status:'PASS',browser:browserLabel,assetLoad:'10/10',replacementCombinations:4,fixtureTotalAUD:10239,persistedReload:'PASS',orbitZoomInputs:'PASS',pageErrors:errors,iOS:'NOT TESTED'},null,2));
+}finally{await browser.close();}

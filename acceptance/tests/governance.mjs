@@ -1,3 +1,4 @@
+import {resultURL} from '../support/results.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -72,4 +73,4 @@ test('Durable governance ledger reload, tamper rejection and no customer grants'
   }finally{assert(path.resolve(dir).startsWith(path.resolve(os.tmpdir())+path.sep+'alpha94-governance-'));fs.rmSync(dir,{recursive:true});}
 });
 console.log(JSON.stringify({suite:'Stage7 current Alpha94 governance',tests:results.length,status:'PASS',sourceProductionVisuals:0}));
-fs.writeFileSync(new URL('consolidation/STAGE_7_TESTS.json',root),JSON.stringify({status:'PASS',tests:results.length,results},null,2)+'\n');
+fs.writeFileSync(resultURL('governance.json'),JSON.stringify({status:'PASS',tests:results.length,results},null,2)+'\n');

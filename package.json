@@ -2,16 +2,32 @@
   "name": "pro4x4-alpha94-consolidation",
   "version": "0.94.0",
   "private": true,
-  "description": "Alpha94 Stage7 reconciled visual evidence and governance",
+  "description": "Alpha94 root validation pipeline",
   "type": "module",
   "scripts": {
     "start": "node tools/serve.mjs",
-    "test": "node --experimental-vm-modules acceptance/tests/layout.mjs && node acceptance/tests/catalogue.mjs && node acceptance/tests/domain.mjs && node acceptance/tests/visual-runtime.mjs && node acceptance/tests/persistence.mjs && node acceptance/tests/governance.mjs && node acceptance/tests/wf5-current.mjs",
-    "test:desktop": "node acceptance/tests/desktop-governance.mjs",
-    "check": "node --check tools/serve.mjs && node --check acceptance/tests/layout.mjs && node --check acceptance/tests/catalogue.mjs && node --check subsystems/catalogue/normalize.mjs && node --check subsystems/domain/engine.mjs && node --check subsystems/domain/client.mjs && node --check subsystems/domain/server.mjs && node --check subsystems/domain/fixture.mjs && node --check acceptance/tests/domain.mjs && node --check subsystems/customer-app/app.mjs && node --check subsystems/visual-runtime/ranger.mjs && node --check subsystems/visual-runtime/session.mjs && node --check subsystems/visual-eligibility/adapter.mjs && node --check acceptance/tests/visual-runtime.mjs && node --check acceptance/tests/desktop-smoke.mjs && node --check subsystems/server-persistence/store.mjs && node --check subsystems/server-persistence/api.mjs && node --check subsystems/server-persistence/bootstrap.mjs && node --check subsystems/customer-app/projects.mjs && node --check acceptance/tests/persistence.mjs && node --check acceptance/tests/desktop-projects.mjs && node --check subsystems/governance/registry.mjs && node --check subsystems/governance/projection.mjs && node --check subsystems/governance/bootstrap.mjs && node --check subsystems/visual-eligibility/governance-policy.mjs && node --check acceptance/tests/governance.mjs && node --check tools/source-archive.mjs && node --check tools/reconcile-governance.mjs && node --check tools/governance-projection.mjs && node --check acceptance/tests/wf5-current.mjs && node --check acceptance/tests/desktop-governance.mjs",
+    "test": "node tools/validate.mjs",
+    "test:core": "node tools/validate.mjs core",
+    "check": "node tools/validate.mjs static",
+    "test:static": "node tools/validate.mjs static",
+    "test:catalogue": "node tools/validate.mjs catalogue",
+    "test:domain": "node tools/validate.mjs domain",
+    "test:visual": "node tools/validate.mjs visual",
+    "test:persistence": "node tools/validate.mjs persistence",
+    "test:governance": "node tools/validate.mjs governance",
+    "test:wf5": "node tools/validate.mjs wf5",
+    "test:browser": "node tools/validate.mjs browser",
+    "test:python": "node tools/validate.mjs python",
+    "test:desktop": "node tools/validate.mjs browser",
     "catalogue:normalize": "node subsystems/catalogue/normalize.mjs"
   },
   "engines": {
-    "node": ">=22"
+    "node": "24.19.0",
+    "npm": "11.11.0"
+  },
+  "packageManager": "npm@11.11.0",
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "yaml": "2.8.1"
   }
 }

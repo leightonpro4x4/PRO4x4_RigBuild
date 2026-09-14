@@ -1,11 +1,10 @@
-import path from 'node:path';
+import {resultURL} from '../support/results.mjs';
 import fs from 'node:fs';
-import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 // Run the complete prior desktop visual regression before project workflow smoke.
 await import('./desktop-smoke.mjs');
-const {chromium}=await import(pathToFileURL(path.resolve(path.dirname(process.execPath),'../node_modules/playwright/index.mjs')).href);
-const browser=await chromium.launch({channel:'msedge',headless:true});
+import {launchBrowser,browserLabel} from '../support/browser.mjs';
+const browser=await launchBrowser();
 try{
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -30,6 +29,6 @@ try{
  const shareURL=(await page.textContent('#projectReceipt')).split('Pinned revision link: ')[1];
  const shared=await (await page.request.get(shareURL)).json();assert.equal(shared.revision.revisionId,'R000001');assert(!JSON.stringify(shared).includes('R000002'));assert(!Object.hasOwn(shared,'project'));assert(!Object.hasOwn(shared.revision,'ownerId'));
  assert.deepEqual(errors,[]);
- const result={status:'PASS',browser:'Edge desktop headless',visualRegression:'PASS',projectSaveReload:'PASS',dirtyQuoteGuard:'PASS',immutableRevisionNavigation:'PASS',quoteHandoff:'PASS / review required',publicShareIsolation:'PASS',pageErrors:errors,iOS:'NOT TESTED'};
- fs.writeFileSync(new URL('../../consolidation/'+(process.env.ALPHA94_VALIDATION_STAGE==='7'?'STAGE_7_PROJECTS_DESKTOP.json':'STAGE_6_DESKTOP.json'),import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+ const result={status:'PASS',browser:browserLabel,visualRegression:'PASS',projectSaveReload:'PASS',dirtyQuoteGuard:'PASS',immutableRevisionNavigation:'PASS',quoteHandoff:'PASS / review required',publicShareIsolation:'PASS',pageErrors:errors,iOS:'NOT TESTED'};
+ fs.writeFileSync(resultURL('browser-projects.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 }finally{await browser.close();}

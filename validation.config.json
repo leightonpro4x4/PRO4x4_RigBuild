@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "node": "24.19.0",
+  "npm": "11.11.0",
+  "python": "3.12.14",
+  "playwright": "1.62.1",
+  "browser": "playwright-chromium",
+  "ciRunner": "windows-2022",
+  "groups": {
+    "static": ["acceptance/tests/static.mjs"],
+    "catalogue": ["acceptance/tests/catalogue.mjs"],
+    "domain": ["acceptance/tests/domain.mjs"],
+    "visual": ["acceptance/tests/layout.mjs", "acceptance/tests/visual-runtime.mjs"],
+    "persistence": ["acceptance/tests/persistence.mjs"],
+    "governance": ["acceptance/tests/governance.mjs"],
+    "wf5": ["acceptance/tests/wf5-current.mjs"],
+    "browser": ["acceptance/tests/browser-ci.mjs"],
+    "python": ["acceptance/tests/candidates.py"]
+  }
+}
