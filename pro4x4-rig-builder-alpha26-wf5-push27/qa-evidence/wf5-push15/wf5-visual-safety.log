@@ -1,0 +1,15 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.17 test:wf5-visual-safety
+> node tests/wf5-visual-governance-rejection-alpha26.js
+
+{
+  "gate": "wf5-visual-governance-rejection-alpha26",
+  "referenceOnlyRejected": true,
+  "masterDraftRejected": true,
+  "layerDraftRejected": true,
+  "blockedFitmentBlocked": true,
+  "unsupportedExactSkuNoFallback": true,
+  "status": "pass"
+}
+(node:954) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

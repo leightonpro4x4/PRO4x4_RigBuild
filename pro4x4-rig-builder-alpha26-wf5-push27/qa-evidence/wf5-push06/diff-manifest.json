@@ -1,0 +1,13 @@
+{
+  "baseline": "/mnt/data/wf5_auto_run06/pro4x4-rig-builder-alpha26-wf5-push05",
+  "candidate": "/mnt/data/wf5_auto_run06/pro4x4-rig-builder-alpha26-wf5-push06",
+  "changed": [
+    "package.json",
+    "tests/wf5-alpha26-acceptance-gate.js",
+    "tests/wf5-alpha26-promotion-path.js"
+  ],
+  "added": [
+    "PUSH_36_WF5_QA_GATE_REPORT.md"
+  ],
+  "removed": []
+}

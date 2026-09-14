@@ -1,0 +1,74 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.9 test:wf5-acceptance
+> node tests/wf5-alpha26-acceptance-gate.js
+
+{
+  "gate": "wf5-alpha26-acceptance-gate",
+  "results": [
+    {
+      "id": "WF1-BOM-ANYOF",
+      "owner": "WF1",
+      "description": "Unsatisfied any-of fitment dependencies must survive into saved project/quote gates.",
+      "status": "fail",
+      "error": "oa-lower-bash-ranger: saved BOM has an unsatisfied anyOfRequiredParts dependency but no project/quote gate; it can be queued as compatible after the supporting bar is removed."
+    },
+    {
+      "id": "WF1-QUOTE-ANYOF",
+      "owner": "WF1",
+      "description": "An orphaned any-of dependency must remain unresolved in the persisted sales/quote fitment review.",
+      "status": "fail",
+      "error": "Quote fitment review reports allApproved=true even though the selected product has no Predator/Toro support item."
+    },
+    {
+      "id": "WF1-BOM-ANYOF-SATISFIED",
+      "owner": "WF1",
+      "description": "A valid one-of support choice must satisfy the dependency without forcing every alternative.",
+      "status": "pass"
+    },
+    {
+      "id": "WF1-REMOVE-ANYOF",
+      "owner": "WF1",
+      "description": "Removing the final supporting item must not strand an any-of dependent product as apparently compatible.",
+      "status": "fail",
+      "error": "Removal cascade still only follows requires/requiredParts and does not revalidate fitment.anyOfRequiredParts; an orphaned dependent can remain selected."
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-REVIEW",
+      "owner": "WF4",
+      "description": "Every production path must require immutable reviewer identity + review timestamp, including direct production upsert.",
+      "status": "fail",
+      "error": "Direct production upsert accepted master-approved metadata with no governance.reviewedBy/reviewedAt, bypassing immutable review evidence."
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-EVIDENCE",
+      "owner": "WF4",
+      "description": "If direct production upsert remains supported, it must create immutable review evidence equivalent to governed version promotion.",
+      "status": "fail",
+      "error": "Direct production upsert succeeded without checksum-pinned immutable approval.reviewEvidence."
+    },
+    {
+      "id": "WF4-MASTER-REFERENCE-BACKING",
+      "owner": "WF4",
+      "description": "A governed Y62 canonical master must not reach production without the locked owner/reference evidence set.",
+      "status": "fail",
+      "error": "Canonical master with no provenance.referenceIds was promoted and resolved as customer available, violating REFERENCE_BACKED_APPROVED_VISUALS_ONLY."
+    },
+    {
+      "id": "WF4-QUOTE-GATE-TRUST-BOUNDARY",
+      "owner": "WF4",
+      "description": "Customer quote intake must not be able to remove fitment gates that are implied by the persisted BOM.",
+      "status": "fail",
+      "error": "Server trusted customer-supplied gates=[] and finalised a quote whose BOM still contains an engineering-review product. Fitment gates must be server-authoritative or recomputed from the immutable BOM."
+    },
+    {
+      "id": "WF5-CUSTOMER-DRAFT-ISOLATION",
+      "owner": "WF5",
+      "description": "Customer entrypoint must not load reference-only/master-draft production candidates or fallback imagery.",
+      "status": "pass"
+    }
+  ],
+  "failed": 7,
+  "status": "fail"
+}
+(node:608) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

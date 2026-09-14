@@ -1,0 +1,8 @@
+npm_test=0
+npm_check=0
+render_resolver=0
+wf5_latest=0
+wf5_visual_safety=0
+wf5_promotion=0
+wf5_acceptance=1
+test_gate=1

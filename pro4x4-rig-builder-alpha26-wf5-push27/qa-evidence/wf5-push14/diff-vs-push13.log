@@ -1,0 +1,5 @@
+Application/runtime/product/visual diff against Push 13 (excluding qa-evidence and PUSH_44 report):
+changed: package.json
+changed: tests/wf5-alpha26-acceptance-gate.js
+
+No application/runtime/product/visual implementation file changed.

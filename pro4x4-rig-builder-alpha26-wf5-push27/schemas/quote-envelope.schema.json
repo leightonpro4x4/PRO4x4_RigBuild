@@ -1,0 +1,485 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pro4x4.com.au/schemas/quote-envelope-0.12.0.json",
+  "title": "PRO4X4 Rig Builder Quote Envelope v0.12.0",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "reference",
+    "createdAt",
+    "channel",
+    "lead",
+    "vehicle",
+    "selections",
+    "pricing",
+    "weight",
+    "gates",
+    "render",
+    "workflow",
+    "catalogue",
+    "project",
+    "contract"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.12.0"
+    },
+    "reference": {
+      "type": "string",
+      "pattern": "^P4X4-"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "lead": {
+      "type": "object",
+      "required": [
+        "name",
+        "phone",
+        "email",
+        "postcode",
+        "preferredContact",
+        "notes"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "string"
+        },
+        "preferredContact": {
+          "enum": [
+            "phone",
+            "email",
+            "either"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "vehicle": {
+      "type": "object",
+      "required": [
+        "id",
+        "paint",
+        "wheelTyre",
+        "view"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "paint": {
+          "type": "string"
+        },
+        "wheelTyre": {
+          "type": "string"
+        },
+        "view": {
+          "enum": [
+            "front34",
+            "side",
+            "rear34"
+          ]
+        }
+      }
+    },
+    "selections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "sku",
+          "status",
+          "pricing",
+          "pricingRequired"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "engineering",
+              "blocked"
+            ]
+          },
+          "pricing": {
+            "$ref": "#/$defs/pricing"
+          },
+          "pricingRequired": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "parts",
+                "labour",
+                "paint",
+                "freight",
+                "engineering"
+              ]
+            }
+          },
+          "weightKg": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "install": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "fitment": {
+            "type": "object"
+          },
+          "source": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": [
+        "currency",
+        "knownSubtotal",
+        "components",
+        "unpricedComponentCounts",
+        "isComplete"
+      ],
+      "properties": {
+        "currency": {
+          "const": "AUD"
+        },
+        "knownSubtotal": {
+          "type": "number",
+          "minimum": 0
+        },
+        "components": {
+          "$ref": "#/$defs/pricingNumbers"
+        },
+        "unpricedComponentCounts": {
+          "$ref": "#/$defs/counts"
+        },
+        "isComplete": {
+          "type": "boolean"
+        }
+      }
+    },
+    "weight": {
+      "type": "object",
+      "required": [
+        "baseline",
+        "knownAccessoryMassKg",
+        "unknownAccessoryMassCount"
+      ],
+      "properties": {
+        "baseline": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "knownAccessoryMassKg": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unknownAccessoryMassCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "estimatedKerbMassWithKnownAccessoriesKg": {
+          "type": "number"
+        },
+        "remainingNominalPayloadKg": {
+          "type": "number"
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id",
+          "status",
+          "note"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "fitment",
+              "dependency",
+              "conflict"
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "required": [
+        "view",
+        "manifestVersion",
+        "productionReady",
+        "activeLayers"
+      ],
+      "properties": {
+        "view": {
+          "type": "string"
+        },
+        "manifestVersion": {
+          "type": "string"
+        },
+        "productionReady": {
+          "type": "boolean"
+        },
+        "activeLayers": {
+          "type": "array"
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "required": [
+        "status",
+        "owner",
+        "staffNotes",
+        "lastUpdatedAt"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "new",
+            "needs-fitment-review",
+            "pricing-incomplete",
+            "ready-to-quote",
+            "quoted",
+            "won",
+            "lost"
+          ]
+        },
+        "owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "staffNotes": {
+          "type": "string"
+        },
+        "lastUpdatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "fitmentReview": {
+      "type": "object"
+    },
+    "quoteFinalisation": {
+      "type": "object"
+    },
+    "catalogue": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "revision",
+        "publishedAt"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "publishedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "contract": {
+      "type": "object",
+      "required": [
+        "version",
+        "createEndpoint"
+      ],
+      "properties": {
+        "version": {
+          "const": "0.12.0"
+        },
+        "createEndpoint": {
+          "type": "string"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "id",
+        "revisionId",
+        "revisionNumber",
+        "savedAt",
+        "source"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^P4X4-PROJ-"
+        },
+        "revisionId": {
+          "type": "string",
+          "pattern": "^R[0-9]{4}$"
+        },
+        "revisionNumber": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "savedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "pricing": {
+      "type": "object",
+      "required": [
+        "parts",
+        "labour",
+        "paint",
+        "freight",
+        "engineering"
+      ],
+      "properties": {
+        "parts": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "labour": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "paint": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "freight": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "engineering": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "pricingNumbers": {
+      "type": "object",
+      "required": [
+        "parts",
+        "labour",
+        "paint",
+        "freight",
+        "engineering"
+      ],
+      "properties": {
+        "parts": {
+          "type": "number"
+        },
+        "labour": {
+          "type": "number"
+        },
+        "paint": {
+          "type": "number"
+        },
+        "freight": {
+          "type": "number"
+        },
+        "engineering": {
+          "type": "number"
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "parts",
+        "labour",
+        "paint",
+        "freight",
+        "engineering"
+      ],
+      "properties": {
+        "parts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "labour": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "paint": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "freight": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "engineering": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

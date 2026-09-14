@@ -1,0 +1,174 @@
+{
+  "gate": "wf5-alpha26-acceptance-gate",
+  "results": [
+    {
+      "id": "WF1-BOM-ANYOF",
+      "owner": "WF1",
+      "description": "Unsatisfied any-of fitment dependencies must survive into saved project/quote gates.",
+      "status": "fail",
+      "error": "oa-lower-bash-ranger: saved BOM has an unsatisfied anyOfRequiredParts dependency but no project/quote gate; it can be queued as compatible after the supporting bar is removed."
+    },
+    {
+      "id": "WF1-QUOTE-ANYOF",
+      "owner": "WF1",
+      "description": "An orphaned any-of dependency must remain unresolved in the persisted sales/quote fitment review.",
+      "status": "fail",
+      "error": "Quote fitment review reports allApproved=true even though the selected product has no Predator/Toro support item."
+    },
+    {
+      "id": "WF1-BOM-ANYOF-SATISFIED",
+      "owner": "WF1",
+      "description": "A valid one-of support choice must satisfy the dependency without forcing every alternative.",
+      "status": "pass"
+    },
+    {
+      "id": "WF1-REMOVE-ANYOF",
+      "owner": "WF1",
+      "description": "Removing the final supporting item must not strand an any-of dependent product as apparently compatible.",
+      "status": "fail",
+      "error": "Removal cascade still only follows requires/requiredParts and does not revalidate fitment.anyOfRequiredParts; an orphaned dependent can remain selected."
+    },
+    {
+      "id": "WF1-CONDITIONAL-FITMENT-GATE",
+      "owner": "WF1",
+      "description": "Manufacturer fitment conditions shown to the customer must survive into the immutable project/quote gate until explicitly confirmed.",
+      "status": "fail",
+      "error": "Confirmed Ranger product oa-ausb-sports-bar-ranger carries manufacturer fitment.conditions but the immutable snapshot has no fitment/setup confirmation gate; quote fitmentReview.allApproved=true and the formal quote can be finalised without confirming the vehicle setup."
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-REVIEW",
+      "owner": "WF4",
+      "description": "Every production path must require immutable reviewer identity + review timestamp, including direct production upsert.",
+      "status": "fail",
+      "error": "Direct production upsert accepted master-approved metadata with no governance.reviewedBy/reviewedAt, bypassing immutable review evidence."
+    },
+    {
+      "id": "WF4-DIRECT-PRODUCTION-EVIDENCE",
+      "owner": "WF4",
+      "description": "If direct production upsert remains supported, it must create immutable review evidence equivalent to governed version promotion.",
+      "status": "fail",
+      "error": "Direct production upsert succeeded without checksum-pinned immutable approval.reviewEvidence."
+    },
+    {
+      "id": "WF4-REVIEWER-IDENTITY-AUTHENTICITY",
+      "owner": "WF4",
+      "description": "Governed promotion must not trust a free-text reviewedBy value; reviewer identity must be bound to an authenticated/audited review transition for that exact candidate version.",
+      "status": "fail",
+      "error": "Governed promotion accepted unauthenticated reviewer identity \"ghost-reviewer-never-authenticated\" from editable candidate metadata. The candidate was edited by wf5-editor and promoted by wf5-promoter, but no review audit exists for ghost-reviewer-never-authenticated. Reviewer identity must be actor-bound/audited, not free text."
+    },
+    {
+      "id": "WF4-MASTER-REFERENCE-BACKING",
+      "owner": "WF4",
+      "description": "A governed Y62 canonical master must not reach production without the locked owner/reference evidence set.",
+      "status": "fail",
+      "error": "Canonical master with no provenance.referenceIds was promoted and resolved as customer available, violating REFERENCE_BACKED_APPROVED_VISUALS_ONLY."
+    },
+    {
+      "id": "WF4-QUOTE-GATE-TRUST-BOUNDARY",
+      "owner": "WF4",
+      "description": "Customer quote intake must not be able to remove fitment gates that are implied by the persisted BOM.",
+      "status": "fail",
+      "error": "Server trusted customer-supplied gates=[] and finalised a quote whose BOM still contains an engineering-review product. Fitment gates must be server-authoritative or recomputed from the immutable BOM."
+    },
+    {
+      "id": "WF5-OWNER-REFERENCE-PACK-INTEGRITY",
+      "owner": "WF5",
+      "description": "Locked owner Y62 reference records must resolve to the packaged files and retain exact SHA-256 provenance.",
+      "status": "pass"
+    },
+    {
+      "id": "WF4-MASTER-REFERENCE-ID-VALIDITY",
+      "owner": "WF4",
+      "description": "Canonical-master promotion must validate that every persisted provenance.referenceId resolves to approved reference evidence.",
+      "status": "fail",
+      "error": "Canonical master with a non-existent provenance.referenceId was promoted and resolved customer-available. Reference backing must be validated, not merely non-empty."
+    },
+    {
+      "id": "WF4-MASTER-BRIEF-REFERENCE-BINDING",
+      "owner": "WF4",
+      "description": "A Y62 F34 canonical master must retain the governing F34 canonical-brief evidence, not unrelated valid owner references.",
+      "status": "fail",
+      "error": "Y62-F34-V1 promoted with unrelated owner references and omitted governing F34 evidence: OWNER-Y62-F34-01, OWNER-Y62-F34-02, OWNER-Y62-FRONT-01"
+    },
+    {
+      "id": "WF4-PRODUCTION-BINARY-IMMUTABILITY",
+      "owner": "WF4",
+      "description": "A promoted production asset binary must remain checksum-pinned to its reviewed immutable version; replacing the binary requires a new governed version/review.",
+      "status": "fail",
+      "error": "Unreviewed replacement binary became customer available under the existing production lineage. Active=bbbbbbbbbbbb…, reviewEvidence=aaaaaaaaaaaa…, version=aaaaaaaaaaaa…. Production binary changes must stage a new immutable version and pass review before resolver admission."
+    },
+    {
+      "id": "WF4-PRODUCTION-IDENTITY-IMMUTABILITY",
+      "owner": "WF4",
+      "description": "A reviewed production version must remain bound to the exact vehicle/view/layer/SKU identity it was approved for; direct retargeting requires a new governed candidate/review.",
+      "status": "fail",
+      "error": "Reviewed production identity was retargeted without a new governed version/review. Active SKU=WF5-IDENTITY-SKU-B, immutable version SKU=WF5-IDENTITY-SKU-A, old state=missing, new state=available. Exact-SKU approval lineage must be immutable."
+    },
+    {
+      "id": "WF4-CANDIDATE-EVIDENCE-RESET",
+      "owner": "WF4",
+      "description": "A newly staged replacement binary must start with clean per-version provenance/review evidence rather than inheriting approval bindings from the active production binary.",
+      "status": "fail",
+      "error": "New candidate V2 inherited stale V1 evidence (review checksum 333333333333…; 3 reference IDs). A replacement binary must begin with reviewEvidence cleared and referenceIds explicitly re-bound for that binary/version."
+    },
+    {
+      "id": "WF4-BLOCKED-FITMENT-PRECEDENCE",
+      "owner": "WF4",
+      "description": "An exact active blocked-fitment declaration must override a previously approved production binary for the same vehicle/view/layer/SKU/state.",
+      "status": "fail",
+      "error": "Resolver returned customer available from WF5-BLOCK-PRECEDENCE-PROD even though an exact blocked-fitment declaration exists for the same vehicle/view/layer/SKU/state. Safety/fitment block must outrank stale production-ready visual availability."
+    },
+    {
+      "id": "WF4-RENDER-STATE-EXACTNESS",
+      "owner": "WF4",
+      "description": "Stateful production layers must require an explicit exact render state; omitting state must never select an arbitrary approved variant.",
+      "status": "fail",
+      "error": "Resolver selected approved state wf5-bronze-state even though the request omitted wheelTyreId. Exact-state policy must reject or return missing when a stateful layer request is underspecified."
+    },
+    {
+      "id": "WF4-PRODUCTION-TUPLE-UNIQUENESS",
+      "owner": "WF4",
+      "description": "Only one production-ready asset may own an exact vehicle/view/layer/SKU/render-state tuple; duplicate governed masters/layers must be rejected, superseded, or resolved as ambiguous rather than arbitrarily selected.",
+      "status": "fail",
+      "error": "Two independently reviewed production assets (WF5-DUPLICATE-TUPLE-A, WF5-DUPLICATE-TUPLE-B) own the same exact tuple, and the resolver silently selected WF5-DUPLICATE-TUPLE-B. Exact production identity must be unique or ambiguity must block customer output."
+    },
+    {
+      "id": "WF4-PROJECT-RENDER-TRUST-BOUNDARY",
+      "owner": "WF4",
+      "description": "Project/share/quote snapshots must not trust customer-supplied production-ready render metadata that is not backed by the governed resolver.",
+      "status": "fail",
+      "error": "project revision trusted unsupported customer-supplied available render WF5-UNSUPPORTED-CUSTOMER-ASSET; production visual state must be server-resolved/governed before persistence."
+    },
+    {
+      "id": "WF4-QUOTE-PROJECT-REVISION-BINDING",
+      "owner": "WF4",
+      "description": "A quote that claims project/revision lineage must be rejected or canonicalised if its commercial/render payload differs from that immutable project revision.",
+      "status": "fail",
+      "error": "Quote accepted payload that differs from immutable R0001 while still claiming that project/revision lineage and it could be formally finalised. Quote intake must bind to the stored revision snapshot or create an explicit new revision."
+    },
+    {
+      "id": "WF4-FINALISED-QUOTE-IMMUTABILITY",
+      "owner": "WF4",
+      "description": "A finalised formal quote must be immutable to subsequent customer upsert using the same reference.",
+      "status": "fail",
+      "error": "Customer upsert mutated a finalised formal quote in place. Finalised quote payload/lineage must be immutable; later changes require a new governed quote revision/reference."
+    },
+    {
+      "id": "WF4-SHARE-REVISION-ISOLATION",
+      "owner": "WF4",
+      "description": "A public share token pinned to one immutable revision must not expose later unshared project revisions or silently follow the project current revision.",
+      "status": "fail",
+      "error": "Public R0001 share response exposes later unshared revision(s) R0002 including private R0002 snapshot data. Share resolution must return only pinned/sanitised project metadata plus the shared immutable revision."
+    },
+    {
+      "id": "WF5-CUSTOMER-DRAFT-ISOLATION",
+      "owner": "WF5",
+      "description": "Customer entrypoint must not load reference-only/master-draft production candidates or fallback imagery.",
+      "status": "pass"
+    }
+  ],
+  "failed": 21,
+  "status": "fail"
+}
+(node:1115) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

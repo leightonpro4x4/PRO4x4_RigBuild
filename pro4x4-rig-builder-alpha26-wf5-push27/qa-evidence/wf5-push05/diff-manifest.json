@@ -1,0 +1,23 @@
+{
+  "baseline": "/mnt/data/wf5_push04_compare/pro4x4-rig-builder-alpha26-wf5-push04",
+  "candidate": "/mnt/data/wf5_auto_run05/pro4x4-rig-builder-alpha26-wf5-push05",
+  "changed": [
+    "package.json",
+    "tests/wf5-alpha26-acceptance-gate.js"
+  ],
+  "added": [
+    "PUSH_35_WF5_QA_GATE_REPORT.md",
+    "qa-evidence/wf5-push05/npm-check.log",
+    "qa-evidence/wf5-push05/npm-test.log",
+    "qa-evidence/wf5-push05/render-resolver.log",
+    "qa-evidence/wf5-push05/static-verification.json",
+    "qa-evidence/wf5-push05/test-gate.exitcode",
+    "qa-evidence/wf5-push05/test-gate.log",
+    "qa-evidence/wf5-push05/wf5-acceptance.exitcode",
+    "qa-evidence/wf5-push05/wf5-acceptance.log",
+    "qa-evidence/wf5-push05/wf5-latest.log",
+    "qa-evidence/wf5-push05/wf5-promotion.log",
+    "qa-evidence/wf5-push05/wf5-visual-safety.log"
+  ],
+  "removed": []
+}

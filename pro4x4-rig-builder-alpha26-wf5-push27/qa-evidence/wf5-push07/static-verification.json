@@ -1,0 +1,18 @@
+{
+  "javascript": {
+    "scope": "application excluding node_modules/qa-evidence",
+    "count": 91,
+    "failures": []
+  },
+  "json": {
+    "applicationCount": 9,
+    "applicationFailures": [],
+    "includingQaEvidenceCount": 22,
+    "includingQaEvidenceFailures": []
+  },
+  "html": {
+    "count": 16,
+    "localReferences": 239,
+    "missing": []
+  }
+}

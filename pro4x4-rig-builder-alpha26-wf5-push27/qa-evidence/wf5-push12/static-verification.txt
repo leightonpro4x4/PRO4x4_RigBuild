@@ -1,0 +1,3 @@
+JS files: 91; syntax failures: 0
+JSON files: 24; parse failures: 0
+HTML files: 16; local references: 239; missing dependencies: 0

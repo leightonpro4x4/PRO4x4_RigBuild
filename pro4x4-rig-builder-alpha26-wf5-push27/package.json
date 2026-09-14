@@ -1,0 +1,30 @@
+{
+  "name": "pro4x4-rig-builder-merged-alpha26",
+  "version": "0.26.30",
+  "private": true,
+  "description": "PRO4X4 Rig Builder Alpha 26 WF5 QA Push 27: public share registry isolation and full integration regression verification",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node tests/smoke-alpha12.js && node tests/server-contract-alpha12.js && node tests/client-journey-alpha12.js && node tests/security-alpha12.js && node tests/hosted-alpha13.js && node tests/asset-registry-alpha14.js && node tests/asset-ingestion-alpha15.js && node tests/asset-vault-alpha16.js && node tests/asset-vault-lifecycle-alpha17.js && node tests/asset-version-lineage-alpha18.js && node tests/asset-delivery-storage-alpha19.js && node tests/render-resolver-alpha20.js && node tests/render-contract-alpha21.js && node tests/render-state-telemetry-alpha22.js && node tests/render-readiness-alpha23.js && node tests/merged-alpha23.js && node tests/merged-project-handoff-alpha24.js && node tests/multi-vehicle-pipeline-alpha24.js && node tests/parallel-workstreams-alpha25.js && node tests/alpha26-parallel-visual-governance.js && node tests/alpha26-parallel-push02.js && node tests/alpha26-wf4-persisted-visual-governance.js && node tests/wf1-save-share-integrity-alpha26.js && node tests/wf3-y62-f34-candidate-alpha26.js && node tests/alpha26-parallel-push03.js && node tests/alpha26-parallel-push04.js && node tests/alpha26-parallel-push05.js && node tests/wf1-conditional-fitment-guidance-alpha26.js && node tests/alpha26-wf4-review-evidence-visibility.js && node tests/wf3-y62-f34-transparent-candidate-alpha26.js && node tests/wf2-ranger-catalogue-alpha26.js && node tests/wf2-ranger-support-components-alpha26.js && node tests/wf5-visual-governance-rejection-alpha26.js",
+    "test:browser": "node tests/browser-journey-alpha12.js",
+    "test:security": "node tests/security-alpha12.js",
+    "check": "node --check server/server.js && node --check server/database.js && node --check server/auth.js && node --check server/security.js && node --check server/config.js && node --check server/auth-gateway.js && node --check server/observability.js && node --check server/asset-storage.js && node --check server/asset-delivery.js && node --check server/asset-vault.js",
+    "test:hosted": "node tests/hosted-alpha13.js",
+    "test:assets": "node tests/asset-registry-alpha14.js",
+    "test:ingestion": "node tests/asset-ingestion-alpha15.js",
+    "test:vault": "node tests/asset-vault-alpha16.js",
+    "test:vault-lifecycle": "node tests/asset-vault-lifecycle-alpha17.js",
+    "test:asset-lineage": "node tests/asset-version-lineage-alpha18.js",
+    "test:asset-delivery": "node tests/asset-delivery-storage-alpha19.js",
+    "test:render-resolver": "node tests/render-resolver-alpha20.js && node tests/render-contract-alpha21.js && node tests/render-state-telemetry-alpha22.js && node tests/render-readiness-alpha23.js",
+    "test:merged": "node tests/merged-alpha23.js && node tests/merged-project-handoff-alpha24.js && node tests/multi-vehicle-pipeline-alpha24.js",
+    "test:wf5-promotion": "node tests/wf5-alpha26-promotion-path.js",
+    "test:wf5-acceptance": "node tests/wf5-alpha26-acceptance-gate.js",
+    "test:gate": "npm test && npm run test:wf5-latest && npm run test:wf5-visual-safety && npm run test:wf5-promotion && npm run test:wf5-acceptance",
+    "test:wf5-latest": "node tests/wf5-alpha26-latest-candidates.js",
+    "test:wf5-visual-safety": "node tests/wf5-visual-governance-rejection-alpha26.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

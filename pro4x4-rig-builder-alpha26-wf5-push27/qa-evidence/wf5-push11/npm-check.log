@@ -1,0 +1,4 @@
+
+> pro4x4-rig-builder-merged-alpha26@0.26.14 check
+> node --check server/server.js && node --check server/database.js && node --check server/auth.js && node --check server/security.js && node --check server/config.js && node --check server/auth-gateway.js && node --check server/observability.js && node --check server/asset-storage.js && node --check server/asset-delivery.js && node --check server/asset-vault.js
+

@@ -1,0 +1,11 @@
+{
+  "targetedCheck": {
+    "id": "WF4-FINALISED-QUOTE-STAFF-MUTATION",
+    "owner": "WF4",
+    "description": "A finalised formal quote must be immutable to later staff review/update writes; staff edits after issuance require a new governed quote revision/reference.",
+    "status": "fail",
+    "error": "Staff update mutated an already-issued formal quote in place while retaining quote identity Q-WF5-FINAL-STAFF-IMMUTABLE. Issued quote payload, BOM/render lineage and commercial evidence must be immutable to every update path; post-issue changes require a new governed quote revision/reference."
+  },
+  "acceptanceFailed": 28,
+  "acceptanceStatus": "fail"
+}

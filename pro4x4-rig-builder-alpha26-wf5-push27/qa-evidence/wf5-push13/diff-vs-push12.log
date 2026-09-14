@@ -1,0 +1,5 @@
+Changed files vs Push 12 (excluding qa-evidence and prior/new WF5 reports):
+Files /tmp/wf5_push12_ref/pro4x4-rig-builder-alpha26-wf5-push12/package.json and ./package.json differ
+Files /tmp/wf5_push12_ref/pro4x4-rig-builder-alpha26-wf5-push12/tests/wf5-alpha26-acceptance-gate.js and ./tests/wf5-alpha26-acceptance-gate.js differ
+QA metadata change:
+Files /tmp/wf5_push12_ref/pro4x4-rig-builder-alpha26-wf5-push12/qa-evidence/WF5_INTEGRATION_MANIFEST.json and qa-evidence/WF5_INTEGRATION_MANIFEST.json differ

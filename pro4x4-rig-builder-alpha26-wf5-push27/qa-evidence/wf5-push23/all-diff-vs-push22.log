@@ -1,0 +1,34 @@
+{
+  "added": [
+    "PUSH_53_WF5_QA_GATE_REPORT.md",
+    "qa-evidence/wf5-push23/all-diff-vs-push22.log",
+    "qa-evidence/wf5-push23/diff-vs-push22.log",
+    "qa-evidence/wf5-push23/html-dependency-sweep.log",
+    "qa-evidence/wf5-push23/npm-check.exit",
+    "qa-evidence/wf5-push23/npm-check.log",
+    "qa-evidence/wf5-push23/npm-test.exit",
+    "qa-evidence/wf5-push23/npm-test.log",
+    "qa-evidence/wf5-push23/render-resolver.exit",
+    "qa-evidence/wf5-push23/render-resolver.log",
+    "qa-evidence/wf5-push23/static-verification.exit",
+    "qa-evidence/wf5-push23/static-verification.txt",
+    "qa-evidence/wf5-push23/test-gate.exit",
+    "qa-evidence/wf5-push23/test-gate.log",
+    "qa-evidence/wf5-push23/wf5-acceptance-targeted.exit",
+    "qa-evidence/wf5-push23/wf5-acceptance-targeted.log",
+    "qa-evidence/wf5-push23/wf5-acceptance.exit",
+    "qa-evidence/wf5-push23/wf5-acceptance.log",
+    "qa-evidence/wf5-push23/wf5-latest.exit",
+    "qa-evidence/wf5-push23/wf5-latest.log",
+    "qa-evidence/wf5-push23/wf5-promotion.exit",
+    "qa-evidence/wf5-push23/wf5-promotion.log",
+    "qa-evidence/wf5-push23/wf5-visual-safety.exit",
+    "qa-evidence/wf5-push23/wf5-visual-safety.log"
+  ],
+  "removed": [],
+  "changed": [
+    "package.json",
+    "qa-evidence/WF5_INTEGRATION_MANIFEST.json",
+    "tests/wf5-alpha26-acceptance-gate.js"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "base": "WF5 Push 06",
+  "target": "WF5 Push 07",
+  "applicationChanges": {
+    "changed": [
+      "package.json",
+      "tests/wf5-alpha26-acceptance-gate.js"
+    ],
+    "added": [
+      "PUSH_37_WF5_QA_GATE_REPORT.md"
+    ],
+    "removed": []
+  }
+}

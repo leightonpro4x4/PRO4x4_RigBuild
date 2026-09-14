@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "javascriptFiles": 91,
+    "javascriptFailures": 0,
+    "jsonFiles": 26,
+    "jsonFailures": 0,
+    "htmlFiles": 16,
+    "htmlLocalReferences": 239,
+    "htmlMissingReferences": 0
+  },
+  "javascriptFailures": [],
+  "jsonFailures": [],
+  "htmlMissing": []
+}

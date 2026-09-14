@@ -1,0 +1,12 @@
+{
+  "targetedCheck": {
+    "id": "WF4-SHARE-REGISTRY-ISOLATION",
+    "owner": "WF4",
+    "description": "A public share token must not expose the project share registry, sibling token hashes/hints, or other share-management metadata.",
+    "status": "fail",
+    "error": "Public share response exposes share-management metadata including a sibling token hash/hint including the active share token hash/hint in project.shares and the active tokenHash in resolved.share. Public resolution must return only the minimum pinned share descriptor plus sanitised project/revision data; the private share registry must remain owner/staff-only."
+  },
+  "acceptanceFailed": 31,
+  "expectedLane": "WF4",
+  "result": "blocker-confirmed"
+}

@@ -1,0 +1,27 @@
+{
+  "changed": [
+    "package.json",
+    "qa-evidence/WF5_ACCEPTANCE_GATE.log",
+    "qa-evidence/WF5_BASELINE_ALPHA_REGRESSION.log",
+    "qa-evidence/WF5_COMBINED_PROMOTION_GATE.log",
+    "qa-evidence/WF5_HTML_DEPENDENCIES.json",
+    "qa-evidence/WF5_HTML_DEPS.json",
+    "qa-evidence/WF5_INTEGRATION_MANIFEST.json",
+    "qa-evidence/WF5_JSON_PARSE.json",
+    "qa-evidence/WF5_JS_SYNTAX.json",
+    "qa-evidence/WF5_NPM_CHECK.log",
+    "qa-evidence/WF5_PROMOTION_PATH.log",
+    "qa-evidence/npm-check.log",
+    "qa-evidence/npm-test.log",
+    "qa-evidence/render-resolver.log",
+    "qa-evidence/test-gate.log",
+    "qa-evidence/wf5-acceptance.log",
+    "qa-evidence/wf5-latest.log",
+    "qa-evidence/wf5-promotion.log",
+    "tests/wf5-alpha26-acceptance-gate.js"
+  ],
+  "added": [
+    "PUSH_39_WF5_QA_GATE_REPORT.md"
+  ],
+  "removed": []
+}

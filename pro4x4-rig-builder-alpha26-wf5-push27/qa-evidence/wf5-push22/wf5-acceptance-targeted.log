@@ -1,0 +1,7 @@
+{
+      "id": "WF4-QUOTE-LINEAGE-EXISTENCE",
+      "owner": "WF4",
+      "description": "A formal quote that supplies project/revision identifiers must prove that the exact immutable revision exists; fabricated or stale lineage identifiers must not be issuable.",
+      "status": "fail",
+      "error": "Formal quote Q-WF5-LINEAGE-EXISTS was issued while claiming P4X4-PROJ-WF5-LINEAGE-EXISTS/R9999, but that immutable revision does not exist (only R0001 exists). Project/revision IDs must be resolved server-side before formal issuance; supplied identifiers cannot be trusted as lineage evidence."
+    }

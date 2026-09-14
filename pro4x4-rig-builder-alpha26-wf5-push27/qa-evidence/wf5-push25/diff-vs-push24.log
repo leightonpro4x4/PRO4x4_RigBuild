@@ -1,0 +1,119 @@
+{
+  "allChanges": [
+    {
+      "path": "PUSH_55_WF5_QA_GATE_REPORT.md",
+      "kind": "added"
+    },
+    {
+      "path": "package.json",
+      "kind": "changed"
+    },
+    {
+      "path": "qa-evidence/WF5_INTEGRATION_MANIFEST.json",
+      "kind": "changed"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/html-dependency-sweep.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/js-syntax-sweep.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/json-parse-sweep.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/npm-check.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/npm-check.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/npm-test.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/npm-test.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/render-resolver.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/render-resolver.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/static-verification.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/static-verification.txt",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/test-gate.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/test-gate.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-acceptance-targeted.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-acceptance-targeted.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-acceptance.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-acceptance.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-latest.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-latest.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-promotion.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-promotion.log",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-visual-safety.exit",
+      "kind": "added"
+    },
+    {
+      "path": "qa-evidence/wf5-push25/wf5-visual-safety.log",
+      "kind": "added"
+    },
+    {
+      "path": "tests/wf5-alpha26-acceptance-gate.js",
+      "kind": "changed"
+    }
+  ],
+  "nonQaImplementationDataVisualChanges": [],
+  "summary": {
+    "allChangedPaths": 27,
+    "implementationDataVisualAdded": 0,
+    "implementationDataVisualRemoved": 0,
+    "implementationDataVisualChanged": 0
+  }
+}

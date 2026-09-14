@@ -1,0 +1,7 @@
+{
+      "id": "WF4-QUOTE-LINEAGE-OWNERSHIP",
+      "owner": "WF4",
+      "description": "A customer must not be able to submit or formally issue a quote bound to an immutable project revision owned by another customer.",
+      "status": "fail",
+      "error": "Customer wf5-lineage-owner-b submitted and obtained formal issuance for P4X4-PROJ-WF5-LINEAGE-OWNER/R0001, which is owned by wf5-lineage-owner-a. Quote lineage must be authorised against the submitting customer/lead context before intake and preserved through staff finalisation; a real revision is not sufficient if it belongs to another customer."
+    }

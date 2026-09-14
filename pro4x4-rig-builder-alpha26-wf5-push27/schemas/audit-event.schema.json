@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pro4x4.com.au/schemas/audit-event-0.12.0.json",
+  "title": "PRO4X4 Rig Builder Audit Event v0.12.0",
+  "type": "object",
+  "required": ["schemaVersion", "id", "at", "action", "entityType", "entityId", "actor", "correlationId", "metadata"],
+  "properties": {
+    "schemaVersion": {"const": "0.12.0"},
+    "id": {"type": "string", "pattern": "^AUD-"},
+    "at": {"type": "string", "format": "date-time"},
+    "action": {"type": "string", "minLength": 3},
+    "entityType": {"type": "string", "minLength": 1},
+    "entityId": {"type": "string"},
+    "actor": {
+      "type": "object",
+      "required": ["actorId", "role"],
+      "properties": {
+        "actorId": {"type": "string"},
+        "displayName": {"type": "string"},
+        "role": {"enum": ["customer", "sales", "fitment", "admin"]},
+        "prototype": {"type": "boolean"}
+      }
+    },
+    "correlationId": {"type": ["string", "null"]},
+    "metadata": {"type": "object"}
+  }
+}

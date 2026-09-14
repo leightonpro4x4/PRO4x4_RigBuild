@@ -1,0 +1,29 @@
+(function(){
+  const KEY='asset-registry:y62:v1';
+  const P=window.PRO4X4_PERSISTENCE?.local;
+  const clone=v=>JSON.parse(JSON.stringify(v));
+  const now=()=>new Date().toISOString();
+  const camera={front34:'Y62-F34-V1',side:'Y62-SIDE-V1',rear34:'Y62-R34-V1'};
+  function fromManifest(){
+    const manifest=window.Y62_RENDER_MANIFEST,records=[];
+    Object.entries(manifest.views).forEach(([viewId,view])=>view.layers.forEach((layer,index)=>{
+      records.push({
+        schemaVersion:'0.18.0',assetId:`Y62-${viewId.toUpperCase()}-${String(index+1).padStart(2,'0')}-${layer.id.toUpperCase()}`,
+        vehicleId:manifest.vehicleId,viewId,layerId:layer.id,exactSku:layer.exactSku||null,status:layer.status,source:layer.source||null,
+        provenance:{sourceType:layer.source?'pro4x4-original':'unknown',sourceUrl:null,licenceStatus:layer.source?'reference-only':'unknown',
+          licenceNote:layer.source?'Existing project image is approved for internal reference only; independent layer rights/status not yet promoted.':'Source and usage rights must be recorded before candidate approval.',
+          capturedAt:manifest.sourceReview.reviewedAt||null},
+        file:{checksumSha256:null,mimeType:layer.source?.endsWith('.png')?'image/png':null,width:null,height:null,hasAlpha:null},
+        cameraGeometry:{profileId:camera[viewId],matched:false,notes:'Must be matched to the locked Y62 view before production approval.'},
+        fitmentScope:[manifest.vehicleId,layer.exactSku||'vehicle-state'],
+        approval:{state:layer.status==='reference-only'?'approved-reference':'not-reviewed',approvedBy:null,approvedAt:null,notes:layer.note||''},
+        history:[{at:now(),action:'registry.seeded',note:`Seeded from Y62 render manifest status: ${layer.status}.`}]
+      });
+    }));
+    return records;
+  }
+  function load(){const saved=P?.get(KEY,null);return Array.isArray(saved)&&saved.length?saved:fromManifest()}
+  function save(records){P?.set(KEY,records);return records}
+  function upsert(record){const records=load(),i=records.findIndex(x=>x.assetId===record.assetId),next=clone(record);next.schemaVersion='0.18.0';next.history=[...(next.history||[]),{at:now(),action:'asset.updated',note:'Asset registry record updated.'}];if(i>=0)records[i]=next;else records.push(next);save(records);return next}
+  window.PRO4X4_ASSET_REGISTRY={schemaVersion:'0.18.0',fromManifest,load,save,upsert};
+})();

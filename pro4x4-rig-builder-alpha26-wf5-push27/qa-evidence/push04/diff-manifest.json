@@ -1,0 +1,112 @@
+[
+  {
+    "path": "data-ranger.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "package.json",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/html-dependencies.json",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/npm-check.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/npm-test.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/render-resolver.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/static-sweep.txt",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/status.txt",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/test-gate.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/wf5-acceptance.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/wf5-latest.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/wf5-promotion.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "qa-evidence/push04/wf5-visual-safety.log",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "ranger-source-evidence.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/alpha26-parallel-push03.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/alpha26-parallel-push04.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/alpha26-parallel-push05.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/wf2-ranger-catalogue-alpha26.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/wf2-ranger-support-components-alpha26.js",
+    "old": false,
+    "new": true
+  },
+  {
+    "path": "tests/wf5-alpha26-acceptance-gate.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/wf5-alpha26-latest-candidates.js",
+    "old": true,
+    "new": true
+  },
+  {
+    "path": "tests/wf5-visual-governance-rejection-alpha26.js",
+    "old": false,
+    "new": true
+  }
+]

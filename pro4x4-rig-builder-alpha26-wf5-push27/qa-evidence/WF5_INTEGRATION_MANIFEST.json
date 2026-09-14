@@ -1,0 +1,59 @@
+{
+  "checkpoint": "Alpha26-WF5-QA-Push27",
+  "base": "Alpha26 WF5 QA Push26 latest merged checkpoint",
+  "candidatePackages": {
+    "WF1": "Merged Alpha26 WF1 Run02",
+    "WF2": "Alpha26 WF2 Ranger Support Push07",
+    "WF3": "Alpha26 WF3 Y62 F34 Push32",
+    "WF4": "Merged Alpha26 WF4 Review Evidence Push04"
+  },
+  "decision": "hold-not-promotable",
+  "packageVerdicts": {
+    "WF1": "package-pass-lane-returned",
+    "WF2": "pass-lock-data",
+    "WF3": "pass-review-artifact-return-for-master",
+    "WF4": "package-pass-lane-returned",
+    "WF5": "pass"
+  },
+  "blockingChecks": [
+    "WF1-BOM-ANYOF",
+    "WF1-QUOTE-ANYOF",
+    "WF1-REMOVE-ANYOF",
+    "WF1-CONDITIONAL-FITMENT-GATE",
+    "WF4-DIRECT-PRODUCTION-REVIEW",
+    "WF4-DIRECT-PRODUCTION-EVIDENCE",
+    "WF4-REVIEWER-IDENTITY-AUTHENTICITY",
+    "WF4-MASTER-REFERENCE-BACKING",
+    "WF4-QUOTE-GATE-TRUST-BOUNDARY",
+    "WF4-MASTER-REFERENCE-ID-VALIDITY",
+    "WF4-MASTER-BRIEF-REFERENCE-BINDING",
+    "WF4-PRODUCTION-BINARY-IMMUTABILITY",
+    "WF4-PRODUCTION-IDENTITY-IMMUTABILITY",
+    "WF4-CANDIDATE-EVIDENCE-RESET",
+    "WF4-BLOCKED-FITMENT-PRECEDENCE",
+    "WF4-RENDER-STATE-EXACTNESS",
+    "WF4-PRODUCTION-TUPLE-UNIQUENESS",
+    "WF4-PROJECT-RENDER-TRUST-BOUNDARY",
+    "WF4-QUOTE-PROJECT-REVISION-BINDING",
+    "WF4-QUOTE-LINEAGE-REQUIRED",
+    "WF4-QUOTE-LINEAGE-EXISTENCE",
+    "WF4-QUOTE-LINEAGE-OWNERSHIP",
+    "WF4-QUOTE-REFERENCE-OWNERSHIP",
+    "WF4-QUOTE-FINALISATION-AUTHORITY",
+    "WF4-QUOTE-REFINALISATION-IMMUTABILITY",
+    "WF4-FINALISED-QUOTE-IMMUTABILITY",
+    "WF4-FINALISED-QUOTE-STAFF-MUTATION",
+    "WF4-QUOTE-FINALISER-IDENTITY",
+    "WF4-QUOTE-REVISION-CHECKSUM-BINDING",
+    "WF4-SHARE-REVISION-ISOLATION",
+    "WF4-SHARE-REGISTRY-ISOLATION"
+  ],
+  "blockingCheckCount": 31,
+  "blockingLanes": [
+    "WF1",
+    "WF4"
+  ],
+  "visualPolicy": "REFERENCE_BACKED_APPROVED_VISUALS_ONLY",
+  "customerDraftFallback": "none",
+  "newFinding": "WF4-SHARE-REGISTRY-ISOLATION"
+}
