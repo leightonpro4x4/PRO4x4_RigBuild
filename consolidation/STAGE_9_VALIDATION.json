@@ -1,0 +1,489 @@
+{
+  "stage": 9,
+  "assessmentDate": "2026-09-15",
+  "repository": "leightonpro4x4/PRO4x4_RigBuild",
+  "branch": "alpha94-consolidation",
+  "assessedApplicationCommit": "7518af7b69aa0aff2461dce5c20cbeab45e17d1f",
+  "assessedTreeSHA": "ee8770ea5a9f20810892b42ec4a0be7b43985056",
+  "scope": "Documentation/release assessment only; no deployment, features, data migration or governance promotion",
+  "sourceVerification": {
+    "trackedFiles": 159,
+    "gitBlobHashes": "159/159 exact against recursive GitHub tree",
+    "sourceArchive": "GitHub codeload ZIP for assessed commit"
+  },
+  "readiness": {
+    "developerLocalBuild": "READY",
+    "desktopHandsOnPreview": "READY FOR HANDS-ON ACCEPTANCE",
+    "iosHandsOnPreview": "BLOCKED",
+    "internalStaffTesting": "READY FOR HANDS-ON ACCEPTANCE",
+    "customerFacingPreview": "BLOCKED",
+    "productionCommercialRelease": "BLOCKED",
+    "rangerVisuals": "PREVIEW ONLY",
+    "y62Catalogue": "PREVIEW ONLY",
+    "y62Visuals": "BLOCKED",
+    "savedProjects": "READY FOR HANDS-ON ACCEPTANCE",
+    "quoteWorkflow": "PREVIEW ONLY"
+  },
+  "readinessScope": "Local desktop acceptance can begin; remote complete-journey preview blocked by deployment configuration and target-host readiness. See STAGE_9.md for explanations.",
+  "githubActions": {
+    "runId": 34898558585,
+    "jobId": 104158639245,
+    "attempt": 1,
+    "headSHA": "7518af7b69aa0aff2461dce5c20cbeab45e17d1f",
+    "url": "https://github.com/leightonpro4x4/PRO4x4_RigBuild/actions/runs/34898558585/job/104158639245",
+    "conclusion": "success",
+    "completedAt": "2026-09-14T21:25:44Z",
+    "runnerLabels": [
+      "windows-2022"
+    ],
+    "workflow": ".github/workflows/alpha94.yml",
+    "groups": [
+      {
+        "group": "static",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:24:58.6066505Z {\"status\":\"PASS\",\"groups\":[\"static\"],\"executed\":1}"
+      },
+      {
+        "group": "catalogue",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:24:59.4336623Z {\"status\":\"PASS\",\"groups\":[\"catalogue\"],\"executed\":1}"
+      },
+      {
+        "group": "domain",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:00.2436013Z {\"status\":\"PASS\",\"groups\":[\"domain\"],\"executed\":1}"
+      },
+      {
+        "group": "visual",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:01.9836221Z {\"status\":\"PASS\",\"groups\":[\"visual\"],\"executed\":2}"
+      },
+      {
+        "group": "persistence",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:03.4547240Z {\"status\":\"PASS\",\"groups\":[\"persistence\"],\"executed\":1}"
+      },
+      {
+        "group": "governance",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:04.8728512Z {\"status\":\"PASS\",\"groups\":[\"governance\"],\"executed\":1}"
+      },
+      {
+        "group": "wf5",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:05.7589905Z {\"status\":\"PASS\",\"groups\":[\"wf5\"],\"executed\":1}"
+      },
+      {
+        "group": "browser",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:37.0291357Z {\"status\":\"PASS\",\"groups\":[\"browser\"],\"executed\":1}"
+      },
+      {
+        "group": "python",
+        "status": "PASS",
+        "source": "hosted GitHub Actions job log",
+        "logLine": "2026-09-14T21:25:39.4914179Z {\"status\":\"PASS\",\"groups\":[\"python\"],\"executed\":1}"
+      }
+    ],
+    "validationArtifactId": 10369767088,
+    "validationArtifactUrl": "https://github.com/leightonpro4x4/PRO4x4_RigBuild/actions/runs/34898558585/artifacts/10369767088",
+    "jobSteps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "number": 1
+      },
+      {
+        "name": "Run actions/checkout@v4",
+        "conclusion": "success",
+        "number": 2
+      },
+      {
+        "name": "Run actions/setup-node@v4",
+        "conclusion": "success",
+        "number": 3
+      },
+      {
+        "name": "Pin npm and install locked dependencies",
+        "conclusion": "success",
+        "number": 4
+      },
+      {
+        "name": "Install checksum-pinned Python 3.12.14",
+        "conclusion": "success",
+        "number": 5
+      },
+      {
+        "name": "Isolated Python validation environment",
+        "conclusion": "success",
+        "number": 6
+      },
+      {
+        "name": "Install pinned Chromium",
+        "conclusion": "success",
+        "number": 7
+      },
+      {
+        "name": "Static, syntax, JSON and HTML",
+        "conclusion": "success",
+        "number": 8
+      },
+      {
+        "name": "Catalogue and data regressions",
+        "conclusion": "success",
+        "number": 9
+      },
+      {
+        "name": "Domain and dependencies",
+        "conclusion": "success",
+        "number": 10
+      },
+      {
+        "name": "Visual runtime and frozen GLB integrity",
+        "conclusion": "success",
+        "number": 11
+      },
+      {
+        "name": "Projects, persistence and quote adversarial gates",
+        "conclusion": "success",
+        "number": 12
+      },
+      {
+        "name": "Visual governance and reviewers",
+        "conclusion": "success",
+        "number": 13
+      },
+      {
+        "name": "Current WF5 acceptance and promotion assertions",
+        "conclusion": "success",
+        "number": 14
+      },
+      {
+        "name": "Chromium desktop smoke journeys",
+        "conclusion": "success",
+        "number": 15
+      },
+      {
+        "name": "Python candidate and reconstruction evidence",
+        "conclusion": "success",
+        "number": 16
+      },
+      {
+        "name": "Preserve validation results",
+        "conclusion": "success",
+        "number": 17
+      },
+      {
+        "name": "Post Run actions/setup-node@v4",
+        "conclusion": "success",
+        "number": 33
+      },
+      {
+        "name": "Post Run actions/checkout@v4",
+        "conclusion": "success",
+        "number": 34
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "number": 35
+      }
+    ],
+    "logEvidence": "Job API and decoded logs retrieved and inspected in Stage 9; all nine group PASS lines preserved here. Artifact link recorded, not claimed as independently downloaded."
+  },
+  "localValidation": {
+    "node": "24.19.0",
+    "command": "node tools/validate.mjs core",
+    "groups": [
+      {
+        "group": "static",
+        "script": "acceptance/tests/static.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "catalogue",
+        "script": "acceptance/tests/catalogue.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "domain",
+        "script": "acceptance/tests/domain.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "visual",
+        "script": "acceptance/tests/layout.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "visual",
+        "script": "acceptance/tests/visual-runtime.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "persistence",
+        "script": "acceptance/tests/persistence.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "governance",
+        "script": "acceptance/tests/governance.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      },
+      {
+        "group": "wf5",
+        "script": "acceptance/tests/wf5-current.mjs",
+        "status": "PASS",
+        "exitCode": 0,
+        "error": null
+      }
+    ],
+    "environment": "Windows PowerShell outside sandbox after initial spawn denial; isolated downloaded source; existing exact-version yaml/playwright dependencies copied into ignored node_modules from local installation",
+    "browserAndPython": "Not rerun locally in Stage 9; current hosted run above is authority",
+    "resultLogSHA256": {
+      "catalogue-catalogue.mjs.log": "937420c5cbde869a7edd29ede2af54ace6e42c74c8684f8ffd5e6a49b20c0aa1",
+      "domain-domain.mjs.log": "4e2bf2941c760233681717afe2f9fac8c97c10ed7fa1cc40fd9e222f1f4d5279",
+      "governance-governance.mjs.log": "ff4b76f1e873e2292e55f98a0b16475fc13ed0b09f264d1b995dba99e8c9749b",
+      "persistence-persistence.mjs.log": "b079c419d4c49780a071a84763b4e2836633238f6e442d49c07c975b92905c39",
+      "static-static.mjs.log": "9d092cbc18607ad5c8f3e9b5bafeeb2f0c49d9f054c6e313f3cbb2f6c3d6a872",
+      "visual-layout.mjs.log": "4ed08320e6333b8707c7384a92b27d76b5183c021ed56f83ea115a4d1405ef70",
+      "visual-visual-runtime.mjs.log": "3c42668300c90eff7a453b9384d06d8abb951d09e4cbf3cfff194363bef25694",
+      "wf5-wf5-current.mjs.log": "a08c324daa69f424aa2d4863c4146f7e7bd0f4b1d80abdf8c8d31075fd3e8377"
+    }
+  },
+  "counts": {
+    "rangerProducts": 73,
+    "rangerEvidence": 54,
+    "y62Products": 26,
+    "y62Evidence": 15,
+    "scopedProducts": 99,
+    "scopedEvidence": 69,
+    "archivedSourceFiles": 2407,
+    "alpha93Relocations": 45,
+    "alpha93PreservedGLBs": 24,
+    "liveGLBs": 10,
+    "domainTests": 29,
+    "visualTests": 17,
+    "persistenceTests": 32,
+    "governanceTests": 34,
+    "wf5CurrentBindings": 34,
+    "wf5IntegrationChecks": 5,
+    "hostedDesktopJourneys": 3,
+    "pythonTests": 13
+  },
+  "checkpoint": {
+    "partsAUD": 10239,
+    "profile": "checkpoint",
+    "productionQuote": false,
+    "authoritativeCatalogueTotal": false
+  },
+  "assets": [
+    {
+      "file": "ranger-static-front-rear.glb",
+      "bytes": 1230128,
+      "expectedSHA256": "2a244cf1cee451be19cd224ae6ed68760e024da7283f6b036a27afe270d8ed60",
+      "actualSHA256": "2a244cf1cee451be19cd224ae6ed68760e024da7283f6b036a27afe270d8ed60",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "factory-front.glb",
+      "bytes": 63176,
+      "expectedSHA256": "b135b9d3db1d4aff1e69d573047cfe3c828bceb9b75b831d12ca5da579f96878",
+      "actualSHA256": "b135b9d3db1d4aff1e69d573047cfe3c828bceb9b75b831d12ca5da579f96878",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "factory-rear.glb",
+      "bytes": 20752,
+      "expectedSHA256": "eff2f7ad45895d83adf2ad82548b7d75dd1f5442b517408128a2f7eaec7a6f74",
+      "actualSHA256": "eff2f7ad45895d83adf2ad82548b7d75dd1f5442b517408128a2f7eaec7a6f74",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "predator.glb",
+      "bytes": 12076,
+      "expectedSHA256": "2f2c4fcf091162735e270ca4ea092dbe89bf0aaa385dbac2b6ef627446249519",
+      "actualSHA256": "2f2c4fcf091162735e270ca4ea092dbe89bf0aaa385dbac2b6ef627446249519",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "rally-hoop-v3.glb",
+      "bytes": 8756,
+      "expectedSHA256": "3cb6b26ab57e00c97adb6104d3dcb97f51304886ce44147306ce2c297c49fa67",
+      "actualSHA256": "3cb6b26ab57e00c97adb6104d3dcb97f51304886ce44147306ce2c297c49fa67",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "butt-kicker-7-pair-v1.glb",
+      "bytes": 27584,
+      "expectedSHA256": "7f1ab253986add0ff84b23d175ddaf821d9c7394d3079d0e355de13e7e45ca3c",
+      "actualSHA256": "7f1ab253986add0ff84b23d175ddaf821d9c7394d3079d0e355de13e7e45ca3c",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "scout.glb",
+      "bytes": 9360,
+      "expectedSHA256": "b37db6f1899527082e588bc5c0c1cbc9c3e0edb1b6c4dcebfc84e99c0ed39049",
+      "actualSHA256": "b37db6f1899527082e588bc5c0c1cbc9c3e0edb1b6c4dcebfc84e99c0ed39049",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "powerboards.glb",
+      "bytes": 5248,
+      "expectedSHA256": "b173205219767daad0d0f0f4336176c7a0a8be77ed1a74890804aac70970c7c8",
+      "actualSHA256": "b173205219767daad0d0f0f4336176c7a0a8be77ed1a74890804aac70970c7c8",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "tubrack.glb",
+      "bytes": 11880,
+      "expectedSHA256": "08a94e0f765d2b772dcea4d776f8c0b44effc50cd9b1a7b5af75c2ab00377ae5",
+      "actualSHA256": "08a94e0f765d2b772dcea4d776f8c0b44effc50cd9b1a7b5af75c2ab00377ae5",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    },
+    {
+      "file": "rearbumper.glb",
+      "bytes": 7392,
+      "expectedSHA256": "75cd2778113dd0935914e6acd2903ad8394f413c8db8271c4f6bc86a102d9729",
+      "actualSHA256": "75cd2778113dd0935914e6acd2903ad8394f413c8db8271c4f6bc86a102d9729",
+      "match": true,
+      "servingGate": "PASS in hosted/local visual suite; hosted browser loaded 10/10"
+    }
+  ],
+  "governance": {
+    "ranger": "preview",
+    "rangerProductionApproved": false,
+    "y62Base": "unavailable",
+    "fallback": "none",
+    "ownerReferences": 9,
+    "referenceApprovals": 9,
+    "attestations": 9,
+    "masters": 3,
+    "candidateBinaries": 9,
+    "canonicalClaims": 0,
+    "decisions": 0,
+    "seals": 0,
+    "productionVisuals": 0,
+    "changed": false
+  },
+  "deployment": {
+    "state": "BLOCKED_REMOTE_PREVIEW",
+    "existingLocalCommand": "npm start",
+    "existingLocalOrigin": "http://127.0.0.1:8094",
+    "probe": {
+      "remoteHost": {
+        "status": 403,
+        "body": {
+          "error": "invalid_host",
+          "message": "invalid_host"
+        }
+      },
+      "remoteOrigin": {
+        "status": 403,
+        "body": {
+          "error": "same_origin_required",
+          "message": "same_origin_required"
+        }
+      },
+      "staticBoundary": [
+        {
+          "url": "/",
+          "status": 200
+        },
+        {
+          "url": "/subsystems/customer-app/app.mjs",
+          "status": 200
+        },
+        {
+          "url": "/subsystems/catalogue/catalogue.json",
+          "status": 200
+        },
+        {
+          "url": "/subsystems/visual-eligibility/governance-policy.mjs",
+          "status": 200
+        },
+        {
+          "url": "/evidence/archive/snapshots/wf3.zip",
+          "status": 404
+        },
+        {
+          "url": "/subsystems/governance/baseline.json",
+          "status": 404
+        },
+        {
+          "url": "/subsystems/y62-evidence/r34-candidate05.json",
+          "status": 404
+        },
+        {
+          "url": "/subsystems/server-persistence/store.mjs",
+          "status": 404
+        },
+        {
+          "url": "/.runtime/alpha94.sqlite",
+          "status": 404
+        },
+        {
+          "url": "/package.json",
+          "status": 404
+        }
+      ]
+    },
+    "proposal": "Minimal launcher/config reusing handle and bootstrap, exact HTTPS origin, isolated directory, private listen/proxy, absent finaliser credentials, empty governance grants",
+    "proposalImplemented": false,
+    "previewPublished": false,
+    "targetHostSmoke": "NOT RUN"
+  },
+  "manualAcceptance": {
+    "desktop": "NOT RUN in Stage 9; plan supplied; hosted automation is separate",
+    "realIosSafari": "NOT TESTED",
+    "remotePreviewUrl": null,
+    "checklist": "STAGE_9_ACCEPTANCE.md"
+  },
+  "protectedBranchHeadsObservedBeforeDocumentationCommit": {
+    "main": "73ba6e8c0341b02a89386f17235dbc619cfcc6ef",
+    "alpha93-master": "48a778a9fd729af9f2b40f991e5144b60ec67ecf",
+    "wf1": "c33f2c61b1b5111c321c40739cd4ebffef32a584",
+    "wf2": "ebccc17ee9caf1b81834bf50a50319c7fcc21dbc",
+    "wf3": "680b40d3c65f137ac07b0a01341f2927531a427f",
+    "wf4": "26331f4619ee0516ce02f594567ca3e7bdc129c0",
+    "wf5": "611c363e2a1eb9b351d387f8438af58d5a9132dc"
+  },
+  "stage9Changes": [
+    "consolidation/STAGE_9.md",
+    "consolidation/STAGE_9_ACCEPTANCE.md",
+    "consolidation/STAGE_9_DEPLOYMENT.md",
+    "consolidation/STAGE_9_VALIDATION.json"
+  ],
+  "recommendation": "ALPHA 94 NOT READY FOR HANDS-ON PREVIEW"
+}
